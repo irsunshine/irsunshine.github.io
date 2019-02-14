@@ -1,4 +1,47 @@
 baseURL = "https://irsunshine.github.io/"
+
 languageCode = "zh-cn"
+
 title = "假装不困"
+
 theme = "coder"
+
+paginate = 20
+canonifyurls = true
+
+pygmentsstyle = "bw"
+pygmentscodefences = true
+pygmentscodefencesguesssyntax = true
+
+googleanalytics = "UA-110120845-1"
+
+[params]
+    author = "TianlongXiang"
+    avatarurl = "images/avatar.jpg"
+    info = "Software Developer"
+    description = "TianlongXiang's personal website and blog"
+    keywords = "blog,developer,personal,c++"
+
+    inverted = true
+
+    custom_css = ["css/custom.css"]
+
+[[params.social]]
+    name = "Github"
+    icon = "fab fa-github"
+    weight = 1
+    url = "https://github.com/irsunshine"
+[[params.social]]
+    name = "RSS"
+    icon = "fas fa-rss-square"
+    weight = 2
+    url = "/index.xml"
+
+[[menu.main]]
+    name = "Blog"
+    weight = 1
+    url  = "/posts/"
+[[menu.main]]
+    name = "About"
+    weight = 2
+    url = "/about/"
