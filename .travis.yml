@@ -37,4 +37,4 @@ only:
 - hugo
 env:
 global:
-- GH_REF: github.com/irsunshine/irsunshine.github.io.git
+- GH_REF: github.com:irsunshine/irsunshine.github.io.git
