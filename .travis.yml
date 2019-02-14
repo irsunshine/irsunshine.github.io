@@ -27,13 +27,11 @@ script:
 after_script:
 - cd ./public
 - git init
-- git config --global credential.helper store
-- ps: Add-Content "$HOME\.git-credentials" "https://${GH_TOKEN}:x-oauth-basic@github.com`n"
 - git config user.name "TianlongXiang"
 - git config user.email "tianlongxiang51@gmail.com"
 - git add .
 - git commit -m "update"
-- git push --force --quiet "https://github.com/irsunshine/irsunshine.github.io.git" master:master
+- git push --force --quiet "https://${GH_TOKEN}@github.com/irsunshine/irsunshine.github.io.git" master:master
 
 branches:
 only:
