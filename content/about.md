@@ -4,9 +4,14 @@ title = "About Me"
 slug = "about" 
 +++
 
-{{< figure src="/images/about.jpg" alt="She and I" class="right-aligned" >}}
+{{< figure src="/images/about.jpg" alt="the life" class="right-aligned" >}}
 
-[github][github],[RSS feed][feed]
+如果你要和我聊互联网，我能和你扯上半天，黑的、白的，都接触过，不算深入，但也有所了解。没毕业那会开始接触灰产、毕业后玩过黑产，简单的来说，我不属于一个安分的码农。
 
-[github]: https://github.com/irsunshine
-[feed]: /index.xml
+说白了，上面提到的那些都属于玩票性质。所谓听懂了不是你懂了，看懂了也不是你懂了，只能说你了解过，我就是了解很多。
+
+谋生之道，还是在公司老老实实上班。
+
+做金融的看不起做IT，做IT的看不起做金融的，我属于中间那部分，金融IT。背靠着金融业，主要是券商，混了几年，技术没太多进步，当然了，进步还是有的。
+
+说道这，也就是我为什么开这个博客，吃的是技术这碗饭，总归不能把技术给扔了，静心写点技术博客，质量也就凑合，也许都算不上凑合，只能算是写点东西出来。
