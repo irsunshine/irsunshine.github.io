@@ -1,3 +1,4 @@
+#集成命令中，通过 -b 设置，便于同步提交两个 git remote
 baseURL = "https://irsunshine.github.io/"
 
 languageCode = "zh-cn"
