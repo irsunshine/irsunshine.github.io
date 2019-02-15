@@ -16,6 +16,9 @@ pygmentscodefencesguesssyntax = true
 
 googleanalytics = "UA-110120845-1"
 
+[permalinks]
+    posts = "/:year/:month/:day/:title/"
+
 [params]
     author = "TianlongXiang"
     avatarurl = "images/avatar.jpg"
