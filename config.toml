@@ -1,3 +1,4 @@
+#集成命令中，通过 -b 设置，便于同步提交两个 git remote
 baseURL = "https://irsunshine.github.io/"
 
 languageCode = "zh-cn"
@@ -14,6 +15,9 @@ pygmentscodefences = true
 pygmentscodefencesguesssyntax = true
 
 googleanalytics = "UA-110120845-1"
+
+[permalinks]
+    posts = "/:year/:month/:day/:title/"
 
 [params]
     author = "TianlongXiang"
