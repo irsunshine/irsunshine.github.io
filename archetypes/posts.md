@@ -1,10 +1,7 @@
-+++ 
-draft = false
-date = {{ .Date }}
-title = ""
-description = ""
-slug = "" 
-tags = []
-categories = []
-externalLink = ""
-+++
+---
+title: "{{ replace .Name "-" " " | title }}"
+tags: []
+categories: []
+date: {{ .Date }}
+draft: false
+---

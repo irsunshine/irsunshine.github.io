@@ -10,7 +10,7 @@ theme = "coder"
 paginate = 20
 canonifyurls = true
 
-pygmentsstyle = "bw"
+pygmentsstyle = "monokai"
 pygmentscodefences = true
 pygmentscodefencesguesssyntax = true
 
@@ -18,6 +18,10 @@ googleanalytics = "UA-110120845-1"
 
 [permalinks]
     posts = "/:year/:month/:day/:title/"
+
+[taxonomies]
+  tag = "tags"
+  category = "categories"   
 
 [params]
     author = "TianlongXiang"
