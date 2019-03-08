@@ -3,7 +3,7 @@ baseURL = "https://irsunshine.github.io/"
 
 languageCode = "zh-cn"
 
-title = "TianlongXiang's Blog"
+title = "假装不困"
 
 theme = "coder"
 
@@ -24,11 +24,11 @@ googleanalytics = "UA-110120845-1"
   category = "categories"   
 
 [params]
-    author = "TianlongXiang"
+    author = "某人"
     avatarurl = "images/avatar.jpg"
-    info = "Software Developer"
-    description = "TianlongXiang's personal website and blog"
-    keywords = "blog,developer,personal,c++"
+    info = "疯子，程序开发，中二少年"
+    description = "你才二十岁，你可以成为任何你想成为的人"
+    keywords = "博客, 程序开发, C++"
 
     inverted = true
 
@@ -46,10 +46,10 @@ googleanalytics = "UA-110120845-1"
     url = "/index.xml"
 
 [[menu.main]]
-    name = "Blog"
+    name = "博客"
     weight = 1
     url  = "/posts/"
 [[menu.main]]
-    name = "About"
+    name = "关于我"
     weight = 2
     url = "/about/"
