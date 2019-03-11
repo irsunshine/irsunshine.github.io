@@ -30,8 +30,7 @@ googleanalytics = "UA-110120845-1"
     description = "你才二十岁，你可以成为任何你想成为的人"
     keywords = "博客, 程序开发, C++"
 
-    inverted = true
-
+    inverted = false
     custom_css = ["css/custom.css"]
 
 [[params.social]]
