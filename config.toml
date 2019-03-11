@@ -46,10 +46,14 @@ googleanalytics = "UA-110120845-1"
     url = "/index.xml"
 
 [[menu.main]]
-    name = "博客"
+    name = "归档"
     weight = 1
     url  = "/posts/"
 [[menu.main]]
     name = "关于我"
     weight = 2
     url = "/about/"
+[[menu.main]]
+    name = "关于博客"
+    weight = 3
+    url = "/article/"
