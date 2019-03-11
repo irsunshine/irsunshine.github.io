@@ -49,10 +49,18 @@ googleanalytics = "UA-110120845-1"
     weight = 1
     url  = "/posts/"
 [[menu.main]]
-    name = "关于我"
+    name = "分类"
     weight = 2
+    url  = "/categories/"
+[[menu.main]]
+    name = "标签"
+    weight = 3
+    url  = "/tags/"
+[[menu.main]]
+    name = "关于我"
+    weight = 4
     url = "/about/"
 [[menu.main]]
     name = "关于博客"
-    weight = 3
+    weight = 5
     url = "/article/"
