@@ -49,7 +49,7 @@ after_script:
 
 branches:
   only:
-    - hugo
+    - hugo-academic
 
 env:
   global:
