@@ -1,7 +1,7 @@
 +++
 # Accomplishments widget.
 widget = "accomplishments"  # Do not modify this line!
-active = true  # Activate this widget? true/false
+active = false  # Activate this widget? true/false
 weight = 50  # Order that this section will appear.
 
 title = "Accomplish&shy;ments"
