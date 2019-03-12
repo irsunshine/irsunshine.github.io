@@ -20,7 +20,8 @@ copyright = "2017"
 googleAnalytics = "UA-110120845-1"
 
 # Enable comments by entering your Disqus shortname
-disqusShortname = "tianlongxiang"
+# disqusShortname = "tianlongxiang"
+disqusShortname = ""
 
 ############################
 ## Advanced options below ##
@@ -38,7 +39,7 @@ hasCJKLanguage = true  # Set `true` for Chinese/Japanese/Korean languages.
 defaultContentLanguageInSubdir = false
 
 paginate = 10  # Number of items per page in paginated lists.
-enableEmoji = true
+enableEmoji = true # https://www.webfx.com/tools/emoji-cheat-sheet/
 footnotereturnlinkcontents = "<sup>^</sup>"
 ignoreFiles = ["\\.ipynb$", ".ipynb_checkpoints$", "\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 preserveTaxonomyNames = true
