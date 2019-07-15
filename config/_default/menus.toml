@@ -9,22 +9,22 @@
 #   weight = 10
 
 [[main]]
-  name = "Posts"
+  name = "随笔"
   url = "#posts"
   weight = 20
 
 [[main]]
-  name = "Projects"
+  name = "项目"
   url = "#projects"
   weight = 30
 
 [[main]]
-  name = "Publications"
+  name = "精选"
   url = "#featured"
   weight = 40
 
 [[main]]
-  name = "Courses"
+  name = "专栏"
   url = "courses/"
   weight = 50
 
