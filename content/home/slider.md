@@ -18,7 +18,7 @@ height = ""
 [[item]]
   title = "-------"
   # content = "I am center aligned :smile:" # https://www.webfx.com/tools/emoji-cheat-sheet/
-  content = "早睡"
+  content = "早睡：归途时  无须凌晨四点的路灯"
   align = "center"  # Choose `center`, `left`, or `right`.
 
   # Overlay a color or image (optional).
@@ -38,7 +38,7 @@ height = ""
 
 [[item]]
   title = "-------"
-  content = "早起"
+  content = "早起：梦醒时  清晨六点的朝阳"
   align = "center"
 
   overlay_color = "#000000"  # An HTML color value.
@@ -47,7 +47,7 @@ height = ""
 
 [[item]]
   title = "-------"
-  content = "心安"
+  content = "心安：日出日落  吾日三省吾身"
   align = "center"
 
   overlay_color = "#000000"  # An HTML color value.
