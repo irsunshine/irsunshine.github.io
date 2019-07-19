@@ -26,9 +26,9 @@ script:
     - echo 'Hugo build done!'
     
 after_script:
-- cp ./static/baidu_verify_1ujrfqcnoU.html ./github_public
+- cp ./static/baidu_verify_Bc279j6L6W.html ./github_public
 - cp ./static/CNAME ./github_public
-- cp ./static/baidu_verify_1ujrfqcnoU.html ./gitee_public
+- cp ./static/baidu_verify_Bc279j6L6W.html ./gitee_public
 - cp ./static/_variables.scss ./themes/coder/assets/scss
 - cd ./github_public
 - git init
