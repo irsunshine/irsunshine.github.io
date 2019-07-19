@@ -21,8 +21,8 @@ install:
     - pwd
 
 script:
-    - hugo -b "https://xiangtianlong.gitee.io/" -d "gitee_public"
-    - hugo -b "https://xiangtianlong.github.io/" -d "github_public"
+    - hugo -b "http://www.xiangtianlong.com/" -d "gitee_public"
+    - hugo -b "http://www.xiangtianlong.com/" -d "github_public"
     - echo 'Hugo build done!'
     
 after_script:
