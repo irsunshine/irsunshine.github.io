@@ -21,8 +21,8 @@ install:
     - pwd
 
 script:
-    - hugo -b "https://irsunshine.gitee.io/" -d "gitee_public"
-    - hugo -b "https://irsunshine.github.io/" -d "github_public"
+    - hugo -b "https://xiangtianlong.gitee.io/" -d "gitee_public"
+    - hugo -b "https://xiangtianlong.github.io/" -d "github_public"
     - echo 'Hugo build done!'
     
 after_script:
@@ -45,7 +45,7 @@ after_script:
 - git config user.email "tianlongxiang51@gmail.com"
 - git add .
 - git commit -m "Update TianlongXiang's Blog"
-- git push --force "https://irsunshine:${GITEE_PASSWORD}@gitee.com/irsunshine/irsunshine.git" master:master
+- git push --force "https://xiangtianlong:${GITEE_PASSWORD}@gitee.com/xiangtianlong/xiangtianlong.git" master:master
 
 branches:
   only:
