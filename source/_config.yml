@@ -35,17 +35,17 @@ cache:
 # ---------------------------------------------------------------
 
 favicon:
-  small: /images/favicon-16x16-next.png
-  medium: /images/favicon-32x32-next.png
-  apple_touch_icon: /images/favicon-32x32-next.png
-  safari_pinned_tab: /images/logo.svg
+  small: /uploads/favicon-16x16-next.png
+  medium: /uploads/favicon-32x32-next.png
+  apple_touch_icon: /uploads/favicon-32x32-next.png
+  safari_pinned_tab: /uploads/logo.svg
   #android_manifest: /images/manifest.json
   #ms_browserconfig: /images/browserconfig.xml
 
 # Set rss to false to disable feed link.
 # Leave rss as blank to use site's feed link, and install dependencies hexo-generator-feed by `npm install hexo-generator-feed --save`.
 # Set rss to specific value if you have burned your feed already.
-rss:
+rss: /atom.xml
 
 footer:
   # Specify the date when the site was setup. If not defined, current year will be used.
@@ -159,8 +159,8 @@ baidu_push: true
 menu:
   home: / || home
   #about: /about/ || user
-  #tags: /tags/ || tags
-  #categories: /categories/ || th
+  tags: /tags/ || tags
+  categories: /categories/ || th
   archives: /archives/ || archive
   #schedule: /schedule/ || calendar
   #sitemap: /sitemap.xml || sitemap
@@ -227,13 +227,13 @@ avatar:
   # In theme directory (source/images): /images/avatar.gif
   # In site directory (source/uploads): /uploads/avatar.gif
   # You can also use other linking images.
-  url: /images/033613581.jpg
+  url: /uploads/033613581.jpg
   # If true, the avatar would be dispalyed in circle.
-  rounded: false
+  rounded: true
   # The value of opacity should be choose from 0 to 1 to set the opacity of the avatar.
   opacity: 1
   # If true, the avatar would be rotated with the cursor.
-  rotated: false
+  rotated: true
 
 # Table Of Contents in the Sidebar
 toc:
@@ -341,7 +341,7 @@ codeblock:
   border_radius:
   # Add copy button on codeblock
   copy_button:
-    enable: false
+    enable: true
     # Show text copy result
     show_result: false
     # Style: only 'flat' is currently available, leave it blank if you prefer default theme
@@ -842,7 +842,7 @@ algolia_search:
 # Local search
 # Dependencies: https://github.com/theme-next/hexo-generator-searchdb
 local_search:
-  enable: false
+  enable: true
   # If auto, trigger search by changing input.
   # If manual, trigger search by pressing enter key or search button.
   trigger: auto
