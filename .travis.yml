@@ -35,8 +35,9 @@ script:
     - git add .
     - git commit -m "Update TianlongXiang's Blog"
     - git push --force "https://xiangtianlong:${GITEE_PASSWORD}@gitee.com/xiangtianlong/xiangtianlong.git" master:master
-    - echo 'Hexo build done!'
 
+after_script:
+    - echo 'Hexo build done!'
 
 branches:
   only:
