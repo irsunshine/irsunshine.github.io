@@ -5,6 +5,7 @@ node_js: stable #设置相应的版本
 
 before_install:
   - npm install hexo-cli -g
+  - npm install gulp -g
   - npm install #安装hexo及插件
   
 install:
@@ -14,7 +15,7 @@ install:
     - hexo version
 
 script:
-    - hexo clean && hexo generate
+    - hexo clean && hexo generate && gulp
     - \cp ./source/_config.yml ./themes/next/_config.yml
     - cd ./public
     - git init
@@ -26,7 +27,7 @@ script:
     - cd ..
     - ls
     - pwd
-    - hexo clean && hexo generate
+    - hexo clean && hexo generate && gulp
     - \cp ./source/_config.yml ./themes/next/_config.yml
     - cd ./public
     - git init
