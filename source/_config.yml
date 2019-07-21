@@ -1022,7 +1022,7 @@ vendors:
   # Example:
   # jquery: //cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js
   # jquery: //cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js
-  jquery: //libs.cdnjs.net/jquery/3.4.1/jquery.min.js
+  jquery:
 
   # Internal version: 2.1.5 & 3.5.7
   # See: https://fancyapps.com/fancybox
@@ -1055,15 +1055,16 @@ vendors:
   # velocity: //cdnjs.cloudflare.com/ajax/libs/velocity/1.2.1/velocity.min.js
   # velocity_ui: //cdn.jsdelivr.net/npm/velocity-animate@1/velocity.ui.min.js
   # velocity_ui: //cdnjs.cloudflare.com/ajax/libs/velocity/1.2.1/velocity.ui.min.js
-  velocity: //libs.cdnjs.net/velocity/1.2.1/velocity.min.js
-  velocity_ui: //libs.cdnjs.net/velocity/1.2.1/velocity.ui.min.js
+  velocity:
+  velocity_ui:
 
   # Internal version: 4.7.0
   # See: https://fontawesome.com
   # Example:
   # fontawesome: //cdn.jsdelivr.net/npm/font-awesome@4/css/font-awesome.min.css
   # fontawesome: //cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css
-  fontawesome: //cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css
+  # 速度不错 //cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css
+  fontawesome:
 
   # Internal version: 2.10.4
   # See: https://www.algolia.com
