@@ -1,56 +1,46 @@
 # https://docs.travis-ci.com/user/deployment/pages/
 # https://docs.travis-ci.com/user/languages/python/
-language: python
 
-python:
-    - "3.6"
+node_js: stable #设置相应的版本
 
 before_install:
-  # This workaround is required to avoid libstdc++ errors while running "extended" hugo with SASS support.
-  - wget -q -O libstdc++6 http://security.ubuntu.com/ubuntu/pool/main/g/gcc-5/libstdc++6_5.4.0-6ubuntu1~16.04.10_amd64.deb
-  - sudo dpkg --force-all -i libstdc++6
+  - npm install #安装hexo及插件
   
 install:
     - uname -a
-    - wget https://github.com/gohugoio/hugo/releases/download/v0.55.6/hugo_extended_0.55.6_Linux-64bit.deb
-    - sudo dpkg -i hugo*.deb
-    - hugo version
-    - rm -rf public
+    - hexo version
     # get more infomation
     - ls
     - pwd
 
 script:
-    - hugo -b "http://www.xiangtianlong.com/" -d "gitee_public"
-    - hugo -b "http://www.xiangtianlong.com/" -d "github_public"
-    - echo 'Hugo build done!'
-    
-after_script:
-- cp ./static/baidu_verify_Bc279j6L6W.html ./github_public
-- cp ./static/CNAME ./github_public
-- cp ./static/baidu_verify_Bc279j6L6W.html ./gitee_public
-- cp ./static/_variables.scss ./themes/coder/assets/scss
-- cd ./github_public
-- git init
-- git config user.name "TianlongXiang"
-- git config user.email "tianlongxiang51@gmail.com"
-- git add .
-- git commit -m "Update TianlongXiang's Blog"
-- git push --force --quiet "https://${GH_TOKEN}@github.com/irsunshine/irsunshine.github.io.git" master:master
-- cd ..
-- ls
-- pwd
-- cd ./gitee_public
-- git init
-- git config user.name "TianlongXiang"
-- git config user.email "tianlongxiang51@gmail.com"
-- git add .
-- git commit -m "Update TianlongXiang's Blog"
-- git push --force "https://xiangtianlong:${GITEE_PASSWORD}@gitee.com/xiangtianlong/xiangtianlong.git" master:master
+    - hugo clean && hugo generate
+    - \cp ./scaffolds/_config.yml ./themes/next/_config.yml
+    - cd ./public
+    - git init
+    - git config user.name "TianlongXiang"
+    - git config user.email "tianlongxiang51@gmail.com"
+    - git add .
+    - git commit -m "Update TianlongXiang's Blog"
+    - git push --force --quiet "https://${GH_TOKEN}@github.com/irsunshine/irsunshine.github.io.git" master:master
+    - cd ..
+    - ls
+    - pwd
+    - hugo clean && hugo generate
+    - \cp ./scaffolds/_config.yml ./themes/next/_config.yml
+    - cd ./public
+    - git init
+    - git config user.name "TianlongXiang"
+    - git config user.email "tianlongxiang51@gmail.com"
+    - git add .
+    - git commit -m "Update TianlongXiang's Blog"
+    - git push --force "https://xiangtianlong:${GITEE_PASSWORD}@gitee.com/xiangtianlong/xiangtianlong.git" master:master
+    - echo 'Hexo build done!'
+
 
 branches:
   only:
-    - hugo-academic
+    - hexo
 
 env:
   global:
