@@ -4,17 +4,17 @@
 node_js: stable #设置相应的版本
 
 before_install:
+  - npm install hexo-cli -g
   - npm install #安装hexo及插件
   
 install:
-    - uname -a
-    - hexo version
     # get more infomation
     - ls
     - pwd
+    - hexo version
 
 script:
-    - hugo clean && hugo generate
+    - hexo clean && hexo generate
     - \cp ./scaffolds/_config.yml ./themes/next/_config.yml
     - cd ./public
     - git init
@@ -26,7 +26,7 @@ script:
     - cd ..
     - ls
     - pwd
-    - hugo clean && hugo generate
+    - hexo clean && hexo generate
     - \cp ./scaffolds/_config.yml ./themes/next/_config.yml
     - cd ./public
     - git init
