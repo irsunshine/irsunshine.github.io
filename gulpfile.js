@@ -28,6 +28,7 @@ gulp.task('minify-js', function() {
         .pipe(gulp.dest('./public'));
 });
 // 执行 gulp 命令时执行的任务
-gulp.task('default', [
-    'minify-html','minify-css','minify-js'
-]);
+// gulp 4.0 适用的方式
+gulp.task('build', gulp.parallel('minify-html', 'minify-css', 'minify-js'
+ //build the website
+));

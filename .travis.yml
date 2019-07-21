@@ -15,7 +15,7 @@ install:
     - hexo version
 
 script:
-    - hexo clean && hexo generate && gulp
+    - hexo clean && hexo generate && gulp build
     - \cp ./source/_config.yml ./themes/next/_config.yml
     - cd ./public
     - git init
@@ -27,7 +27,7 @@ script:
     - cd ..
     - ls
     - pwd
-    - hexo clean && hexo generate && gulp
+    - hexo clean && hexo generate && gulp build
     - \cp ./source/_config.yml ./themes/next/_config.yml
     - cd ./public
     - git init
