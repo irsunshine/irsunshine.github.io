@@ -15,7 +15,7 @@ install:
 
 script:
     - hexo clean && hexo generate
-    - \cp ./scaffolds/_config.yml ./themes/next/_config.yml
+    - \cp ./source/_config.yml ./themes/next/_config.yml
     - cd ./public
     - git init
     - git config user.name "TianlongXiang"
@@ -27,7 +27,7 @@ script:
     - ls
     - pwd
     - hexo clean && hexo generate
-    - \cp ./scaffolds/_config.yml ./themes/next/_config.yml
+    - \cp ./source/_config.yml ./themes/next/_config.yml
     - cd ./public
     - git init
     - git config user.name "TianlongXiang"
@@ -35,8 +35,6 @@ script:
     - git add .
     - git commit -m "Update TianlongXiang's Blog"
     - git push --force "https://xiangtianlong:${GITEE_PASSWORD}@gitee.com/xiangtianlong/xiangtianlong.git" master:master
-
-after_script:
     - echo 'Hexo build done!'
 
 branches:
