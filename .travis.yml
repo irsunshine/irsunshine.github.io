@@ -7,6 +7,7 @@ before_install:
   - npm install hexo-cli -g
   - npm install gulp -g
   - npm install #安装hexo及插件
+  - apt-get install -y curl
   
 install:
     # get more infomation
@@ -15,8 +16,7 @@ install:
     - hexo version
 
 script:
-    - sed -i 's/{BAIDU_TOKEN}/${BAIDU_TOKEN}/g' ./source/_config.yml
-    - hexo clean && hexo generate && gulp build && hexo deploy
+    - hexo clean && hexo generate && gulp build
     - \cp ./source/_config.yml ./themes/next/_config.yml
     - cd ./public
     - git init
@@ -28,7 +28,7 @@ script:
     - cd ..
     - ls
     - pwd
-    - hexo clean && hexo generate && gulp build && hexo deploy
+    - hexo clean && hexo generate && gulp build
     - \cp ./source/_config.yml ./themes/next/_config.yml
     - cd ./public
     - git init
@@ -38,6 +38,9 @@ script:
     - git commit -m "Update TianlongXiang's Blog"
     - git push --force "https://xiangtianlong:${GITEE_PASSWORD}@gitee.com/xiangtianlong/xiangtianlong.git" master:master
     - echo 'Hexo build done!'
+
+after_script:
+    - cd ./public && curl -H 'Content-Type:text/plain' --data-binary @baidu_urls.txt "http://data.zz.baidu.com/urls?site=xiangtianlong.com&token=${BAIDU_TOKEN}
 
 branches:
   only:

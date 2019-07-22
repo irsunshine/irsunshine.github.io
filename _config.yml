@@ -27,7 +27,7 @@ baidusitemap:
 baidu_url_submit:
   count: 10
   host: https://xiangtianlong.com
-  token: {BAIDU_TOKEN}
+  token: XXXXXXX
   path: baidu_urls.txt
 
 # Directory
