@@ -24,6 +24,12 @@ sitemap:
 baidusitemap:
   path: baidusitemap.xml
 
+baidu_url_submit:
+  count: 10
+  host: https://xiangtianlong.com
+  token: {BAIDU_TOKEN}
+  path: baidu_urls.txt
+
 # Directory
 source_dir: source
 public_dir: public
@@ -84,7 +90,7 @@ theme: next
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-  type:
+  - type: baidu_url_submitter
 
 search:
   path: search.xml
