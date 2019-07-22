@@ -15,7 +15,8 @@ install:
     - hexo version
 
 script:
-    - hexo clean && hexo generate && gulp build
+    - sed -i 's/{BAIDU_TOKEN}/${BAIDU_TOKEN}/g' ./source/_config.yml
+    - hexo clean && hexo generate && gulp build && hexo deploy
     - \cp ./source/_config.yml ./themes/next/_config.yml
     - cd ./public
     - git init
@@ -27,7 +28,7 @@ script:
     - cd ..
     - ls
     - pwd
-    - hexo clean && hexo generate && gulp build
+    - hexo clean && hexo generate && gulp build && hexo deploy
     - \cp ./source/_config.yml ./themes/next/_config.yml
     - cd ./public
     - git init
