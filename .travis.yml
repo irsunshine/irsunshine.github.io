@@ -42,7 +42,7 @@ script:
 after_script:
     - ls
     - pwd
-    - cd ./public && curl -H 'Content-Type:text/plain' --data-binary @baidu_urls.txt "http://data.zz.baidu.com/urls?site=xiangtianlong.com&token=${BAIDU_TOKEN}"
+    - curl -H 'Content-Type:text/plain' --data-binary @baidu_urls.txt "http://data.zz.baidu.com/urls?site=xiangtianlong.com&token=${BAIDU_TOKEN}"
 
 branches:
   only:
