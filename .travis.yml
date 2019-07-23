@@ -40,7 +40,7 @@ script:
     - echo 'Hexo build done!'
 
 after_script:
-    - cd ./public && curl -H 'Content-Type:text/plain' --data-binary @baidu_urls.txt "http://data.zz.baidu.com/urls?site=xiangtianlong.com&token=${BAIDU_TOKEN}
+    - cd ./public && curl -H 'Content-Type:text/plain' --data-binary @baidu_urls.txt "http://data.zz.baidu.com/urls?site=xiangtianlong.com&token=${BAIDU_TOKEN}"
 
 branches:
   only:
