@@ -786,10 +786,10 @@ busuanzi_count:
   post_views_icon: eye
 
 # Tencent analytics
-tencent_analytics: # <app_id>
+tencent_analytics: 66488756
 
 # Tencent MTA
-tencent_mta: # <app_id>
+tencent_mta: 500702637
 
 
 # ---------------------------------------------------------------
