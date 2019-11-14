@@ -18,24 +18,24 @@ install:
 script:
     - hexo clean && hexo generate
     - \cp ./source/_config.yml ./themes/next/_config.yml
-    - cd ./public
+    - cd ./public && cat index.html
     - git init
     - git config user.name "TianlongXiang"
     - git config user.email "tianlongxiang51@gmail.com"
     - git add .
-    - git commit -m "Update TianlongXiang's Blog"
-    - git push --force --quiet "https://${GH_TOKEN}@github.com/xiangtianlong/xiangtianlong.github.io.git" master:master
+    - git commit -m "Update Github TianlongXiang's Blog"
+    - git push --force "https://${GH_TOKEN}@github.com/xiangtianlong/xiangtianlong.github.io.git" master:master
     - cd ..
     - ls
     - pwd
     - hexo clean && hexo generate
     - \cp ./source/_config.yml ./themes/next/_config.yml
-    - cd ./public
+    - cd ./public && cat index.html
     - git init
     - git config user.name "TianlongXiang"
     - git config user.email "tianlongxiang51@gmail.com"
     - git add .
-    - git commit -m "Update TianlongXiang's Blog"
+    - git commit -m "Update Gitee TianlongXiang's Blog"
     - git push --force "https://xiangtianlong:${GITEE_PASSWORD}@gitee.com/xiangtianlong/xiangtianlong.git" master:master
     - echo 'Hexo build done!'
 
