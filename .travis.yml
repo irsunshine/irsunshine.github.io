@@ -19,6 +19,11 @@ script:
     - hexo clean && hexo generate
     - \cp ./source/_config.yml ./themes/next/_config.yml
     - cd ./public && cat index.html
+    - ls
+    - pwd
+    - hexo clean && hexo generate
+    - \cp ./source/_config.yml ./themes/next/_config.yml
+    - cd ./public && cat index.html
     - git init
     - git config user.name "TianlongXiang"
     - git config user.email "tianlongxiang51@gmail.com"
