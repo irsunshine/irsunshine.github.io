@@ -10,19 +10,6 @@ categories:
   - windows
 date: 2019-11-25 19:15:13
 ---
-
-### 前言
-
-项目源码和文章主体内容来源于：[book-code](https://github.com/wyrover/book-code/tree/master/IOCP%E5%AE%8C%E6%88%90%E7%AB%AF%E5%8F%A3)
-变更内容：
-
-- 基于原项目进行验证性测试
-- 升级测试代码解决方案到`vs2019`
-- 代码中补充注释说明
-- `txt`格式讲义转为`markdown`
-
-本文对应的源码地址：[LearnWindowsSocket](https://github.com/xiangtianlong/LearnWindowsSocket)
-
 ### 概述
 
 如果你想在Windows平台上构建服务器应用，那么I/O模型是你必须考虑的
@@ -55,6 +42,7 @@ int select(
 
 其中，第一个参数`nfds`会被忽略。之所以仍然要提供这个参数，只是为了保持与`Berkeley`套接字兼容
 后面大家看到有三个`fd_set`类型的参数：
+
 * 检查可读性（readfds）
 * 检查可写性（writefds）
 * 用于例外数据（exceptfds）
@@ -78,6 +66,7 @@ typedef struct fd_set {
 ##### readfds
 
 `fdset`代表着一系列特定套接字的集合。其中，`readfds`集合包括符合下述任何一个条件的套接字：
+
 * 有数据可以读入
 * 连接已经关闭、重设或中止
 * 假如已调用了`listen`，而且一个连接正在建立，那么`accept`函数调用会成功
@@ -85,6 +74,7 @@ typedef struct fd_set {
 ##### writefds
 
 `writefds`集合包括符合下述任何一个条件的套接字：
+
 * 有数据可以发出
 * 如果已完成了对一个非锁定连接调用的处理，连接就会成功
 
@@ -109,6 +99,7 @@ typedef struct fd_set {
 ##### timeval
 
 对 timeval 结构的定义如下：
+
 * `tv_sec`字段以秒为单位指定等待时间
 * `tv_usec`字段则以毫秒为单位指定等待时间
 
@@ -125,6 +116,7 @@ typedef struct fd_set {
 用`select`对套接字进行监视之前，必须将套接字句柄分配给一个`fdset`的结构集合，
 之后再来调用`select`，便可知道一个套接字上是否正在发生上述的 I/O 活动。
 `Winsock`提供了下列宏操作，可用来针对 I/O 活动，对`fdset`进行处理与检查：
+
 * `FD_CLR(s, *set)`：从set中删除套接字s
 * `FD_ISSET(s, *set)`：检查s是否set集合的一名成员；如答案是肯定的是，则返回`TRUE`
 * `FD_SET(s, *set)`：将套接字s加入集合`set`
@@ -141,3 +133,15 @@ typedef struct fd_set {
 
 `select`函数返回后，会修改`fdset`结构，删除那些不存在待决 I/O 操作的套接字句柄。
 这正是我们在上述的步骤 (4) 中，为何要使用`FDISSET`宏来判断一个特定的套接字是否仍在集合中的原因
+
+### 后记
+
+项目源码和文章主体内容来源于：[book-code](https://github.com/wyrover/book-code/tree/master/IOCP%E5%AE%8C%E6%88%90%E7%AB%AF%E5%8F%A3)
+变更内容：
+
+- 基于原项目进行验证性测试
+- 升级测试代码解决方案到`vs2019`
+- 代码中补充注释说明
+- `txt`格式讲义转为`markdown`
+
+本文对应的源码地址：[LearnWindowsSocket](https://github.com/xiangtianlong/LearnWindowsSocket)
