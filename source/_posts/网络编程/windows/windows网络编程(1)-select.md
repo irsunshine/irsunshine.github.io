@@ -141,7 +141,11 @@ typedef struct fd_set {
 
 - 基于原项目进行验证性测试
 - 升级测试代码解决方案到`vs2019`
-- 代码中补充注释说明
+- `MFC`升级后编译问题修复，界面交互增加提示语
 - `txt`格式讲义转为`markdown`
+
+`CEdit`换行符不生效，控件属性设置中开启`Multiline`，设置为`True`
+
+更多详细的修改内容，查看`git`提交日志
 
 本文对应的源码地址：[LearnWindowsSocket](https://github.com/xiangtianlong/LearnWindowsSocket)
