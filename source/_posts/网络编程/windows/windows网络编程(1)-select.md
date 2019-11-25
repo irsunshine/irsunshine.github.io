@@ -1,16 +1,19 @@
 ---
-title: windwos socket 编程：select
-date: 2019-11-25 19:15:13
-tags: 
+title: windows网络编程(1)-select
+tags:
   - windows
   - select
   - 网络编程
   - 完成端口
+categories:
+  - 网络编程
+  - windows
+date: 2019-11-25 19:15:13
+---
 
 ### 前言
 
 项目源码和文章主体内容来源于：[book-code](https://github.com/wyrover/book-code/tree/master/IOCP%E5%AE%8C%E6%88%90%E7%AB%AF%E5%8F%A3)
-
 变更内容：
 
 - 基于原项目进行验证性测试
@@ -23,7 +26,6 @@ tags:
 ### 概述
 
 如果你想在Windows平台上构建服务器应用，那么I/O模型是你必须考虑的
-
 Windows操作系统提供了五种I/O模型，分别是：
 
 * 选择（select）
@@ -52,11 +54,12 @@ int select(
 ```
 
 其中，第一个参数`nfds`会被忽略。之所以仍然要提供这个参数，只是为了保持与`Berkeley`套接字兼容
-
 后面大家看到有三个`fd_set`类型的参数：
 * 检查可读性（readfds）
 * 检查可写性（writefds）
 * 用于例外数据（exceptfds）
+
+<!-- more -->
 
 ##### fd_set
 
@@ -106,7 +109,6 @@ typedef struct fd_set {
 ##### timeval
 
 对 timeval 结构的定义如下：
-
 * `tv_sec`字段以秒为单位指定等待时间
 * `tv_usec`字段则以毫秒为单位指定等待时间
 
@@ -123,14 +125,12 @@ typedef struct fd_set {
 用`select`对套接字进行监视之前，必须将套接字句柄分配给一个`fdset`的结构集合，
 之后再来调用`select`，便可知道一个套接字上是否正在发生上述的 I/O 活动。
 `Winsock`提供了下列宏操作，可用来针对 I/O 活动，对`fdset`进行处理与检查：
-
 * `FD_CLR(s, *set)`：从set中删除套接字s
 * `FD_ISSET(s, *set)`：检查s是否set集合的一名成员；如答案是肯定的是，则返回`TRUE`
 * `FD_SET(s, *set)`：将套接字s加入集合`set`
 * `FD_ZERO( * set)`：将`set`初始化成空集合
 
 例如，假定我们想知道是否可从一个套接字中安全地读取数据，同时不会陷于无休止的“锁定”状态，便可使用`FDSET`宏，将自己的套接字分配给`fdread`集合，再来调用`select`。要想检测自己的套接字是否仍属`fdread`集合的一部分，可使用`FD_ISSET`宏。采用下述步骤，便可完成用`select`操作一个或多个套接字句柄的全过程：
-
 1) 使用`FDZERO`宏，初始化一个`fdset`对象
 2) 使用`FDSET`宏，将套接字句柄加入到`fdset`集合中
 3) 调用`select`函数，等待其返回……`select`完成后，会返回在所有`fdset`集合中设置的套接字句柄总数
