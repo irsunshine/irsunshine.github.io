@@ -70,6 +70,10 @@ default_category: uncategorized
 category_map:
 tag_map:
 
+auto_category:
+ enable: true
+ depth: 
+
 # Date / Time format
 ## Hexo uses Moment.js to parse and display date
 ## You can customize the date format as defined in
