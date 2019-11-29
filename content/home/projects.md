@@ -5,7 +5,7 @@ headless = true  # This file represents a page section.
 active = true  # Activate this widget? true/false
 weight = 65  # Order that this section will appear.
 
-title = "项目"
+title = "Projects"
 subtitle = ""
 
 [content]
@@ -39,6 +39,7 @@ subtitle = ""
 
   # Toggle between the various page layout types.
   #   1 = List
+  #   2 = Compact
   #   3 = Card
   #   5 = Showcase
   view = 3
