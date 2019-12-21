@@ -13,10 +13,6 @@ featured: false
 draft: false
 ---
 
-本文为课程笔记：[https://time.geekbang.org/column/article/169225](https://time.geekbang.org/column/article/169225)
-
-参考博客：[https://www.cnblogs.com/kelamoyujuzhen/p/10452929.html](https://www.cnblogs.com/kelamoyujuzhen/p/10452929.html)
-
 上一篇中我还特意提到了编译器的选择， 实际上本专栏正式开始前，有一篇关于编译器的介绍，这可真是目录都没看，就开始"翻书"了。
 
 前面也提到了，目录都没细看，直接开始听稿子，没想到第一讲说的居然是堆、栈。
@@ -168,3 +164,9 @@ auto ptr = new std::vector<int>();
     }
 }
 ```
+
+# 引用
+
+本文为课程笔记：[https://time.geekbang.org/column/article/169225](https://time.geekbang.org/column/article/169225)
+
+参考博客：[https://www.cnblogs.com/kelamoyujuzhen/p/10452929.html](https://www.cnblogs.com/kelamoyujuzhen/p/10452929.html)
