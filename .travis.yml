@@ -13,7 +13,6 @@ script:
     - echo 'Hugo build done!'
     
 after_script:
-- cp ./static/CNAME ./gitee_public && cp ./static/CNAME ./github_public
 - cd ./github_public
 - git init
 - git config user.name "TianlongXiang"
