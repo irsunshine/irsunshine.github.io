@@ -11,9 +11,9 @@
 [zh]
  languageCode = "zh-Hans"
  contentDir = "content"
- title = "不二城"
+ title = "假装不困"
  [zh.params]
-   description = "缘.妄想.癫狂"
+   description = "欺骗别人很容易，欺骗自己很难，想想18岁的自己"
  [[zh.menu.main]]
    name = ""
    url = "#pages"
