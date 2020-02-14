@@ -5,6 +5,7 @@ summary:
 authors: 
 - 白岩松
 tags:
+- 白岩松
 - 白说
 - 演讲稿
 categories:
