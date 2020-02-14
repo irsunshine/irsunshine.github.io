@@ -14,7 +14,29 @@
  title = "假装不困"
  [zh.params]
    description = "欺骗别人很容易，欺骗自己很难，想想18岁的自己"
- # [[zh.menu.main]]
-   # name = "文章"
-   # url = "#pages"
-   # weight = 1
+ [[zh.menu.main]]
+   name = "Posts"
+   url = "#posts"
+   weight = 10
+   
+ [[zh.menu.main]]
+   name = "Projects"
+   url = "#projects"
+   weight = 20
+   
+ [[zh.menu.main]]
+   name = "Publications"
+   url = "#featured"
+   weight = 30
+   
+ [[zh.menu.main]]
+   name = "Courses"
+   url = "courses/"
+   weight = 40
+  
+ [[zh.menu.main]]
+   name = "Contact"
+   url = "#contact"
+   weight = 50
+   
+   
