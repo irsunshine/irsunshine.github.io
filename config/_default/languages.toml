@@ -35,8 +35,8 @@
    weight = 40
   
  [[zh.menu.main]]
-   name = "Contact"
-   url = "#contact"
+   name = "About"
+   url = "#about"
    weight = 50
    
    
