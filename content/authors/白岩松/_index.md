@@ -18,7 +18,7 @@ organizations:
   url: ""
 
 # Short bio (displayed in user profile at end of posts)
-bio: 
+bio: 文章内容来源于网络演讲视频，如有侵权，联系本人删除
 
 # List each interest with a dash
 interests:
