@@ -20,7 +20,7 @@ copyright = "2018"
 ############################
 
 # Name of Academic theme folder in `themes/`.
-theme = "fix-academic"
+theme = "academic"
 
 # Get last modified date for content from Git?
 enableGitInfo = false
@@ -31,6 +31,7 @@ hasCJKLanguage = true  # Set `true` for Chinese/Japanese/Korean languages.
 defaultContentLanguageInSubdir = true
 removePathAccents = true  # Workaround for https://github.com/gohugoio/hugo/issues/5687
 
+summaryLength = 30  # Listing summary length in words. Also, see `abstract_length` in `params.toml`.
 paginate = 10  # Number of items per page in paginated lists.
 enableEmoji = true
 footnotereturnlinkcontents = "<sup>^</sup>"
