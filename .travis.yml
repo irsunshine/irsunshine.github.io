@@ -19,7 +19,7 @@ after_script:
 - git config user.email "tianlongxiang51@gmail.com"
 - git add .
 - git commit -m "Update TianlongXiang's Blog"
-- git push --force --quiet "https://${GH_TOKEN}@github.com/irsunshine/irsunshine.github.io.git" master:master
+- git push --force --quiet "https://${GH_TOKEN}@github.com/xiangtianlong/xiangtianlong.github.io.git" master:master
 - cd .. && cd ./gitee_public
 - git init
 - git config user.name "TianlongXiang"
