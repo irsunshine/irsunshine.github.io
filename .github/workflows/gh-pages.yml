@@ -20,10 +20,10 @@ jobs:
           extended: true
 
       - name: Build
-        run: hugo -b "https://www.xiangtianlong.com/" && ls
+        run: hugo -b "https://www.xiangtianlong.com/" -d "github_public" && ls
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.BLOG_TOKEN }}
-          publish_dir: ./
+          publish_dir: ./github_public
