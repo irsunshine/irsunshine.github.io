@@ -20,7 +20,7 @@ jobs:
           extended: true
 
       - name: Build
-        run: hugo -b "https://www.xiangtianlong.com/"
+        run: hugo -b "https://www.xiangtianlong.com/" && ls
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
