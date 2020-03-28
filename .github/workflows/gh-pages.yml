@@ -19,8 +19,10 @@ jobs:
           hugo-version: 'latest'
           extended: true
 
-      - name: Build
+      - name: Build Github
         run: hugo -b "https://www.xiangtianlong.com/" -d "github_public" && ls
+
+      - name: Build Gitee
         run: hugo -b "https://www.xiangtianlong.com/" -d "gitee_public" && ls
 
       - name: Deploy
