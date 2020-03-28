@@ -27,4 +27,5 @@ jobs:
         with:
           github_token: ${{ secrets.BLOG_TOKEN }}
           publish_dir: ./github_public
+          publish_branch: master
           cname: xiangtianlong.com
