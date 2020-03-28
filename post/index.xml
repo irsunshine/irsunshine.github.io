@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts | 假装不困</title>
+    <link>https://www.xiangtianlong.com/post/</link>
+      <atom:link href="https://www.xiangtianlong.com/post/index.xml" rel="self" type="application/rss+xml" />
+    <description>Posts</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>zh-Hans</language><copyright>2018</copyright><lastBuildDate>Mon, 30 Dec 2019 13:26:19 +0800</lastBuildDate>
+    <image>
+      <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
+      <title>Posts</title>
+      <link>https://www.xiangtianlong.com/post/</link>
+    </image>
+    
+    <item>
+      <title>标准库容器的内存分配器：allocator</title>
+      <link>https://www.xiangtianlong.com/post/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/c&#43;&#43;/std-allocator-%E7%9B%B8%E5%85%B3%E6%A6%82%E5%BF%B5/</link>
+      <pubDate>Mon, 30 Dec 2019 13:26:19 +0800</pubDate>
+      <guid>https://www.xiangtianlong.com/post/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/c&#43;&#43;/std-allocator-%E7%9B%B8%E5%85%B3%E6%A6%82%E5%BF%B5/</guid>
+      <description>&lt;h4 id=&#34;前因&#34;&gt;前因&lt;/h4&gt;
+&lt;p&gt;近期接触到了网络网络数据包的开发，需要频繁的申请和释放小块的内存，原本想着使用内存池，查看了几个现有的内存池，发现了这个：&lt;/p&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://github.com/cacay/MemoryPool&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://github.com/cacay/MemoryPool&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;看到接口的时候，就比较纳闷，这个内存池的实现怎么有点奇怪。&lt;code&gt;MemoryPool&lt;/code&gt;的实现逻辑，是在申请固定大小的内存空间。看过boost的内存池接口，提供的是一个模板，用的时候进行实例化。正巧这个库已经有文章进行过介绍，提到了&lt;code&gt;allocator&lt;/code&gt;这个概念。&lt;/p&gt;
+&lt;h4 id=&#34;wikihttpszhwikipediaorgwikie58886e9858de599a8_c2b2b&#34;&gt;
+&lt;a href=&#34;https://zh.wikipedia.org/wiki/%E5%88%86%E9%85%8D%E5%99%A8_%28C%2B%2B%29&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;wiki&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;在C++编程中，分配器（英语：allocator）是C++标准库的重要组成部分。C++的库中定义了多种被统称为“容器”的数据结构（如链表、集合等），这些容器的共同特征之一，就是其大小可以在程序的运行时改变；为了实现这一点，进行动态内存分配就显得尤为必要，在此分配器就用于处理容器对内存的分配与释放请求。换句话说，分配器用于封装标准模板库（STL）容器在内存管理上的低层细节。默认情况下，C++标准库使用其自带的通用分配器，但根据具体需要，程序员也可自行定制分配器以替代之。&lt;/p&gt;
+&lt;p&gt;分配器最早由亚历山大·斯特潘诺夫作为C++标准模板库（Standard Template Library，简称STL）的一部分发明，其初衷是创造一种能“使库更加灵活，并能独立于底层数据模型的方法”，并允许程序员在库中利用自定义的指针和引用类型；但在将标准模板库纳入C++标准时，C++标准委员会意识到对数据模型的完全抽象化处理会带来不可接受的性能损耗，为作折中，标准中对分配器的限制变得更加严格，而有鉴于此，与斯特潘诺夫原先的设想相比，现有标准所描述的分配器可定制程度已大大受限。&lt;/p&gt;
+&lt;p&gt;虽然分配器的定制有所限制，但在许多情况下，仍需要用到自定义的分配器，而这一般是为封装对不同类型内存空间（如共享内存与已回收内存）的访问方式，或在使用内存池进行内存分配时提高性能而为。除此以外，从内存占用和运行时间的角度看，在频繁进行少量内存分配的程序中，若引入为之专门定制的分配器，也会获益良多。&lt;/p&gt;
+&lt;h4 id=&#34;使用需求httpszhwikipediaorgwikie58886e9858de599a8_c2b2b&#34;&gt;
+&lt;a href=&#34;https://zh.wikipedia.org/wiki/%E5%88%86%E9%85%8D%E5%99%A8_%28C%2B%2B%29&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;使用需求&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;定义自定义分配器的主要原因之一是提升性能。利用专用的自定义分配器可以提高程序的性能，又或提高内存使用效率，亦或两者兼而有之[4][8]。默认分配器使用new操作符分配存储空间[文 5]，而这常利用C语言堆分配函数（malloc()）实现[9]。由于堆分配函数常针对偶发的内存大量分配作优化，因此在为需要一次分配大量内存的容器（如向量、双端队列）分配内存时，默认分配器一般效率良好[8]。但是，对于关联容器与双向链表这类需要频繁分配少量内存的容器来说，若采用默认分配器分配内存，则通常效率很低[4][9]。除此之外，基于malloc()的默认分配器还存在许多问题，诸如较差的引用局部性[4]，以及可能造成内存碎片化[4][9]。&lt;/p&gt;
+&lt;p&gt;简言之，此段（……）（如同）是这一标准针对分配器的一场《我有一个梦想》的演讲。在梦想成真之前，关心可移植性的程序员将把自己局限于（使用）无状态的自定义分配器上。
+——斯科特 梅耶斯，《Effective STL》
+有鉴于此，在这一情况下，人们常使用基于内存池的分配器来解决频繁少量分配问题[8]。与默认的“按需分配”方式不同，在使用基于内存池的分配器时，程序会预先为之分配大块内存（即“内存池”），而后在需要分配内存时，自定义分配器只需向请求方返回一个指向池内内存的指针即可；而在对象析构时，并不需实际解除分配内存，而是延迟到内存池的生命周期完结时才真正解除分配[注 1][8]。&lt;/p&gt;
+&lt;p&gt;在“自定义分配器”这一话题上，已有诸多C++专家与相关作者参与探讨，例如斯科特·梅耶斯的作品《Effective STL》与安德烈·亚历山德雷斯库的《Modern C++ Design》都有提及。梅耶斯洞察到，若要求针对某一类型T的分配器的所有实例都相等，则可移植的分配器的实例必须不包含状态。虽然C++标准鼓励库的实现者支持带状态的分配器[文 4]，但梅耶斯称，相关段落是“（看似）美妙的观点”，但也几乎是空话，并称分配器的限制“过于严苛”[4]。例如，STL的list允许splice方法，即一个list对象A的节点可以被直接移入另一个list对象B中，这就要求A的分配器申请到的内存，可被B的分配器释放掉，从而推导出A与B的分配器实例必须相等。梅耶斯的结论是，分配器最好定义为使用静态方法的类型。例如，根据C++标准，分配器必须提供一个实现了rebind方法的other类模板。&lt;/p&gt;
+&lt;p&gt;另外，在《C++程序设计语言》中，比雅尼·斯特劳斯特鲁普则认为“‘严格限制分配器，以免各对象信息不同’，这点显然问题不大”（大意），并指出大部分分配器并不需要状态，甚至没有状态情形下性能反倒更佳。他提出了三个自定义分配器的用例：内存池型的分配器、共享内存型分配器与垃圾回收型分配器，并展示了一个分配器的实现，此间利用了一个内部内存池，以快速分配/解除分配少量内存。但他也提到，如此优化可能已经在他所提供的样例分配器中实现[3]。&lt;/p&gt;
+&lt;p&gt;自定义分配器的另一用途是调试内存相关错误[10]。若要做到这一点，可以编写一个分配器，令之在分配时分配额外的内存，并借此存放调试信息。这类分配器不仅可以保证内存由同类分配器分配/解除分配内存，还可在一定程度上保护程序免受缓存溢出之害[11]。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>02-堆、栈、RAII基本概念</title>
+      <link>https://www.xiangtianlong.com/post/%E7%8E%B0%E4%BB%A3c&#43;&#43;30%E8%AE%B2/02-%E5%A0%86%E6%A0%88raii%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/</link>
+      <pubDate>Fri, 20 Dec 2019 23:25:15 +0800</pubDate>
+      <guid>https://www.xiangtianlong.com/post/%E7%8E%B0%E4%BB%A3c&#43;&#43;30%E8%AE%B2/02-%E5%A0%86%E6%A0%88raii%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/</guid>
+      <description>&lt;p&gt;上一篇中我还特意提到了编译器的选择， 实际上本专栏正式开始前，有一篇关于编译器的介绍，这可真是目录都没看，就开始&amp;quot;翻书&amp;quot;了。&lt;/p&gt;
+&lt;p&gt;前面也提到了，目录都没细看，直接开始听稿子，没想到第一讲说的居然是堆、栈。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;堆：&lt;code&gt;heap&lt;/code&gt;，在内存管理中，指的是动态分配的内存，&lt;code&gt;new delete malloc free&lt;/code&gt;。也叫做&lt;code&gt;system heap&lt;/code&gt;，是指由操作系统提供的一块&lt;code&gt;global&lt;/code&gt;內存空間，程序可动态分配(&lt;code&gt;dynamic allocated&lt;/code&gt;) 从某中获得若干区塊(&lt;code&gt;blocks&lt;/code&gt;)。&lt;/li&gt;
+&lt;li&gt;栈：&lt;code&gt;stack&lt;/code&gt;，函数调用过程中的本地变量和调用数据的区域。是存在于某作用域(scope) 的一块内存空间(&lt;code&gt;memory space&lt;/code&gt;)。例如当你调用函数，函数本身即会形成一个&lt;code&gt;stack&lt;/code&gt;用來放置它所接收的参数，以及返回地址。在函数本体(&lt;code&gt;function body&lt;/code&gt;) 內声明的任何变量，其所使用的內存块都取自上述&lt;code&gt;stack&lt;/code&gt;。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;%E5%A0%86%E6%A0%881.png&#34; alt=&#34;堆栈1&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;RAII&lt;/code&gt;在我看来属于&lt;code&gt;C++&lt;/code&gt;的内存管理方式，配合析构函数，对象对于外部而言并没有直接内存相关的操作。&lt;/p&gt;
+&lt;p&gt;最新正好在开发一个和行情相关的项目，为了提高性能，能说一句恰逢其时？&lt;code&gt;C11&lt;/code&gt;的智能指针效率，&lt;strong&gt;存在纳秒级别的性能损耗&lt;/strong&gt;。&lt;/p&gt;
+&lt;h3 id=&#34;堆&#34;&gt;堆&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;auto ptr = new std::vector&amp;lt;int&amp;gt;();
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;动态申请内存时(堆)，三个常见的内存操作：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;让内存管理器分配一个某个大小的内存&lt;/li&gt;
+&lt;li&gt;让内存管理器释放一个之前分配的内存块&lt;/li&gt;
+&lt;li&gt;让内存管理器进行垃圾回收，寻找不再使用的内存块并进行释放&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;由于动态分配内存存在不确定性&lt;/strong&gt;，在特定的场合，会禁用动态分配：飞行控制器和电信设备&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;C++&lt;/code&gt;通常做前面两步，&lt;code&gt;java&lt;/code&gt;通常做1和3。不同的语言有着不同的实现方式。&lt;/p&gt;
+&lt;p&gt;释放内存不只是简单地把内存标记为已未使用。对于连续使用的内存块，通常内存管理器需要将其合并成一块，一遍满足后续大的内存分配申请。
+&lt;strong&gt;目前的编程模式都要求申请的内存块是连续的&lt;/strong&gt;。&lt;/p&gt;
+&lt;h3 id=&#34;栈&#34;&gt;栈&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;栈上的分配极为简单，移动一下栈指针&lt;/li&gt;
+&lt;li&gt;栈上的释放也简单，函数执行结束是，移动一下栈指针即可&lt;/li&gt;
+&lt;li&gt;由于后劲先出的执行过程，不可能出现内存碎片&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;code&gt;c1&lt;/code&gt;便是所谓&lt;code&gt;stack object&lt;/code&gt;，其生命在作用域(&lt;code&gt;scope&lt;/code&gt;) 结束之际結束。这种作用域內的&lt;code&gt;object&lt;/code&gt;，又称为&lt;code&gt;auto object&lt;/code&gt;，因为它会被「&lt;strong&gt;自动&lt;/strong&gt;」清理。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;%E5%A0%86%E6%A0%882.png&#34; alt=&#34;堆栈2&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;实践&#34;&gt;实践&lt;/h3&gt;
+&lt;p&gt;其实我相信，就算读完了上面这些内容，对于堆栈的含义理解的也不会那么深刻，最大的疑问就是，我知道哪些是堆哪些是栈，对于实际的程序开发有什么意义？
+先给结论：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;动态向操作系统申请内存的耗时，远远大于已经申请的内存区域写入数据&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;直接操作栈内存的耗时基本基本等于像已经申请的内存块写入数据&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;概述起来就是一句话，程序运行期间，向操作系统申请内存，在纳秒级别时，属于昂贵的操作，开发高性能的程序，需要预先申请所需要的内存。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;测试环境：visual studio 2019&lt;/li&gt;
+&lt;li&gt;CPU：i7-6700 3.41GHz&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;案例的含义在于分别统计：连续申请堆内存并操作，预先申请堆内存并操作，连续操作栈内存&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;%E5%A0%86%E6%A0%88%E5%86%85%E5%AD%98%E5%9D%97%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%951.jpg&#34; alt=&#34;堆栈内存块性能测试1&#34;&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;{
+	int result = 0;
+
+	SECTION(&amp;quot;堆上连续申请内存&amp;quot;)
+	{
+		auto timer = std::chrono::steady_clock::now().time_since_epoch().count();
+		for (auto i = 0; i &amp;lt; kTestCount; i++)
+		{
+			int* j = new int(1);
+			result += *j;
+			delete j;
+		}
+		auto count = std::chrono::steady_clock::now().time_since_epoch().count() - timer;
+		std::cout &amp;lt;&amp;lt; &amp;quot;堆上连续申请内存：&amp;quot; &amp;lt;&amp;lt; result &amp;lt;&amp;lt; &amp;quot;\t&amp;quot; &amp;lt;&amp;lt; count &amp;lt;&amp;lt; std::endl;
+	}
+
+    SECTION(&amp;quot;栈上连续申请内存&amp;quot;)
+    {
+        auto timer = std::chrono::steady_clock::now().time_since_epoch().count();
+        for (auto i = 0; i &amp;lt; kTestCount; i++)
+        {
+			int j = 1;
+			result += j;
+        }
+        auto count = std::chrono::steady_clock::now().time_since_epoch().count() - timer;
+		std::cout &amp;lt;&amp;lt; &amp;quot;栈上连续申请内存：&amp;quot; &amp;lt;&amp;lt; result &amp;lt;&amp;lt; &amp;quot;\t&amp;quot; &amp;lt;&amp;lt; count &amp;lt;&amp;lt; std::endl;
+    }
+
+    SECTION(&amp;quot;堆上预先申请内存，连续写入数据&amp;quot;)
+    {
+        auto timer = std::chrono::steady_clock::now().time_since_epoch().count();
+		int* j = new int(1);
+        for (auto i = 0; i &amp;lt; kTestCount; i++)
+        {
+			*j = 1;
+            result += *j;
+        }
+		delete j;
+        auto count = std::chrono::steady_clock::now().time_since_epoch().count() - timer;
+        std::cout &amp;lt;&amp;lt; &amp;quot;堆上预先申请内存，连续写入数据：&amp;quot; &amp;lt;&amp;lt; result &amp;lt;&amp;lt; &amp;quot;\t&amp;quot; &amp;lt;&amp;lt; count &amp;lt;&amp;lt; std::endl;
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;其实呢，初次看到上面的测试案例结果，肯定会纳闷，怎么预先申请的内存和栈内存的性能差别那么大，其实这个属于现在编译器&lt;code&gt;Release&lt;/code&gt;模式的代码优化。
+每次操作的都是常数，编译器就能预先做掉一部分事情，具体原理本人不是很清楚，不过我们改进一下测试案例，每次累加动态的数据。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;%E5%A0%86%E6%A0%88%E5%86%85%E5%AD%98%E5%9D%97%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%952.jpg&#34; alt=&#34;堆栈内存块性能测试2&#34;&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;{
+	int result = 0;
+
+	SECTION(&amp;quot;堆上连续申请内存&amp;quot;)
+	{
+		auto timer = std::chrono::steady_clock::now().time_since_epoch().count();
+		for (auto i = 0; i &amp;lt; 100000; i++)
+		{
+			int* j = new int(i);
+			result += *j;
+			delete j;
+		}
+		auto count = std::chrono::steady_clock::now().time_since_epoch().count() - timer;
+		std::cout &amp;lt;&amp;lt; &amp;quot;堆上连续申请内存：&amp;quot; &amp;lt;&amp;lt; result &amp;lt;&amp;lt; &amp;quot;\t&amp;quot; &amp;lt;&amp;lt; count &amp;lt;&amp;lt; std::endl;
+	}
+
+    SECTION(&amp;quot;栈上连续申请内存&amp;quot;)
+    {
+        auto timer = std::chrono::steady_clock::now().time_since_epoch().count();
+        for (auto i = 0; i &amp;lt; 100000; i++)
+        {
+			int j = i;
+			result += j;
+        }
+        auto count = std::chrono::steady_clock::now().time_since_epoch().count() - timer;
+		std::cout &amp;lt;&amp;lt; &amp;quot;栈上连续申请内存：&amp;quot; &amp;lt;&amp;lt; result &amp;lt;&amp;lt; &amp;quot;\t&amp;quot; &amp;lt;&amp;lt; count &amp;lt;&amp;lt; std::endl;
+    }
+
+    SECTION(&amp;quot;堆上预先申请内存，连续写入数据&amp;quot;)
+    {
+        auto timer = std::chrono::steady_clock::now().time_since_epoch().count();
+		int* j = new int(1);
+        for (auto i = 0; i &amp;lt; 100000; i++)
+        {
+			*j = i;
+            result += *j;
+        }
+		delete j;
+        auto count = std::chrono::steady_clock::now().time_since_epoch().count() - timer;
+        std::cout &amp;lt;&amp;lt; &amp;quot;堆上预先申请内存，连续写入数据：&amp;quot; &amp;lt;&amp;lt; result &amp;lt;&amp;lt; &amp;quot;\t&amp;quot; &amp;lt;&amp;lt; count &amp;lt;&amp;lt; std::endl;
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&#34;引用&#34;&gt;引用&lt;/h1&gt;
+&lt;p&gt;本文为课程笔记：
+&lt;a href=&#34;https://time.geekbang.org/column/article/169225&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://time.geekbang.org/column/article/169225&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;参考博客：
+&lt;a href=&#34;https://www.cnblogs.com/kelamoyujuzhen/p/10452929.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://www.cnblogs.com/kelamoyujuzhen/p/10452929.html&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>01-C&#43;&#43;这么难，为什么我们还要用C&#43;&#43;</title>
+      <link>https://www.xiangtianlong.com/post/%E7%8E%B0%E4%BB%A3c&#43;&#43;30%E8%AE%B2/01-c&#43;&#43;%E8%BF%99%E4%B9%88%E9%9A%BE%E4%B8%BA%E4%BB%80%E4%B9%88%E6%88%91%E4%BB%AC%E8%BF%98%E8%A6%81%E7%94%A8c&#43;&#43;/</link>
+      <pubDate>Thu, 19 Dec 2019 22:08:43 +0800</pubDate>
+      <guid>https://www.xiangtianlong.com/post/%E7%8E%B0%E4%BB%A3c&#43;&#43;30%E8%AE%B2/01-c&#43;&#43;%E8%BF%99%E4%B9%88%E9%9A%BE%E4%B8%BA%E4%BB%80%E4%B9%88%E6%88%91%E4%BB%AC%E8%BF%98%E8%A6%81%E7%94%A8c&#43;&#43;/</guid>
+      <description>&lt;p&gt;自从毕业以来，工作语言大部分时间都是 C++，书呢屯了很多，也不能纯说是屯着，偶尔开发项目的时候也会用到。相对于电子书来说，个人还是习惯查阅纸质的资料。
+对于现代C++的认知，只涉及到了C11，常用的当然是新增的线程库、时间库、函数指针，换个说法，用上了C11，对于大部分人来说，就能放弃使用boost库。
+前言扯了够多的，补充一点，windows上，需要升级编译器 visual studio 到 2015 update3 才能比较完整的支持C11语法。
+针对开篇词的概述：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;现代的程序开发中，不再仅仅是停留在某种语言，而是多种语言混合使用&lt;/li&gt;
+&lt;li&gt;C++适用于编写高性能，低功耗的组件&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;从开发时间的角度权衡，C++的开发时间超出其他现代化的语言好几倍，毕竟语言的复杂度摆在这里。但是如果，开发的程序需要大批量的部署，开发的所占用的时间成本，
+能从后期的运维成本中&amp;quot;回收&amp;rdquo;。特别是移动端的应用，功耗是个很敏感的点，这个也是在本课程之前，我从未注意到的地方。&lt;/p&gt;
+&lt;p&gt;本文为课程笔记：
+&lt;a href=&#34;https://time.geekbang.org/column/article/169177&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://time.geekbang.org/column/article/169177&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Academic: the website builder for Hugo</title>
+      <link>https://www.xiangtianlong.com/post/getting-started/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
+      <guid>https://www.xiangtianlong.com/post/getting-started/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Create a free website with Academic using Markdown, Jupyter, or RStudio. Choose a beautiful color theme and build anything with the Page Builder - over 40 &lt;em&gt;widgets&lt;/em&gt;, &lt;em&gt;themes&lt;/em&gt;, and &lt;em&gt;language packs&lt;/em&gt; included!&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://academic-demo.netlify.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Check out the latest &lt;strong&gt;demo&lt;/strong&gt;&lt;/a&gt; of what you&amp;rsquo;ll get in less than 10 minutes, or 
+&lt;a href=&#34;https://sourcethemes.com/academic/#expo&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;view the &lt;strong&gt;showcase&lt;/strong&gt;&lt;/a&gt; of personal, project, and business sites.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;👉 
+&lt;a href=&#34;#install&#34;&gt;&lt;strong&gt;Get Started&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;📚 
+&lt;a href=&#34;https://sourcethemes.com/academic/docs/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;View the &lt;strong&gt;documentation&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;💬 
+&lt;a href=&#34;https://discourse.gohugo.io&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;Ask a question&lt;/strong&gt; on the forum&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;👥 
+&lt;a href=&#34;https://spectrum.chat/academic&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Chat with the &lt;strong&gt;community&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;🐦 Twitter: 
+&lt;a href=&#34;https://twitter.com/source_themes&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;@source_themes&lt;/a&gt; 
+&lt;a href=&#34;https://twitter.com/GeorgeCushen&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;@GeorgeCushen&lt;/a&gt; 
+&lt;a href=&#34;https://twitter.com/search?q=%23MadeWithAcademic&amp;amp;src=typd&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;#MadeWithAcademic&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;💡 
+&lt;a href=&#34;https://github.com/gcushen/hugo-academic/issues&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Request a &lt;strong&gt;feature&lt;/strong&gt; or report a &lt;strong&gt;bug&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;⬆️ &lt;strong&gt;Updating?&lt;/strong&gt; View the 
+&lt;a href=&#34;https://sourcethemes.com/academic/docs/update/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Update Guide&lt;/a&gt; and 
+&lt;a href=&#34;https://sourcethemes.com/academic/updates/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Release Notes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;❤ &lt;strong&gt;Support development&lt;/strong&gt; of Academic:
+&lt;ul&gt;
+&lt;li&gt;☕️ 
+&lt;a href=&#34;https://paypal.me/cushen&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;Donate a coffee&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;💵 
+&lt;a href=&#34;https://www.patreon.com/cushen&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Become a backer on &lt;strong&gt;Patreon&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;🖼️ 
+&lt;a href=&#34;https://www.redbubble.com/people/neutreno/works/34387919-academic&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Decorate your laptop or journal with an Academic &lt;strong&gt;sticker&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;👕 
+&lt;a href=&#34;https://academic.threadless.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Wear the &lt;strong&gt;T-shirt&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;👩‍💻 
+&lt;a href=&#34;https://sourcethemes.com/academic/docs/contribute/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;Contribute&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-academic-is-mobile-first-with-a-responsive-design-to-ensure-that-your-site-looks-stunning-on-every-device&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;https://raw.githubusercontent.com/gcushen/hugo-academic/master/academic.png&#34; data-caption=&#34;Academic is mobile first with a responsive design to ensure that your site looks stunning on every device.&#34;&gt;
+
+
+  &lt;img src=&#34;https://raw.githubusercontent.com/gcushen/hugo-academic/master/academic.png&#34; alt=&#34;&#34;  &gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption&gt;
+    Academic is mobile first with a responsive design to ensure that your site looks stunning on every device.
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;p&gt;&lt;strong&gt;Key features:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Page builder&lt;/strong&gt; - Create &lt;em&gt;anything&lt;/em&gt; with 
+&lt;a href=&#34;https://sourcethemes.com/academic/docs/page-builder/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;widgets&lt;/strong&gt;&lt;/a&gt; and 
+&lt;a href=&#34;https://sourcethemes.com/academic/docs/writing-markdown-latex/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;elements&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Edit any type of content&lt;/strong&gt; - Blog posts, publications, talks, slides, projects, and more!&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Create content&lt;/strong&gt; in 
+&lt;a href=&#34;https://sourcethemes.com/academic/docs/writing-markdown-latex/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;Markdown&lt;/strong&gt;&lt;/a&gt;, 
+&lt;a href=&#34;https://sourcethemes.com/academic/docs/jupyter/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;Jupyter&lt;/strong&gt;&lt;/a&gt;, or 
+&lt;a href=&#34;https://sourcethemes.com/academic/docs/install/#install-with-rstudio&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;RStudio&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Plugin System&lt;/strong&gt; - Fully customizable 
+&lt;a href=&#34;https://sourcethemes.com/academic/themes/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;color&lt;/strong&gt; and &lt;strong&gt;font themes&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Display Code and Math&lt;/strong&gt; - Code highlighting and 
+&lt;a href=&#34;https://en.wikibooks.org/wiki/LaTeX/Mathematics&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;LaTeX math&lt;/a&gt; supported&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Integrations&lt;/strong&gt; - 
+&lt;a href=&#34;https://analytics.google.com&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Google Analytics&lt;/a&gt;, 
+&lt;a href=&#34;https://disqus.com&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Disqus commenting&lt;/a&gt;, Maps, Contact Forms, and more!&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Beautiful Site&lt;/strong&gt; - Simple and refreshing one page design&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Industry-Leading SEO&lt;/strong&gt; - Help get your website found on search engines and social media&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Media Galleries&lt;/strong&gt; - Display your images and videos with captions in a customizable gallery&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Mobile Friendly&lt;/strong&gt; - Look amazing on every screen with a mobile friendly version of your site&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Multi-language&lt;/strong&gt; - 15+ language packs including English, 中文, and Português&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Multi-user&lt;/strong&gt; - Each author gets their own profile page&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Privacy Pack&lt;/strong&gt; - Assists with GDPR&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Stand Out&lt;/strong&gt; - Bring your site to life with animation, parallax backgrounds, and scroll effects&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;One-Click Deployment&lt;/strong&gt; - No servers. No databases. Only files.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;themes&#34;&gt;Themes&lt;/h2&gt;
+&lt;p&gt;Academic comes with &lt;strong&gt;automatic day (light) and night (dark) mode&lt;/strong&gt; built-in. Alternatively, visitors can  choose their preferred mode - click the sun/moon icon in the top right of the 
+&lt;a href=&#34;https://academic-demo.netlify.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Demo&lt;/a&gt; to see it in action! Day/night mode can also be disabled by the site admin in &lt;code&gt;params.toml&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://sourcethemes.com/academic/themes/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Choose a stunning &lt;strong&gt;theme&lt;/strong&gt; and &lt;strong&gt;font&lt;/strong&gt;&lt;/a&gt; for your site. Themes are fully 
+&lt;a href=&#34;https://sourcethemes.com/academic/docs/customization/#custom-theme&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;customizable&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;ecosystem&#34;&gt;Ecosystem&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;
+&lt;a href=&#34;https://github.com/sourcethemes/academic-admin&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Academic Admin&lt;/a&gt;:&lt;/strong&gt; An admin tool to import publications from BibTeX or import assets for an offline site&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;
+&lt;a href=&#34;https://github.com/sourcethemes/academic-scripts&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Academic Scripts&lt;/a&gt;:&lt;/strong&gt; Scripts to help migrate content to new versions of Academic&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;install&#34;&gt;Install&lt;/h2&gt;
+&lt;p&gt;You can choose from one of the following four methods to install:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://sourcethemes.com/academic/docs/install/#install-with-web-browser&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;one-click install using your web browser (recommended)&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://sourcethemes.com/academic/docs/install/#install-with-git&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;install on your computer using &lt;strong&gt;Git&lt;/strong&gt; with the Command Prompt/Terminal app&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://sourcethemes.com/academic/docs/install/#install-with-zip&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;install on your computer by downloading the &lt;strong&gt;ZIP files&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://sourcethemes.com/academic/docs/install/#install-with-rstudio&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;install on your computer with &lt;strong&gt;RStudio&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Then 
+&lt;a href=&#34;https://sourcethemes.com/academic/docs/get-started/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;personalize and deploy your new site&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;updating&#34;&gt;Updating&lt;/h2&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://sourcethemes.com/academic/docs/update/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;View the Update Guide&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Feel free to &lt;em&gt;star&lt;/em&gt; the project on 
+&lt;a href=&#34;https://github.com/gcushen/hugo-academic/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Github&lt;/a&gt; to help keep track of 
+&lt;a href=&#34;https://sourcethemes.com/academic/updates&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;updates&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;license&#34;&gt;License&lt;/h2&gt;
+&lt;p&gt;Copyright 2016-present 
+&lt;a href=&#34;https://georgecushen.com&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;George Cushen&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Released under the 
+&lt;a href=&#34;https://github.com/gcushen/hugo-academic/blob/master/LICENSE.md&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;MIT&lt;/a&gt; license.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
