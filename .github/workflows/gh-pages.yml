@@ -21,6 +21,7 @@ jobs:
 
       - name: Build
         run: hugo -b "https://www.xiangtianlong.com/" -d "github_public" && ls
+        run: hugo -b "https://www.xiangtianlong.com/" -d "gitee_public" && ls
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
