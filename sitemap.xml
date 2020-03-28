@@ -3,6 +3,21 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://www.xiangtianlong.com/courses/example/example1/</loc>
+    <lastmod>2019-05-05T00:00:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.xiangtianlong.com/courses/example/</loc>
+    <lastmod>2018-09-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.xiangtianlong.com/courses/example/example2/</loc>
+    <lastmod>2019-05-05T00:00:00+01:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://www.xiangtianlong.com/authors/%E5%90%91%E5%A4%A9%E9%BE%99/</loc>
     <lastmod>2020-03-29T02:11:33+08:00</lastmod>
   </url>
@@ -210,6 +225,11 @@
   <url>
     <loc>https://www.xiangtianlong.com/post/%E7%8E%B0%E4%BB%A3c&#43;&#43;30%E8%AE%B2/01-c&#43;&#43;%E8%BF%99%E4%B9%88%E9%9A%BE%E4%B8%BA%E4%BB%80%E4%B9%88%E6%88%91%E4%BB%AC%E8%BF%98%E8%A6%81%E7%94%A8c&#43;&#43;/</loc>
     <lastmod>2019-12-19T22:08:43+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.xiangtianlong.com/courses/</loc>
+    <lastmod>2019-05-05T00:00:00+01:00</lastmod>
   </url>
   
   <url>
