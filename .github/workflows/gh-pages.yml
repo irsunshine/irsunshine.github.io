@@ -20,7 +20,7 @@ jobs:
           extended: true
 
       - name: Build
-        run: hugo --minify
+        run: hugo -b "https://www.xiangtianlong.com/"
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
