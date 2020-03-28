@@ -6,4 +6,4 @@
 	url = https://github.com/luizdepra/hugo-coder.git
 [submodule "themes/fix-academic"]
 	path = themes/fix-academic
-	url = git@github.com:xiangtianlong/hugo-academic.git
+	url = https://github.com/xiangtianlong/hugo-academic.git
