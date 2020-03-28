@@ -3,32 +3,67 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://www.xiangtianlong.com/authors/%E5%90%91%E5%A4%A9%E9%BE%99/</loc>
+    <lastmod>2020-03-29T02:11:33+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.xiangtianlong.com/authors/</loc>
+    <lastmod>2020-03-29T02:11:33+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.xiangtianlong.com/categories/</loc>
+    <lastmod>2020-03-29T02:11:33+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.xiangtianlong.com/tags/github-action/</loc>
+    <lastmod>2020-03-29T02:11:33+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.xiangtianlong.com/post/</loc>
+    <lastmod>2020-03-29T02:11:33+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.xiangtianlong.com/tags/</loc>
+    <lastmod>2020-03-29T02:11:33+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.xiangtianlong.com/tags/travis/</loc>
+    <lastmod>2020-03-29T02:11:33+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.xiangtianlong.com/</loc>
+    <lastmod>2020-03-29T02:11:33+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.xiangtianlong.com/categories/%E5%85%B6%E4%BB%96/</loc>
+    <lastmod>2020-03-29T02:11:33+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.xiangtianlong.com/post/%E5%8D%9A%E5%AE%A2%E8%87%AA%E5%8A%A8%E9%9B%86%E6%88%90%E7%B3%BB%E7%BB%9F%E5%88%87%E6%8D%A2/</loc>
+    <lastmod>2020-03-29T02:11:33+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.xiangtianlong.com/tags/%E8%87%AA%E5%8A%A8%E9%9B%86%E6%88%90/</loc>
+    <lastmod>2020-03-29T02:11:33+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://www.xiangtianlong.com/authors/%E7%99%BD%E5%B2%A9%E6%9D%BE/</loc>
     <lastmod>2020-02-15T11:28:28+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.xiangtianlong.com/authors/</loc>
-    <lastmod>2020-02-15T11:28:28+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.xiangtianlong.com/categories/</loc>
-    <lastmod>2020-02-15T11:28:28+08:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://www.xiangtianlong.com/talk/</loc>
-    <lastmod>2020-02-15T11:28:28+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.xiangtianlong.com/tags/</loc>
-    <lastmod>2020-02-15T11:28:28+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.xiangtianlong.com/</loc>
     <lastmod>2020-02-15T11:28:28+08:00</lastmod>
   </url>
   
@@ -148,11 +183,6 @@
   </url>
   
   <url>
-    <loc>https://www.xiangtianlong.com/post/</loc>
-    <lastmod>2019-12-30T13:26:19+08:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://www.xiangtianlong.com/post/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/c&#43;&#43;/std-allocator-%E7%9B%B8%E5%85%B3%E6%A6%82%E5%BF%B5/</loc>
     <lastmod>2019-12-30T13:26:19+08:00</lastmod>
   </url>
@@ -205,10 +235,6 @@
   <url>
     <loc>https://www.xiangtianlong.com/talk/example/</loc>
     <lastmod>2003-06-01T13:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.xiangtianlong.com/authors/%E5%90%91%E5%A4%A9%E9%BE%99/</loc>
   </url>
   
   <url>

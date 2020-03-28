@@ -5,12 +5,72 @@
     <link>https://www.xiangtianlong.com/</link>
       <atom:link href="https://www.xiangtianlong.com/index.xml" rel="self" type="application/rss+xml" />
     <description>假装不困</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>zh-Hans</language><copyright>2018</copyright><lastBuildDate>Sat, 15 Feb 2020 11:28:28 +0800</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>zh-Hans</language><copyright>2018</copyright><lastBuildDate>Sun, 29 Mar 2020 02:11:33 +0800</lastBuildDate>
     <image>
       <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
       <title>假装不困</title>
       <link>https://www.xiangtianlong.com/</link>
     </image>
+    
+    <item>
+      <title>博客自动集成系统切换</title>
+      <link>https://www.xiangtianlong.com/post/%E5%8D%9A%E5%AE%A2%E8%87%AA%E5%8A%A8%E9%9B%86%E6%88%90%E7%B3%BB%E7%BB%9F%E5%88%87%E6%8D%A2/</link>
+      <pubDate>Sun, 29 Mar 2020 02:11:33 +0800</pubDate>
+      <guid>https://www.xiangtianlong.com/post/%E5%8D%9A%E5%AE%A2%E8%87%AA%E5%8A%A8%E9%9B%86%E6%88%90%E7%B3%BB%E7%BB%9F%E5%88%87%E6%8D%A2/</guid>
+      <description>&lt;h4 id=&#34;背景介绍&#34;&gt;背景介绍&lt;/h4&gt;
+&lt;p&gt;昨天更新博客时发现travis服务不可用，查看travis网页，发现进度卡在拉取源码的时候，灵光闪现想到了github之前推出的action服务&lt;/p&gt;
+&lt;p&gt;由于那会比较忙，同时也需要申请才能使用action，现在已经开始正式上线，周末闲来无事，尝试一个新玩具？&lt;/p&gt;
+&lt;p&gt;官方资料大家自行进入网站查阅即可，本文就不做更多的转载了，如果之前用过kubernetes会觉得，action的yaml文件配置和kubernetes很像。&lt;/p&gt;
+&lt;p&gt;关于的入门的教程，或者说是中文的介绍资料，推荐搜索&lt;strong&gt;阮一峰的博客&lt;/strong&gt;，有两篇文章，第一篇是基础的语法介绍，第二篇是一个实际的案例。&lt;/p&gt;
+&lt;h4 id=&#34;正文&#34;&gt;正文&lt;/h4&gt;
+&lt;p&gt;需要的知识点&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;github secrets&lt;/li&gt;
+&lt;li&gt;action 语法&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;核心的job使用现有的组件完成，推送到国内gitee使用command实现，command这部分比较粗暴，都是强制推送，沿用了使用travis的逻辑。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-yaml&#34;&gt;name: github pages and gitee pages
+
+on:
+  push:
+    branches:
+      - hugo
+
+jobs:
+  deploy:
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          submodules: true
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: &#39;latest&#39;
+          extended: true
+
+      - name: Build Github and Gitee ## 单个step只能写一个run命令
+        run: hugo -b &amp;quot;https://www.xiangtianlong.com/&amp;quot; -d &amp;quot;github_public&amp;quot; &amp;amp;&amp;amp; hugo -b &amp;quot;https://www.xiangtianlong.com/&amp;quot; -d &amp;quot;gitee_public&amp;quot; &amp;amp;&amp;amp; ls
+
+      - name: Deploy Github
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.BLOG_TOKEN }}
+          publish_dir: ./github_public
+          publish_branch: master
+          cname: xiangtianlong.com
+
+      - name: Deploy Gitee
+        run: cd ./gitee_public &amp;amp;&amp;amp; git init &amp;amp;&amp;amp; git config user.name &amp;quot;TianlongXiang&amp;quot; &amp;amp;&amp;amp; git config user.email &amp;quot;tianlongxiang51@gmail.com&amp;quot; &amp;amp;&amp;amp; git add . &amp;amp;&amp;amp; git commit -m &amp;quot;Update TianlongXiang&#39;s Blog&amp;quot; &amp;amp;&amp;amp; git push --force &amp;quot;https://xiangtianlong:${{ secrets.GITEE_PASSWORD }}@gitee.com/xiangtianlong/xiangtianlong.git&amp;quot; master:master   
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&#34;后记&#34;&gt;后记&lt;/h4&gt;
+&lt;p&gt;从官方市场提供的action来看，目前支持的玩法挺多，构建docker镜像以后也能不再依赖dockerhub提供的服务&lt;/p&gt;
+&lt;p&gt;查阅hugo的issue，发现使用github action自动部署git pages，最终发布的网页需要在master分支，如果是部署在其他分支，在setting界面，github会提示部署的网页存在语法问题&lt;/p&gt;
+&lt;p&gt;实际上只是由于hugo的源文件放在了master分支，github当作jelly博客的源码进行检测，无法检查无法通过导致的报错&lt;/p&gt;
+&lt;p&gt;解决方案也简单，hugo源码文件放到其他分支，静态文件发布在master分支&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>未来的好中国一定是有好老头好老太太的中国</title>
