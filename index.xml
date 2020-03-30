@@ -5,7 +5,7 @@
     <link>https://www.xiangtianlong.com/</link>
       <atom:link href="https://www.xiangtianlong.com/index.xml" rel="self" type="application/rss+xml" />
     <description>假装不困</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>zh-Hans</language><copyright>2018</copyright><lastBuildDate>Sun, 29 Mar 2020 02:11:33 +0800</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>zh-Hans</language><copyright>2018</copyright><lastBuildDate>Mon, 30 Mar 2020 00:00:00 +0000</lastBuildDate>
     <image>
       <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
       <title>假装不困</title>
@@ -51,6 +51,165 @@
 &lt;p&gt;Cras aliquam rhoncus ipsum, in hendrerit nunc mattis vitae. Duis vitae efficitur metus, ac tempus leo. Cras nec fringilla lacus. Quisque sit amet risus at ipsum pharetra commodo. Sed aliquam mauris at consequat eleifend. Praesent porta, augue sed viverra bibendum, neque ante euismod ante, in vehicula justo lorem ac eros. Suspendisse augue libero, venenatis eget tincidunt ut, malesuada at lorem. Donec vitae bibendum arcu. Aenean maximus nulla non pretium iaculis. Quisque imperdiet, nulla in pulvinar aliquet, velit quam ultrices quam, sit amet fringilla leo sem vel nunc. Mauris in lacinia lacus.&lt;/p&gt;
 &lt;p&gt;Suspendisse a tincidunt lacus. Curabitur at urna sagittis, dictum ante sit amet, euismod magna. Sed rutrum massa id tortor commodo, vitae elementum turpis tempus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean purus turpis, venenatis a ullamcorper nec, tincidunt et massa. Integer posuere quam rutrum arcu vehicula imperdiet. Mauris ullamcorper quam vitae purus congue, quis euismod magna eleifend. Vestibulum semper vel augue eget tincidunt. Fusce eget justo sodales, dapibus odio eu, ultrices lorem. Duis condimentum lorem id eros commodo, in facilisis mauris scelerisque. Morbi sed auctor leo. Nullam volutpat a lacus quis pharetra. Nulla congue rutrum magna a ornare.&lt;/p&gt;
 &lt;p&gt;Aliquam in turpis accumsan, malesuada nibh ut, hendrerit justo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque sed erat nec justo posuere suscipit. Donec ut efficitur arcu, in malesuada neque. Nunc dignissim nisl massa, id vulputate nunc pretium nec. Quisque eget urna in risus suscipit ultricies. Pellentesque odio odio, tincidunt in eleifend sed, posuere a diam. Nam gravida nisl convallis semper elementum. Morbi vitae felis faucibus, vulputate orci placerat, aliquet nisi. Aliquam erat volutpat. Maecenas sagittis pulvinar purus, sed porta quam laoreet at.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>C&#43;&#43;这么难，为什么我们还要用C&#43;&#43;</title>
+      <link>https://www.xiangtianlong.com/courses/%E7%8E%B0%E4%BB%A3c&#43;&#43;%E5%AE%9E%E6%88%9830%E8%AE%B2%E7%AC%94%E8%AE%B0/01-%E8%AF%BE%E5%89%8D%E5%BF%85%E8%AF%BB/01-c&#43;&#43;%E8%BF%99%E4%B9%88%E9%9A%BE%E4%B8%BA%E4%BB%80%E4%B9%88%E6%88%91%E4%BB%AC%E8%BF%98%E8%A6%81%E7%94%A8c&#43;&#43;/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://www.xiangtianlong.com/courses/%E7%8E%B0%E4%BB%A3c&#43;&#43;%E5%AE%9E%E6%88%9830%E8%AE%B2%E7%AC%94%E8%AE%B0/01-%E8%AF%BE%E5%89%8D%E5%BF%85%E8%AF%BB/01-c&#43;&#43;%E8%BF%99%E4%B9%88%E9%9A%BE%E4%B8%BA%E4%BB%80%E4%B9%88%E6%88%91%E4%BB%AC%E8%BF%98%E8%A6%81%E7%94%A8c&#43;&#43;/</guid>
+      <description>&lt;p&gt;自从毕业以来，工作语言大部分时间都是 C++，书呢屯了很多，也不能纯说是屯着，偶尔开发项目的时候也会用到。相对于电子书来说，个人还是习惯查阅纸质的资料。
+对于现代C++的认知，只涉及到了C11，常用的当然是新增的线程库、时间库、函数指针，换个说法，用上了C11，对于大部分人来说，就能放弃使用boost库。
+前言扯了够多的，补充一点，windows上，需要升级编译器 visual studio 到 2015 update3 才能比较完整的支持C11语法。
+针对开篇词的概述：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;现代的程序开发中，不再仅仅是停留在某种语言，而是多种语言混合使用&lt;/li&gt;
+&lt;li&gt;C++适用于编写高性能，低功耗的组件&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;从开发时间的角度权衡，C++的开发时间超出其他现代化的语言好几倍，毕竟语言的复杂度摆在这里。但是如果，开发的程序需要大批量的部署，开发的所占用的时间成本，
+能从后期的运维成本中&amp;quot;回收&amp;rdquo;。特别是移动端的应用，功耗是个很敏感的点，这个也是在本课程之前，我从未注意到的地方。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>堆、栈、RAII基本概念</title>
+      <link>https://www.xiangtianlong.com/courses/%E7%8E%B0%E4%BB%A3c&#43;&#43;%E5%AE%9E%E6%88%9830%E8%AE%B2%E7%AC%94%E8%AE%B0/02-%E5%9F%BA%E7%A1%80%E7%AF%87/01-%E5%A0%86%E6%A0%88raii%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/</link>
+      <pubDate>Sun, 05 May 2019 00:00:00 +0100</pubDate>
+      <guid>https://www.xiangtianlong.com/courses/%E7%8E%B0%E4%BB%A3c&#43;&#43;%E5%AE%9E%E6%88%9830%E8%AE%B2%E7%AC%94%E8%AE%B0/02-%E5%9F%BA%E7%A1%80%E7%AF%87/01-%E5%A0%86%E6%A0%88raii%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/</guid>
+      <description>&lt;p&gt;上一篇中我还特意提到了编译器的选择， 实际上本专栏正式开始前，有一篇关于编译器的介绍，这可真是目录都没看，就开始&amp;quot;翻书&amp;quot;了。&lt;/p&gt;
+&lt;p&gt;前面也提到了，目录都没细看，直接开始听稿子，没想到第一讲说的居然是堆、栈。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;堆：&lt;code&gt;heap&lt;/code&gt;，在内存管理中，指的是动态分配的内存，&lt;code&gt;new delete malloc free&lt;/code&gt;。也叫做&lt;code&gt;system heap&lt;/code&gt;，是指由操作系统提供的一块&lt;code&gt;global&lt;/code&gt;內存空間，程序可动态分配(&lt;code&gt;dynamic allocated&lt;/code&gt;) 从某中获得若干区塊(&lt;code&gt;blocks&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;栈：&lt;code&gt;stack&lt;/code&gt;，函数调用过程中的本地变量和调用数据的区域。是存在于某作用域(scope) 的一块内存空间(&lt;code&gt;memory space&lt;/code&gt;)。例如当你调用函数，函数本身即会形成一个&lt;code&gt;stack&lt;/code&gt;用來放置它所接收的参数，以及返回地址。在函数本体(&lt;code&gt;function body&lt;/code&gt;) 內声明的任何变量，其所使用的內存块都取自上述&lt;code&gt;stack&lt;/code&gt;。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;%E5%A0%86%E6%A0%881.png&#34; alt=&#34;堆栈1&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;RAII&lt;/code&gt;在我看来属于&lt;code&gt;C++&lt;/code&gt;的内存管理方式，配合析构函数，对象对于外部而言并没有直接内存相关的操作。&lt;/p&gt;
+&lt;p&gt;最新正好在开发一个和行情相关的项目，为了提高性能，能说一句恰逢其时？&lt;code&gt;C11&lt;/code&gt;的智能指针效率，&lt;strong&gt;存在纳秒级别的性能损耗&lt;/strong&gt;。&lt;/p&gt;
+&lt;h3 id=&#34;堆&#34;&gt;堆&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-c++&#34;&gt;auto ptr = new std::vector&amp;lt;int&amp;gt;();
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;动态申请内存时(堆)，三个常见的内存操作：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;让内存管理器分配一个某个大小的内存&lt;/li&gt;
+&lt;li&gt;让内存管理器释放一个之前分配的内存块&lt;/li&gt;
+&lt;li&gt;让内存管理器进行垃圾回收，寻找不再使用的内存块并进行释放&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;由于动态分配内存存在不确定性&lt;/strong&gt;，在特定的场合，会禁用动态分配：飞行控制器和电信设备&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;C++&lt;/code&gt;通常做前面两步，&lt;code&gt;java&lt;/code&gt;通常做1和3。不同的语言有着不同的实现方式。&lt;/p&gt;
+&lt;p&gt;释放内存不只是简单地把内存标记为已未使用。对于连续使用的内存块，通常内存管理器需要将其合并成一块，一遍满足后续大的内存分配申请。
+&lt;strong&gt;目前的编程模式都要求申请的内存块是连续的&lt;/strong&gt;。&lt;/p&gt;
+&lt;h3 id=&#34;栈&#34;&gt;栈&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;栈上的分配极为简单，移动一下栈指针&lt;/li&gt;
+&lt;li&gt;栈上的释放也简单，函数执行结束是，移动一下栈指针即可&lt;/li&gt;
+&lt;li&gt;由于后劲先出的执行过程，不可能出现内存碎片&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;code&gt;c1&lt;/code&gt;便是所谓&lt;code&gt;stack object&lt;/code&gt;，其生命在作用域(&lt;code&gt;scope&lt;/code&gt;) 结束之际結束。这种作用域內的&lt;code&gt;object&lt;/code&gt;，又称为&lt;code&gt;auto object&lt;/code&gt;，因为它会被「&lt;strong&gt;自动&lt;/strong&gt;」清理。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;%E5%A0%86%E6%A0%882.png&#34; alt=&#34;堆栈2&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;实践&#34;&gt;实践&lt;/h3&gt;
+&lt;p&gt;其实我相信，就算读完了上面这些内容，对于堆栈的含义理解的也不会那么深刻，最大的疑问就是，我知道哪些是堆哪些是栈，对于实际的程序开发有什么意义？
+先给结论：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;动态向操作系统申请内存的耗时，远远大于已经申请的内存区域写入数据&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;直接操作栈内存的耗时基本基本等于像已经申请的内存块写入数据&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;概述起来就是一句话，程序运行期间，向操作系统申请内存，在纳秒级别时，属于昂贵的操作，开发高性能的程序，需要预先申请所需要的内存。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;测试环境：visual studio 2019&lt;/li&gt;
+&lt;li&gt;CPU：i7-6700 3.41GHz&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;案例的含义在于分别统计：连续申请堆内存并操作，预先申请堆内存并操作，连续操作栈内存&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;%E5%A0%86%E6%A0%88%E5%86%85%E5%AD%98%E5%9D%97%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%951.jpg&#34; alt=&#34;堆栈内存块性能测试1&#34;&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-c++&#34;&gt;{
+  int result = 0;
+
+  SECTION(&amp;quot;堆上连续申请内存&amp;quot;)
+  {
+    auto timer = std::chrono::steady_clock::now().time_since_epoch().count();
+    for (auto i = 0; i &amp;lt; kTestCount; i++)
+    {
+      int* j = new int(1);
+      result += *j;
+      delete j;
+    }
+    auto count = std::chrono::steady_clock::now().time_since_epoch().count() - timer;
+    std::cout &amp;lt;&amp;lt; &amp;quot;堆上连续申请内存：&amp;quot; &amp;lt;&amp;lt; result &amp;lt;&amp;lt; &amp;quot;\t&amp;quot; &amp;lt;&amp;lt; count &amp;lt;&amp;lt; std::endl;
+  }
+
+    SECTION(&amp;quot;栈上连续申请内存&amp;quot;)
+    {
+        auto timer = std::chrono::steady_clock::now().time_since_epoch().count();
+        for (auto i = 0; i &amp;lt; kTestCount; i++)
+        {
+          int j = 1;
+          result += j;
+        }
+        auto count = std::chrono::steady_clock::now().time_since_epoch().count() - timer;
+        std::cout &amp;lt;&amp;lt; &amp;quot;栈上连续申请内存：&amp;quot; &amp;lt;&amp;lt; result &amp;lt;&amp;lt; &amp;quot;\t&amp;quot; &amp;lt;&amp;lt; count &amp;lt;&amp;lt; std::endl;
+    }
+
+    SECTION(&amp;quot;堆上预先申请内存，连续写入数据&amp;quot;)
+    {
+        auto timer = std::chrono::steady_clock::now().time_since_epoch().count();
+        int* j = new int(1);
+        for (auto i = 0; i &amp;lt; kTestCount; i++)
+        {
+            *j = 1;
+            result += *j;
+        }
+        delete j;
+        auto count = std::chrono::steady_clock::now().time_since_epoch().count() - timer;
+        std::cout &amp;lt;&amp;lt; &amp;quot;堆上预先申请内存，连续写入数据：&amp;quot; &amp;lt;&amp;lt; result &amp;lt;&amp;lt; &amp;quot;\t&amp;quot; &amp;lt;&amp;lt; count &amp;lt;&amp;lt; std::endl;
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;其实呢，初次看到上面的测试案例结果，肯定会纳闷，怎么预先申请的内存和栈内存的性能差别那么大，其实这个属于现在编译器&lt;code&gt;Release&lt;/code&gt;模式的代码优化。
+每次操作的都是常数，编译器就能预先做掉一部分事情，具体原理本人不是很清楚，不过我们改进一下测试案例，每次累加动态的数据。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;%E5%A0%86%E6%A0%88%E5%86%85%E5%AD%98%E5%9D%97%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%952.jpg&#34; alt=&#34;堆栈内存块性能测试2&#34;&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-c++&#34;&gt;{
+  int result = 0;
+
+  SECTION(&amp;quot;堆上连续申请内存&amp;quot;)
+  {
+    auto timer = std::chrono::steady_clock::now().time_since_epoch().count();
+    for (auto i = 0; i &amp;lt; 100000; i++)
+    {
+      int* j = new int(i);
+      result += *j;
+      delete j;
+    }
+    auto count = std::chrono::steady_clock::now().time_since_epoch().count() - timer;
+    std::cout &amp;lt;&amp;lt; &amp;quot;堆上连续申请内存：&amp;quot; &amp;lt;&amp;lt; result &amp;lt;&amp;lt; &amp;quot;\t&amp;quot; &amp;lt;&amp;lt; count &amp;lt;&amp;lt; std::endl;
+  }
+
+    SECTION(&amp;quot;栈上连续申请内存&amp;quot;)
+    {
+        auto timer = std::chrono::steady_clock::now().time_since_epoch().count();
+        for (auto i = 0; i &amp;lt; 100000; i++)
+        {
+          int j = i;
+          result += j;
+        }
+        auto count = std::chrono::steady_clock::now().time_since_epoch().count() - timer;
+        std::cout &amp;lt;&amp;lt; &amp;quot;栈上连续申请内存：&amp;quot; &amp;lt;&amp;lt; result &amp;lt;&amp;lt; &amp;quot;\t&amp;quot; &amp;lt;&amp;lt; count &amp;lt;&amp;lt; std::endl;
+    }
+
+    SECTION(&amp;quot;堆上预先申请内存，连续写入数据&amp;quot;)
+    {
+        auto timer = std::chrono::steady_clock::now().time_since_epoch().count();
+        int* j = new int(1);
+        for (auto i = 0; i &amp;lt; 100000; i++)
+        {
+            *j = i;
+            result += *j;
+        }
+        delete j;
+        auto count = std::chrono::steady_clock::now().time_since_epoch().count() - timer;
+        std::cout &amp;lt;&amp;lt; &amp;quot;堆上预先申请内存，连续写入数据：&amp;quot; &amp;lt;&amp;lt; result &amp;lt;&amp;lt; &amp;quot;\t&amp;quot; &amp;lt;&amp;lt; count &amp;lt;&amp;lt; std::endl;
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
 </description>
     </item>
     
@@ -271,172 +430,6 @@ jobs:
 &lt;p&gt;在“自定义分配器”这一话题上，已有诸多C++专家与相关作者参与探讨，例如斯科特·梅耶斯的作品《Effective STL》与安德烈·亚历山德雷斯库的《Modern C++ Design》都有提及。梅耶斯洞察到，若要求针对某一类型T的分配器的所有实例都相等，则可移植的分配器的实例必须不包含状态。虽然C++标准鼓励库的实现者支持带状态的分配器[文 4]，但梅耶斯称，相关段落是“（看似）美妙的观点”，但也几乎是空话，并称分配器的限制“过于严苛”[4]。例如，STL的list允许splice方法，即一个list对象A的节点可以被直接移入另一个list对象B中，这就要求A的分配器申请到的内存，可被B的分配器释放掉，从而推导出A与B的分配器实例必须相等。梅耶斯的结论是，分配器最好定义为使用静态方法的类型。例如，根据C++标准，分配器必须提供一个实现了rebind方法的other类模板。&lt;/p&gt;
 &lt;p&gt;另外，在《C++程序设计语言》中，比雅尼·斯特劳斯特鲁普则认为“‘严格限制分配器，以免各对象信息不同’，这点显然问题不大”（大意），并指出大部分分配器并不需要状态，甚至没有状态情形下性能反倒更佳。他提出了三个自定义分配器的用例：内存池型的分配器、共享内存型分配器与垃圾回收型分配器，并展示了一个分配器的实现，此间利用了一个内部内存池，以快速分配/解除分配少量内存。但他也提到，如此优化可能已经在他所提供的样例分配器中实现[3]。&lt;/p&gt;
 &lt;p&gt;自定义分配器的另一用途是调试内存相关错误[10]。若要做到这一点，可以编写一个分配器，令之在分配时分配额外的内存，并借此存放调试信息。这类分配器不仅可以保证内存由同类分配器分配/解除分配内存，还可在一定程度上保护程序免受缓存溢出之害[11]。&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>02-堆、栈、RAII基本概念</title>
-      <link>https://www.xiangtianlong.com/post/%E7%8E%B0%E4%BB%A3c&#43;&#43;30%E8%AE%B2/02-%E5%A0%86%E6%A0%88raii%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/</link>
-      <pubDate>Fri, 20 Dec 2019 23:25:15 +0800</pubDate>
-      <guid>https://www.xiangtianlong.com/post/%E7%8E%B0%E4%BB%A3c&#43;&#43;30%E8%AE%B2/02-%E5%A0%86%E6%A0%88raii%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/</guid>
-      <description>&lt;p&gt;上一篇中我还特意提到了编译器的选择， 实际上本专栏正式开始前，有一篇关于编译器的介绍，这可真是目录都没看，就开始&amp;quot;翻书&amp;quot;了。&lt;/p&gt;
-&lt;p&gt;前面也提到了，目录都没细看，直接开始听稿子，没想到第一讲说的居然是堆、栈。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;堆：&lt;code&gt;heap&lt;/code&gt;，在内存管理中，指的是动态分配的内存，&lt;code&gt;new delete malloc free&lt;/code&gt;。也叫做&lt;code&gt;system heap&lt;/code&gt;，是指由操作系统提供的一块&lt;code&gt;global&lt;/code&gt;內存空間，程序可动态分配(&lt;code&gt;dynamic allocated&lt;/code&gt;) 从某中获得若干区塊(&lt;code&gt;blocks&lt;/code&gt;)。&lt;/li&gt;
-&lt;li&gt;栈：&lt;code&gt;stack&lt;/code&gt;，函数调用过程中的本地变量和调用数据的区域。是存在于某作用域(scope) 的一块内存空间(&lt;code&gt;memory space&lt;/code&gt;)。例如当你调用函数，函数本身即会形成一个&lt;code&gt;stack&lt;/code&gt;用來放置它所接收的参数，以及返回地址。在函数本体(&lt;code&gt;function body&lt;/code&gt;) 內声明的任何变量，其所使用的內存块都取自上述&lt;code&gt;stack&lt;/code&gt;。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;%E5%A0%86%E6%A0%881.png&#34; alt=&#34;堆栈1&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;RAII&lt;/code&gt;在我看来属于&lt;code&gt;C++&lt;/code&gt;的内存管理方式，配合析构函数，对象对于外部而言并没有直接内存相关的操作。&lt;/p&gt;
-&lt;p&gt;最新正好在开发一个和行情相关的项目，为了提高性能，能说一句恰逢其时？&lt;code&gt;C11&lt;/code&gt;的智能指针效率，&lt;strong&gt;存在纳秒级别的性能损耗&lt;/strong&gt;。&lt;/p&gt;
-&lt;h3 id=&#34;堆&#34;&gt;堆&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;auto ptr = new std::vector&amp;lt;int&amp;gt;();
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;动态申请内存时(堆)，三个常见的内存操作：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;让内存管理器分配一个某个大小的内存&lt;/li&gt;
-&lt;li&gt;让内存管理器释放一个之前分配的内存块&lt;/li&gt;
-&lt;li&gt;让内存管理器进行垃圾回收，寻找不再使用的内存块并进行释放&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;由于动态分配内存存在不确定性&lt;/strong&gt;，在特定的场合，会禁用动态分配：飞行控制器和电信设备&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;C++&lt;/code&gt;通常做前面两步，&lt;code&gt;java&lt;/code&gt;通常做1和3。不同的语言有着不同的实现方式。&lt;/p&gt;
-&lt;p&gt;释放内存不只是简单地把内存标记为已未使用。对于连续使用的内存块，通常内存管理器需要将其合并成一块，一遍满足后续大的内存分配申请。
-&lt;strong&gt;目前的编程模式都要求申请的内存块是连续的&lt;/strong&gt;。&lt;/p&gt;
-&lt;h3 id=&#34;栈&#34;&gt;栈&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;栈上的分配极为简单，移动一下栈指针&lt;/li&gt;
-&lt;li&gt;栈上的释放也简单，函数执行结束是，移动一下栈指针即可&lt;/li&gt;
-&lt;li&gt;由于后劲先出的执行过程，不可能出现内存碎片&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;code&gt;c1&lt;/code&gt;便是所谓&lt;code&gt;stack object&lt;/code&gt;，其生命在作用域(&lt;code&gt;scope&lt;/code&gt;) 结束之际結束。这种作用域內的&lt;code&gt;object&lt;/code&gt;，又称为&lt;code&gt;auto object&lt;/code&gt;，因为它会被「&lt;strong&gt;自动&lt;/strong&gt;」清理。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;%E5%A0%86%E6%A0%882.png&#34; alt=&#34;堆栈2&#34;&gt;&lt;/p&gt;
-&lt;h3 id=&#34;实践&#34;&gt;实践&lt;/h3&gt;
-&lt;p&gt;其实我相信，就算读完了上面这些内容，对于堆栈的含义理解的也不会那么深刻，最大的疑问就是，我知道哪些是堆哪些是栈，对于实际的程序开发有什么意义？
-先给结论：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;动态向操作系统申请内存的耗时，远远大于已经申请的内存区域写入数据&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;直接操作栈内存的耗时基本基本等于像已经申请的内存块写入数据&lt;/strong&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;概述起来就是一句话，程序运行期间，向操作系统申请内存，在纳秒级别时，属于昂贵的操作，开发高性能的程序，需要预先申请所需要的内存。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;测试环境：visual studio 2019&lt;/li&gt;
-&lt;li&gt;CPU：i7-6700 3.41GHz&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;案例的含义在于分别统计：连续申请堆内存并操作，预先申请堆内存并操作，连续操作栈内存&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;%E5%A0%86%E6%A0%88%E5%86%85%E5%AD%98%E5%9D%97%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%951.jpg&#34; alt=&#34;堆栈内存块性能测试1&#34;&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;{
-	int result = 0;
-
-	SECTION(&amp;quot;堆上连续申请内存&amp;quot;)
-	{
-		auto timer = std::chrono::steady_clock::now().time_since_epoch().count();
-		for (auto i = 0; i &amp;lt; kTestCount; i++)
-		{
-			int* j = new int(1);
-			result += *j;
-			delete j;
-		}
-		auto count = std::chrono::steady_clock::now().time_since_epoch().count() - timer;
-		std::cout &amp;lt;&amp;lt; &amp;quot;堆上连续申请内存：&amp;quot; &amp;lt;&amp;lt; result &amp;lt;&amp;lt; &amp;quot;\t&amp;quot; &amp;lt;&amp;lt; count &amp;lt;&amp;lt; std::endl;
-	}
-
-    SECTION(&amp;quot;栈上连续申请内存&amp;quot;)
-    {
-        auto timer = std::chrono::steady_clock::now().time_since_epoch().count();
-        for (auto i = 0; i &amp;lt; kTestCount; i++)
-        {
-			int j = 1;
-			result += j;
-        }
-        auto count = std::chrono::steady_clock::now().time_since_epoch().count() - timer;
-		std::cout &amp;lt;&amp;lt; &amp;quot;栈上连续申请内存：&amp;quot; &amp;lt;&amp;lt; result &amp;lt;&amp;lt; &amp;quot;\t&amp;quot; &amp;lt;&amp;lt; count &amp;lt;&amp;lt; std::endl;
-    }
-
-    SECTION(&amp;quot;堆上预先申请内存，连续写入数据&amp;quot;)
-    {
-        auto timer = std::chrono::steady_clock::now().time_since_epoch().count();
-		int* j = new int(1);
-        for (auto i = 0; i &amp;lt; kTestCount; i++)
-        {
-			*j = 1;
-            result += *j;
-        }
-		delete j;
-        auto count = std::chrono::steady_clock::now().time_since_epoch().count() - timer;
-        std::cout &amp;lt;&amp;lt; &amp;quot;堆上预先申请内存，连续写入数据：&amp;quot; &amp;lt;&amp;lt; result &amp;lt;&amp;lt; &amp;quot;\t&amp;quot; &amp;lt;&amp;lt; count &amp;lt;&amp;lt; std::endl;
-    }
-}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;其实呢，初次看到上面的测试案例结果，肯定会纳闷，怎么预先申请的内存和栈内存的性能差别那么大，其实这个属于现在编译器&lt;code&gt;Release&lt;/code&gt;模式的代码优化。
-每次操作的都是常数，编译器就能预先做掉一部分事情，具体原理本人不是很清楚，不过我们改进一下测试案例，每次累加动态的数据。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;%E5%A0%86%E6%A0%88%E5%86%85%E5%AD%98%E5%9D%97%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%952.jpg&#34; alt=&#34;堆栈内存块性能测试2&#34;&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;{
-	int result = 0;
-
-	SECTION(&amp;quot;堆上连续申请内存&amp;quot;)
-	{
-		auto timer = std::chrono::steady_clock::now().time_since_epoch().count();
-		for (auto i = 0; i &amp;lt; 100000; i++)
-		{
-			int* j = new int(i);
-			result += *j;
-			delete j;
-		}
-		auto count = std::chrono::steady_clock::now().time_since_epoch().count() - timer;
-		std::cout &amp;lt;&amp;lt; &amp;quot;堆上连续申请内存：&amp;quot; &amp;lt;&amp;lt; result &amp;lt;&amp;lt; &amp;quot;\t&amp;quot; &amp;lt;&amp;lt; count &amp;lt;&amp;lt; std::endl;
-	}
-
-    SECTION(&amp;quot;栈上连续申请内存&amp;quot;)
-    {
-        auto timer = std::chrono::steady_clock::now().time_since_epoch().count();
-        for (auto i = 0; i &amp;lt; 100000; i++)
-        {
-			int j = i;
-			result += j;
-        }
-        auto count = std::chrono::steady_clock::now().time_since_epoch().count() - timer;
-		std::cout &amp;lt;&amp;lt; &amp;quot;栈上连续申请内存：&amp;quot; &amp;lt;&amp;lt; result &amp;lt;&amp;lt; &amp;quot;\t&amp;quot; &amp;lt;&amp;lt; count &amp;lt;&amp;lt; std::endl;
-    }
-
-    SECTION(&amp;quot;堆上预先申请内存，连续写入数据&amp;quot;)
-    {
-        auto timer = std::chrono::steady_clock::now().time_since_epoch().count();
-		int* j = new int(1);
-        for (auto i = 0; i &amp;lt; 100000; i++)
-        {
-			*j = i;
-            result += *j;
-        }
-		delete j;
-        auto count = std::chrono::steady_clock::now().time_since_epoch().count() - timer;
-        std::cout &amp;lt;&amp;lt; &amp;quot;堆上预先申请内存，连续写入数据：&amp;quot; &amp;lt;&amp;lt; result &amp;lt;&amp;lt; &amp;quot;\t&amp;quot; &amp;lt;&amp;lt; count &amp;lt;&amp;lt; std::endl;
-    }
-}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h1 id=&#34;引用&#34;&gt;引用&lt;/h1&gt;
-&lt;p&gt;本文为课程笔记：
-&lt;a href=&#34;https://time.geekbang.org/column/article/169225&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://time.geekbang.org/column/article/169225&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;参考博客：
-&lt;a href=&#34;https://www.cnblogs.com/kelamoyujuzhen/p/10452929.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://www.cnblogs.com/kelamoyujuzhen/p/10452929.html&lt;/a&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>01-C&#43;&#43;这么难，为什么我们还要用C&#43;&#43;</title>
-      <link>https://www.xiangtianlong.com/post/%E7%8E%B0%E4%BB%A3c&#43;&#43;30%E8%AE%B2/01-c&#43;&#43;%E8%BF%99%E4%B9%88%E9%9A%BE%E4%B8%BA%E4%BB%80%E4%B9%88%E6%88%91%E4%BB%AC%E8%BF%98%E8%A6%81%E7%94%A8c&#43;&#43;/</link>
-      <pubDate>Thu, 19 Dec 2019 22:08:43 +0800</pubDate>
-      <guid>https://www.xiangtianlong.com/post/%E7%8E%B0%E4%BB%A3c&#43;&#43;30%E8%AE%B2/01-c&#43;&#43;%E8%BF%99%E4%B9%88%E9%9A%BE%E4%B8%BA%E4%BB%80%E4%B9%88%E6%88%91%E4%BB%AC%E8%BF%98%E8%A6%81%E7%94%A8c&#43;&#43;/</guid>
-      <description>&lt;p&gt;自从毕业以来，工作语言大部分时间都是 C++，书呢屯了很多，也不能纯说是屯着，偶尔开发项目的时候也会用到。相对于电子书来说，个人还是习惯查阅纸质的资料。
-对于现代C++的认知，只涉及到了C11，常用的当然是新增的线程库、时间库、函数指针，换个说法，用上了C11，对于大部分人来说，就能放弃使用boost库。
-前言扯了够多的，补充一点，windows上，需要升级编译器 visual studio 到 2015 update3 才能比较完整的支持C11语法。
-针对开篇词的概述：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;现代的程序开发中，不再仅仅是停留在某种语言，而是多种语言混合使用&lt;/li&gt;
-&lt;li&gt;C++适用于编写高性能，低功耗的组件&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;从开发时间的角度权衡，C++的开发时间超出其他现代化的语言好几倍，毕竟语言的复杂度摆在这里。但是如果，开发的程序需要大批量的部署，开发的所占用的时间成本，
-能从后期的运维成本中&amp;quot;回收&amp;rdquo;。特别是移动端的应用，功耗是个很敏感的点，这个也是在本课程之前，我从未注意到的地方。&lt;/p&gt;
-&lt;p&gt;本文为课程笔记：
-&lt;a href=&#34;https://time.geekbang.org/column/article/169177&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://time.geekbang.org/column/article/169177&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     
