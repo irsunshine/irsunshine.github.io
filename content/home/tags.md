@@ -5,8 +5,8 @@ headless = true  # This file represents a page section.
 active = true  # Activate this widget? true/false
 weight = 120  # Order that this section will appear.
 
-title = ""
-subtitle = ""
+title = "标签云"
+subtitle = "等我会前端了，重新做个好看的"
 
 [content]
   # Choose the taxonomy from `config.toml` to display (e.g. tags, categories)
