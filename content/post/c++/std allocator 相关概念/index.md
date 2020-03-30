@@ -2,7 +2,7 @@
 title: "标准库容器的内存分配器：allocator"
 subtitle:
 summary:
-authors:
+authors: [向天龙]
 tags:
 - allocator
 categories:
