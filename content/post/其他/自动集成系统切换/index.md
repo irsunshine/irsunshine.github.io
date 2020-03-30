@@ -1,7 +1,7 @@
 ---
 # Documentation: https://sourcethemes.com/academic/docs/managing-content/
 
-title: "博客自动集成系统切换"
+title: "自动集成系统切换"
 subtitle: "travis 到 github action"
 summary: ""
 authors: [向天龙]
