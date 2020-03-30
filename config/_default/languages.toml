@@ -15,13 +15,13 @@
  [zh.params]
    description = "欺骗别人很容易，欺骗自己很难，想想18岁的自己"
  [[zh.menu.main]]
-   name = "Posts"
+   name = "随笔"
    url = "#posts"
    weight = 10
    
  [[zh.menu.main]]
-   name = "Talks"
-   url = "#talks"
+   name = "演讲"
+   url = "/talk/"
    weight = 20
    
 #  [[zh.menu.main]]
@@ -30,17 +30,17 @@
 #    weight = 30
    
  [[zh.menu.main]]
-   name = "Courses"
+   name = "课程"
    url = "courses/"
    weight = 40
 
  [[zh.menu.main]]
-   name = "Categories"
+   name = "目录"
    url = "/categories/"
    weight = 45
   
  [[zh.menu.main]]
-   name = "About"
+   name = "关于我"
    url = "#about"
    weight = 50
    
