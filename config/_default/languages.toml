@@ -16,7 +16,7 @@
    description = "欺骗别人很容易，欺骗自己很难，想想18岁的自己"
  [[zh.menu.main]]
    name = "随笔"
-   url = "#posts"
+   url = "/post/"
    weight = 10
    
  [[zh.menu.main]]
@@ -41,7 +41,7 @@
   
  [[zh.menu.main]]
    name = "关于我"
-   url = "#about"
+   url = "/authors/向天龙/"
    weight = 50
    
    
