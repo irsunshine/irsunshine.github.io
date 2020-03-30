@@ -1,5 +1,5 @@
 ---
-title: Posts
+title: " "
 
 # View.
 #   1 = List
