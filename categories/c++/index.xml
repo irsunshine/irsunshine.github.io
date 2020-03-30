@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>软件开发 | 假装不困</title>
-    <link>https://www.xiangtianlong.com/categories/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/</link>
-      <atom:link href="https://www.xiangtianlong.com/categories/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/index.xml" rel="self" type="application/rss+xml" />
-    <description>软件开发</description>
+    <title>c&#43;&#43; | 假装不困</title>
+    <link>https://www.xiangtianlong.com/categories/c&#43;&#43;/</link>
+      <atom:link href="https://www.xiangtianlong.com/categories/c++/index.xml" rel="self" type="application/rss+xml" />
+    <description>c&#43;&#43;</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>zh-Hans</language><copyright>2018</copyright><lastBuildDate>Mon, 30 Dec 2019 13:26:19 +0800</lastBuildDate>
     <image>
       <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
-      <title>软件开发</title>
-      <link>https://www.xiangtianlong.com/categories/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/</link>
+      <title>c&#43;&#43;</title>
+      <link>https://www.xiangtianlong.com/categories/c&#43;&#43;/</link>
     </image>
     
     <item>
