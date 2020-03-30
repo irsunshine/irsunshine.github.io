@@ -7,7 +7,7 @@ date: "202-03-30T00:00:00+01:00"
 draft: false
 menu:
   现代C++实战30讲笔记:
-    parent: 01:课前必读
+    parent: 01-课前必读
     weight: 1
 
 # Prev/next pager order (if `docs_section_pager` enabled in `params.toml`)
