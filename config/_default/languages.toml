@@ -24,15 +24,20 @@
    url = "#talks"
    weight = 20
    
- [[zh.menu.main]]
-   name = "Publications"
-   url = "#featured"
-   weight = 30
+#  [[zh.menu.main]]
+#    name = "Publications"
+#    url = "#featured"
+#    weight = 30
    
  [[zh.menu.main]]
    name = "Courses"
    url = "courses/"
    weight = 40
+
+ [[zh.menu.main]]
+   name = "Categories"
+   url = "/categories/"
+   weight = 45
   
  [[zh.menu.main]]
    name = "About"
