@@ -5,10 +5,6 @@ summary:
 authors: 
 - 白岩松
 tags:
-- 白岩松
-- 白说
-- 演讲稿
-- 18岁
 categories:
 - 白岩松演讲稿
 date: 2020-02-15T11:19:33+08:00

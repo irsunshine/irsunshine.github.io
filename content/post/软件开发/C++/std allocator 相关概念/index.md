@@ -4,11 +4,9 @@ subtitle:
 summary:
 authors:
 tags:
-- c++
 - allocator
-- 空间配置器
 categories:
-- 软件开发
+- c++
 date: 2019-12-30T13:26:19+08:00
 lastmod: 2019-12-30T13:26:19+08:00
 featured: false
