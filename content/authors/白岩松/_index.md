@@ -4,7 +4,7 @@ name: "白岩松"
 
 # Username (this should match the folder name and the name on publications)
 authors:
-- Name "白岩松"
+- Name: "白岩松"
 
 # Is this the primary user of the site?
 superuser: false

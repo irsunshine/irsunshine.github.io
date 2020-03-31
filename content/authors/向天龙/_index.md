@@ -4,10 +4,10 @@ name: "向天龙"
 
 # Username (this should match the folder name and the name on publications)
 authors:
-- Name "向天龙"
+- Name: "向天龙"
 
 # Is this the primary user of the site?
-superuser: true
+superuser: false
 
 # Role/position (e.g., Professor of Artificial Intelligence)
 role:
@@ -18,7 +18,7 @@ organizations:
   url: ""
 
 # Short bio (displayed in user profile at end of posts)
-bio: 
+bio: 年轻嘛，你让我安安静静看书，不可能的！必须要写出来。
 
 # List each interest with a dash
 interests:
