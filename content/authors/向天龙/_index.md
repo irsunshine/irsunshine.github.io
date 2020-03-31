@@ -22,15 +22,15 @@ bio:
 
 # List each interest with a dash
 interests:
-- 黑暗料理 初级
-- 键盘打击 初级
+- 烹饪 一级
+- 编码 三级
 
 education:
   courses:
-  - course: Title course 1
+  - course: 高中
     institution: Name of Institution
     year: 2008
-  - course: Title course 2
+  - course: 大学
     institution: Name of Institution
     year: 2015
 
