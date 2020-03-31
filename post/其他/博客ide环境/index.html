@@ -24,10 +24,10 @@
   
     
   
-  <meta name="description" content="前因 近期接触到了网络网络数据包的开发，需要频繁的申请和释放小块的内存，原本想着使用内存池，查看了几个现有的内存池，发现了这个： https://github.com/cacay/MemoryPool 看到接口的时候，就比较纳闷，这个内存池的实现怎么有点奇怪。MemoryPool的实现逻辑，是在申请固定大小的内存">
+  <meta name="description" content="markdown语法规则 习惯了无gui的终端开发模式，键盘输入md标记符号肯定是首选。 习惯了window界面化操作的朋友，推荐vscode快捷键的模式进行md标记符号的插入。 有人要吐槽了，怎么能懒成这样？理由很简单： md在于抛弃文章的样式，">
 
   
-  <link rel="alternate" hreflang="zh-Hans" href="https://www.xiangtianlong.com/post/c&#43;&#43;/std-allocator-%E7%9B%B8%E5%85%B3%E6%A6%82%E5%BF%B5/">
+  <link rel="alternate" hreflang="zh-Hans" href="https://www.xiangtianlong.com/post/%E5%85%B6%E4%BB%96/%E5%8D%9A%E5%AE%A2ide%E7%8E%AF%E5%A2%83/">
 
   
 
@@ -247,7 +247,7 @@
   <link rel="icon" type="image/png" href="/images/icon_huabee4a8ccfc9d7d1c51a93249a1dcfdd_17677_32x32_fill_lanczos_center_2.png">
   <link rel="apple-touch-icon" type="image/png" href="/images/icon_huabee4a8ccfc9d7d1c51a93249a1dcfdd_17677_192x192_fill_lanczos_center_2.png">
 
-  <link rel="canonical" href="https://www.xiangtianlong.com/post/c&#43;&#43;/std-allocator-%E7%9B%B8%E5%85%B3%E6%A6%82%E5%BF%B5/">
+  <link rel="canonical" href="https://www.xiangtianlong.com/post/%E5%85%B6%E4%BB%96/%E5%8D%9A%E5%AE%A2ide%E7%8E%AF%E5%A2%83/">
 
   
   
@@ -261,15 +261,15 @@
   <meta property="twitter:card" content="summary">
   
   <meta property="og:site_name" content="假装不困">
-  <meta property="og:url" content="https://www.xiangtianlong.com/post/c&#43;&#43;/std-allocator-%E7%9B%B8%E5%85%B3%E6%A6%82%E5%BF%B5/">
-  <meta property="og:title" content="标准库容器的内存分配器：allocator | 假装不困">
-  <meta property="og:description" content="前因 近期接触到了网络网络数据包的开发，需要频繁的申请和释放小块的内存，原本想着使用内存池，查看了几个现有的内存池，发现了这个： https://github.com/cacay/MemoryPool 看到接口的时候，就比较纳闷，这个内存池的实现怎么有点奇怪。MemoryPool的实现逻辑，是在申请固定大小的内存"><meta property="og:image" content="img/map[gravatar:%!s(bool=false) shape:circle]">
+  <meta property="og:url" content="https://www.xiangtianlong.com/post/%E5%85%B6%E4%BB%96/%E5%8D%9A%E5%AE%A2ide%E7%8E%AF%E5%A2%83/">
+  <meta property="og:title" content="博客IDE环境 | 假装不困">
+  <meta property="og:description" content="markdown语法规则 习惯了无gui的终端开发模式，键盘输入md标记符号肯定是首选。 习惯了window界面化操作的朋友，推荐vscode快捷键的模式进行md标记符号的插入。 有人要吐槽了，怎么能懒成这样？理由很简单： md在于抛弃文章的样式，"><meta property="og:image" content="img/map[gravatar:%!s(bool=false) shape:circle]">
   <meta property="twitter:image" content="img/map[gravatar:%!s(bool=false) shape:circle]"><meta property="og:locale" content="zh-Hans">
   
     
-      <meta property="article:published_time" content="2019-12-30T13:26:19&#43;08:00">
+      <meta property="article:published_time" content="2020-03-31T13:54:27&#43;08:00">
     
-    <meta property="article:modified_time" content="2019-12-30T13:26:19&#43;08:00">
+    <meta property="article:modified_time" content="2020-03-31T14:28:27&#43;08:00">
   
 
   
@@ -293,12 +293,12 @@
   "@type": "BlogPosting",
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://www.xiangtianlong.com/post/c++/std-allocator-%E7%9B%B8%E5%85%B3%E6%A6%82%E5%BF%B5/"
+    "@id": "https://www.xiangtianlong.com/post/%E5%85%B6%E4%BB%96/%E5%8D%9A%E5%AE%A2ide%E7%8E%AF%E5%A2%83/"
   },
-  "headline": "标准库容器的内存分配器：allocator",
+  "headline": "博客IDE环境",
   
-  "datePublished": "2019-12-30T13:26:19+08:00",
-  "dateModified": "2019-12-30T13:26:19+08:00",
+  "datePublished": "2020-03-31T13:54:27+08:00",
+  "dateModified": "2020-03-31T14:28:27+08:00",
   
   "author": {
     "@type": "Person",
@@ -313,7 +313,7 @@
       "url": "https://www.xiangtianlong.com/images/icon_huabee4a8ccfc9d7d1c51a93249a1dcfdd_17677_192x192_fill_lanczos_center_2.png"
     }
   },
-  "description": "前因 近期接触到了网络网络数据包的开发，需要频繁的申请和释放小块的内存，原本想着使用内存池，查看了几个现有的内存池，发现了这个： https://github.com/cacay/MemoryPool 看到接口的时候，就比较纳闷，这个内存池的实现怎么有点奇怪。MemoryPool的实现逻辑，是在申请固定大小的内存"
+  "description": "markdown语法规则 习惯了无gui的终端开发模式，键盘输入md标记符号肯定是首选。 习惯了window界面化操作的朋友，推荐vscode快捷键的模式进行md标记符号的插入。 有人要吐槽了，怎么能懒成这样？理由很简单： md在于抛弃文章的样式，"
 }
 </script>
 
@@ -331,7 +331,7 @@
 
 
 
-  <title>标准库容器的内存分配器：allocator | 假装不困</title>
+  <title>博客IDE环境 | 假装不困</title>
 
 </head>
 
@@ -565,7 +565,7 @@
   
   
 <div class="article-container pt-3">
-  <h1>标准库容器的内存分配器：allocator</h1>
+  <h1>博客IDE环境</h1>
 
   
 
@@ -593,8 +593,10 @@
     
     
       
+          最近更新于
+      
     
-    Dec 30, 2019
+    Mar 31, 2020
   </span>
   
 
@@ -603,7 +605,7 @@
   
   <span class="middot-divider"></span>
   <span class="article-reading-time">
-    5 分钟阅读时长
+    2 分钟阅读时长
   </span>
   
 
@@ -615,7 +617,7 @@
   
   <span class="middot-divider"></span>
   <span class="article-categories">
-    <i class="fas fa-folder mr-1"></i><a href="">c&#43;&#43;</a></span>
+    <i class="fas fa-folder mr-1"></i><a href="/categories/%E5%85%B6%E4%BB%96/">其他</a></span>
   
 
 </div>
@@ -643,25 +645,54 @@
   <div class="article-container">
 
     <div class="article-style">
-      <h4 id="前因">前因</h4>
-<p>近期接触到了网络网络数据包的开发，需要频繁的申请和释放小块的内存，原本想着使用内存池，查看了几个现有的内存池，发现了这个：</p>
-<p>
-<a href="https://github.com/cacay/MemoryPool" target="_blank" rel="noopener">https://github.com/cacay/MemoryPool</a></p>
-<p>看到接口的时候，就比较纳闷，这个内存池的实现怎么有点奇怪。<code>MemoryPool</code>的实现逻辑，是在申请固定大小的内存空间。看过boost的内存池接口，提供的是一个模板，用的时候进行实例化。正巧这个库已经有文章进行过介绍，提到了<code>allocator</code>这个概念。</p>
-<h4 id="wikihttpszhwikipediaorgwikie58886e9858de599a8_c2b2b">
-<a href="https://zh.wikipedia.org/wiki/%E5%88%86%E9%85%8D%E5%99%A8_%28C%2B%2B%29" target="_blank" rel="noopener">wiki</a></h4>
-<p>在C++编程中，分配器（英语：allocator）是C++标准库的重要组成部分。C++的库中定义了多种被统称为“容器”的数据结构（如链表、集合等），这些容器的共同特征之一，就是其大小可以在程序的运行时改变；为了实现这一点，进行动态内存分配就显得尤为必要，在此分配器就用于处理容器对内存的分配与释放请求。换句话说，分配器用于封装标准模板库（STL）容器在内存管理上的低层细节。默认情况下，C++标准库使用其自带的通用分配器，但根据具体需要，程序员也可自行定制分配器以替代之。</p>
-<p>分配器最早由亚历山大·斯特潘诺夫作为C++标准模板库（Standard Template Library，简称STL）的一部分发明，其初衷是创造一种能“使库更加灵活，并能独立于底层数据模型的方法”，并允许程序员在库中利用自定义的指针和引用类型；但在将标准模板库纳入C++标准时，C++标准委员会意识到对数据模型的完全抽象化处理会带来不可接受的性能损耗，为作折中，标准中对分配器的限制变得更加严格，而有鉴于此，与斯特潘诺夫原先的设想相比，现有标准所描述的分配器可定制程度已大大受限。</p>
-<p>虽然分配器的定制有所限制，但在许多情况下，仍需要用到自定义的分配器，而这一般是为封装对不同类型内存空间（如共享内存与已回收内存）的访问方式，或在使用内存池进行内存分配时提高性能而为。除此以外，从内存占用和运行时间的角度看，在频繁进行少量内存分配的程序中，若引入为之专门定制的分配器，也会获益良多。</p>
-<h4 id="使用需求httpszhwikipediaorgwikie58886e9858de599a8_c2b2b">
-<a href="https://zh.wikipedia.org/wiki/%E5%88%86%E9%85%8D%E5%99%A8_%28C%2B%2B%29" target="_blank" rel="noopener">使用需求</a></h4>
-<p>定义自定义分配器的主要原因之一是提升性能。利用专用的自定义分配器可以提高程序的性能，又或提高内存使用效率，亦或两者兼而有之[4][8]。默认分配器使用new操作符分配存储空间[文 5]，而这常利用C语言堆分配函数（malloc()）实现[9]。由于堆分配函数常针对偶发的内存大量分配作优化，因此在为需要一次分配大量内存的容器（如向量、双端队列）分配内存时，默认分配器一般效率良好[8]。但是，对于关联容器与双向链表这类需要频繁分配少量内存的容器来说，若采用默认分配器分配内存，则通常效率很低[4][9]。除此之外，基于malloc()的默认分配器还存在许多问题，诸如较差的引用局部性[4]，以及可能造成内存碎片化[4][9]。</p>
-<p>简言之，此段（……）（如同）是这一标准针对分配器的一场《我有一个梦想》的演讲。在梦想成真之前，关心可移植性的程序员将把自己局限于（使用）无状态的自定义分配器上。
-——斯科特 梅耶斯，《Effective STL》
-有鉴于此，在这一情况下，人们常使用基于内存池的分配器来解决频繁少量分配问题[8]。与默认的“按需分配”方式不同，在使用基于内存池的分配器时，程序会预先为之分配大块内存（即“内存池”），而后在需要分配内存时，自定义分配器只需向请求方返回一个指向池内内存的指针即可；而在对象析构时，并不需实际解除分配内存，而是延迟到内存池的生命周期完结时才真正解除分配[注 1][8]。</p>
-<p>在“自定义分配器”这一话题上，已有诸多C++专家与相关作者参与探讨，例如斯科特·梅耶斯的作品《Effective STL》与安德烈·亚历山德雷斯库的《Modern C++ Design》都有提及。梅耶斯洞察到，若要求针对某一类型T的分配器的所有实例都相等，则可移植的分配器的实例必须不包含状态。虽然C++标准鼓励库的实现者支持带状态的分配器[文 4]，但梅耶斯称，相关段落是“（看似）美妙的观点”，但也几乎是空话，并称分配器的限制“过于严苛”[4]。例如，STL的list允许splice方法，即一个list对象A的节点可以被直接移入另一个list对象B中，这就要求A的分配器申请到的内存，可被B的分配器释放掉，从而推导出A与B的分配器实例必须相等。梅耶斯的结论是，分配器最好定义为使用静态方法的类型。例如，根据C++标准，分配器必须提供一个实现了rebind方法的other类模板。</p>
-<p>另外，在《C++程序设计语言》中，比雅尼·斯特劳斯特鲁普则认为“‘严格限制分配器，以免各对象信息不同’，这点显然问题不大”（大意），并指出大部分分配器并不需要状态，甚至没有状态情形下性能反倒更佳。他提出了三个自定义分配器的用例：内存池型的分配器、共享内存型分配器与垃圾回收型分配器，并展示了一个分配器的实现，此间利用了一个内部内存池，以快速分配/解除分配少量内存。但他也提到，如此优化可能已经在他所提供的样例分配器中实现[3]。</p>
-<p>自定义分配器的另一用途是调试内存相关错误[10]。若要做到这一点，可以编写一个分配器，令之在分配时分配额外的内存，并借此存放调试信息。这类分配器不仅可以保证内存由同类分配器分配/解除分配内存，还可在一定程度上保护程序免受缓存溢出之害[11]。</p>
+      <h2 id="markdown语法规则">markdown语法规则</h2>
+<p>习惯了无gui的终端开发模式，键盘输入md标记符号肯定是首选。</p>
+<p>习惯了window界面化操作的朋友，推荐vscode快捷键的模式进行md标记符号的插入。</p>
+<p>有人要吐槽了，怎么能懒成这样？理由很简单：</p>
+<ul>
+<li>md在于抛弃文章的样式，专注于内容</li>
+<li><strong>符号标记</strong>实现各种样式的渲染</li>
+</ul>
+<p>靠脑子记住和直接使用快捷键，这个问题不用过多纠结，取决于个人喜好。</p>
+<h2 id="环境">环境</h2>
+<p>前两年也许还有人推荐sublime，有篇老的博文，那会我介绍的还是sublime。</p>
+<p>现在都已经<strong>2020</strong>年了，vscode一统江湖，千秋万代。</p>
+<p>本地的轻量编辑，首选vscode。</p>
+<p>捎带一提，国内部分云厂商的云上开发环境，IDE核心也是vscode。</p>
+<p>背后靠着微软爸爸，加上开源界的推动，vscode用起来是真香。</p>
+<h2 id="插件">插件</h2>
+<p><img src="2020-03-31-14-07-17.png" alt="插件清单"></p>
+<p>具体的插件说明，自行阅读插件说明，毕竟我能提供的只是当前的版本，直接阅读插件说明，肯定是没错的。</p>
+<p><code>Paste Image</code>，配合hugo的图片插件方式，能快捷的实现本地图片的引用。</p>
+<h2 id="hugo">hugo</h2>
+<p>前文也提过，本人是从<code>hexo</code>切换到了<code>hugo</code>。</p>
+<ol>
+<li>hugo支持在单独的文件夹放置图片和md文档</li>
+<li>academic主题在设计上支持多种各式的文章样式</li>
+</ol>
+<ul>
+<li>随笔</li>
+<li>演讲</li>
+<li>电子书</li>
+</ul>
+<h2 id="academic">academic</h2>
+<p>官网默认<code>exampleSite</code>，menu路径都是组件的方式<code>#组件</code>，其实我更推荐使用<code>url</code>方式。</p>
+<p>url的模式，点击导航栏能实现单页的跳转，而非在首页进行滚动。</p>
+<h2 id="结尾">结尾</h2>
+<p>小朋友又要吐槽了。我是来学习从零搭建个人博客，你怎么从头到尾都说的模模糊糊，细节什么的都不提。</p>
+<p>我想说的是，目前使用的这些工具：</p>
+<ul>
+<li><strong>官方手册</strong></li>
+<li><strong>插件说明</strong></li>
+<li><strong>各式博文介绍</strong></li>
+</ul>
+<p>快速上手新技术，推荐先阅读官网文档，<strong>粗读</strong>不求一遍看懂，至少心里有个数。</p>
+<p>和看书的道理一样，先看目录，搞清楚作者准备讲什么。</p>
+<h2 id="彩蛋">彩蛋</h2>
+<p>切换<code>hugo academic</code>内置风格样式，发布到站点，访问时，风格没有发生变换。</p>
+<p>聪明的小伙伴已经想到了，清空本地浏览器缓存，能解决问题。</p>
+<p>机智的我：<code>F12</code>开发者模式，切换到<code>network</code>，勾选<code>disable cache</code>，刷新，搞定！</p>
+<p><img src="2020-03-31-14-27-15.png" alt="network"></p>
 
     </div>
 
@@ -670,12 +701,6 @@
 
 
 
-
-<div class="article-tags">
-  
-  <a class="badge badge-light" href="/tags/allocator/">allocator</a>
-  
-</div>
 
 
 
@@ -690,7 +715,7 @@
       
       
       <li>
-        <a href="https://twitter.com/intent/tweet?url=https://www.xiangtianlong.com/post/c&#43;&#43;/std-allocator-%E7%9B%B8%E5%85%B3%E6%A6%82%E5%BF%B5/&amp;text=%e6%a0%87%e5%87%86%e5%ba%93%e5%ae%b9%e5%99%a8%e7%9a%84%e5%86%85%e5%ad%98%e5%88%86%e9%85%8d%e5%99%a8%ef%bc%9aallocator" target="_blank" rel="noopener" class="share-btn-twitter">
+        <a href="https://twitter.com/intent/tweet?url=https://www.xiangtianlong.com/post/%E5%85%B6%E4%BB%96/%E5%8D%9A%E5%AE%A2ide%E7%8E%AF%E5%A2%83/&amp;text=%e5%8d%9a%e5%ae%a2IDE%e7%8e%af%e5%a2%83" target="_blank" rel="noopener" class="share-btn-twitter">
           <i class="fab fa-twitter"></i>
         </a>
       </li>
@@ -703,7 +728,7 @@
       
       
       <li>
-        <a href="https://www.facebook.com/sharer.php?u=https://www.xiangtianlong.com/post/c&#43;&#43;/std-allocator-%E7%9B%B8%E5%85%B3%E6%A6%82%E5%BF%B5/&amp;t=%e6%a0%87%e5%87%86%e5%ba%93%e5%ae%b9%e5%99%a8%e7%9a%84%e5%86%85%e5%ad%98%e5%88%86%e9%85%8d%e5%99%a8%ef%bc%9aallocator" target="_blank" rel="noopener" class="share-btn-facebook">
+        <a href="https://www.facebook.com/sharer.php?u=https://www.xiangtianlong.com/post/%E5%85%B6%E4%BB%96/%E5%8D%9A%E5%AE%A2ide%E7%8E%AF%E5%A2%83/&amp;t=%e5%8d%9a%e5%ae%a2IDE%e7%8e%af%e5%a2%83" target="_blank" rel="noopener" class="share-btn-facebook">
           <i class="fab fa-facebook"></i>
         </a>
       </li>
@@ -716,7 +741,7 @@
       
       
       <li>
-        <a href="mailto:?subject=%e6%a0%87%e5%87%86%e5%ba%93%e5%ae%b9%e5%99%a8%e7%9a%84%e5%86%85%e5%ad%98%e5%88%86%e9%85%8d%e5%99%a8%ef%bc%9aallocator&amp;body=https://www.xiangtianlong.com/post/c&#43;&#43;/std-allocator-%E7%9B%B8%E5%85%B3%E6%A6%82%E5%BF%B5/" target="_blank" rel="noopener" class="share-btn-email">
+        <a href="mailto:?subject=%e5%8d%9a%e5%ae%a2IDE%e7%8e%af%e5%a2%83&amp;body=https://www.xiangtianlong.com/post/%E5%85%B6%E4%BB%96/%E5%8D%9A%E5%AE%A2ide%E7%8E%AF%E5%A2%83/" target="_blank" rel="noopener" class="share-btn-email">
           <i class="fas fa-envelope"></i>
         </a>
       </li>
@@ -729,7 +754,7 @@
       
       
       <li>
-        <a href="https://www.linkedin.com/shareArticle?url=https://www.xiangtianlong.com/post/c&#43;&#43;/std-allocator-%E7%9B%B8%E5%85%B3%E6%A6%82%E5%BF%B5/&amp;title=%e6%a0%87%e5%87%86%e5%ba%93%e5%ae%b9%e5%99%a8%e7%9a%84%e5%86%85%e5%ad%98%e5%88%86%e9%85%8d%e5%99%a8%ef%bc%9aallocator" target="_blank" rel="noopener" class="share-btn-linkedin">
+        <a href="https://www.linkedin.com/shareArticle?url=https://www.xiangtianlong.com/post/%E5%85%B6%E4%BB%96/%E5%8D%9A%E5%AE%A2ide%E7%8E%AF%E5%A2%83/&amp;title=%e5%8d%9a%e5%ae%a2IDE%e7%8e%af%e5%a2%83" target="_blank" rel="noopener" class="share-btn-linkedin">
           <i class="fab fa-linkedin-in"></i>
         </a>
       </li>
@@ -742,7 +767,7 @@
       
       
       <li>
-        <a href="https://web.whatsapp.com/send?text=%e6%a0%87%e5%87%86%e5%ba%93%e5%ae%b9%e5%99%a8%e7%9a%84%e5%86%85%e5%ad%98%e5%88%86%e9%85%8d%e5%99%a8%ef%bc%9aallocator%20https://www.xiangtianlong.com/post/c&#43;&#43;/std-allocator-%E7%9B%B8%E5%85%B3%E6%A6%82%E5%BF%B5/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+        <a href="https://web.whatsapp.com/send?text=%e5%8d%9a%e5%ae%a2IDE%e7%8e%af%e5%a2%83%20https://www.xiangtianlong.com/post/%E5%85%B6%E4%BB%96/%E5%8D%9A%E5%AE%A2ide%E7%8E%AF%E5%A2%83/" target="_blank" rel="noopener" class="share-btn-whatsapp">
           <i class="fab fa-whatsapp"></i>
         </a>
       </li>
@@ -755,7 +780,7 @@
       
       
       <li>
-        <a href="https://service.weibo.com/share/share.php?url=https://www.xiangtianlong.com/post/c&#43;&#43;/std-allocator-%E7%9B%B8%E5%85%B3%E6%A6%82%E5%BF%B5/&amp;title=%e6%a0%87%e5%87%86%e5%ba%93%e5%ae%b9%e5%99%a8%e7%9a%84%e5%86%85%e5%ad%98%e5%88%86%e9%85%8d%e5%99%a8%ef%bc%9aallocator" target="_blank" rel="noopener" class="share-btn-weibo">
+        <a href="https://service.weibo.com/share/share.php?url=https://www.xiangtianlong.com/post/%E5%85%B6%E4%BB%96/%E5%8D%9A%E5%AE%A2ide%E7%8E%AF%E5%A2%83/&amp;title=%e5%8d%9a%e5%ae%a2IDE%e7%8e%af%e5%a2%83" target="_blank" rel="noopener" class="share-btn-weibo">
           <i class="fab fa-weibo"></i>
         </a>
       </li>
