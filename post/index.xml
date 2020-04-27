@@ -27,7 +27,7 @@
 &lt;p&gt;&lt;strong&gt;csdn博文系统&lt;/strong&gt;也推出了支持md语法的在线编辑器，在首次使用时，默认会有一篇关于md语法的介绍文章，笔者觉得还不错&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;印象笔记&lt;/strong&gt;在2018年增加了对于md笔记的支持，快捷栏中有各种md标记的选项，用起来和编辑普通的文章差不多，整体的交互流程属于新手友好&lt;/p&gt;
 &lt;h3 id=&#34;ide推荐&#34;&gt;IDE推荐&lt;/h3&gt;
-&lt;p&gt;编写本文的时候，已经是2020年，vscode你必然是听说过的，毕竟能想到使用git page来搭建博文系统的都是业内人士。早些年的时候，sublime、atom也是不错的选择，经过两年开源社区的推动vscode发展迅速，成为&lt;strong&gt;入场&lt;/strong&gt;的首选。&lt;/p&gt;
+&lt;p&gt;编写本文的时候，已经是2020年，vscode你必然是听说过的，毕竟能想到使用git page来搭建博文系统的都是业内人士。早些年的时候，sublime、atom也是不错的选择，经过两年开源社区的推动，vscode发展迅速，成为&lt;strong&gt;入场&lt;/strong&gt;的首选。&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;微软巨头和开源社区的关系从割裂的状态，成功跨入蜜月期：拥抱开源&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -51,6 +51,9 @@
 &lt;li&gt;academic主题在设计上支持多种各式的文章样式&lt;/li&gt;
 &lt;li&gt;各种便捷的自定义拓展&lt;/li&gt;
 &lt;/ol&gt;
+&lt;h2 id=&#34;academic&#34;&gt;academic&lt;/h2&gt;
+&lt;p&gt;官网默认&lt;code&gt;exampleSite&lt;/code&gt;，menu引入采用&lt;code&gt;#组件&lt;/code&gt;的方式，推荐使用&lt;code&gt;url&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;url的模式，点击导航栏能实现单页的跳转，而非在首页进行滚动，这点纯属个人喜好&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;样式上：随笔、演讲、电子书&lt;/li&gt;
 &lt;li&gt;灵活性：自定义整体风格、自定义css样式&lt;/li&gt;
@@ -58,9 +61,8 @@
 &lt;p&gt;这款主题对于中文的支持还不是很完善，主要是从视觉的角度来说，字体大小不太符合中文阅读习惯，hexo的开发人员大部分为国人，在这点优于hugo&lt;/p&gt;
 &lt;p&gt;但是呢，自己动手丰衣足食，浏览器审核元素，引入&lt;strong&gt;custom.css&lt;/strong&gt;文件，
 &lt;a href=&#34;https://sourcethemes.com/academic/docs/customization/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;官方链接&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&#34;academic&#34;&gt;academic&lt;/h2&gt;
-&lt;p&gt;官网默认&lt;code&gt;exampleSite&lt;/code&gt;，menu引入采用&lt;code&gt;#组件&lt;/code&gt;的方式，推荐使用&lt;code&gt;url&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;url的模式，点击导航栏能实现单页的跳转，而非在首页进行滚动，这点纯属个人喜好&lt;/p&gt;
+&lt;p&gt;主题内置的语法高亮设置，
+&lt;a href=&#34;https://sourcethemes.com/academic/docs/writing-markdown-latex/#highlighting-options.&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;官方链接&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;结尾&#34;&gt;结尾&lt;/h2&gt;
 &lt;p&gt;小朋友又要吐槽了，你怎么从头到尾都说的模模糊糊，细节什么的都不提&lt;/p&gt;
 &lt;p&gt;我想说的是，目前使用的这些工具：&lt;/p&gt;
