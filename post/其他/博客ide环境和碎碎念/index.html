@@ -35,7 +35,7 @@
   
   
   
-  <meta name="theme-color" content="hsl(339, 90%, 68%)">
+  <meta name="theme-color" content="#795548">
   
 
   
@@ -184,7 +184,7 @@
   
   
   
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CRoboto:400,400italic,700%7CRoboto+Mono&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cutive+Mono%7CLora:400,700%7CRoboto:400,700&display=swap">
   
 
   
@@ -333,7 +333,7 @@
 
 </head>
 
-<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="dark">
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" >
 
   <aside class="search-results" id="search">
   <div class="container">
@@ -632,8 +632,10 @@
 <p>这款主题对于中文的支持还不是很完善，主要是从视觉的角度来说，字体大小不太符合中文阅读习惯，hexo的开发人员大部分为国人，在这点优于hugo</p>
 <p>但是呢，自己动手丰衣足食，浏览器审核元素。定位了到了元素，想要知道需要修改的css样式名称，侧栏点击<strong>Insert Style Rule Below</strong>，即使嵌套多层的css，也能轻松拿到节点名称。</p>
 <ul>
-<li>引入<strong>custom.css</strong>文件，
-<a href="https://sourcethemes.com/academic/docs/customization/" target="_blank" rel="noopener">官方链接</a></li>
+<li>
+<a href="https://sourcethemes.com/academic/docs/customization/" target="_blank" rel="noopener">引入<strong>custom.css</strong></a></li>
+<li>
+<a href="https://sourcethemes.com/academic/docs/customization/#add-scripts-js" target="_blank" rel="noopener">引入<strong>custom_js</strong></a></li>
 <li>主题内置的语法高亮设置，
 <a href="https://sourcethemes.com/academic/docs/writing-markdown-latex/#highlighting-options." target="_blank" rel="noopener">官方链接</a></li>
 </ul>
@@ -870,7 +872,7 @@
 
     
     
-    <script>const isSiteThemeDark = true;</script>
+    <script>const isSiteThemeDark = false;</script>
     
 
     
@@ -937,10 +939,22 @@
     
     <script src="/js/academic.min.c816d323c3a55093dae0829b44ea1ca8.js"></script>
 
+    <html>
+<head>
+	<script src="https://cdn.jsdelivr.net/npm/pangu@4.0.7/dist/browser/pangu.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/pangu@4.0.7/dist/browser/pangu.min.js"></script>
+</head>
+<script>
+  pangu.spacingElementById('main');
+  pangu.spacingElementByClassName('comment');
+  pangu.spacingElementByTagName('p');
+
+  document.addEventListener('DOMContentLoaded', () => {
     
-
-
-
+    pangu.autoSpacingPage();
+  });
+</script>
+</html>
 
 
 

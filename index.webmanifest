@@ -2,8 +2,8 @@
   "name": "假装不困",
   "short_name": "假装不困",
   "lang": "zh-Hans",
-  "theme_color": "hsl(339, 90%, 68%)",
-  "background_color": "hsl(339, 90%, 68%)",
+  "theme_color": "#795548",
+  "background_color": "#795548",
   "icons": [{
     "src": "/images/icon_huabee4a8ccfc9d7d1c51a93249a1dcfdd_17677_192x192_fill_lanczos_center_2.png",
     "sizes": "192x192",

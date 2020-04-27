@@ -54,8 +54,10 @@
 &lt;p&gt;这款主题对于中文的支持还不是很完善，主要是从视觉的角度来说，字体大小不太符合中文阅读习惯，hexo的开发人员大部分为国人，在这点优于hugo&lt;/p&gt;
 &lt;p&gt;但是呢，自己动手丰衣足食，浏览器审核元素。定位了到了元素，想要知道需要修改的css样式名称，侧栏点击&lt;strong&gt;Insert Style Rule Below&lt;/strong&gt;，即使嵌套多层的css，也能轻松拿到节点名称。&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;引入&lt;strong&gt;custom.css&lt;/strong&gt;文件，
-&lt;a href=&#34;https://sourcethemes.com/academic/docs/customization/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;官方链接&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://sourcethemes.com/academic/docs/customization/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;引入&lt;strong&gt;custom.css&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://sourcethemes.com/academic/docs/customization/#add-scripts-js&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;引入&lt;strong&gt;custom_js&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;主题内置的语法高亮设置，
 &lt;a href=&#34;https://sourcethemes.com/academic/docs/writing-markdown-latex/#highlighting-options.&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;官方链接&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
