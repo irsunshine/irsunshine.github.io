@@ -225,25 +225,18 @@
 &lt;/blockquote&gt;
 &lt;p&gt;详细的Markdown语法本文不做额外赘述，推荐一本电子书，
 &lt;a href=&#34;https://markdown-zh.readthedocs.io/en/latest/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;点击此处&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;csdn博文系统&lt;/strong&gt;也推出了支持md语法的在线编辑器，在首次使用时，默认会有一篇关于md语法的介绍文章，笔者觉得还不错&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;印象笔记&lt;/strong&gt;在2018年增加了对于md笔记的支持，快捷栏中有各种md标记的选项，用起来和编辑普通的文章差不多，整体的交互流程属于新手友好&lt;/p&gt;
+&lt;p&gt;市面上很多软件都已经支持md作为书写方式。csdn博文系统推出了支持md语法的在线编辑器，在首次使用时，默认会有一篇关于md语法的介绍文章，笔者觉得还不错；印象笔记在2018年增加了对于md笔记的支持，快捷栏中有各种md标记的选项，用起来和编辑普通的文章差不多，整体的交互流程属于新手友好&lt;/p&gt;
 &lt;h3 id=&#34;ide推荐&#34;&gt;IDE推荐&lt;/h3&gt;
-&lt;p&gt;编写本文的时候，已经是2020年，vscode你必然是听说过的，毕竟能想到使用git page来搭建博文系统的都是业内人士。早些年的时候，sublime、atom也是不错的选择，经过两年开源社区的推动，vscode发展迅速，成为&lt;strong&gt;入场&lt;/strong&gt;的首选。&lt;/p&gt;
+&lt;p&gt;编写本文的时候，已经是2020年，vscode你必然是听说过的，毕竟能想到使用git page来搭建博文系统的都是业内人士。早些年的时候，sublime、atom也是不错的选择，经过两年开源社区的推动，vscode发展迅速，已经逐渐成为新手入场的首选。&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;微软巨头和开源社区的关系从割裂的状态，成功跨入蜜月期：拥抱开源&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;笔者所在的公司在最近两年也积极的引入Java体系，说白了就是大环境如此，换言之在业务开发上，如今的Java体系在国内属实真香&lt;/p&gt;
+&lt;p&gt;微软巨头和开源社区的关系从割裂的状态，成功跨入蜜月期：拥抱开源；笔者所在的公司在最近两年也积极的引入Java体系，换言之在业务开发上，如今的Java生态在国内属实真香&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h3 id=&#34;vscode插件推荐&#34;&gt;vscode插件推荐&lt;/h3&gt;
 &lt;p&gt;&lt;img src=&#34;2020-03-31-14-07-17.png&#34; alt=&#34;插件清单&#34;&gt;&lt;/p&gt;
 &lt;p&gt;插件都有自带的Readme，介绍基本用法，核心功能，部分插件作者还提供动态效果展示图&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;Paste Image&lt;/code&gt;，配合hugo的图片插件方式，很便捷的就能引入图片&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;快捷键没记住，打开vscode快捷键管理菜单，搜索md，多看几遍&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;重看一遍插件使用说明&lt;/p&gt;
+&lt;p&gt;快捷键没记住，打开vscode快捷键管理菜单，搜索md，多看几遍；重看一遍插件使用说明&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h2 id=&#34;hugo&#34;&gt;hugo&lt;/h2&gt;
 &lt;p&gt;笔者从&lt;code&gt;hexo&lt;/code&gt;切换到了&lt;code&gt;hugo&lt;/code&gt;，爱折腾是我的天性，终归是耐不住性子安安静静写文章&lt;/p&gt;
@@ -260,23 +253,23 @@
 &lt;li&gt;灵活性：自定义整体风格、自定义css样式&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;这款主题对于中文的支持还不是很完善，主要是从视觉的角度来说，字体大小不太符合中文阅读习惯，hexo的开发人员大部分为国人，在这点优于hugo&lt;/p&gt;
-&lt;p&gt;但是呢，自己动手丰衣足食，浏览器审核元素，引入&lt;strong&gt;custom.css&lt;/strong&gt;文件，
-&lt;a href=&#34;https://sourcethemes.com/academic/docs/customization/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;官方链接&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;主题内置的语法高亮设置，
-&lt;a href=&#34;https://sourcethemes.com/academic/docs/writing-markdown-latex/#highlighting-options.&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;官方链接&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;但是呢，自己动手丰衣足食，浏览器审核元素。定位了到了元素，想要知道需要修改的css样式名称，侧栏点击&lt;strong&gt;Insert Style Rule Below&lt;/strong&gt;，即使嵌套多层的css，也能轻松拿到节点名称。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;引入&lt;strong&gt;custom.css&lt;/strong&gt;文件，
+&lt;a href=&#34;https://sourcethemes.com/academic/docs/customization/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;官方链接&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;主题内置的语法高亮设置，
+&lt;a href=&#34;https://sourcethemes.com/academic/docs/writing-markdown-latex/#highlighting-options.&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;官方链接&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h2 id=&#34;结尾&#34;&gt;结尾&lt;/h2&gt;
 &lt;p&gt;小朋友又要吐槽了，你怎么从头到尾都说的模模糊糊，细节什么的都不提&lt;/p&gt;
-&lt;p&gt;我想说的是，目前使用的这些工具：&lt;/p&gt;
+&lt;p&gt;我想说的是，有下面这些东西，足够你用了：&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;官方手册&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;插件说明&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;官方手册&lt;/li&gt;
+&lt;li&gt;插件说明&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;快速上手新技术，推荐先阅读官网文档，&lt;strong&gt;粗读&lt;/strong&gt;不求一遍看懂，至少心里有个数。&lt;/p&gt;
-&lt;p&gt;和看书的道理一样，先看目录，搞清楚作者准备讲什么。&lt;/p&gt;
+&lt;p&gt;快速上手新技术，推荐先阅读官网文档，&lt;strong&gt;粗读&lt;/strong&gt;不求一遍看懂，至少心里有个数，搜索引擎出来的结果，不一定和当前最新的版本保持一致，也许会产生误导。翻阅新书也是如此，先看目录，搞清楚作者准备讲什么，有时候读书先读序，部分国外的著作翻译成中文，译者的序其实涵盖了书籍和核心内容。&lt;/p&gt;
 &lt;h2 id=&#34;彩蛋&#34;&gt;彩蛋&lt;/h2&gt;
-&lt;p&gt;切换&lt;code&gt;hugo academic&lt;/code&gt;内置风格样式，发布到站点，访问时，风格没有发生变换。&lt;/p&gt;
-&lt;p&gt;聪明的小伙伴已经想到了，清空本地浏览器缓存，能解决问题。&lt;/p&gt;
-&lt;p&gt;机智的我：&lt;code&gt;F12&lt;/code&gt;开发者模式，切换到&lt;code&gt;network&lt;/code&gt;，勾选&lt;code&gt;disable cache&lt;/code&gt;，刷新，搞定！&lt;/p&gt;
+&lt;p&gt;切换hugo academic内置风格样式，发布到站点，访问时，风格没有发生变换。聪明的小伙伴已经想到了，清空本地浏览器缓存，能解决问题。机智的我：F12开发者模式，切换到&lt;code&gt;network&lt;/code&gt;，勾选&lt;code&gt;disable cache&lt;/code&gt;，刷新，搞定！&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;2020-03-31-14-27-15.png&#34; alt=&#34;network&#34;&gt;&lt;/p&gt;
 </description>
     </item>
