@@ -74,7 +74,8 @@ url的模式，点击导航栏能实现单页的跳转，而非在首页进行�
 这款主题对于中文的支持还不是很完善，主要是从视觉的角度来说，字体大小不太符合中文阅读习惯，hexo的开发人员大部分为国人，在这点优于hugo
 
 但是呢，自己动手丰衣足食，浏览器审核元素。定位了到了元素，想要知道需要修改的css样式名称，侧栏点击**Insert Style Rule Below**，即使嵌套多层的css，也能轻松拿到节点名称。
-* 引入**custom.css**文件，[官方链接](https://sourcethemes.com/academic/docs/customization/)
+* [引入**custom.css**](https://sourcethemes.com/academic/docs/customization/)
+* [引入**custom_js**](https://sourcethemes.com/academic/docs/customization/#add-scripts-js)
 * 主题内置的语法高亮设置，[官方链接](https://sourcethemes.com/academic/docs/writing-markdown-latex/#highlighting-options.)
 
 ## 结尾

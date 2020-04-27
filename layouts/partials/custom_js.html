@@ -1,0 +1,16 @@
+<html>
+<head>
+	<script src="https://cdn.jsdelivr.net/npm/pangu@4.0.7/dist/browser/pangu.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/pangu@4.0.7/dist/browser/pangu.min.js"></script>
+</head>
+<script>
+  pangu.spacingElementById('main');
+  pangu.spacingElementByClassName('comment');
+  pangu.spacingElementByTagName('p');
+
+  document.addEventListener('DOMContentLoaded', () => {
+    // listen to any DOM change and automatically perform spacing via MutationObserver()
+    pangu.autoSpacingPage();
+  });
+</script>
+</html>
