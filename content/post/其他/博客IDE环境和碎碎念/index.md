@@ -68,6 +68,12 @@ projects: []
 2. academic主题在设计上支持多种各式的文章样式
 3. 各种便捷的自定义拓展
 
+## academic
+
+官网默认`exampleSite`，menu引入采用`#组件`的方式，推荐使用`url`
+
+url的模式，点击导航栏能实现单页的跳转，而非在首页进行滚动，这点纯属个人喜好
+
 - 样式上：随笔、演讲、电子书
 - 灵活性：自定义整体风格、自定义css样式
 
@@ -75,11 +81,7 @@ projects: []
 
 但是呢，自己动手丰衣足食，浏览器审核元素，引入**custom.css**文件，[官方链接](https://sourcethemes.com/academic/docs/customization/)
 
-## academic
-
-官网默认`exampleSite`，menu引入采用`#组件`的方式，推荐使用`url`
-
-url的模式，点击导航栏能实现单页的跳转，而非在首页进行滚动，这点纯属个人喜好
+主题内置的语法高亮设置，[官方链接](https://sourcethemes.com/academic/docs/writing-markdown-latex/#highlighting-options.)
 
 ## 结尾
 
