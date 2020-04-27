@@ -19,10 +19,10 @@
    url = "/post/"
    weight = 10
    
- [[zh.menu.main]]
-   name = "演讲"
-   url = "/talk/"
-   weight = 20
+#  [[zh.menu.main]]
+#    name = "演讲"
+#    url = "/talk/"
+#    weight = 20
    
 #  [[zh.menu.main]]
 #    name = "Publications"
@@ -34,10 +34,10 @@
    url = "courses/"
    weight = 40
 
- [[zh.menu.main]]
-   name = "目录"
-   url = "/categories/"
-   weight = 45
+#  [[zh.menu.main]]
+#    name = "目录"
+#    url = "/categories/"
+#    weight = 45
   
  [[zh.menu.main]]
    name = "关于我"
