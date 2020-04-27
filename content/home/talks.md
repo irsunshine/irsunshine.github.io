@@ -8,7 +8,7 @@ active = true  # Activate this widget? true/false
 weight = 70  # Order that this section will appear.
 
 title = "演讲笔记"
-subtitle = "目前只是听，梦想有一天我是主讲"
+subtitle = "笔杆子和半桶水的差距"
 
 [content]
   # Page type to display. E.g. post, talk, or publication.

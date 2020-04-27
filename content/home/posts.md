@@ -8,7 +8,7 @@ active = true  # Activate this widget? true/false
 weight = 60  # Order that this section will appear.
 
 title = "近期随笔"
-subtitle = "稿子改到第三版，看着才顺眼"
+subtitle = "文笔不行，稿子反复折腾"
 
 [content]
   # Page type to display. E.g. post, talk, or publication.

@@ -6,7 +6,7 @@ active = true  # Activate this widget? true/false
 weight = 250  # Order that this section will appear.
 
 title = "标签云"
-subtitle = "等我会前端了，重新做个好看的"
+subtitle = "羡慕别人家的样式，偷偷拿来用"
 
 [content]
   # Choose the taxonomy from `config.toml` to display (e.g. tags, categories)
