@@ -19,8 +19,8 @@ jobs:
           hugo-version: 'latest'
           extended: true
 
-      - name: Build Github and Gitee
-        run: hugo -b "https://www.xiangtianlong.com/" -d "github_public" && hugo -b "https://www.xiangtianlong.com/" -d "gitee_public" && ls
+      - name: Build Github
+        run: hugo -b "https://www.xiangtianlong.com/" -d "github_public" && ls
 
       - name: Deploy Github
         uses: peaceiris/actions-gh-pages@v3
@@ -29,6 +29,3 @@ jobs:
           publish_dir: ./github_public
           publish_branch: master
           cname: xiangtianlong.com
-
-      - name: Deploy Gitee
-        run: cd ./gitee_public && git init && git config user.name "TianlongXiang" && git config user.email "tianlongxiang51@gmail.com" && git add . && git commit -m "Update TianlongXiang's Blog" && git push --force "https://xiangtianlong:${{ secrets.GITEE_PASSWORD }}@gitee.com/xiangtianlong/xiangtianlong.git" master:master   
