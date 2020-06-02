@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>c&#43;&#43; | 假装不困</title>
+    <title>c&#43;&#43; | 工作内容收藏</title>
     <link>https://www.xiangtianlong.com/categories/c&#43;&#43;/</link>
       <atom:link href="https://www.xiangtianlong.com/categories/c++/index.xml" rel="self" type="application/rss+xml" />
     <description>c&#43;&#43;</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>zh-Hans</language><copyright>2018</copyright><lastBuildDate>Mon, 30 Dec 2019 13:26:19 +0800</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>zh-Hans</language><copyright>2019</copyright><lastBuildDate>Mon, 30 Dec 2019 13:26:19 +0800</lastBuildDate>
     <image>
       <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
       <title>c&#43;&#43;</title>
