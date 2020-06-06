@@ -19,10 +19,10 @@
    url = "/post/"
    weight = 10
    
-#  [[zh.menu.main]]
-#    name = "演讲"
-#    url = "/talk/"
-#    weight = 20
+ [[zh.menu.main]]
+   name = "演讲"
+   url = "/talk/"
+   weight = 20
    
 #  [[zh.menu.main]]
 #    name = "Publications"
