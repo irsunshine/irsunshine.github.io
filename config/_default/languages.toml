@@ -11,7 +11,7 @@
 [zh]
  languageCode = "zh-Hans"
  contentDir = "content"
- title = "工作内容收藏"#"假装不困"
+ title = "假装不困" #"工作内容收藏"
  [zh.params]
    description = "欺骗别人很容易，欺骗自己很难，想想18岁的自己"
  [[zh.menu.main]]
