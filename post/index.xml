@@ -17,61 +17,45 @@
       <link>https://www.xiangtianlong.com/post/%E5%85%B6%E4%BB%96/%E7%BD%91%E7%AB%99%E5%8A%A0%E9%80%9F%E5%92%8C%E5%9F%9F%E5%90%8D%E8%AE%BE%E7%BD%AE/</link>
       <pubDate>Sat, 20 Jun 2020 10:36:27 +0800</pubDate>
       <guid>https://www.xiangtianlong.com/post/%E5%85%B6%E4%BB%96/%E7%BD%91%E7%AB%99%E5%8A%A0%E9%80%9F%E5%92%8C%E5%9F%9F%E5%90%8D%E8%AE%BE%E7%BD%AE/</guid>
-      <description>&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
-&lt;h3 id=&#34;markdown&#34;&gt;Markdown&lt;/h3&gt;
+      <description>&lt;h3 id=&#34;背景&#34;&gt;背景&lt;/h3&gt;
+&lt;p&gt;网站托管在GitHub Pages，某些众所周知的原因，境内访问GitHub Pages有点慢。故而申请了个人域名，购买了国内云主机供应商的CDN加速服务。在设置加速服务的时候，想到了自己还有开发机器，上面部署了docker、frp、k8s等服务，这些服务都有配套的dashboard，本着不浪费的原则，配置了几个反向代理，全部挂上了二级域名。&lt;/p&gt;
+&lt;p&gt;当我美滋滋用着二级域名的时候，突发现www子域名无法访问了，阿里云上命名配置了DNS同时解析到www.xiangtianlong.com和xiangtianlong.com，尚未启用CDN加速的时候，两个域名都能正常使用。&lt;/p&gt;
+&lt;p&gt;在配置CDN加速的时候，由于二级域名太多，启用了泛域名规则，统一路由到了开发机器，结果导致www这个二级域名也挂了，是的，你没看错，www前缀是个二级域名。实际网站部署在GitHub Pages，开发机器没有任何网站的缓存信息。&lt;/p&gt;
+&lt;p&gt;至于为什么开发机器上没有部署站点，因为静态博客，配着GitHub提供的action，自动集成发布，真香。&lt;/p&gt;
+&lt;h3 id=&#34;域名&#34;&gt;域名&lt;/h3&gt;
+&lt;p&gt;非专业的web开发，对于域名的理解不涉及SEO和跨域问题。作为博客站点，裸域容易突出博客主的站点，说的就是我这种用汉字拼音当做域名的小朋友，加之当前移动访问居多，能少输入几个字符。&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;一种轻量级标记语言，它允许人们使用易读易写的纯文本格式编写文档&lt;/p&gt;
+&lt;p&gt;电脑端能使用快捷键免去输入www和com&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;详细的Markdown语法本文不做额外赘述，推荐一本电子书，
-&lt;a href=&#34;https://markdown-zh.readthedocs.io/en/latest/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;点击此处&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;市面上很多软件都已经支持md作为书写方式。csdn博文系统推出了支持md语法的在线编辑器，在首次使用时，默认会有一篇关于md语法的介绍文章，笔者觉得还不错；印象笔记在2018年增加了对于md笔记的支持，快捷栏中有各种md标记的选项，用起来和编辑普通的文章差不多，整体的交互流程属于新手友好&lt;/p&gt;
-&lt;h3 id=&#34;ide推荐&#34;&gt;IDE推荐&lt;/h3&gt;
-&lt;p&gt;编写本文的时候，已经是2020年，vscode你必然是听说过的，毕竟能想到使用git page来搭建博文系统的都是业内人士。早些年的时候，sublime、atom也是不错的选择，经过两年开源社区的推动，vscode发展迅速，已经逐渐成为新手入场的首选。&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;微软巨头和开源社区的关系从割裂的状态，成功跨入蜜月期：拥抱开源；笔者所在的公司在最近两年也积极的引入Java体系，换言之在业务开发上，如今的Java生态在国内属实真香&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h3 id=&#34;vscode插件推荐&#34;&gt;vscode插件推荐&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;2020-03-31-14-07-17.png&#34; alt=&#34;插件清单&#34;&gt;&lt;/p&gt;
-&lt;p&gt;插件都有自带的Readme，介绍基本用法，核心功能，部分插件作者还提供动态效果展示图&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;Paste Image&lt;/code&gt;，配合hugo的图片插件方式，很便捷的就能引入图片&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;快捷键没记住，打开vscode快捷键管理菜单，搜索md，多看几遍；重看一遍插件使用说明&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&#34;hugo&#34;&gt;hugo&lt;/h2&gt;
-&lt;p&gt;笔者从&lt;code&gt;hexo&lt;/code&gt;切换到了&lt;code&gt;hugo&lt;/code&gt;，爱折腾是我的天性，终归是耐不住性子安安静静写文章&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;hugo支持在单独的文件夹放置图片和md文档&lt;/li&gt;
-&lt;li&gt;academic主题在设计上支持多种各式的文章样式&lt;/li&gt;
-&lt;li&gt;各种便捷的自定义拓展&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2 id=&#34;academic&#34;&gt;academic&lt;/h2&gt;
-&lt;p&gt;官网默认&lt;code&gt;exampleSite&lt;/code&gt;，menu引入采用&lt;code&gt;#组件&lt;/code&gt;的方式，推荐使用&lt;code&gt;url&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;url的模式，点击导航栏能实现单页的跳转，而非在首页进行滚动，这点纯属个人喜好&lt;/p&gt;
+&lt;h3 id=&#34;cdn&#34;&gt;CDN&lt;/h3&gt;
+&lt;p&gt;阿里云和腾讯云的都用过，新人上手不难，腾讯云还有个视频单独讲解相关的概念。CDN加速的原理和京东仓库是一个道理，发售新商品，提前统一配送到全国各地的仓库，触发配送请求的时候，就近分发。&lt;/p&gt;
+&lt;p&gt;回源地址：网站资源原始存放的地址&lt;/p&gt;
+&lt;p&gt;缓存文件设置，浏览器F12，管理控制台，简单分析静态资源和动态资源&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;样式上：随笔、演讲、电子书&lt;/li&gt;
-&lt;li&gt;灵活性：自定义整体风格、自定义css样式&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;这款主题对于中文的支持还不是很完善，主要是从视觉的角度来说，字体大小不太符合中文阅读习惯，hexo的开发人员大部分为国人，在这点优于hugo&lt;/p&gt;
-&lt;p&gt;但是呢，自己动手丰衣足食，浏览器审核元素。定位了到了元素，想要知道需要修改的css样式名称，侧栏点击&lt;strong&gt;Insert Style Rule Below&lt;/strong&gt;，即使嵌套多层的css，也能轻松拿到节点名称。&lt;/p&gt;
-&lt;ul&gt;
+&lt;li&gt;全部0天有效期&lt;/li&gt;
+&lt;li&gt;.php;.jsp;.asp;.aspx 0天有效期&lt;/li&gt;
 &lt;li&gt;
-&lt;a href=&#34;https://sourcethemes.com/academic/docs/customization/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;引入&lt;strong&gt;custom.css&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;
-&lt;a href=&#34;https://sourcethemes.com/academic/docs/customization/#add-scripts-js&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;引入&lt;strong&gt;custom_js&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;主题内置的语法高亮设置，
-&lt;a href=&#34;https://sourcethemes.com/academic/docs/writing-markdown-latex/#highlighting-options.&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;官方链接&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;结尾&#34;&gt;结尾&lt;/h2&gt;
-&lt;p&gt;小朋友又要吐槽了，你怎么从头到尾都说的模模糊糊，细节什么的都不提&lt;/p&gt;
-&lt;p&gt;我想说的是，有下面这些东西，足够你用了：&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;官方手册&lt;/li&gt;
-&lt;li&gt;插件说明&lt;/li&gt;
+&lt;li&gt;.jpg;.png;.js;.css;.woff2	1天有效期&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;快速上手新技术，推荐先阅读官网文档，&lt;strong&gt;粗读&lt;/strong&gt;不求一遍看懂，至少心里有个数，搜索引擎出来的结果，不一定和当前最新的版本保持一致，也许会产生误导。翻阅新书也是如此，先看目录，搞清楚作者准备讲什么，有时候读书先读序，部分国外的著作翻译成中文，译者的序其实涵盖了书籍和核心内容。&lt;/p&gt;
-&lt;h2 id=&#34;彩蛋&#34;&gt;彩蛋&lt;/h2&gt;
-&lt;p&gt;切换hugo academic内置风格样式，发布到站点，访问时，风格没有发生变换。聪明的小伙伴已经想到了，清空本地浏览器缓存，能解决问题。机智的我：F12开发者模式，切换到&lt;code&gt;network&lt;/code&gt;，勾选&lt;code&gt;disable cache&lt;/code&gt;，刷新，搞定！&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;2020-03-31-14-27-15.png&#34; alt=&#34;network&#34;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;腾讯云配置规则：&lt;/p&gt;
+&lt;p&gt;缓存过期规则最多可配置10条。
+多条缓存过期规则之间的优先级为底部优先。
+缓存过期时间最多可设置365天。&lt;/p&gt;
+&lt;h3 id=&#34;悲惨自述&#34;&gt;悲惨自述&lt;/h3&gt;
+&lt;p&gt;没耐着性子安静看会Nginx配置，搜索引擎一顿折腾，结果屁用没有，还是没搞定通过Nginx配置跳转。就想着笨办法解决一下，DNS解析删除*模式的泛域名解析，单个二级域名进行独立设置。此时突然注意到了阿里云DNS解析有一个叫做显示URL跳转的模式，尝试了一下，这不就是我想要的302跳转。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;设置了第一个二级域名正常访问，等我设置第二个的时候，发现没用，都快怀疑人生了，等了一会突然就能用了，看来阿里云的DNS扩散偶尔也是会抽风的&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;参考资料&#34;&gt;参考资料&lt;/h3&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://www.zhihu.com/question/20414602&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;为什么越来越多的网站域名不加「www」前缀？&lt;/a&gt;
+
+&lt;a href=&#34;https://www.cloudxns.net/Support/detail/id/918.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;带www和不带www域名有什么区别呢?&lt;/a&gt;
+
+&lt;a href=&#34;https://gythialy.github.io/Docker-nginx-reverse-proxy/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Docker nginx 反向代理设置&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     
