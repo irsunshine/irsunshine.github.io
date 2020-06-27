@@ -33,19 +33,17 @@
 &lt;p&gt;缓存文件设置，浏览器F12，管理控制台，简单分析静态资源和动态资源&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;全部0天有效期&lt;/li&gt;
-&lt;li&gt;.php;.jsp;.asp;.aspx 0天有效期&lt;/li&gt;
-&lt;li&gt;
-&lt;ul&gt;
-&lt;li&gt;.jpg;.png;.js;.css;.woff2	1天有效期&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;.php;.jsp;.asp;.aspx&lt;/code&gt; 0天有效期&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;.jpg;.png;.js;.css;.woff2&lt;/code&gt;	1天有效期&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;腾讯云配置规则：&lt;/p&gt;
-&lt;p&gt;缓存过期规则最多可配置10条。
-多条缓存过期规则之间的优先级为底部优先。
-缓存过期时间最多可设置365天。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;缓存过期规则最多可配置10条&lt;/li&gt;
+&lt;li&gt;多条缓存过期规则之间的优先级为底部优先&lt;/li&gt;
+&lt;li&gt;缓存过期时间最多可设置365天&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h3 id=&#34;悲惨自述&#34;&gt;悲惨自述&lt;/h3&gt;
-&lt;p&gt;没耐着性子安静看会Nginx配置，搜索引擎一顿折腾，结果屁用没有，还是没搞定通过Nginx配置跳转。就想着笨办法解决一下，DNS解析删除*模式的泛域名解析，单个二级域名进行独立设置。此时突然注意到了阿里云DNS解析有一个叫做显示URL跳转的模式，尝试了一下，这不就是我想要的302跳转。&lt;/p&gt;
+&lt;p&gt;以前也没用过Nginx，以为网站随便搜索就能明白反向代理的配置，结果有点混乱，折腾半天连个302跳转也没弄明白，结果屁用没有。就想着笨办法解决一下，DNS解析删除*模式的泛域名解析，单个二级域名进行独立设置。此时突然注意到了阿里云DNS解析有一个叫做显示URL跳转的模式，尝试了一下，这不就是我想要的302跳转。&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;设置了第一个二级域名正常访问，等我设置第二个的时候，发现没用，都快怀疑人生了，等了一会突然就能用了，看来阿里云的DNS扩散偶尔也是会抽风的&lt;/p&gt;
 &lt;/blockquote&gt;
