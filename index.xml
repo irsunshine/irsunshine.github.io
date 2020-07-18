@@ -249,12 +249,14 @@
 &lt;p&gt;设置了第一个二级域名正常访问，等我设置第二个的时候，发现没用，都快怀疑人生了，等了一会突然就能用了，看来阿里云的DNS扩散偶尔也是会抽风的&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h3 id=&#34;参考资料&#34;&gt;参考资料&lt;/h3&gt;
-&lt;p&gt;
-&lt;a href=&#34;https://www.zhihu.com/question/20414602&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;为什么越来越多的网站域名不加「www」前缀？&lt;/a&gt;
-
-&lt;a href=&#34;https://www.cloudxns.net/Support/detail/id/918.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;带www和不带www域名有什么区别呢?&lt;/a&gt;
-
-&lt;a href=&#34;https://gythialy.github.io/Docker-nginx-reverse-proxy/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Docker nginx 反向代理设置&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://www.zhihu.com/question/20414602&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;为什么越来越多的网站域名不加「www」前缀？&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://www.cloudxns.net/Support/detail/id/918.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;带www和不带www域名有什么区别呢?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://gythialy.github.io/Docker-nginx-reverse-proxy/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Docker nginx 反向代理设置&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 </description>
     </item>
     
