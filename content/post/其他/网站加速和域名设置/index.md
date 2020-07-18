@@ -68,6 +68,6 @@ projects: []
 
 ### 参考资料
 
-[为什么越来越多的网站域名不加「www」前缀？](https://www.zhihu.com/question/20414602)
-[带www和不带www域名有什么区别呢?](https://www.cloudxns.net/Support/detail/id/918.html)
-[Docker nginx 反向代理设置](https://gythialy.github.io/Docker-nginx-reverse-proxy/)
+- [为什么越来越多的网站域名不加「www」前缀？](https://www.zhihu.com/question/20414602)
+- [带www和不带www域名有什么区别呢?](https://www.cloudxns.net/Support/detail/id/918.html)
+- [Docker nginx 反向代理设置](https://gythialy.github.io/Docker-nginx-reverse-proxy/)
