@@ -4,9 +4,9 @@
 title: "电脑组装那些事"
 subtitle: ""
 summary: ""
-authors: []
+authors: [向天龙]
 tags: []
-categories: []
+categories: [其他]
 date: 2020-07-18T14:33:46+08:00
 lastmod: 2020-07-18T14:33:46+08:00
 featured: false
