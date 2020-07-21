@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>linux | 假装不困</title>
+    <link>https://www.xiangtianlong.com/categories/linux/</link>
+      <atom:link href="https://www.xiangtianlong.com/categories/linux/index.xml" rel="self" type="application/rss+xml" />
+    <description>linux</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>zh-Hans</language><copyright>2019</copyright><lastBuildDate>Tue, 21 Jul 2020 20:02:35 +0800</lastBuildDate>
+    <image>
+      <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
+      <title>linux</title>
+      <link>https://www.xiangtianlong.com/categories/linux/</link>
+    </image>
+    
+    <item>
+      <title>redhat and centos life cycle</title>
+      <link>https://www.xiangtianlong.com/post/linux/redhat-and-centos-life-cycle/</link>
+      <pubDate>Tue, 21 Jul 2020 20:02:35 +0800</pubDate>
+      <guid>https://www.xiangtianlong.com/post/linux/redhat-and-centos-life-cycle/</guid>
+      <description>&lt;p&gt;线上生产环境操作系统，目前国内的环境来说，redhat和centos为主流选择。前两年经历了redhat6的退役，特此记录两个系统生命周期官网链接。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://access.redhat.com/support/policy/updates/errata&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Red Hat Enterprise Linux Life Cycle&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://wiki.centos.org/zh/About/Product&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CentOS 产品规范&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
