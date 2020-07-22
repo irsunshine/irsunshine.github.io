@@ -270,6 +270,17 @@
 &lt;h4 id=&#34;sn550-vs-sn750&#34;&gt;SN550 VS SN750&lt;/h4&gt;
 &lt;p&gt;SN550 1TB容量和SN750 1TB容量差别就是，两者持续读写差一倍，一个850MB，一个1.6GB，但日常使用没区别，因为两者4K都一样。当然这里说的是1TB容量的SN550，500G和250G速度顺序读写更慢。其实我觉得只要不是不差钱的，日常使用买SN550就行，我没买这个最大原因不是因为它的顺序读写速度，而是它最大只有1TB容量，而SN750有2TB容量。对我来说，在不额外扩展的情况下，主板的M.2 Nvme接口比这些固态的差价更值钱&lt;/p&gt;
 &lt;p&gt;综合网友的结论，入手一块转接板，B150 主板也能支持 M2 接口的固态。&lt;/p&gt;
+&lt;h4 id=&#34;机械硬盘选购&#34;&gt;机械硬盘选购&lt;/h4&gt;
+&lt;p&gt;机械硬盘目前价格趋于稳定，对于有大量存储需求的用户，需要选购一款合适的机械硬盘，频繁下载资源的用户推荐企业级硬盘，常见的有：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;西数金盘&lt;/li&gt;
+&lt;li&gt;希捷exos&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;大容量的机械硬盘推荐进行分区，频繁的下载操作固定在某个分区进行，日后出现坏道，可以集中在某个分区，废弃当前分区即可，能有效延长机械硬盘寿命。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;希捷系列
+&lt;a href=&#34;https://www.seagate.com/cn/zh/enterprise-storage/exos-drives/exos-e-drives/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;官网介绍&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;%E5%B8%8C%E6%8D%B7exos1.png&#34; alt=&#34;希捷企业级硬盘概述&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;%E5%B8%8C%E6%8D%B7exos2.png&#34; alt=&#34;希捷企业级硬盘概述&#34;&gt;&lt;/p&gt;
 &lt;h4 id=&#34;内存频率&#34;&gt;内存频率&lt;/h4&gt;
 &lt;p&gt;日常工作的角度出发，频率不会对性能产生太大的影响。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;%E5%86%85%E5%AD%98.png&#34; alt=&#34;内存时序&#34;&gt; &lt;img src=&#34;%E5%92%B8%E9%B1%BC%E5%86%85%E5%AD%98.png&#34; alt=&#34;咸鱼内存&#34;&gt;&lt;/p&gt;
