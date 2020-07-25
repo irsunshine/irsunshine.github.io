@@ -1,4 +1,4 @@
-name: github pages and gitee pages
+name: github pages
 
 on:
   push:
