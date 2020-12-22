@@ -27,7 +27,7 @@
   <meta name="description" content="前因 近期接触到了网络网络数据包的开发，需要频繁的申请和释放小块的内存，原本想着使用内存池，查看了几个现有的内存池，发现了这个： https://github.com/cacay/MemoryPool 看到接口的时候，就比较纳闷，这个内存池的实现怎么有点奇怪。MemoryPool的实现逻辑，是在申请固定大小的内存">
 
   
-  <link rel="alternate" hreflang="zh-Hans" href="https://www.xiangtianlong.com/post/c&#43;&#43;/std-allocator-%E7%9B%B8%E5%85%B3%E6%A6%82%E5%BF%B5/">
+  <link rel="alternate" hreflang="zh-Hans" href="https://www.xiangtianlong.com/post/2020/std-allocator-%E7%9B%B8%E5%85%B3%E6%A6%82%E5%BF%B5/">
 
   
 
@@ -245,7 +245,7 @@
   <link rel="icon" type="image/png" href="/images/icon_huabee4a8ccfc9d7d1c51a93249a1dcfdd_17677_32x32_fill_lanczos_center_2.png">
   <link rel="apple-touch-icon" type="image/png" href="/images/icon_huabee4a8ccfc9d7d1c51a93249a1dcfdd_17677_192x192_fill_lanczos_center_2.png">
 
-  <link rel="canonical" href="https://www.xiangtianlong.com/post/c&#43;&#43;/std-allocator-%E7%9B%B8%E5%85%B3%E6%A6%82%E5%BF%B5/">
+  <link rel="canonical" href="https://www.xiangtianlong.com/post/2020/std-allocator-%E7%9B%B8%E5%85%B3%E6%A6%82%E5%BF%B5/">
 
   
   
@@ -259,7 +259,7 @@
   <meta property="twitter:card" content="summary">
   
   <meta property="og:site_name" content="假装不困">
-  <meta property="og:url" content="https://www.xiangtianlong.com/post/c&#43;&#43;/std-allocator-%E7%9B%B8%E5%85%B3%E6%A6%82%E5%BF%B5/">
+  <meta property="og:url" content="https://www.xiangtianlong.com/post/2020/std-allocator-%E7%9B%B8%E5%85%B3%E6%A6%82%E5%BF%B5/">
   <meta property="og:title" content="标准库容器的内存分配器：allocator | 假装不困">
   <meta property="og:description" content="前因 近期接触到了网络网络数据包的开发，需要频繁的申请和释放小块的内存，原本想着使用内存池，查看了几个现有的内存池，发现了这个： https://github.com/cacay/MemoryPool 看到接口的时候，就比较纳闷，这个内存池的实现怎么有点奇怪。MemoryPool的实现逻辑，是在申请固定大小的内存"><meta property="og:image" content="img/map[gravatar:%!s(bool=false) shape:circle]">
   <meta property="twitter:image" content="img/map[gravatar:%!s(bool=false) shape:circle]"><meta property="og:locale" content="zh-Hans">
@@ -291,7 +291,7 @@
   "@type": "BlogPosting",
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://www.xiangtianlong.com/post/c++/std-allocator-%E7%9B%B8%E5%85%B3%E6%A6%82%E5%BF%B5/"
+    "@id": "https://www.xiangtianlong.com/post/2020/std-allocator-%E7%9B%B8%E5%85%B3%E6%A6%82%E5%BF%B5/"
   },
   "headline": "标准库容器的内存分配器：allocator",
   
@@ -662,7 +662,7 @@
       
       
       <li>
-        <a href="https://twitter.com/intent/tweet?url=https://www.xiangtianlong.com/post/c&#43;&#43;/std-allocator-%E7%9B%B8%E5%85%B3%E6%A6%82%E5%BF%B5/&amp;text=%e6%a0%87%e5%87%86%e5%ba%93%e5%ae%b9%e5%99%a8%e7%9a%84%e5%86%85%e5%ad%98%e5%88%86%e9%85%8d%e5%99%a8%ef%bc%9aallocator" target="_blank" rel="noopener" class="share-btn-twitter">
+        <a href="https://twitter.com/intent/tweet?url=https://www.xiangtianlong.com/post/2020/std-allocator-%E7%9B%B8%E5%85%B3%E6%A6%82%E5%BF%B5/&amp;text=%e6%a0%87%e5%87%86%e5%ba%93%e5%ae%b9%e5%99%a8%e7%9a%84%e5%86%85%e5%ad%98%e5%88%86%e9%85%8d%e5%99%a8%ef%bc%9aallocator" target="_blank" rel="noopener" class="share-btn-twitter">
           <i class="fab fa-twitter"></i>
         </a>
       </li>
@@ -675,7 +675,7 @@
       
       
       <li>
-        <a href="https://www.facebook.com/sharer.php?u=https://www.xiangtianlong.com/post/c&#43;&#43;/std-allocator-%E7%9B%B8%E5%85%B3%E6%A6%82%E5%BF%B5/&amp;t=%e6%a0%87%e5%87%86%e5%ba%93%e5%ae%b9%e5%99%a8%e7%9a%84%e5%86%85%e5%ad%98%e5%88%86%e9%85%8d%e5%99%a8%ef%bc%9aallocator" target="_blank" rel="noopener" class="share-btn-facebook">
+        <a href="https://www.facebook.com/sharer.php?u=https://www.xiangtianlong.com/post/2020/std-allocator-%E7%9B%B8%E5%85%B3%E6%A6%82%E5%BF%B5/&amp;t=%e6%a0%87%e5%87%86%e5%ba%93%e5%ae%b9%e5%99%a8%e7%9a%84%e5%86%85%e5%ad%98%e5%88%86%e9%85%8d%e5%99%a8%ef%bc%9aallocator" target="_blank" rel="noopener" class="share-btn-facebook">
           <i class="fab fa-facebook"></i>
         </a>
       </li>
@@ -688,7 +688,7 @@
       
       
       <li>
-        <a href="mailto:?subject=%e6%a0%87%e5%87%86%e5%ba%93%e5%ae%b9%e5%99%a8%e7%9a%84%e5%86%85%e5%ad%98%e5%88%86%e9%85%8d%e5%99%a8%ef%bc%9aallocator&amp;body=https://www.xiangtianlong.com/post/c&#43;&#43;/std-allocator-%E7%9B%B8%E5%85%B3%E6%A6%82%E5%BF%B5/" target="_blank" rel="noopener" class="share-btn-email">
+        <a href="mailto:?subject=%e6%a0%87%e5%87%86%e5%ba%93%e5%ae%b9%e5%99%a8%e7%9a%84%e5%86%85%e5%ad%98%e5%88%86%e9%85%8d%e5%99%a8%ef%bc%9aallocator&amp;body=https://www.xiangtianlong.com/post/2020/std-allocator-%E7%9B%B8%E5%85%B3%E6%A6%82%E5%BF%B5/" target="_blank" rel="noopener" class="share-btn-email">
           <i class="fas fa-envelope"></i>
         </a>
       </li>
@@ -701,7 +701,7 @@
       
       
       <li>
-        <a href="https://www.linkedin.com/shareArticle?url=https://www.xiangtianlong.com/post/c&#43;&#43;/std-allocator-%E7%9B%B8%E5%85%B3%E6%A6%82%E5%BF%B5/&amp;title=%e6%a0%87%e5%87%86%e5%ba%93%e5%ae%b9%e5%99%a8%e7%9a%84%e5%86%85%e5%ad%98%e5%88%86%e9%85%8d%e5%99%a8%ef%bc%9aallocator" target="_blank" rel="noopener" class="share-btn-linkedin">
+        <a href="https://www.linkedin.com/shareArticle?url=https://www.xiangtianlong.com/post/2020/std-allocator-%E7%9B%B8%E5%85%B3%E6%A6%82%E5%BF%B5/&amp;title=%e6%a0%87%e5%87%86%e5%ba%93%e5%ae%b9%e5%99%a8%e7%9a%84%e5%86%85%e5%ad%98%e5%88%86%e9%85%8d%e5%99%a8%ef%bc%9aallocator" target="_blank" rel="noopener" class="share-btn-linkedin">
           <i class="fab fa-linkedin-in"></i>
         </a>
       </li>
@@ -714,7 +714,7 @@
       
       
       <li>
-        <a href="https://web.whatsapp.com/send?text=%e6%a0%87%e5%87%86%e5%ba%93%e5%ae%b9%e5%99%a8%e7%9a%84%e5%86%85%e5%ad%98%e5%88%86%e9%85%8d%e5%99%a8%ef%bc%9aallocator%20https://www.xiangtianlong.com/post/c&#43;&#43;/std-allocator-%E7%9B%B8%E5%85%B3%E6%A6%82%E5%BF%B5/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+        <a href="https://web.whatsapp.com/send?text=%e6%a0%87%e5%87%86%e5%ba%93%e5%ae%b9%e5%99%a8%e7%9a%84%e5%86%85%e5%ad%98%e5%88%86%e9%85%8d%e5%99%a8%ef%bc%9aallocator%20https://www.xiangtianlong.com/post/2020/std-allocator-%E7%9B%B8%E5%85%B3%E6%A6%82%E5%BF%B5/" target="_blank" rel="noopener" class="share-btn-whatsapp">
           <i class="fab fa-whatsapp"></i>
         </a>
       </li>
@@ -727,7 +727,7 @@
       
       
       <li>
-        <a href="https://service.weibo.com/share/share.php?url=https://www.xiangtianlong.com/post/c&#43;&#43;/std-allocator-%E7%9B%B8%E5%85%B3%E6%A6%82%E5%BF%B5/&amp;title=%e6%a0%87%e5%87%86%e5%ba%93%e5%ae%b9%e5%99%a8%e7%9a%84%e5%86%85%e5%ad%98%e5%88%86%e9%85%8d%e5%99%a8%ef%bc%9aallocator" target="_blank" rel="noopener" class="share-btn-weibo">
+        <a href="https://service.weibo.com/share/share.php?url=https://www.xiangtianlong.com/post/2020/std-allocator-%E7%9B%B8%E5%85%B3%E6%A6%82%E5%BF%B5/&amp;title=%e6%a0%87%e5%87%86%e5%ba%93%e5%ae%b9%e5%99%a8%e7%9a%84%e5%86%85%e5%ad%98%e5%88%86%e9%85%8d%e5%99%a8%ef%bc%9aallocator" target="_blank" rel="noopener" class="share-btn-weibo">
           <i class="fab fa-weibo"></i>
         </a>
       </li>
