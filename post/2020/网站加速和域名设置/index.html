@@ -516,9 +516,9 @@
 </nav>
 
 
-  <article class="article">
-
   
+        <article class="article">
+            
 
 
 
@@ -613,11 +613,9 @@
 </div>
 
 
-
-  <div class="article-container">
-
-    <div class="article-style">
-      <h3 id="背景">背景</h3>
+            <div class="article-container">
+              <div class="article-style">
+                <h3 id="背景">背景</h3>
 <p>网站托管在GitHub Pages，某些众所周知的原因，境内访问GitHub Pages有点慢。故而申请了个人域名，购买了国内云主机供应商的CDN加速服务。在设置加速服务的时候，想到了自己还有开发机器，上面部署了docker、frp、k8s等服务，这些服务都有配套的dashboard，本着不浪费的原则，配置了几个反向代理，全部挂上了二级域名。</p>
 <p>当我美滋滋用着二级域名的时候，突发现www子域名无法访问了，阿里云上命名配置了DNS同时解析到www.xiangtianlong.com和xiangtianlong.com，尚未启用CDN加速的时候，两个域名都能正常使用。</p>
 <p>在配置CDN加速的时候，由于二级域名太多，启用了泛域名规则，统一路由到了开发机器，结果导致www这个二级域名也挂了，是的，你没看错，www前缀是个二级域名。实际网站部署在GitHub Pages，开发机器没有任何网站的缓存信息。</p>
@@ -657,9 +655,8 @@
 <a href="https://gythialy.github.io/Docker-nginx-reverse-proxy/" target="_blank" rel="noopener">Docker nginx 反向代理设置</a></li>
 </ul>
 
-    </div>
-
-    
+              </div>
+              
 
 
 
@@ -840,9 +837,9 @@
   
 
 
-
-  </div>
-</article>
+            </div>
+        </article>
+  
 
       
 
@@ -859,10 +856,6 @@
       
         
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js" integrity="sha256-eOgo0OtLL4cdq7RdwRUiGKLX9XsIJ7nGhWEKbohmVAQ=" crossorigin="anonymous"></script>
-        
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/languages/c&#43;&#43;.min.js"></script>
-        
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/languages/yaml.min.js"></script>
         
       
 

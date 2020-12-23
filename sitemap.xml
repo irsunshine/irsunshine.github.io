@@ -33,22 +33,52 @@
   
   <url>
     <loc>https://www.xiangtianlong.com/authors/%E5%90%91%E5%A4%A9%E9%BE%99/</loc>
-    <lastmod>2020-07-21T20:02:35+08:00</lastmod>
+    <lastmod>2020-12-22T10:12:50+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://www.xiangtianlong.com/post/</loc>
-    <lastmod>2020-07-21T20:02:35+08:00</lastmod>
+    <lastmod>2020-12-22T10:12:50+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://www.xiangtianlong.com/authors/</loc>
-    <lastmod>2020-07-21T20:02:35+08:00</lastmod>
+    <lastmod>2020-12-22T10:12:50+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://www.xiangtianlong.com/categories/</loc>
-    <lastmod>2020-07-21T20:02:35+08:00</lastmod>
+    <lastmod>2020-12-22T10:12:50+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.xiangtianlong.com/tags/jmeter/</loc>
+    <lastmod>2020-12-22T10:12:50+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.xiangtianlong.com/tags/linux/</loc>
+    <lastmod>2020-12-22T10:12:50+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.xiangtianlong.com/post/2020/linux%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BAjmeter%E5%8E%8B%E6%B5%8B%E7%8E%AF%E5%A2%83/</loc>
+    <lastmod>2020-12-22T10:12:50+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.xiangtianlong.com/tags/</loc>
+    <lastmod>2020-12-22T10:12:50+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.xiangtianlong.com/</loc>
+    <lastmod>2020-12-22T10:12:50+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.xiangtianlong.com/categories/%E5%8E%8B%E5%8A%9B%E6%B5%8B%E8%AF%95/</loc>
+    <lastmod>2020-12-22T10:12:50+08:00</lastmod>
   </url>
   
   <url>
@@ -58,11 +88,6 @@
   
   <url>
     <loc>https://www.xiangtianlong.com/post/2020/redhat-and-centos-life-cycle/</loc>
-    <lastmod>2020-07-21T20:02:35+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.xiangtianlong.com/</loc>
     <lastmod>2020-07-21T20:02:35+08:00</lastmod>
   </url>
   
@@ -103,11 +128,6 @@
   
   <url>
     <loc>https://www.xiangtianlong.com/tags/github-action/</loc>
-    <lastmod>2020-03-29T02:11:33+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.xiangtianlong.com/tags/</loc>
     <lastmod>2020-03-29T02:11:33+08:00</lastmod>
   </url>
   

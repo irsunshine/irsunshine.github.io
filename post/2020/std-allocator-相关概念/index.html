@@ -516,9 +516,9 @@
 </nav>
 
 
-  <article class="article">
-
   
+        <article class="article">
+            
 
 
 
@@ -611,11 +611,9 @@
 </div>
 
 
-
-  <div class="article-container">
-
-    <div class="article-style">
-      <h4 id="前因">前因</h4>
+            <div class="article-container">
+              <div class="article-style">
+                <h4 id="前因">前因</h4>
 <p>近期接触到了网络网络数据包的开发，需要频繁的申请和释放小块的内存，原本想着使用内存池，查看了几个现有的内存池，发现了这个：</p>
 <p>
 <a href="https://github.com/cacay/MemoryPool" target="_blank" rel="noopener">https://github.com/cacay/MemoryPool</a></p>
@@ -635,9 +633,8 @@
 <p>另外，在《C++程序设计语言》中，比雅尼·斯特劳斯特鲁普则认为“‘严格限制分配器，以免各对象信息不同’，这点显然问题不大”（大意），并指出大部分分配器并不需要状态，甚至没有状态情形下性能反倒更佳。他提出了三个自定义分配器的用例：内存池型的分配器、共享内存型分配器与垃圾回收型分配器，并展示了一个分配器的实现，此间利用了一个内部内存池，以快速分配/解除分配少量内存。但他也提到，如此优化可能已经在他所提供的样例分配器中实现[3]。</p>
 <p>自定义分配器的另一用途是调试内存相关错误[10]。若要做到这一点，可以编写一个分配器，令之在分配时分配额外的内存，并借此存放调试信息。这类分配器不仅可以保证内存由同类分配器分配/解除分配内存，还可在一定程度上保护程序免受缓存溢出之害[11]。</p>
 
-    </div>
-
-    
+              </div>
+              
 
 
 
@@ -824,9 +821,9 @@
   
 
 
-
-  </div>
-</article>
+            </div>
+        </article>
+  
 
       
 
@@ -843,10 +840,6 @@
       
         
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js" integrity="sha256-eOgo0OtLL4cdq7RdwRUiGKLX9XsIJ7nGhWEKbohmVAQ=" crossorigin="anonymous"></script>
-        
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/languages/c&#43;&#43;.min.js"></script>
-        
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/languages/yaml.min.js"></script>
         
       
 

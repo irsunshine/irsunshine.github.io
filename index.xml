@@ -5,7 +5,7 @@
     <link>https://www.xiangtianlong.com/</link>
       <atom:link href="https://www.xiangtianlong.com/index.xml" rel="self" type="application/rss+xml" />
     <description>假装不困</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>zh-Hans</language><copyright>2019</copyright><lastBuildDate>Tue, 21 Jul 2020 20:02:35 +0800</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>zh-Hans</language><copyright>2019</copyright><lastBuildDate>Tue, 22 Dec 2020 10:12:50 +0800</lastBuildDate>
     <image>
       <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
       <title>假装不困</title>
@@ -87,9 +87,8 @@
 &lt;p&gt;&lt;code&gt;RAII&lt;/code&gt;在我看来属于&lt;code&gt;C++&lt;/code&gt;的内存管理方式，配合析构函数，对象对于外部而言并没有直接内存相关的操作。&lt;/p&gt;
 &lt;p&gt;最新正好在开发一个和行情相关的项目，为了提高性能，能说一句恰逢其时？&lt;code&gt;C11&lt;/code&gt;的智能指针效率，&lt;strong&gt;存在纳秒级别的性能损耗&lt;/strong&gt;。&lt;/p&gt;
 &lt;h3 id=&#34;堆&#34;&gt;堆&lt;/h3&gt;
-&lt;pre&gt;&lt;code class=&#34;language-c++&#34;&gt;auto ptr = new std::vector&amp;lt;int&amp;gt;();
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;动态申请内存时(堆)，三个常见的内存操作：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-c++&#34; data-lang=&#34;c++&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;auto&lt;/span&gt; ptr &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;new&lt;/span&gt; std&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;vector&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;();
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;动态申请内存时(堆)，三个常见的内存操作：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;让内存管理器分配一个某个大小的内存&lt;/li&gt;
 &lt;li&gt;让内存管理器释放一个之前分配的内存块&lt;/li&gt;
@@ -121,95 +120,183 @@
 &lt;/ul&gt;
 &lt;p&gt;案例的含义在于分别统计：连续申请堆内存并操作，预先申请堆内存并操作，连续操作栈内存&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;%E5%A0%86%E6%A0%88%E5%86%85%E5%AD%98%E5%9D%97%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%951.jpg&#34; alt=&#34;堆栈内存块性能测试1&#34;&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-c++&#34;&gt;{
-  int result = 0;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-c++&#34; data-lang=&#34;c++&#34;&gt;{
+  &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; result &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;;
 
-  SECTION(&amp;quot;堆上连续申请内存&amp;quot;)
+  SECTION(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;堆上连续申请内存&amp;#34;&lt;/span&gt;)
   {
-    auto timer = std::chrono::steady_clock::now().time_since_epoch().count();
-    for (auto i = 0; i &amp;lt; kTestCount; i++)
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;auto&lt;/span&gt; timer &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; std&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;chrono&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;steady_clock&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;now().time_since_epoch().count();
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; (&lt;span style=&#34;color:#66d9ef&#34;&gt;auto&lt;/span&gt; i &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;; i &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt; kTestCount; i&lt;span style=&#34;color:#f92672&#34;&gt;++&lt;/span&gt;)
     {
-      int* j = new int(1);
-      result += *j;
-      delete j;
+      &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; j &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;new&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt;(&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;);
+      result &lt;span style=&#34;color:#f92672&#34;&gt;+=&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;j;
+      &lt;span style=&#34;color:#66d9ef&#34;&gt;delete&lt;/span&gt; j;
     }
-    auto count = std::chrono::steady_clock::now().time_since_epoch().count() - timer;
-    std::cout &amp;lt;&amp;lt; &amp;quot;堆上连续申请内存：&amp;quot; &amp;lt;&amp;lt; result &amp;lt;&amp;lt; &amp;quot;\t&amp;quot; &amp;lt;&amp;lt; count &amp;lt;&amp;lt; std::endl;
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;auto&lt;/span&gt; count &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; std&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;chrono&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;steady_clock&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;now().time_since_epoch().count() &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt; timer;
+    std&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;cout &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;堆上连续申请内存：&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; result &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;\t&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; count &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; std&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;endl;
   }
 
-    SECTION(&amp;quot;栈上连续申请内存&amp;quot;)
+    SECTION(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;栈上连续申请内存&amp;#34;&lt;/span&gt;)
     {
-        auto timer = std::chrono::steady_clock::now().time_since_epoch().count();
-        for (auto i = 0; i &amp;lt; kTestCount; i++)
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;auto&lt;/span&gt; timer &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; std&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;chrono&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;steady_clock&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;now().time_since_epoch().count();
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; (&lt;span style=&#34;color:#66d9ef&#34;&gt;auto&lt;/span&gt; i &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;; i &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt; kTestCount; i&lt;span style=&#34;color:#f92672&#34;&gt;++&lt;/span&gt;)
         {
-          int j = 1;
-          result += j;
+          &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; j &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;;
+          result &lt;span style=&#34;color:#f92672&#34;&gt;+=&lt;/span&gt; j;
         }
-        auto count = std::chrono::steady_clock::now().time_since_epoch().count() - timer;
-        std::cout &amp;lt;&amp;lt; &amp;quot;栈上连续申请内存：&amp;quot; &amp;lt;&amp;lt; result &amp;lt;&amp;lt; &amp;quot;\t&amp;quot; &amp;lt;&amp;lt; count &amp;lt;&amp;lt; std::endl;
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;auto&lt;/span&gt; count &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; std&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;chrono&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;steady_clock&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;now().time_since_epoch().count() &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt; timer;
+        std&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;cout &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;栈上连续申请内存：&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; result &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;\t&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; count &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; std&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;endl;
     }
 
-    SECTION(&amp;quot;堆上预先申请内存，连续写入数据&amp;quot;)
+    SECTION(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;堆上预先申请内存，连续写入数据&amp;#34;&lt;/span&gt;)
     {
-        auto timer = std::chrono::steady_clock::now().time_since_epoch().count();
-        int* j = new int(1);
-        for (auto i = 0; i &amp;lt; kTestCount; i++)
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;auto&lt;/span&gt; timer &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; std&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;chrono&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;steady_clock&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;now().time_since_epoch().count();
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; j &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;new&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt;(&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;);
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; (&lt;span style=&#34;color:#66d9ef&#34;&gt;auto&lt;/span&gt; i &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;; i &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt; kTestCount; i&lt;span style=&#34;color:#f92672&#34;&gt;++&lt;/span&gt;)
         {
-            *j = 1;
-            result += *j;
+            &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;j &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;;
+            result &lt;span style=&#34;color:#f92672&#34;&gt;+=&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;j;
         }
-        delete j;
-        auto count = std::chrono::steady_clock::now().time_since_epoch().count() - timer;
-        std::cout &amp;lt;&amp;lt; &amp;quot;堆上预先申请内存，连续写入数据：&amp;quot; &amp;lt;&amp;lt; result &amp;lt;&amp;lt; &amp;quot;\t&amp;quot; &amp;lt;&amp;lt; count &amp;lt;&amp;lt; std::endl;
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;delete&lt;/span&gt; j;
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;auto&lt;/span&gt; count &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; std&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;chrono&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;steady_clock&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;now().time_since_epoch().count() &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt; timer;
+        std&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;cout &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;堆上预先申请内存，连续写入数据：&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; result &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;\t&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; count &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; std&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;endl;
     }
 }
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;其实呢，初次看到上面的测试案例结果，肯定会纳闷，怎么预先申请的内存和栈内存的性能差别那么大，其实这个属于现在编译器&lt;code&gt;Release&lt;/code&gt;模式的代码优化。
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;其实呢，初次看到上面的测试案例结果，肯定会纳闷，怎么预先申请的内存和栈内存的性能差别那么大，其实这个属于现在编译器&lt;code&gt;Release&lt;/code&gt;模式的代码优化。
 每次操作的都是常数，编译器就能预先做掉一部分事情，具体原理本人不是很清楚，不过我们改进一下测试案例，每次累加动态的数据。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;%E5%A0%86%E6%A0%88%E5%86%85%E5%AD%98%E5%9D%97%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%952.jpg&#34; alt=&#34;堆栈内存块性能测试2&#34;&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-c++&#34;&gt;{
-  int result = 0;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-c++&#34; data-lang=&#34;c++&#34;&gt;{
+  &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; result &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;;
 
-  SECTION(&amp;quot;堆上连续申请内存&amp;quot;)
+  SECTION(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;堆上连续申请内存&amp;#34;&lt;/span&gt;)
   {
-    auto timer = std::chrono::steady_clock::now().time_since_epoch().count();
-    for (auto i = 0; i &amp;lt; 100000; i++)
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;auto&lt;/span&gt; timer &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; std&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;chrono&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;steady_clock&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;now().time_since_epoch().count();
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; (&lt;span style=&#34;color:#66d9ef&#34;&gt;auto&lt;/span&gt; i &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;; i &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;100000&lt;/span&gt;; i&lt;span style=&#34;color:#f92672&#34;&gt;++&lt;/span&gt;)
     {
-      int* j = new int(i);
-      result += *j;
-      delete j;
+      &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; j &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;new&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt;(i);
+      result &lt;span style=&#34;color:#f92672&#34;&gt;+=&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;j;
+      &lt;span style=&#34;color:#66d9ef&#34;&gt;delete&lt;/span&gt; j;
     }
-    auto count = std::chrono::steady_clock::now().time_since_epoch().count() - timer;
-    std::cout &amp;lt;&amp;lt; &amp;quot;堆上连续申请内存：&amp;quot; &amp;lt;&amp;lt; result &amp;lt;&amp;lt; &amp;quot;\t&amp;quot; &amp;lt;&amp;lt; count &amp;lt;&amp;lt; std::endl;
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;auto&lt;/span&gt; count &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; std&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;chrono&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;steady_clock&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;now().time_since_epoch().count() &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt; timer;
+    std&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;cout &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;堆上连续申请内存：&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; result &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;\t&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; count &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; std&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;endl;
   }
 
-    SECTION(&amp;quot;栈上连续申请内存&amp;quot;)
+    SECTION(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;栈上连续申请内存&amp;#34;&lt;/span&gt;)
     {
-        auto timer = std::chrono::steady_clock::now().time_since_epoch().count();
-        for (auto i = 0; i &amp;lt; 100000; i++)
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;auto&lt;/span&gt; timer &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; std&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;chrono&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;steady_clock&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;now().time_since_epoch().count();
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; (&lt;span style=&#34;color:#66d9ef&#34;&gt;auto&lt;/span&gt; i &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;; i &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;100000&lt;/span&gt;; i&lt;span style=&#34;color:#f92672&#34;&gt;++&lt;/span&gt;)
         {
-          int j = i;
-          result += j;
+          &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; j &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; i;
+          result &lt;span style=&#34;color:#f92672&#34;&gt;+=&lt;/span&gt; j;
         }
-        auto count = std::chrono::steady_clock::now().time_since_epoch().count() - timer;
-        std::cout &amp;lt;&amp;lt; &amp;quot;栈上连续申请内存：&amp;quot; &amp;lt;&amp;lt; result &amp;lt;&amp;lt; &amp;quot;\t&amp;quot; &amp;lt;&amp;lt; count &amp;lt;&amp;lt; std::endl;
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;auto&lt;/span&gt; count &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; std&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;chrono&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;steady_clock&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;now().time_since_epoch().count() &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt; timer;
+        std&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;cout &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;栈上连续申请内存：&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; result &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;\t&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; count &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; std&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;endl;
     }
 
-    SECTION(&amp;quot;堆上预先申请内存，连续写入数据&amp;quot;)
+    SECTION(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;堆上预先申请内存，连续写入数据&amp;#34;&lt;/span&gt;)
     {
-        auto timer = std::chrono::steady_clock::now().time_since_epoch().count();
-        int* j = new int(1);
-        for (auto i = 0; i &amp;lt; 100000; i++)
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;auto&lt;/span&gt; timer &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; std&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;chrono&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;steady_clock&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;now().time_since_epoch().count();
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; j &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;new&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt;(&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;);
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; (&lt;span style=&#34;color:#66d9ef&#34;&gt;auto&lt;/span&gt; i &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;; i &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;100000&lt;/span&gt;; i&lt;span style=&#34;color:#f92672&#34;&gt;++&lt;/span&gt;)
         {
-            *j = i;
-            result += *j;
+            &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;j &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; i;
+            result &lt;span style=&#34;color:#f92672&#34;&gt;+=&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;j;
         }
-        delete j;
-        auto count = std::chrono::steady_clock::now().time_since_epoch().count() - timer;
-        std::cout &amp;lt;&amp;lt; &amp;quot;堆上预先申请内存，连续写入数据：&amp;quot; &amp;lt;&amp;lt; result &amp;lt;&amp;lt; &amp;quot;\t&amp;quot; &amp;lt;&amp;lt; count &amp;lt;&amp;lt; std::endl;
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;delete&lt;/span&gt; j;
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;auto&lt;/span&gt; count &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; std&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;chrono&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;steady_clock&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;now().time_since_epoch().count() &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt; timer;
+        std&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;cout &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;堆上预先申请内存，连续写入数据：&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; result &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;\t&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; count &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; std&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;endl;
     }
 }
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>Linux搭建Jmeter压测环境</title>
+      <link>https://www.xiangtianlong.com/post/2020/linux%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BAjmeter%E5%8E%8B%E6%B5%8B%E7%8E%AF%E5%A2%83/</link>
+      <pubDate>Tue, 22 Dec 2020 10:12:50 +0800</pubDate>
+      <guid>https://www.xiangtianlong.com/post/2020/linux%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BAjmeter%E5%8E%8B%E6%B5%8B%E7%8E%AF%E5%A2%83/</guid>
+      <description>&lt;h1 id=&#34;背景&#34;&gt;背景&lt;/h1&gt;
+&lt;p&gt;&lt;code&gt;众所周知&lt;/code&gt;本人对硬件有很浓厚的兴趣，凑巧测试组在用&lt;code&gt;Jmeter&lt;/code&gt;做压力测试，发现性能上不去，作为好奇宝宝的我果断出击，试试公司的压测是怎么玩的。此处还有个小故事，在某个久远的时间点，在开源中国看过一篇帖子，如何绘制看上去更加高大上的性能压测图，在测试围观过&lt;code&gt;windows&lt;/code&gt;版本执行测试，已经做到了可视化的&lt;code&gt;TPS&lt;/code&gt;数据展示，另外配置一份web面板能有什么用？&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;脑子想的都是想当然的东西，你要去试试才明白&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Don&amp;rsquo;t use GUI mode for load testing! only for Test creation and Test debuggin.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;官方推荐的是通过命令行的方式获取压测报告，绘制GUI的方式展示，存在数据上的误差？对于Jmeter了解的不是很深入，至少找到一个理由去折腾一下&lt;code&gt;Linux&lt;/code&gt;版本的控制台面板&lt;/p&gt;
+&lt;p&gt;开源中国的帖子，核心组件的部署方式并不友好，安装所需的文件也需要关注公众号才能下载，作为新生代的好青年，当然是用&lt;code&gt;Docker&lt;/code&gt;替代了。说白了还是自己服务器在境内，跨境的源地址访问速度都很慢，至少镜像服务，阿里云有个免费的加速。&lt;/p&gt;
+&lt;h2 id=&#34;influxdb&#34;&gt;InfluxDB&lt;/h2&gt;
+&lt;p&gt;InfluxDB是一款用Go语言编写的开源分布式时序、事件和指标数据库，无需外部依赖。该数据库现在主要用于存储涉及大量的时间戳数据，如DevOps监控数据，APP metrics, loT传感器数据和实时分析数据。&lt;/p&gt;
+&lt;h3 id=&#34;influxdb-特点&#34;&gt;InfluxDB 特点&lt;/h3&gt;
+&lt;p&gt;InfluxDB的特点可以归纳为以下9个方面：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;无结构(无模式)：可以是任意数量的列;&lt;/li&gt;
+&lt;li&gt;可以设置metric的保存时间;&lt;/li&gt;
+&lt;li&gt;支持与时间有关的相关函数(如min、max、sum、count、mean、median等)，方便统计;&lt;/li&gt;
+&lt;li&gt;支持存储策略:可以用于数据的删改。(influxDB没有提供数据的删除与修改方法);&lt;/li&gt;
+&lt;li&gt;支持连续查询:是数据库中自动定时启动的一组语句，和存储策略搭配可以降低InfluxDB的系统占用量;&lt;/li&gt;
+&lt;li&gt;原生的HTTP支持，内置HTTP API;&lt;/li&gt;
+&lt;li&gt;支持类似sql语法;&lt;/li&gt;
+&lt;li&gt;支持设置数据在集群中的副本数;&lt;/li&gt;
+&lt;li&gt;支持定期采样数据，写入另外的measurement，方便分粒度存储数据。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;influxdb-docker-安装&#34;&gt;InfluxDB docker 安装&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;docker run -p 8086:8086 -d --name influxdb -v $PWD:/var/lib/influxdb influxdb:1.7
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;code&gt;docker exec -it influxdb /bin/bash&lt;/code&gt; 进入容器，执行命令，人工创建数据库&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;root@bce0a55bbc72:/# influx
+Connected to http://localhost:8086 version 1.7.10
+InfluxDB shell version: 1.7.10
+&amp;gt; 交互面板执行命令
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;influxdb-创建数据库和用户&#34;&gt;InfluxDB 创建数据库和用户&lt;/h3&gt;
+&lt;p&gt;创建数据库：create database jmeter_t2
+查看数据库：show databases
+切换数据库：use jmeter_t2
+创建用户：create user &amp;ldquo;admin&amp;rdquo; with password &amp;lsquo;XXX&amp;rsquo; with all privileges
+查看用户：show users&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&amp;gt; show users
+user  admin
+----  -----
+admin true
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;如果显示用户权限&lt;code&gt;admin&lt;/code&gt;为&lt;code&gt;true&lt;/code&gt;，数据库的准备工作就完成了&lt;/p&gt;
+&lt;h2 id=&#34;jmeter&#34;&gt;Jmeter&lt;/h2&gt;
+&lt;p&gt;Apache JMeter是Apache组织开发的基于Java的压力测试工具。用于对软件做压力测试，它最初被设计用于Web应用测试，但后来扩展到其他测试领域。 它可以用于测试静态和动态资源，例如静态文件、Java 小服务程序、CGI 脚本、Java 对象、数据库、FTP 服务器， 等等。JMeter 可以用于对服务器、网络或对象模拟巨大的负载，来自不同压力类别下测试它们的强度和分析整体性能。另外，JMeter能够对应用程序做功能/回归测试，通过创建带有断言的脚本来验证你的程序返回了你期望的结果。为了最大限度的灵活性，JMeter允许使用正则表达式创建断言。&lt;/p&gt;
+&lt;p&gt;Apache jmeter 可以用于对静态的和动态的资源（文件，Servlet，Perl脚本，java 对象，数据库和查询，FTP服务器等等）的性能进行测试。它可以用于对服务器、网络或对象模拟繁重的负载来测试它们的强度或分析不同压力类型下的整体性能。你可以使用它做性能的图形分析或在大并发负载测试你的服务器/脚本/对象。&lt;/p&gt;
+&lt;h3 id=&#34;jmeter-部署-centos7&#34;&gt;Jmeter 部署 centos7&lt;/h3&gt;
+&lt;p&gt;安装运行环境&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;yum update -y &lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;\
+&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;&lt;/span&gt;yum install java-1.8.0-openjdk -y &lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;\
+&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;&lt;/span&gt;java -version
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;获取安装包&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;wget https://mirrors.bfsu.edu.cn/apache//jmeter/binaries/apache-jmeter-5.4.tgz &lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; tar -xf apache-jmeter-5.4.tgz
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;配置环境变量&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;export JMETER_HOME&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;$HOME/jmeter/apache-jmeter-5.4
+export PATH&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;$JMETER_HOME/bin:$PATH
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;jmeter-命令&#34;&gt;Jmeter 命令&lt;/h3&gt;
+&lt;p&gt;最后会对接&lt;code&gt;Grafana&lt;/code&gt;控制面板，可以不输入&lt;code&gt;-l&lt;/code&gt;参数，在&lt;code&gt;web&lt;/code&gt;控制台观察数据&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;jmeter -n -t /tmp/order-500-10s.jmx -l /tmp/jmeter-order-report-20200109/order-500-10s.jtl
+&lt;span style=&#34;color:#75715e&#34;&gt;# 一般不用测试结果和测试报告，简化命令&lt;/span&gt;
+jmeter -n -t /tmp/order-500-10s.jmx
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;grafana-暂时废弃&#34;&gt;Grafana 暂时废弃&lt;/h2&gt;
+&lt;p&gt;编写测试案例的时候发现，图表展示的效果其实没太多必要，接口的&lt;code&gt;tps&lt;/code&gt;数据在命令行执行的时候已经能观测到，更多是想知道程序内部的耗时&lt;/p&gt;
+&lt;h2 id=&#34;后记&#34;&gt;后记&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;高性能的程序模式必然是 one loop thread，任何的锁、入队列和出队列，都会造成不必要的性能损失&lt;/li&gt;
+&lt;li&gt;核心业务逻辑的耗时大于引入其他代码的耗时，并发才能有效提高效率，核心耗时如果足够小谨慎引入其他代码&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;参考资料&#34;&gt;参考资料&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://my.oschina.net/u/4617935/blog/4680856&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Jmeter系列之Jmeter+Grafana+InfluxDB实时监控&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://hub.docker.com/_/influxdb&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;influxdb官方镜像&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://hub.docker.com/r/grafana/grafana&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;grafane官方镜像&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://jmeter.apache.org/download_jmeter.cgi&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Jmeter官网&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://medium.com/@jasonli.studio/to-install-apache-jmeter-in-centos7-294bc72a97ba&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;To install Apache JMeter in CentOS7&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 </description>
     </item>
     
@@ -426,42 +513,41 @@
 &lt;li&gt;action 语法&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;核心的job使用现有的组件完成，推送到国内gitee使用command实现，command这部分比较粗暴，都是强制推送，沿用了使用travis的逻辑。&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-yaml&#34;&gt;name: github pages and gitee pages
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;name&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;github pages and gitee pages&lt;/span&gt;
 
-on:
-  push:
-    branches:
-      - hugo
+&lt;span style=&#34;color:#f92672&#34;&gt;on&lt;/span&gt;:
+  &lt;span style=&#34;color:#f92672&#34;&gt;push&lt;/span&gt;:
+    &lt;span style=&#34;color:#f92672&#34;&gt;branches&lt;/span&gt;:
+      - &lt;span style=&#34;color:#ae81ff&#34;&gt;hugo&lt;/span&gt;
 
-jobs:
-  deploy:
-    runs-on: ubuntu-18.04
-    steps:
-      - uses: actions/checkout@v2
-        with:
-          submodules: true
+&lt;span style=&#34;color:#f92672&#34;&gt;jobs&lt;/span&gt;:
+  &lt;span style=&#34;color:#f92672&#34;&gt;deploy&lt;/span&gt;:
+    &lt;span style=&#34;color:#f92672&#34;&gt;runs-on&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;ubuntu-18.04&lt;/span&gt;
+    &lt;span style=&#34;color:#f92672&#34;&gt;steps&lt;/span&gt;:
+      - &lt;span style=&#34;color:#f92672&#34;&gt;uses&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;actions/checkout@v2&lt;/span&gt;
+        &lt;span style=&#34;color:#f92672&#34;&gt;with&lt;/span&gt;:
+          &lt;span style=&#34;color:#f92672&#34;&gt;submodules&lt;/span&gt;: &lt;span style=&#34;color:#66d9ef&#34;&gt;true&lt;/span&gt;
 
-      - name: Setup Hugo
-        uses: peaceiris/actions-hugo@v2
-        with:
-          hugo-version: &#39;latest&#39;
-          extended: true
+      - &lt;span style=&#34;color:#f92672&#34;&gt;name&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;Setup Hugo&lt;/span&gt;
+        &lt;span style=&#34;color:#f92672&#34;&gt;uses&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;peaceiris/actions-hugo@v2&lt;/span&gt;
+        &lt;span style=&#34;color:#f92672&#34;&gt;with&lt;/span&gt;:
+          &lt;span style=&#34;color:#f92672&#34;&gt;hugo-version&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;latest&amp;#39;&lt;/span&gt;
+          &lt;span style=&#34;color:#f92672&#34;&gt;extended&lt;/span&gt;: &lt;span style=&#34;color:#66d9ef&#34;&gt;true&lt;/span&gt;
 
-      - name: Build Github and Gitee ## 单个step只能写一个run命令
-        run: hugo -b &amp;quot;https://www.xiangtianlong.com/&amp;quot; -d &amp;quot;github_public&amp;quot; &amp;amp;&amp;amp; hugo -b &amp;quot;https://www.xiangtianlong.com/&amp;quot; -d &amp;quot;gitee_public&amp;quot; &amp;amp;&amp;amp; ls
+      - &lt;span style=&#34;color:#f92672&#34;&gt;name&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;Build Github and Gitee&lt;/span&gt; &lt;span style=&#34;color:#75715e&#34;&gt;## 单个step只能写一个run命令&lt;/span&gt;
+        &lt;span style=&#34;color:#f92672&#34;&gt;run&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;hugo -b &amp;#34;https://www.xiangtianlong.com/&amp;#34; -d &amp;#34;github_public&amp;#34; &amp;amp;&amp;amp; hugo -b &amp;#34;https://www.xiangtianlong.com/&amp;#34; -d &amp;#34;gitee_public&amp;#34; &amp;amp;&amp;amp; ls&lt;/span&gt;
 
-      - name: Deploy Github
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.BLOG_TOKEN }}
-          publish_dir: ./github_public
-          publish_branch: master
-          cname: xiangtianlong.com
+      - &lt;span style=&#34;color:#f92672&#34;&gt;name&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;Deploy Github&lt;/span&gt;
+        &lt;span style=&#34;color:#f92672&#34;&gt;uses&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;peaceiris/actions-gh-pages@v3&lt;/span&gt;
+        &lt;span style=&#34;color:#f92672&#34;&gt;with&lt;/span&gt;:
+          &lt;span style=&#34;color:#f92672&#34;&gt;github_token&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;${{ secrets.BLOG_TOKEN }}&lt;/span&gt;
+          &lt;span style=&#34;color:#f92672&#34;&gt;publish_dir&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;./github_public&lt;/span&gt;
+          &lt;span style=&#34;color:#f92672&#34;&gt;publish_branch&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;master&lt;/span&gt;
+          &lt;span style=&#34;color:#f92672&#34;&gt;cname&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;xiangtianlong.com&lt;/span&gt;
 
-      - name: Deploy Gitee
-        run: cd ./gitee_public &amp;amp;&amp;amp; git init &amp;amp;&amp;amp; git config user.name &amp;quot;TianlongXiang&amp;quot; &amp;amp;&amp;amp; git config user.email &amp;quot;tianlongxiang51@gmail.com&amp;quot; &amp;amp;&amp;amp; git add . &amp;amp;&amp;amp; git commit -m &amp;quot;Update TianlongXiang&#39;s Blog&amp;quot; &amp;amp;&amp;amp; git push --force &amp;quot;https://xiangtianlong:${{ secrets.GITEE_PASSWORD }}@gitee.com/xiangtianlong/xiangtianlong.git&amp;quot; master:master   
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h4 id=&#34;后记&#34;&gt;后记&lt;/h4&gt;
+      - &lt;span style=&#34;color:#f92672&#34;&gt;name&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;Deploy Gitee&lt;/span&gt;
+        &lt;span style=&#34;color:#f92672&#34;&gt;run&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;cd ./gitee_public &amp;amp;&amp;amp; git init &amp;amp;&amp;amp; git config user.name &amp;#34;TianlongXiang&amp;#34; &amp;amp;&amp;amp; git config user.email &amp;#34;tianlongxiang51@gmail.com&amp;#34; &amp;amp;&amp;amp; git add . &amp;amp;&amp;amp; git commit -m &amp;#34;Update TianlongXiang&amp;#39;s Blog&amp;#34; &amp;amp;&amp;amp; git push --force &amp;#34;https://xiangtianlong:${{ secrets.GITEE_PASSWORD }}@gitee.com/xiangtianlong/xiangtianlong.git&amp;#34; master:master   &lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;后记&#34;&gt;后记&lt;/h4&gt;
 &lt;p&gt;从官方市场提供的action来看，目前支持的玩法挺多，构建docker镜像以后也能不再依赖dockerhub提供的服务&lt;/p&gt;
 &lt;p&gt;查阅hugo的issue，发现使用github action自动部署git pages，最终发布的网页需要在master分支，如果是部署在其他分支，在setting界面，github会提示部署的网页存在语法问题&lt;/p&gt;
 &lt;p&gt;实际上只是由于hugo的源文件放在了master分支，github当作jelly博客的源码进行检测，无法检查无法通过导致的报错&lt;/p&gt;

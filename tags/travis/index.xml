@@ -29,42 +29,41 @@
 &lt;li&gt;action 语法&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;核心的job使用现有的组件完成，推送到国内gitee使用command实现，command这部分比较粗暴，都是强制推送，沿用了使用travis的逻辑。&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-yaml&#34;&gt;name: github pages and gitee pages
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;name&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;github pages and gitee pages&lt;/span&gt;
 
-on:
-  push:
-    branches:
-      - hugo
+&lt;span style=&#34;color:#f92672&#34;&gt;on&lt;/span&gt;:
+  &lt;span style=&#34;color:#f92672&#34;&gt;push&lt;/span&gt;:
+    &lt;span style=&#34;color:#f92672&#34;&gt;branches&lt;/span&gt;:
+      - &lt;span style=&#34;color:#ae81ff&#34;&gt;hugo&lt;/span&gt;
 
-jobs:
-  deploy:
-    runs-on: ubuntu-18.04
-    steps:
-      - uses: actions/checkout@v2
-        with:
-          submodules: true
+&lt;span style=&#34;color:#f92672&#34;&gt;jobs&lt;/span&gt;:
+  &lt;span style=&#34;color:#f92672&#34;&gt;deploy&lt;/span&gt;:
+    &lt;span style=&#34;color:#f92672&#34;&gt;runs-on&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;ubuntu-18.04&lt;/span&gt;
+    &lt;span style=&#34;color:#f92672&#34;&gt;steps&lt;/span&gt;:
+      - &lt;span style=&#34;color:#f92672&#34;&gt;uses&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;actions/checkout@v2&lt;/span&gt;
+        &lt;span style=&#34;color:#f92672&#34;&gt;with&lt;/span&gt;:
+          &lt;span style=&#34;color:#f92672&#34;&gt;submodules&lt;/span&gt;: &lt;span style=&#34;color:#66d9ef&#34;&gt;true&lt;/span&gt;
 
-      - name: Setup Hugo
-        uses: peaceiris/actions-hugo@v2
-        with:
-          hugo-version: &#39;latest&#39;
-          extended: true
+      - &lt;span style=&#34;color:#f92672&#34;&gt;name&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;Setup Hugo&lt;/span&gt;
+        &lt;span style=&#34;color:#f92672&#34;&gt;uses&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;peaceiris/actions-hugo@v2&lt;/span&gt;
+        &lt;span style=&#34;color:#f92672&#34;&gt;with&lt;/span&gt;:
+          &lt;span style=&#34;color:#f92672&#34;&gt;hugo-version&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;latest&amp;#39;&lt;/span&gt;
+          &lt;span style=&#34;color:#f92672&#34;&gt;extended&lt;/span&gt;: &lt;span style=&#34;color:#66d9ef&#34;&gt;true&lt;/span&gt;
 
-      - name: Build Github and Gitee ## 单个step只能写一个run命令
-        run: hugo -b &amp;quot;https://www.xiangtianlong.com/&amp;quot; -d &amp;quot;github_public&amp;quot; &amp;amp;&amp;amp; hugo -b &amp;quot;https://www.xiangtianlong.com/&amp;quot; -d &amp;quot;gitee_public&amp;quot; &amp;amp;&amp;amp; ls
+      - &lt;span style=&#34;color:#f92672&#34;&gt;name&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;Build Github and Gitee&lt;/span&gt; &lt;span style=&#34;color:#75715e&#34;&gt;## 单个step只能写一个run命令&lt;/span&gt;
+        &lt;span style=&#34;color:#f92672&#34;&gt;run&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;hugo -b &amp;#34;https://www.xiangtianlong.com/&amp;#34; -d &amp;#34;github_public&amp;#34; &amp;amp;&amp;amp; hugo -b &amp;#34;https://www.xiangtianlong.com/&amp;#34; -d &amp;#34;gitee_public&amp;#34; &amp;amp;&amp;amp; ls&lt;/span&gt;
 
-      - name: Deploy Github
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.BLOG_TOKEN }}
-          publish_dir: ./github_public
-          publish_branch: master
-          cname: xiangtianlong.com
+      - &lt;span style=&#34;color:#f92672&#34;&gt;name&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;Deploy Github&lt;/span&gt;
+        &lt;span style=&#34;color:#f92672&#34;&gt;uses&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;peaceiris/actions-gh-pages@v3&lt;/span&gt;
+        &lt;span style=&#34;color:#f92672&#34;&gt;with&lt;/span&gt;:
+          &lt;span style=&#34;color:#f92672&#34;&gt;github_token&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;${{ secrets.BLOG_TOKEN }}&lt;/span&gt;
+          &lt;span style=&#34;color:#f92672&#34;&gt;publish_dir&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;./github_public&lt;/span&gt;
+          &lt;span style=&#34;color:#f92672&#34;&gt;publish_branch&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;master&lt;/span&gt;
+          &lt;span style=&#34;color:#f92672&#34;&gt;cname&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;xiangtianlong.com&lt;/span&gt;
 
-      - name: Deploy Gitee
-        run: cd ./gitee_public &amp;amp;&amp;amp; git init &amp;amp;&amp;amp; git config user.name &amp;quot;TianlongXiang&amp;quot; &amp;amp;&amp;amp; git config user.email &amp;quot;tianlongxiang51@gmail.com&amp;quot; &amp;amp;&amp;amp; git add . &amp;amp;&amp;amp; git commit -m &amp;quot;Update TianlongXiang&#39;s Blog&amp;quot; &amp;amp;&amp;amp; git push --force &amp;quot;https://xiangtianlong:${{ secrets.GITEE_PASSWORD }}@gitee.com/xiangtianlong/xiangtianlong.git&amp;quot; master:master   
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h4 id=&#34;后记&#34;&gt;后记&lt;/h4&gt;
+      - &lt;span style=&#34;color:#f92672&#34;&gt;name&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;Deploy Gitee&lt;/span&gt;
+        &lt;span style=&#34;color:#f92672&#34;&gt;run&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;cd ./gitee_public &amp;amp;&amp;amp; git init &amp;amp;&amp;amp; git config user.name &amp;#34;TianlongXiang&amp;#34; &amp;amp;&amp;amp; git config user.email &amp;#34;tianlongxiang51@gmail.com&amp;#34; &amp;amp;&amp;amp; git add . &amp;amp;&amp;amp; git commit -m &amp;#34;Update TianlongXiang&amp;#39;s Blog&amp;#34; &amp;amp;&amp;amp; git push --force &amp;#34;https://xiangtianlong:${{ secrets.GITEE_PASSWORD }}@gitee.com/xiangtianlong/xiangtianlong.git&amp;#34; master:master   &lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;后记&#34;&gt;后记&lt;/h4&gt;
 &lt;p&gt;从官方市场提供的action来看，目前支持的玩法挺多，构建docker镜像以后也能不再依赖dockerhub提供的服务&lt;/p&gt;
 &lt;p&gt;查阅hugo的issue，发现使用github action自动部署git pages，最终发布的网页需要在master分支，如果是部署在其他分支，在setting界面，github会提示部署的网页存在语法问题&lt;/p&gt;
 &lt;p&gt;实际上只是由于hugo的源文件放在了master分支，github当作jelly博客的源码进行检测，无法检查无法通过导致的报错&lt;/p&gt;

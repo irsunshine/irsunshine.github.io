@@ -45,9 +45,8 @@
 &lt;p&gt;&lt;code&gt;RAII&lt;/code&gt;在我看来属于&lt;code&gt;C++&lt;/code&gt;的内存管理方式，配合析构函数，对象对于外部而言并没有直接内存相关的操作。&lt;/p&gt;
 &lt;p&gt;最新正好在开发一个和行情相关的项目，为了提高性能，能说一句恰逢其时？&lt;code&gt;C11&lt;/code&gt;的智能指针效率，&lt;strong&gt;存在纳秒级别的性能损耗&lt;/strong&gt;。&lt;/p&gt;
 &lt;h3 id=&#34;堆&#34;&gt;堆&lt;/h3&gt;
-&lt;pre&gt;&lt;code class=&#34;language-c++&#34;&gt;auto ptr = new std::vector&amp;lt;int&amp;gt;();
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;动态申请内存时(堆)，三个常见的内存操作：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-c++&#34; data-lang=&#34;c++&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;auto&lt;/span&gt; ptr &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;new&lt;/span&gt; std&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;vector&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;();
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;动态申请内存时(堆)，三个常见的内存操作：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;让内存管理器分配一个某个大小的内存&lt;/li&gt;
 &lt;li&gt;让内存管理器释放一个之前分配的内存块&lt;/li&gt;
@@ -79,96 +78,94 @@
 &lt;/ul&gt;
 &lt;p&gt;案例的含义在于分别统计：连续申请堆内存并操作，预先申请堆内存并操作，连续操作栈内存&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;%E5%A0%86%E6%A0%88%E5%86%85%E5%AD%98%E5%9D%97%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%951.jpg&#34; alt=&#34;堆栈内存块性能测试1&#34;&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-c++&#34;&gt;{
-  int result = 0;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-c++&#34; data-lang=&#34;c++&#34;&gt;{
+  &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; result &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;;
 
-  SECTION(&amp;quot;堆上连续申请内存&amp;quot;)
+  SECTION(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;堆上连续申请内存&amp;#34;&lt;/span&gt;)
   {
-    auto timer = std::chrono::steady_clock::now().time_since_epoch().count();
-    for (auto i = 0; i &amp;lt; kTestCount; i++)
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;auto&lt;/span&gt; timer &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; std&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;chrono&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;steady_clock&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;now().time_since_epoch().count();
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; (&lt;span style=&#34;color:#66d9ef&#34;&gt;auto&lt;/span&gt; i &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;; i &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt; kTestCount; i&lt;span style=&#34;color:#f92672&#34;&gt;++&lt;/span&gt;)
     {
-      int* j = new int(1);
-      result += *j;
-      delete j;
+      &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; j &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;new&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt;(&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;);
+      result &lt;span style=&#34;color:#f92672&#34;&gt;+=&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;j;
+      &lt;span style=&#34;color:#66d9ef&#34;&gt;delete&lt;/span&gt; j;
     }
-    auto count = std::chrono::steady_clock::now().time_since_epoch().count() - timer;
-    std::cout &amp;lt;&amp;lt; &amp;quot;堆上连续申请内存：&amp;quot; &amp;lt;&amp;lt; result &amp;lt;&amp;lt; &amp;quot;\t&amp;quot; &amp;lt;&amp;lt; count &amp;lt;&amp;lt; std::endl;
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;auto&lt;/span&gt; count &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; std&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;chrono&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;steady_clock&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;now().time_since_epoch().count() &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt; timer;
+    std&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;cout &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;堆上连续申请内存：&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; result &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;\t&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; count &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; std&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;endl;
   }
 
-    SECTION(&amp;quot;栈上连续申请内存&amp;quot;)
+    SECTION(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;栈上连续申请内存&amp;#34;&lt;/span&gt;)
     {
-        auto timer = std::chrono::steady_clock::now().time_since_epoch().count();
-        for (auto i = 0; i &amp;lt; kTestCount; i++)
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;auto&lt;/span&gt; timer &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; std&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;chrono&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;steady_clock&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;now().time_since_epoch().count();
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; (&lt;span style=&#34;color:#66d9ef&#34;&gt;auto&lt;/span&gt; i &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;; i &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt; kTestCount; i&lt;span style=&#34;color:#f92672&#34;&gt;++&lt;/span&gt;)
         {
-          int j = 1;
-          result += j;
+          &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; j &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;;
+          result &lt;span style=&#34;color:#f92672&#34;&gt;+=&lt;/span&gt; j;
         }
-        auto count = std::chrono::steady_clock::now().time_since_epoch().count() - timer;
-        std::cout &amp;lt;&amp;lt; &amp;quot;栈上连续申请内存：&amp;quot; &amp;lt;&amp;lt; result &amp;lt;&amp;lt; &amp;quot;\t&amp;quot; &amp;lt;&amp;lt; count &amp;lt;&amp;lt; std::endl;
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;auto&lt;/span&gt; count &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; std&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;chrono&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;steady_clock&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;now().time_since_epoch().count() &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt; timer;
+        std&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;cout &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;栈上连续申请内存：&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; result &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;\t&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; count &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; std&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;endl;
     }
 
-    SECTION(&amp;quot;堆上预先申请内存，连续写入数据&amp;quot;)
+    SECTION(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;堆上预先申请内存，连续写入数据&amp;#34;&lt;/span&gt;)
     {
-        auto timer = std::chrono::steady_clock::now().time_since_epoch().count();
-        int* j = new int(1);
-        for (auto i = 0; i &amp;lt; kTestCount; i++)
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;auto&lt;/span&gt; timer &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; std&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;chrono&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;steady_clock&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;now().time_since_epoch().count();
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; j &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;new&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt;(&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;);
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; (&lt;span style=&#34;color:#66d9ef&#34;&gt;auto&lt;/span&gt; i &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;; i &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt; kTestCount; i&lt;span style=&#34;color:#f92672&#34;&gt;++&lt;/span&gt;)
         {
-            *j = 1;
-            result += *j;
+            &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;j &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;;
+            result &lt;span style=&#34;color:#f92672&#34;&gt;+=&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;j;
         }
-        delete j;
-        auto count = std::chrono::steady_clock::now().time_since_epoch().count() - timer;
-        std::cout &amp;lt;&amp;lt; &amp;quot;堆上预先申请内存，连续写入数据：&amp;quot; &amp;lt;&amp;lt; result &amp;lt;&amp;lt; &amp;quot;\t&amp;quot; &amp;lt;&amp;lt; count &amp;lt;&amp;lt; std::endl;
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;delete&lt;/span&gt; j;
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;auto&lt;/span&gt; count &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; std&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;chrono&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;steady_clock&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;now().time_since_epoch().count() &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt; timer;
+        std&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;cout &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;堆上预先申请内存，连续写入数据：&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; result &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;\t&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; count &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; std&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;endl;
     }
 }
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;其实呢，初次看到上面的测试案例结果，肯定会纳闷，怎么预先申请的内存和栈内存的性能差别那么大，其实这个属于现在编译器&lt;code&gt;Release&lt;/code&gt;模式的代码优化。
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;其实呢，初次看到上面的测试案例结果，肯定会纳闷，怎么预先申请的内存和栈内存的性能差别那么大，其实这个属于现在编译器&lt;code&gt;Release&lt;/code&gt;模式的代码优化。
 每次操作的都是常数，编译器就能预先做掉一部分事情，具体原理本人不是很清楚，不过我们改进一下测试案例，每次累加动态的数据。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;%E5%A0%86%E6%A0%88%E5%86%85%E5%AD%98%E5%9D%97%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%952.jpg&#34; alt=&#34;堆栈内存块性能测试2&#34;&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-c++&#34;&gt;{
-  int result = 0;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-c++&#34; data-lang=&#34;c++&#34;&gt;{
+  &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; result &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;;
 
-  SECTION(&amp;quot;堆上连续申请内存&amp;quot;)
+  SECTION(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;堆上连续申请内存&amp;#34;&lt;/span&gt;)
   {
-    auto timer = std::chrono::steady_clock::now().time_since_epoch().count();
-    for (auto i = 0; i &amp;lt; 100000; i++)
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;auto&lt;/span&gt; timer &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; std&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;chrono&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;steady_clock&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;now().time_since_epoch().count();
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; (&lt;span style=&#34;color:#66d9ef&#34;&gt;auto&lt;/span&gt; i &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;; i &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;100000&lt;/span&gt;; i&lt;span style=&#34;color:#f92672&#34;&gt;++&lt;/span&gt;)
     {
-      int* j = new int(i);
-      result += *j;
-      delete j;
+      &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; j &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;new&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt;(i);
+      result &lt;span style=&#34;color:#f92672&#34;&gt;+=&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;j;
+      &lt;span style=&#34;color:#66d9ef&#34;&gt;delete&lt;/span&gt; j;
     }
-    auto count = std::chrono::steady_clock::now().time_since_epoch().count() - timer;
-    std::cout &amp;lt;&amp;lt; &amp;quot;堆上连续申请内存：&amp;quot; &amp;lt;&amp;lt; result &amp;lt;&amp;lt; &amp;quot;\t&amp;quot; &amp;lt;&amp;lt; count &amp;lt;&amp;lt; std::endl;
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;auto&lt;/span&gt; count &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; std&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;chrono&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;steady_clock&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;now().time_since_epoch().count() &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt; timer;
+    std&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;cout &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;堆上连续申请内存：&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; result &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;\t&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; count &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; std&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;endl;
   }
 
-    SECTION(&amp;quot;栈上连续申请内存&amp;quot;)
+    SECTION(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;栈上连续申请内存&amp;#34;&lt;/span&gt;)
     {
-        auto timer = std::chrono::steady_clock::now().time_since_epoch().count();
-        for (auto i = 0; i &amp;lt; 100000; i++)
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;auto&lt;/span&gt; timer &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; std&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;chrono&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;steady_clock&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;now().time_since_epoch().count();
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; (&lt;span style=&#34;color:#66d9ef&#34;&gt;auto&lt;/span&gt; i &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;; i &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;100000&lt;/span&gt;; i&lt;span style=&#34;color:#f92672&#34;&gt;++&lt;/span&gt;)
         {
-          int j = i;
-          result += j;
+          &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; j &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; i;
+          result &lt;span style=&#34;color:#f92672&#34;&gt;+=&lt;/span&gt; j;
         }
-        auto count = std::chrono::steady_clock::now().time_since_epoch().count() - timer;
-        std::cout &amp;lt;&amp;lt; &amp;quot;栈上连续申请内存：&amp;quot; &amp;lt;&amp;lt; result &amp;lt;&amp;lt; &amp;quot;\t&amp;quot; &amp;lt;&amp;lt; count &amp;lt;&amp;lt; std::endl;
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;auto&lt;/span&gt; count &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; std&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;chrono&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;steady_clock&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;now().time_since_epoch().count() &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt; timer;
+        std&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;cout &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;栈上连续申请内存：&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; result &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;\t&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; count &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; std&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;endl;
     }
 
-    SECTION(&amp;quot;堆上预先申请内存，连续写入数据&amp;quot;)
+    SECTION(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;堆上预先申请内存，连续写入数据&amp;#34;&lt;/span&gt;)
     {
-        auto timer = std::chrono::steady_clock::now().time_since_epoch().count();
-        int* j = new int(1);
-        for (auto i = 0; i &amp;lt; 100000; i++)
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;auto&lt;/span&gt; timer &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; std&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;chrono&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;steady_clock&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;now().time_since_epoch().count();
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; j &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;new&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt;(&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;);
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; (&lt;span style=&#34;color:#66d9ef&#34;&gt;auto&lt;/span&gt; i &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;; i &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;100000&lt;/span&gt;; i&lt;span style=&#34;color:#f92672&#34;&gt;++&lt;/span&gt;)
         {
-            *j = i;
-            result += *j;
+            &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;j &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; i;
+            result &lt;span style=&#34;color:#f92672&#34;&gt;+=&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;j;
         }
-        delete j;
-        auto count = std::chrono::steady_clock::now().time_since_epoch().count() - timer;
-        std::cout &amp;lt;&amp;lt; &amp;quot;堆上预先申请内存，连续写入数据：&amp;quot; &amp;lt;&amp;lt; result &amp;lt;&amp;lt; &amp;quot;\t&amp;quot; &amp;lt;&amp;lt; count &amp;lt;&amp;lt; std::endl;
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;delete&lt;/span&gt; j;
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;auto&lt;/span&gt; count &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; std&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;chrono&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;steady_clock&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;now().time_since_epoch().count() &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt; timer;
+        std&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;cout &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;堆上预先申请内存，连续写入数据：&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; result &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;\t&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; count &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; std&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;endl;
     }
 }
-&lt;/code&gt;&lt;/pre&gt;
-</description>
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
     
   </channel>
