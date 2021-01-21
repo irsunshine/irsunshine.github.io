@@ -58,8 +58,8 @@
     
       
       
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/monokai.min.css" crossorigin="anonymous" title="hl-light">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/monokai.min.css" crossorigin="anonymous" title="hl-dark" disabled>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/vs.min.css" crossorigin="anonymous" title="hl-light">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/vs.min.css" crossorigin="anonymous" title="hl-dark" disabled>
       
     
 
@@ -266,7 +266,7 @@
   <meta property="og:description" content="欺骗别人很容易，欺骗自己很难，想想18岁的自己"><meta property="og:image" content="img/map[gravatar:%!s(bool=false) shape:circle]">
   <meta property="twitter:image" content="img/map[gravatar:%!s(bool=false) shape:circle]"><meta property="og:locale" content="zh-Hans">
   
-    <meta property="og:updated_time" content="2020-12-22T10:12:50&#43;08:00">
+    <meta property="og:updated_time" content="2021-01-21T09:26:07&#43;08:00">
   
 
   
@@ -504,6 +504,18 @@
   
 
   
+  
+    
+    
+    
+    <div>
+      <h2><a href="/post/2021/docker%E4%BA%8C%E4%B8%89%E4%BA%8B/" >docker二三事</a></h2>
+      <div class="article-style">
+        
+          安装 国内服务器安装，先设置阿里云仓库地址 yum install yum-utils device-mapper-persistent-data lvm2 &amp;&amp; \ sudo yum-config-manager --add-repo http://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo &amp;&amp; \ sudo yum install -y docker-ce docker-ce-cli containerd.io &amp;&amp; systemctl enable --now docker 普通用户添加docker权限 sudo usermod -aG docker ${USER} 卸载 sudo yum erase -y docker-ce docker-ce-cli containerd.io 镜像加速 加速的地址各位看管自己注册阿里云账号获取，此服务免费，阿里云也提供免费的镜像构建服务 cat
+        
+      </div>
+    </div>
   
     
     

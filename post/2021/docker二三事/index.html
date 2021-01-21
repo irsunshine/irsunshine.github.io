@@ -24,10 +24,10 @@
   
     
   
-  <meta name="description" content="线上生产环境操作系统，目前国内的环境来说，redhat和centos为主流选择。前两年经历了redhat6的退役，特此记录两个系统生命周期官网链接。 Red Hat Enterprise Linux Life Cycle CentOS 产品规范">
+  <meta name="description" content="安装 国内服务器安装，先设置阿里云仓库地址 yum install yum-utils device-mapper-persistent-data lvm2 &amp;&amp; \ sudo yum-config-manager --add-repo http://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo &amp;&amp; \ sudo yum install -y docker-ce docker-ce-cli containerd.io &amp;&amp; systemctl enable --now docker 普通用户添加docker权限 sudo usermod -aG docker ${USER} 卸载 sudo yum erase -y docker-ce docker-ce-cli containerd.io 镜像加速 加速的地址各位看管自己注册阿里云账号获取，此服务免费，阿里云也提供免费的镜像构建服务 cat">
 
   
-  <link rel="alternate" hreflang="zh-Hans" href="https://www.xiangtianlong.com/post/2020/redhat-and-centos-life-cycle/">
+  <link rel="alternate" hreflang="zh-Hans" href="https://www.xiangtianlong.com/post/2021/docker%E4%BA%8C%E4%B8%89%E4%BA%8B/">
 
   
 
@@ -245,7 +245,7 @@
   <link rel="icon" type="image/png" href="/images/icon_huabee4a8ccfc9d7d1c51a93249a1dcfdd_17677_32x32_fill_lanczos_center_2.png">
   <link rel="apple-touch-icon" type="image/png" href="/images/icon_huabee4a8ccfc9d7d1c51a93249a1dcfdd_17677_192x192_fill_lanczos_center_2.png">
 
-  <link rel="canonical" href="https://www.xiangtianlong.com/post/2020/redhat-and-centos-life-cycle/">
+  <link rel="canonical" href="https://www.xiangtianlong.com/post/2021/docker%E4%BA%8C%E4%B8%89%E4%BA%8B/">
 
   
   
@@ -253,21 +253,20 @@
   
   
     
-    
   
   
-  <meta property="twitter:card" content="summary">
+  <meta property="twitter:card" content="summary_large_image">
   
   <meta property="og:site_name" content="假装不困">
-  <meta property="og:url" content="https://www.xiangtianlong.com/post/2020/redhat-and-centos-life-cycle/">
-  <meta property="og:title" content="redhat and centos life cycle | 假装不困">
-  <meta property="og:description" content="线上生产环境操作系统，目前国内的环境来说，redhat和centos为主流选择。前两年经历了redhat6的退役，特此记录两个系统生命周期官网链接。 Red Hat Enterprise Linux Life Cycle CentOS 产品规范"><meta property="og:image" content="img/map[gravatar:%!s(bool=false) shape:circle]">
-  <meta property="twitter:image" content="img/map[gravatar:%!s(bool=false) shape:circle]"><meta property="og:locale" content="zh-Hans">
+  <meta property="og:url" content="https://www.xiangtianlong.com/post/2021/docker%E4%BA%8C%E4%B8%89%E4%BA%8B/">
+  <meta property="og:title" content="docker二三事 | 假装不困">
+  <meta property="og:description" content="安装 国内服务器安装，先设置阿里云仓库地址 yum install yum-utils device-mapper-persistent-data lvm2 &amp;&amp; \ sudo yum-config-manager --add-repo http://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo &amp;&amp; \ sudo yum install -y docker-ce docker-ce-cli containerd.io &amp;&amp; systemctl enable --now docker 普通用户添加docker权限 sudo usermod -aG docker ${USER} 卸载 sudo yum erase -y docker-ce docker-ce-cli containerd.io 镜像加速 加速的地址各位看管自己注册阿里云账号获取，此服务免费，阿里云也提供免费的镜像构建服务 cat"><meta property="og:image" content="https://www.xiangtianlong.com/post/2021/docker%E4%BA%8C%E4%B8%89%E4%BA%8B/featured.png">
+  <meta property="twitter:image" content="https://www.xiangtianlong.com/post/2021/docker%E4%BA%8C%E4%B8%89%E4%BA%8B/featured.png"><meta property="og:locale" content="zh-Hans">
   
     
-      <meta property="article:published_time" content="2020-07-21T20:02:35&#43;08:00">
+      <meta property="article:published_time" content="2021-01-21T09:26:07&#43;08:00">
     
-    <meta property="article:modified_time" content="2020-07-21T20:02:35&#43;08:00">
+    <meta property="article:modified_time" content="2021-01-21T09:26:07&#43;08:00">
   
 
   
@@ -291,12 +290,16 @@
   "@type": "BlogPosting",
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://www.xiangtianlong.com/post/2020/redhat-and-centos-life-cycle/"
+    "@id": "https://www.xiangtianlong.com/post/2021/docker%E4%BA%8C%E4%B8%89%E4%BA%8B/"
   },
-  "headline": "redhat and centos life cycle",
+  "headline": "docker二三事",
   
-  "datePublished": "2020-07-21T20:02:35+08:00",
-  "dateModified": "2020-07-21T20:02:35+08:00",
+  "image": [
+    "https://www.xiangtianlong.com/post/2021/docker%E4%BA%8C%E4%B8%89%E4%BA%8B/featured.png"
+  ],
+  
+  "datePublished": "2021-01-21T09:26:07+08:00",
+  "dateModified": "2021-01-21T09:26:07+08:00",
   
   "author": {
     "@type": "Person",
@@ -311,7 +314,7 @@
       "url": "https://www.xiangtianlong.com/images/icon_huabee4a8ccfc9d7d1c51a93249a1dcfdd_17677_192x192_fill_lanczos_center_2.png"
     }
   },
-  "description": "线上生产环境操作系统，目前国内的环境来说，redhat和centos为主流选择。前两年经历了redhat6的退役，特此记录两个系统生命周期官网链接。 Red Hat Enterprise Linux Life Cycle CentOS 产品规范"
+  "description": "安装 国内服务器安装，先设置阿里云仓库地址 yum install yum-utils device-mapper-persistent-data lvm2 \u0026amp;\u0026amp; \\ sudo yum-config-manager --add-repo http://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo \u0026amp;\u0026amp; \\ sudo yum install -y docker-ce docker-ce-cli containerd.io \u0026amp;\u0026amp; systemctl enable --now docker 普通用户添加docker权限 sudo usermod -aG docker ${USER} 卸载 sudo yum erase -y docker-ce docker-ce-cli containerd.io 镜像加速 加速的地址各位看管自己注册阿里云账号获取，此服务免费，阿里云也提供免费的镜像构建服务 cat"
 }
 </script>
 
@@ -329,7 +332,7 @@
 
 
 
-  <title>redhat and centos life cycle | 假装不困</title>
+  <title>docker二三事 | 假装不困</title>
 
 </head>
 
@@ -531,18 +534,26 @@
 
 
 
-  
+
+
+
+
+
+
+
 
   
-  
-  
-<div class="article-container pt-3">
-  <h1>redhat and centos life cycle</h1>
-
-  
-
   
     
+  
+
+
+<div class="article-container pt-3">
+  <h1>docker二三事</h1>
+
+  
+
+  
 
 
 <div class="article-metadata">
@@ -566,7 +577,7 @@
     
       
     
-    Jul 21, 2020
+    Jan 21, 2021
   </span>
   
 
@@ -585,48 +596,126 @@
 
   
   
-  <span class="middot-divider"></span>
-  <span class="article-categories">
-    <i class="fas fa-folder mr-1"></i><a href="/categories/linux/">linux</a></span>
-  
 
 </div>
 
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+<div class="article-header article-container featured-image-wrapper mt-4 mb-4" style="max-width: 720px; max-height: 575px;">
+  <div style="position: relative">
+    <img src="/post/2021/docker%E4%BA%8C%E4%B8%89%E4%BA%8B/featured_hub53427d2bffbcee50b2c500a06589ca1_32933_720x0_resize_lanczos_2.png" alt="" class="featured-image">
+    
+  </div>
 </div>
 
 
             <div class="article-container">
               <div class="article-style">
-                <p>线上生产环境操作系统，目前国内的环境来说，redhat和centos为主流选择。前两年经历了redhat6的退役，特此记录两个系统生命周期官网链接。</p>
+                <h3 id="安装">安装</h3>
+<p>国内服务器安装，先设置阿里云仓库地址</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">yum install yum-utils device-mapper-persistent-data lvm2 <span style="color:#f92672">&amp;&amp;</span> <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>sudo yum-config-manager --add-repo http://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo <span style="color:#f92672">&amp;&amp;</span> <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>sudo yum install -y docker-ce docker-ce-cli containerd.io <span style="color:#f92672">&amp;&amp;</span> systemctl enable --now docker
+</code></pre></div><h3 id="普通用户添加docker权限">普通用户添加docker权限</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sudo usermod -aG docker <span style="color:#e6db74">${</span>USER<span style="color:#e6db74">}</span>
+</code></pre></div><h3 id="卸载">卸载</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sudo yum erase -y docker-ce docker-ce-cli containerd.io
+</code></pre></div><h3 id="镜像加速">镜像加速</h3>
+<p>加速的地址各位看管自己注册阿里云账号获取，此服务免费，阿里云也提供免费的镜像构建服务</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">cat &gt; /etc/docker/daemon.json <span style="color:#e6db74">&lt;&lt;EOF
+</span><span style="color:#e6db74">{
+</span><span style="color:#e6db74">  &#34;registry-mirrors&#34;: [&#34;https://9fbz1if4.mirror.aliyuncs.com&#34;]
+</span><span style="color:#e6db74">}
+</span><span style="color:#e6db74">EOF</span>
+</code></pre></div><p>重启设置生效</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">systemctl daemon-reload <span style="color:#f92672">&amp;&amp;</span> <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>systemctl restart docker
+</code></pre></div><h3 id="安装特定版本的docker">安装特定版本的<code>docker</code></h3>
+<p><code>kubernetes</code>和<code>docker</code>的发布并没与完全同步，此时需要安装特特定的版本</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">yum list docker-ce --showduplicates | sort -r
+sudo yum install -y docker-ce-18.09.2-3.el7 docker-ce-cli-18.09.2-3.el7 containerd.io-18.09.2-3.el7 <span style="color:#f92672">&amp;&amp;</span> systemctl enable --now docker
+</code></pre></div><h3 id="强烈推荐的控制面板">强烈推荐的控制面板</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">docker volume create portainer_data <span style="color:#f92672">&amp;&amp;</span> <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>docker run -d --name<span style="color:#f92672">=</span>portainer --restart<span style="color:#f92672">=</span>always -p 9000:9000 -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce:2.0.1
+</code></pre></div><h3 id="常用镜像拉取合集">常用镜像拉取合集</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">docker pull rancher/rancher:stable <span style="color:#f92672">&amp;&amp;</span> docker pull  portainer/portainer-ce:2.0.1 <span style="color:#f92672">&amp;&amp;</span> <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>docker pull centos:7 <span style="color:#f92672">&amp;&amp;</span> docker pull ubuntu:20.04 <span style="color:#f92672">&amp;&amp;</span> docker pull ubuntu:18.04 <span style="color:#f92672">&amp;&amp;</span> <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>docker pull redis:5 <span style="color:#f92672">&amp;&amp;</span> docker pull redis:6 <span style="color:#f92672">&amp;&amp;</span> <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>docker pull alpine:3.11 <span style="color:#f92672">&amp;&amp;</span> docker pull busybox:1.32 <span style="color:#f92672">&amp;&amp;</span> <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>docker pull rabbitmq:3.7-management <span style="color:#f92672">&amp;&amp;</span> <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>docker pull mariadb:10.2 <span style="color:#f92672">&amp;&amp;</span> <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>docker pull nginx:1.18 <span style="color:#f92672">&amp;&amp;</span> docker pull nginx:1.19 <span style="color:#f92672">&amp;&amp;</span> <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>docker pull mysql:5.6 <span style="color:#f92672">&amp;&amp;</span> docker pull mysql:8 <span style="color:#f92672">&amp;&amp;</span> <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>docker pull elasticsearch:6.8.11 <span style="color:#f92672">&amp;&amp;</span> docker pull logstash:6.8.11 <span style="color:#f92672">&amp;&amp;</span> docker pull kibana:6.8.11 <span style="color:#f92672">&amp;&amp;</span> <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>docker pull zookeeper:3.4 <span style="color:#f92672">&amp;&amp;</span> <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>docker pull influxdb:1.7 <span style="color:#f92672">&amp;&amp;</span> docker pull grafana/grafana:7.3.1 <span style="color:#f92672">&amp;&amp;</span> <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>docker pull percona:8 <span style="color:#f92672">&amp;&amp;</span> docker pull percona:5.6 <span style="color:#f92672">&amp;&amp;</span> <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>docker pull cloverzrg/frps-docker:0.34.3 <span style="color:#f92672">&amp;&amp;</span> docker pull cloverzrg/frpc-docker:0.34.3
+</code></pre></div><h3 id="常用组合命令">常用组合命令</h3>
+<p>
+<a href="https://docs.docker.com/engine/reference/commandline/docker/" target="_blank" rel="noopener">https://docs.docker.com/engine/reference/commandline/docker/</a></p>
+<hr>
 <ul>
-<li>
-<a href="https://access.redhat.com/support/policy/updates/errata" target="_blank" rel="noopener">Red Hat Enterprise Linux Life Cycle</a></li>
-<li>
-<a href="https://wiki.centos.org/zh/About/Product" target="_blank" rel="noopener">CentOS 产品规范</a></li>
+<li>查看容器运行状态，附加<code>format</code>参数，查看详细的容器信息，此时不关注镜像信息</li>
 </ul>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">docker ps --format <span style="color:#e6db74">&#34;{{.Names}}: {{.Ports}}: {{.Size}}&#34;</span>
+<span style="color:#75715e">#portainer: 0.0.0.0:8000-&gt;8000/tcp, 0.0.0.0:9000-&gt;9000/tcp: 0B (virtual 172MB)</span>
+<span style="color:#75715e">#influxdb: 0.0.0.0:8086-&gt;8086/tcp: 183B (virtual 311MB)</span>
+</code></pre></div><hr>
+<ul>
+<li>一键停止所有容器</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">docker stop <span style="color:#66d9ef">$(</span>docker ps -a -q<span style="color:#66d9ef">)</span>
+</code></pre></div><ul>
+<li>一键删除所有镜像</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">dokcer rmi <span style="color:#66d9ef">$(</span>docker images -a -q<span style="color:#66d9ef">)</span>
+</code></pre></div><hr>
+<ul>
+<li>导出镜像</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">docker save &lt;IMAGE NAME&gt;:&lt;IMAGE TAG&gt; &gt; -o XXX.tar
+</code></pre></div><ul>
+<li>导出镜像并压缩</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">docker save &lt;IMAGE NAME&gt;:&lt;IMAGE TAG&gt; | gzip &gt; XXX.tar
+</code></pre></div><ul>
+<li>导入镜像</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">docker load -i XXX.tar
+</code></pre></div>
               </div>
               
 
 
 
 
+
+<div class="article-tags">
+  
+  <a class="badge badge-light" href="/tags/docker/">docker</a>
+  
+  <a class="badge badge-light" href="/tags/linux/">linux</a>
+  
+  <a class="badge badge-light" href="/tags/centos/">centos</a>
+  
+</div>
 
 
 
@@ -641,7 +730,7 @@
       
       
       <li>
-        <a href="https://twitter.com/intent/tweet?url=https://www.xiangtianlong.com/post/2020/redhat-and-centos-life-cycle/&amp;text=redhat%20and%20centos%20life%20cycle" target="_blank" rel="noopener" class="share-btn-twitter">
+        <a href="https://twitter.com/intent/tweet?url=https://www.xiangtianlong.com/post/2021/docker%E4%BA%8C%E4%B8%89%E4%BA%8B/&amp;text=docker%e4%ba%8c%e4%b8%89%e4%ba%8b" target="_blank" rel="noopener" class="share-btn-twitter">
           <i class="fab fa-twitter"></i>
         </a>
       </li>
@@ -654,7 +743,7 @@
       
       
       <li>
-        <a href="https://www.facebook.com/sharer.php?u=https://www.xiangtianlong.com/post/2020/redhat-and-centos-life-cycle/&amp;t=redhat%20and%20centos%20life%20cycle" target="_blank" rel="noopener" class="share-btn-facebook">
+        <a href="https://www.facebook.com/sharer.php?u=https://www.xiangtianlong.com/post/2021/docker%E4%BA%8C%E4%B8%89%E4%BA%8B/&amp;t=docker%e4%ba%8c%e4%b8%89%e4%ba%8b" target="_blank" rel="noopener" class="share-btn-facebook">
           <i class="fab fa-facebook"></i>
         </a>
       </li>
@@ -667,7 +756,7 @@
       
       
       <li>
-        <a href="mailto:?subject=redhat%20and%20centos%20life%20cycle&amp;body=https://www.xiangtianlong.com/post/2020/redhat-and-centos-life-cycle/" target="_blank" rel="noopener" class="share-btn-email">
+        <a href="mailto:?subject=docker%e4%ba%8c%e4%b8%89%e4%ba%8b&amp;body=https://www.xiangtianlong.com/post/2021/docker%E4%BA%8C%E4%B8%89%E4%BA%8B/" target="_blank" rel="noopener" class="share-btn-email">
           <i class="fas fa-envelope"></i>
         </a>
       </li>
@@ -680,7 +769,7 @@
       
       
       <li>
-        <a href="https://www.linkedin.com/shareArticle?url=https://www.xiangtianlong.com/post/2020/redhat-and-centos-life-cycle/&amp;title=redhat%20and%20centos%20life%20cycle" target="_blank" rel="noopener" class="share-btn-linkedin">
+        <a href="https://www.linkedin.com/shareArticle?url=https://www.xiangtianlong.com/post/2021/docker%E4%BA%8C%E4%B8%89%E4%BA%8B/&amp;title=docker%e4%ba%8c%e4%b8%89%e4%ba%8b" target="_blank" rel="noopener" class="share-btn-linkedin">
           <i class="fab fa-linkedin-in"></i>
         </a>
       </li>
@@ -693,7 +782,7 @@
       
       
       <li>
-        <a href="https://web.whatsapp.com/send?text=redhat%20and%20centos%20life%20cycle%20https://www.xiangtianlong.com/post/2020/redhat-and-centos-life-cycle/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+        <a href="https://web.whatsapp.com/send?text=docker%e4%ba%8c%e4%b8%89%e4%ba%8b%20https://www.xiangtianlong.com/post/2021/docker%E4%BA%8C%E4%B8%89%E4%BA%8B/" target="_blank" rel="noopener" class="share-btn-whatsapp">
           <i class="fab fa-whatsapp"></i>
         </a>
       </li>
@@ -706,7 +795,7 @@
       
       
       <li>
-        <a href="https://service.weibo.com/share/share.php?url=https://www.xiangtianlong.com/post/2020/redhat-and-centos-life-cycle/&amp;title=redhat%20and%20centos%20life%20cycle" target="_blank" rel="noopener" class="share-btn-weibo">
+        <a href="https://service.weibo.com/share/share.php?url=https://www.xiangtianlong.com/post/2021/docker%E4%BA%8C%E4%B8%89%E4%BA%8B/&amp;title=docker%e4%ba%8c%e4%b8%89%e4%ba%8b" target="_blank" rel="noopener" class="share-btn-weibo">
           <i class="fab fa-weibo"></i>
         </a>
       </li>
