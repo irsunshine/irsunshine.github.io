@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>深交所 | 假装不困</title>
+    <link>https://www.xiangtianlong.com/tags/%E6%B7%B1%E4%BA%A4%E6%89%80/</link>
+      <atom:link href="https://www.xiangtianlong.com/tags/%E6%B7%B1%E4%BA%A4%E6%89%80/index.xml" rel="self" type="application/rss+xml" />
+    <description>深交所</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>zh-Hans</language><copyright>2019</copyright><lastBuildDate>Wed, 27 Jan 2021 14:35:21 +0800</lastBuildDate>
+    <image>
+      <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
+      <title>深交所</title>
+      <link>https://www.xiangtianlong.com/tags/%E6%B7%B1%E4%BA%A4%E6%89%80/</link>
+    </image>
+    
+    <item>
+      <title>交易所接口文档汇总</title>
+      <link>https://www.xiangtianlong.com/post/2021/%E4%BA%A4%E6%98%93%E6%89%80%E6%8E%A5%E5%8F%A3%E6%96%87%E6%A1%A3%E6%B1%87%E6%80%BB/</link>
+      <pubDate>Wed, 27 Jan 2021 14:35:21 +0800</pubDate>
+      <guid>https://www.xiangtianlong.com/post/2021/%E4%BA%A4%E6%98%93%E6%89%80%E6%8E%A5%E5%8F%A3%E6%96%87%E6%A1%A3%E6%B1%87%E6%80%BB/</guid>
+      <description>&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
+&lt;p&gt;金融软件开发的第五个年头，打交道最多的就是各种交易所的接口文档，熟悉的也是港交所的文档，近期处理中华通业务，涉及到了部分中华通业务，顺手查阅了深交所和上交所的资料&lt;/p&gt;
+&lt;h2 id=&#34;港交所&#34;&gt;港交所&lt;/h2&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://www.hkex.com.hk/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;官网链接&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;常用&#34;&gt;常用&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;a href=&#34;www.hkex.com.hk/Mutual-Market/Stock-Connect/Reference-Materials/Trading-Hour,-Trading-and-Settlement-Calendar?sc_lang=zh-HK&#34;&gt;交易時間，交易和結算日曆&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://sc.hkex.com.hk/TuniS/www.hkex.com.hk/Services/Trading/Securities/Overview/Trading-Mechanism?sc_lang=zh-CN&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;交易机制&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://www.hkex.com.hk/-/media/hkex-market/mutual-market/stock-connect/reference-materials/resources/glossary_c&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;中港金融詞彙對照表&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://sc.hkex.com.hk/TuniS/www.hkex.com.hk/chi/vcm/vcmtriggersecurity_c.aspx&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;市调机制冷静期触发记录&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://sc.hkex.com.hk/TuniS/www.hkex.com.hk/chi/services/trading/securities/securitieslists/ListOfSecurities_c.xlsx&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;证券名单：基本信息、证券分类&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://sc.hkex.com.hk/TuniS/www.hkex.com.hk/Services/Trading/Securities/Securities-Lists/Closing-Auction-Session-%28CAS%29-Securities?sc_lang=zh-CN&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;收市竞价交易时段证券&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://sc.hkex.com.hk/TuniS/www.hkex.com.hk/Services/Trading/Securities/Securities-Lists/Volatility-Control-Mechanism-%28VCM%29-Securities?sc_lang=zh-CN&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;市场波动调节机制（市调机制）证券&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://sc.hkex.com.hk/TuniS/www.hkex.com.hk/Services/Trading/Securities/Securities-Lists/Designated-Securities-Eligible-for-Short-Selling?sc_lang=zh-CN&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;可进行卖空的指定证券&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;行情接口文档港股--中华通&#34;&gt;行情接口文档：港股 + 中华通&lt;/h3&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://www.hkex.com.hk/Services/Market-Data-Services/Infrastructure/Overview?sc_lang=en&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;行情接口文档汇总链接&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;常见问题答疑、指引开发手册、历史行情接口文档可以通过搜索栏获取下载地址，搜索历史版本号&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://www.hkex.com.hk/Services/Market-Data-Services/Infrastructure/HKEX-Orion-Market-Data-Platform-Securities-Market-OMD-C?sc_lang=en&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;港股证券行情接口文档&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://www.hkex.com.hk/Mutual-Market/Stock-Connect/Reference-Materials/Technical-Documents/OMD_CC-Specifications?sc_lang=en&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;中华通行情接口文档&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;报盘接口文档港股--中华通&#34;&gt;报盘接口文档：港股 + 中华通&lt;/h3&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://www.hkex.com.hk/Services/Trading/Securities/Infrastructure/Overview?sc_lang=en&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;报盘接口文档汇总链接&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://www.hkex.com.hk/-/media/HKEX-Market/Services/Trading/Securities/Infrastructure/Orion-Trading-Platform-Securities-Market-OTP-C/OTPC/HKEX_OCG_FIX_Trading_Interface_Specifications_v2_2-%28clean%29.pdf?la=en&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;港股FIX协议接口文档&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://www.hkex.com.hk/-/media/HKEX-Market/Services/Trading/Securities/Infrastructure/Orion-Trading-Platform-Securities-Market-OTP-C/OTPC/HKEX_OCG_Binary_Trading_Interface_Specifications_v2_2-%28clean%29.pdf?la=en&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;港股二级制协议接口文档&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://www.hkex.com.hk/-/media/HKEX-Market/Services/Trading/Securities/Infrastructure/Orion-Trading-Platform-Securities-Market-OTP-C/OTPC/Reason-Text-List.xlsx?la=en&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;港股交易所错误代码清单&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://www.hkex.com.hk/-/media/HKEX-Market/Mutual-Market/Stock-Connect/Reference-Materials/Northbound-Investor-ID-Model/HKEx_CCCG_FIX_Trading_Interface_Specifications_v1_3-%28clean%29.pdf?la=zh-CN&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;中华通Fix协议接口文档&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://www.hkex.com.hk/-/media/HKEX-Market/Mutual-Market/Stock-Connect/Reference-Materials/Northbound-Investor-ID-Model/HKEx_CCCG_Binary_Trading_Interface_Specifications_v1_3-%28clean%29.pdf?la=zh-CN&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;中华通二进制接口文档&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;上交所&#34;&gt;上交所&lt;/h2&gt;
+&lt;p&gt;
+&lt;a href=&#34;http://www.sse.com.cn/services/tradingservice/tradingtech/technical/data/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;行情报盘接口文档&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;
+&lt;a href=&#34;http://www.sse.com.cn/services/tradingservice/tradingtech/technical/other/c/SSE_IS111_ErrorCode_CV3.15.xlsx&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;报盘报错接口文档&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;深交所&#34;&gt;深交所&lt;/h2&gt;
+&lt;p&gt;
+&lt;a href=&#34;http://www.szse.cn/marketServices/technicalservice/interface/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;行情报盘接口文档&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;深交所没有提供单独的报错信息说明，在报盘接口文档的第六章有附加说明&lt;/p&gt;
+&lt;p&gt;
+&lt;a href=&#34;http://www.szse.cn/marketServices/technicalservice/interface/P020201229686784934466.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;深圳证券交易所Binary交易数据接口规范（Ver1.18）&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;纳斯达克&#34;&gt;纳斯达克&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://www.nyse.com/markets/hours-calendars&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;假期安排&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://www.nasdaq.com/market-activity/ipos?tab=upcoming&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;新股上市信息&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;收市价&#34;&gt;收市价&lt;/h2&gt;
+&lt;p&gt;
+&lt;a href=&#34;http://eoddata.com/stocklist/NASDAQ.htm&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;全球市场收市价&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
