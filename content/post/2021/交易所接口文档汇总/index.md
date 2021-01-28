@@ -39,16 +39,22 @@ projects: []
 
 ### 常用
 
-* [交易時間，交易和結算日曆](www.hkex.com.hk/Mutual-Market/Stock-Connect/Reference-Materials/Trading-Hour,-Trading-and-Settlement-Calendar?sc_lang=zh-HK)
+* [交易時間，交易和結算日曆](https://www.hkex.com.hk/Mutual-Market/Stock-Connect/Reference-Materials/Trading-Hour,-Trading-and-Settlement-Calendar?sc_lang=zh-HK)
 * [交易机制](https://sc.hkex.com.hk/TuniS/www.hkex.com.hk/Services/Trading/Securities/Overview/Trading-Mechanism?sc_lang=zh-CN)
 * [中港金融詞彙對照表](https://www.hkex.com.hk/-/media/hkex-market/mutual-market/stock-connect/reference-materials/resources/glossary_c)
+---
+* [滬港通及深港通交易日曆 PDF](2021-Calendar_pdf_c.pdf)
+* [滬港通及深港通交易日曆 CSV](2021-Calendar_csv_c.csv)
+* [中港金融詞彙對照表 PDF](glossary_c.pdf)
+---
 ---
 * [市调机制冷静期触发记录](https://sc.hkex.com.hk/TuniS/www.hkex.com.hk/chi/vcm/vcmtriggersecurity_c.aspx)
 * [证券名单：基本信息、证券分类](https://sc.hkex.com.hk/TuniS/www.hkex.com.hk/chi/services/trading/securities/securitieslists/ListOfSecurities_c.xlsx)
 * [收市竞价交易时段证券](https://sc.hkex.com.hk/TuniS/www.hkex.com.hk/Services/Trading/Securities/Securities-Lists/Closing-Auction-Session-(CAS)-Securities?sc_lang=zh-CN)
 * [市场波动调节机制（市调机制）证券](https://sc.hkex.com.hk/TuniS/www.hkex.com.hk/Services/Trading/Securities/Securities-Lists/Volatility-Control-Mechanism-(VCM)-Securities?sc_lang=zh-CN)
 * [可进行卖空的指定证券](https://sc.hkex.com.hk/TuniS/www.hkex.com.hk/Services/Trading/Securities/Securities-Lists/Designated-Securities-Eligible-for-Short-Selling?sc_lang=zh-CN)
-
+---
+* [证券名单：基本信息、证券分类 XLSX](ListOfSecurities_c.xlsx)
 ### 行情接口文档：港股 + 中华通
 
 [行情接口文档汇总链接](https://www.hkex.com.hk/Services/Market-Data-Services/Infrastructure/Overview?sc_lang=en)
@@ -57,23 +63,32 @@ projects: []
 
 * [港股证券行情接口文档](https://www.hkex.com.hk/Services/Market-Data-Services/Infrastructure/HKEX-Orion-Market-Data-Platform-Securities-Market-OMD-C?sc_lang=en)
 * [中华通行情接口文档](https://www.hkex.com.hk/Mutual-Market/Stock-Connect/Reference-Materials/Technical-Documents/OMD_CC-Specifications?sc_lang=en)
+---
+* [HKEX_OMDC_Binary_Interface_Specifications_v_1,-d-,32c.pdf](HKEX_OMDC_Binary_Interface_Specifications_v_1,-d-,32c.pdf)
+* [HKEX_OMDC_Developers_Guide_1_11.pdf](HKEX_OMDC_Developers_Guide_1_11.pdf)
+* [OMDC_Connectivity_Guide_Securities_Market-_Index_datafeed_(v2_2).pdf](OMDC_Connectivity_Guide_Securities_Market-_Index_datafeed_(v2_2).pdf)
+* [OMD_Interface_Specification_China_Connect_Securities-(v1-3).pdf](OMD_Interface_Specification_China_Connect_Securities-(v1-3).pdf)
+* [OMD_Connectivity_Guide_China_Connect_Securities.pdf](OMD_Connectivity_Guide_China_Connect_Securities.pdf)
+* [OMD_Developers_Guide_China_Connect_Securities.pdf](OMD_Developers_Guide_China_Connect_Securities.pdf)
 
 ### 报盘接口文档：港股 + 中华通
 
 [报盘接口文档汇总链接](https://www.hkex.com.hk/Services/Trading/Securities/Infrastructure/Overview?sc_lang=en)
 
-* [港股FIX协议接口文档](https://www.hkex.com.hk/-/media/HKEX-Market/Services/Trading/Securities/Infrastructure/Orion-Trading-Platform-Securities-Market-OTP-C/OTPC/HKEX_OCG_FIX_Trading_Interface_Specifications_v2_2-(clean).pdf?la=en)
-* [港股二级制协议接口文档](https://www.hkex.com.hk/-/media/HKEX-Market/Services/Trading/Securities/Infrastructure/Orion-Trading-Platform-Securities-Market-OTP-C/OTPC/HKEX_OCG_Binary_Trading_Interface_Specifications_v2_2-(clean).pdf?la=en)
-* [港股交易所错误代码清单](https://www.hkex.com.hk/-/media/HKEX-Market/Services/Trading/Securities/Infrastructure/Orion-Trading-Platform-Securities-Market-OTP-C/OTPC/Reason-Text-List.xlsx?la=en)
+* [港股FIX协议接口文档 PDF](HKEX_OCG_FIX_Trading_Interface_Specifications_v2_2-(clean).pdf)
+* [港股二级制协议接口文档 PDF](HKEX_OCG_Binary_Trading_Interface_Specifications_v2_2-(clean).pdf)
+* [港股交易所错误代码清单 XLSX](Reason_Text_List.xlsx)
 ---
-* [中华通Fix协议接口文档](https://www.hkex.com.hk/-/media/HKEX-Market/Mutual-Market/Stock-Connect/Reference-Materials/Northbound-Investor-ID-Model/HKEx_CCCG_FIX_Trading_Interface_Specifications_v1_3-(clean).pdf?la=zh-CN)
-* [中华通二进制接口文档](https://www.hkex.com.hk/-/media/HKEX-Market/Mutual-Market/Stock-Connect/Reference-Materials/Northbound-Investor-ID-Model/HKEx_CCCG_Binary_Trading_Interface_Specifications_v1_3-(clean).pdf?la=zh-CN)
+* [中华通Fix协议接口文档 PDF](HKEx_CCCG_FIX_Trading_Interface_Specifications_v1_3-(clean).pdf)
+* [中华通二进制接口文档 PDF](HKEx_CCCG_Binary_Trading_Interface_Specifications_v1_3-(clean).pdf)
 
 ## 上交所
 
 [行情报盘接口文档](http://www.sse.com.cn/services/tradingservice/tradingtech/technical/data/)
 
-[报盘报错接口文档](http://www.sse.com.cn/services/tradingservice/tradingtech/technical/other/c/SSE_IS111_ErrorCode_CV3.15.xlsx)
+报错接口文档在其他菜单中获取
+
+[报盘报错接口文档 XLSX](SSE_IS111_ErrorCode_CV3.15.xlsx)
 
 ## 深交所
 
@@ -81,7 +96,7 @@ projects: []
 
 深交所没有提供单独的报错信息说明，在报盘接口文档的第六章有附加说明
 
-[深圳证券交易所Binary交易数据接口规范（Ver1.18）](http://www.szse.cn/marketServices/technicalservice/interface/P020201229686784934466.pdf)
+[深圳证券交易所Binary交易数据接口规范（Ver1.18）PDF](P020201229686784934466.pdf)
 
 ## 纳斯达克
 
