@@ -273,8 +273,19 @@ export PATH&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;$JMETER_HOME/
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;jmeter -n -t /tmp/order-500-10s.jmx -l /tmp/jmeter-order-report-20200109/order-500-10s.jtl
 &lt;span style=&#34;color:#75715e&#34;&gt;# 一般不用测试结果和测试报告，简化命令&lt;/span&gt;
 jmeter -n -t /tmp/order-500-10s.jmx
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;grafana-暂时废弃&#34;&gt;Grafana 暂时废弃&lt;/h2&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;grafana&#34;&gt;Grafana&lt;/h2&gt;
 &lt;p&gt;编写测试案例的时候发现，图表展示的效果其实没太多必要，接口的&lt;code&gt;tps&lt;/code&gt;数据在命令行执行的时候已经能观测到，更多是想知道程序内部的耗时&lt;/p&gt;
+&lt;p&gt;简单部署&lt;code&gt;grafana&lt;/code&gt;控制台面板，导入配置文件对接&lt;code&gt;InfluxDB&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;控制台支持通过标签过滤测试结果，一般只需要配置一个&lt;code&gt;InfluxDB&lt;/code&gt;数据库即可：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;应用名称&lt;/li&gt;
+&lt;li&gt;测试案例名称&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;Snipaste_2021-03-09_19-44-22.png&#34; alt=&#34;grafana&#34;&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;docker run -d --name=grafana -p 3000:3000 grafana/grafana:7.3.1
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;网页版由于采样器间隔会导致计算的&lt;code&gt;TPS&lt;/code&gt;和相关数值与&lt;code&gt;Jmeter&lt;/code&gt;聚合报告不相符，参考链接：
+&lt;a href=&#34;https://www.vinsguru.com/jmeter-real-time-results-influxdb-grafana/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://www.vinsguru.com/jmeter-real-time-results-influxdb-grafana/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;资料中也描述了如何自定义&lt;code&gt;监听器&lt;/code&gt;&lt;/p&gt;
 &lt;h2 id=&#34;后记&#34;&gt;后记&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;高性能的程序模式必然是 one loop thread，任何的锁、入队列和出队列，都会造成不必要的性能损失&lt;/li&gt;

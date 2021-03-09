@@ -1,273 +1,165 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
   <url>
     <loc>https://www.xiangtianlong.com/courses/example/example1/</loc>
     <lastmod>2019-05-05T00:00:00+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.xiangtianlong.com/courses/example/example2/</loc>
     <lastmod>2019-05-05T00:00:00+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.xiangtianlong.com/courses/%E7%8E%B0%E4%BB%A3c&#43;&#43;%E5%AE%9E%E6%88%9830%E8%AE%B2%E7%AC%94%E8%AE%B0/01-%E8%AF%BE%E5%89%8D%E5%BF%85%E8%AF%BB/01-c&#43;&#43;%E8%BF%99%E4%B9%88%E9%9A%BE%E4%B8%BA%E4%BB%80%E4%B9%88%E6%88%91%E4%BB%AC%E8%BF%98%E8%A6%81%E7%94%A8c&#43;&#43;/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.xiangtianlong.com/courses/%E7%8E%B0%E4%BB%A3c&#43;&#43;%E5%AE%9E%E6%88%9830%E8%AE%B2%E7%AC%94%E8%AE%B0/02-%E5%9F%BA%E7%A1%80%E7%AF%87/01-%E5%A0%86%E6%A0%88raii%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/</loc>
     <lastmod>2019-05-05T00:00:00+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.xiangtianlong.com/courses/%E7%8E%B0%E4%BB%A3c&#43;&#43;%E5%AE%9E%E6%88%9830%E8%AE%B2%E7%AC%94%E8%AE%B0/</loc>
     <lastmod>2020-03-30T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.xiangtianlong.com/courses/example/</loc>
     <lastmod>2018-09-09T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.xiangtianlong.com/authors/%E5%90%91%E5%A4%A9%E9%BE%99/</loc>
-    <lastmod>2021-01-28T20:53:21+08:00</lastmod>
-  </url>
-  
-  <url>
+    <lastmod>2021-03-09T10:12:50+08:00</lastmod>
+  </url><url>
     <loc>https://www.xiangtianlong.com/post/</loc>
-    <lastmod>2021-01-28T20:53:21+08:00</lastmod>
-  </url>
-  
-  <url>
+    <lastmod>2021-03-09T10:12:50+08:00</lastmod>
+  </url><url>
     <loc>https://www.xiangtianlong.com/authors/</loc>
-    <lastmod>2021-01-28T20:53:21+08:00</lastmod>
-  </url>
-  
-  <url>
+    <lastmod>2021-03-09T10:12:50+08:00</lastmod>
+  </url><url>
     <loc>https://www.xiangtianlong.com/tags/hkex/</loc>
     <lastmod>2021-01-28T20:53:21+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.xiangtianlong.com/tags/</loc>
-    <lastmod>2021-01-28T20:53:21+08:00</lastmod>
-  </url>
-  
-  <url>
+    <lastmod>2021-03-09T10:12:50+08:00</lastmod>
+  </url><url>
     <loc>https://www.xiangtianlong.com/tags/%E4%B8%8A%E4%BA%A4%E6%89%80/</loc>
     <lastmod>2021-01-28T20:53:21+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.xiangtianlong.com/tags/%E4%B8%AD%E5%8D%8E%E9%80%9A/</loc>
     <lastmod>2021-01-28T20:53:21+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.xiangtianlong.com/post/2021/%E4%BA%A4%E6%98%93%E6%89%80%E6%8E%A5%E5%8F%A3%E6%96%87%E6%A1%A3%E6%B1%87%E6%80%BB/</loc>
     <lastmod>2021-01-28T20:53:21+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.xiangtianlong.com/</loc>
-    <lastmod>2021-01-28T20:53:21+08:00</lastmod>
-  </url>
-  
-  <url>
+    <lastmod>2021-03-09T10:12:50+08:00</lastmod>
+  </url><url>
     <loc>https://www.xiangtianlong.com/tags/%E6%8E%A5%E5%8F%A3%E6%96%87%E6%A1%A3/</loc>
     <lastmod>2021-01-28T20:53:21+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.xiangtianlong.com/tags/%E6%B7%B1%E4%BA%A4%E6%89%80/</loc>
     <lastmod>2021-01-28T20:53:21+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.xiangtianlong.com/tags/%E6%B8%AF%E4%BA%A4%E6%89%80/</loc>
     <lastmod>2021-01-28T20:53:21+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.xiangtianlong.com/tags/%E7%BA%B3%E6%96%AF%E8%BE%BE%E5%85%8B/</loc>
     <lastmod>2021-01-28T20:53:21+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.xiangtianlong.com/tags/centos/</loc>
     <lastmod>2021-01-21T09:26:07+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.xiangtianlong.com/tags/docker/</loc>
     <lastmod>2021-01-21T09:26:07+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.xiangtianlong.com/post/2021/docker%E4%BA%8C%E4%B8%89%E4%BA%8B/</loc>
     <lastmod>2021-01-21T09:26:07+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.xiangtianlong.com/tags/linux/</loc>
-    <lastmod>2021-01-21T09:26:07+08:00</lastmod>
-  </url>
-  
-  <url>
+    <lastmod>2021-03-09T10:12:50+08:00</lastmod>
+  </url><url>
     <loc>https://www.xiangtianlong.com/categories/</loc>
-    <lastmod>2020-12-22T10:12:50+08:00</lastmod>
-  </url>
-  
-  <url>
+    <lastmod>2021-03-09T10:12:50+08:00</lastmod>
+  </url><url>
     <loc>https://www.xiangtianlong.com/tags/jmeter/</loc>
-    <lastmod>2020-12-22T10:12:50+08:00</lastmod>
-  </url>
-  
-  <url>
+    <lastmod>2021-03-09T10:12:50+08:00</lastmod>
+  </url><url>
     <loc>https://www.xiangtianlong.com/post/2020/linux%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BAjmeter%E5%8E%8B%E6%B5%8B%E7%8E%AF%E5%A2%83/</loc>
-    <lastmod>2020-12-22T10:12:50+08:00</lastmod>
-  </url>
-  
-  <url>
+    <lastmod>2021-03-09T10:12:50+08:00</lastmod>
+  </url><url>
     <loc>https://www.xiangtianlong.com/categories/%E5%8E%8B%E5%8A%9B%E6%B5%8B%E8%AF%95/</loc>
-    <lastmod>2020-12-22T10:12:50+08:00</lastmod>
-  </url>
-  
-  <url>
+    <lastmod>2021-03-09T10:12:50+08:00</lastmod>
+  </url><url>
     <loc>https://www.xiangtianlong.com/categories/linux/</loc>
     <lastmod>2020-07-21T20:02:35+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.xiangtianlong.com/post/2020/redhat-and-centos-life-cycle/</loc>
     <lastmod>2020-07-21T20:02:35+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.xiangtianlong.com/post/2020/%E4%B8%AD%E7%BE%8E%E8%B4%B8%E6%98%93%E6%88%98/</loc>
     <lastmod>2020-07-21T19:52:41+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.xiangtianlong.com/categories/%E9%B1%BC%E7%9A%84%E8%AE%B0%E5%BF%86%E8%A7%81%E9%97%BB/</loc>
     <lastmod>2020-07-21T19:52:41+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.xiangtianlong.com/categories/%E5%85%B6%E4%BB%96/</loc>
     <lastmod>2020-07-18T14:33:46+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.xiangtianlong.com/post/2020/%E7%94%B5%E8%84%91%E7%BB%84%E8%A3%85%E9%82%A3%E4%BA%9B%E4%BA%8B/</loc>
     <lastmod>2020-07-18T14:33:46+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.xiangtianlong.com/post/2020/%E7%BD%91%E7%AB%99%E5%8A%A0%E9%80%9F%E5%92%8C%E5%9F%9F%E5%90%8D%E8%AE%BE%E7%BD%AE/</loc>
     <lastmod>2020-06-27T15:01:27+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.xiangtianlong.com/post/2020/%E5%8D%9A%E5%AE%A2ide%E7%8E%AF%E5%A2%83%E5%92%8C%E7%A2%8E%E7%A2%8E%E5%BF%B5/</loc>
     <lastmod>2020-04-27T20:53:27+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.xiangtianlong.com/courses/</loc>
     <lastmod>2020-03-30T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.xiangtianlong.com/tags/github-action/</loc>
     <lastmod>2020-03-29T02:11:33+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.xiangtianlong.com/tags/travis/</loc>
     <lastmod>2020-03-29T02:11:33+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.xiangtianlong.com/tags/%E8%87%AA%E5%8A%A8%E9%9B%86%E6%88%90/</loc>
     <lastmod>2020-03-29T02:11:33+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.xiangtianlong.com/post/2020/%E8%87%AA%E5%8A%A8%E9%9B%86%E6%88%90%E7%B3%BB%E7%BB%9F%E5%88%87%E6%8D%A2/</loc>
     <lastmod>2020-03-29T02:11:33+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.xiangtianlong.com/authors/%E7%99%BD%E5%B2%A9%E6%9D%BE/</loc>
     <lastmod>2020-02-15T11:28:28+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.xiangtianlong.com/talk/</loc>
     <lastmod>2020-02-15T11:28:28+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.xiangtianlong.com/talk/%E5%B2%81%E6%9C%88%E6%97%A2%E6%85%A2%E4%B8%94%E9%95%BF%E7%99%BD%E8%AF%B4%E4%BD%A0%E5%90%AC/06-%E6%9C%AA%E6%9D%A5%E7%9A%84%E5%A5%BD%E4%B8%AD%E5%9B%BD%E4%B8%80%E5%AE%9A%E6%98%AF%E6%9C%89%E5%A5%BD%E8%80%81%E5%A4%B4%E5%A5%BD%E8%80%81%E5%A4%AA%E5%A4%AA%E7%9A%84%E4%B8%AD%E5%9B%BD/</loc>
     <lastmod>2020-02-15T11:28:28+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.xiangtianlong.com/categories/%E7%99%BD%E5%B2%A9%E6%9D%BE%E6%BC%94%E8%AE%B2%E7%A8%BF/</loc>
     <lastmod>2020-02-15T11:28:28+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.xiangtianlong.com/talk/%E5%B2%81%E6%9C%88%E6%97%A2%E6%85%A2%E4%B8%94%E9%95%BF%E7%99%BD%E8%AF%B4%E4%BD%A0%E5%90%AC/05-%E6%88%91%E7%9A%8418%E5%B2%81%E5%8F%AF%E8%83%BD%E8%B7%9F%E4%BD%A0%E4%BB%AC%E4%B8%8D%E5%A4%AA%E4%B8%80%E6%A0%B7/</loc>
     <lastmod>2020-02-15T11:19:33+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.xiangtianlong.com/talk/%E5%B2%81%E6%9C%88%E6%97%A2%E6%85%A2%E4%B8%94%E9%95%BF%E7%99%BD%E8%AF%B4%E4%BD%A0%E5%90%AC/04-%E8%BF%99%E4%B8%AA%E7%A4%BE%E4%BC%9A%E9%9C%80%E8%A6%81%E4%BB%80%E4%B9%88%E6%A0%B7%E7%9A%84%E8%AE%B0%E8%80%85/</loc>
     <lastmod>2020-02-15T11:08:38+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.xiangtianlong.com/talk/%E5%B2%81%E6%9C%88%E6%97%A2%E6%85%A2%E4%B8%94%E9%95%BF%E7%99%BD%E8%AF%B4%E4%BD%A0%E5%90%AC/03-20%E5%B9%B4%E5%90%8E%E7%9A%84%E4%B8%AD%E5%9B%BD%E8%B6%B3%E7%90%83%E4%BC%9A%E6%80%8E%E4%B9%88%E6%A0%B7/</loc>
     <lastmod>2020-02-15T10:59:32+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.xiangtianlong.com/talk/%E5%B2%81%E6%9C%88%E6%97%A2%E6%85%A2%E4%B8%94%E9%95%BF%E7%99%BD%E8%AF%B4%E4%BD%A0%E5%90%AC/02-%E9%81%93%E5%BE%B7%E8%B5%A4%E5%AD%97%E4%BA%BA%E6%80%A7%E4%BA%8F%E6%8D%9F%E6%89%8D%E6%98%AF%E7%8E%B0%E5%9C%A8%E6%9C%80%E5%A4%A7%E7%9A%84%E8%B5%A4%E5%AD%97%E5%92%8C%E4%BA%8F%E6%8D%9F/</loc>
     <lastmod>2020-02-15T01:20:34+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.xiangtianlong.com/talk/%E5%B2%81%E6%9C%88%E6%97%A2%E6%85%A2%E4%B8%94%E9%95%BF%E7%99%BD%E8%AF%B4%E4%BD%A0%E5%90%AC/01-%E5%85%B3%E4%BA%8E%E5%85%89%E9%98%B4%E4%BD%A0%E8%A6%81%E8%AF%BB%E5%BE%88%E5%A4%9A%E4%B9%A6%E6%89%8D%E8%83%BD%E6%89%BE%E5%88%B0%E7%AD%94%E6%A1%88/</loc>
     <lastmod>2020-02-14T07:27:21+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.xiangtianlong.com/tags/allocator/</loc>
     <lastmod>2019-12-30T13:26:19+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.xiangtianlong.com/categories/c&#43;&#43;/</loc>
     <lastmod>2019-12-30T13:26:19+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.xiangtianlong.com/post/2020/std-allocator-%E7%9B%B8%E5%85%B3%E6%A6%82%E5%BF%B5/</loc>
     <lastmod>2019-12-30T13:26:19+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.xiangtianlong.com/talk/example/</loc>
     <lastmod>2003-06-01T13:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.xiangtianlong.com/publication_types/</loc>
   </url>
-  
 </urlset>

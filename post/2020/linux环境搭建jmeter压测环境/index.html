@@ -267,7 +267,7 @@
     
       <meta property="article:published_time" content="2020-12-22T10:12:50&#43;08:00">
     
-    <meta property="article:modified_time" content="2020-12-22T10:12:50&#43;08:00">
+    <meta property="article:modified_time" content="2021-03-09T10:12:50&#43;08:00">
   
 
   
@@ -296,7 +296,7 @@
   "headline": "Linux搭建Jmeter压测环境",
   
   "datePublished": "2020-12-22T10:12:50+08:00",
-  "dateModified": "2020-12-22T10:12:50+08:00",
+  "dateModified": "2021-03-09T10:12:50+08:00",
   
   "author": {
     "@type": "Person",
@@ -540,7 +540,7 @@
             <li><a href="#jmeter-命令">Jmeter 命令</a></li>
           </ul>
         </li>
-        <li><a href="#grafana-暂时废弃">Grafana 暂时废弃</a></li>
+        <li><a href="#grafana">Grafana</a></li>
         <li><a href="#后记">后记</a></li>
       </ul>
     </li>
@@ -599,8 +599,10 @@
     
     
       
+          最近更新于
+      
     
-    Dec 22, 2020
+    Mar 9, 2021
   </span>
   
 
@@ -708,8 +710,19 @@ export PATH<span style="color:#f92672">=</span>$JMETER_HOME/bin:$PATH
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">jmeter -n -t /tmp/order-500-10s.jmx -l /tmp/jmeter-order-report-20200109/order-500-10s.jtl
 <span style="color:#75715e"># 一般不用测试结果和测试报告，简化命令</span>
 jmeter -n -t /tmp/order-500-10s.jmx
-</code></pre></div><h2 id="grafana-暂时废弃">Grafana 暂时废弃</h2>
+</code></pre></div><h2 id="grafana">Grafana</h2>
 <p>编写测试案例的时候发现，图表展示的效果其实没太多必要，接口的<code>tps</code>数据在命令行执行的时候已经能观测到，更多是想知道程序内部的耗时</p>
+<p>简单部署<code>grafana</code>控制台面板，导入配置文件对接<code>InfluxDB</code></p>
+<p>控制台支持通过标签过滤测试结果，一般只需要配置一个<code>InfluxDB</code>数据库即可：</p>
+<ul>
+<li>应用名称</li>
+<li>测试案例名称</li>
+</ul>
+<p><img src="Snipaste_2021-03-09_19-44-22.png" alt="grafana"></p>
+<pre><code>docker run -d --name=grafana -p 3000:3000 grafana/grafana:7.3.1
+</code></pre><p>网页版由于采样器间隔会导致计算的<code>TPS</code>和相关数值与<code>Jmeter</code>聚合报告不相符，参考链接：
+<a href="https://www.vinsguru.com/jmeter-real-time-results-influxdb-grafana/" target="_blank" rel="noopener">https://www.vinsguru.com/jmeter-real-time-results-influxdb-grafana/</a></p>
+<p>资料中也描述了如何自定义<code>监听器</code></p>
 <h2 id="后记">后记</h2>
 <ul>
 <li>高性能的程序模式必然是 one loop thread，任何的锁、入队列和出队列，都会造成不必要的性能损失</li>
@@ -1023,7 +1036,7 @@ jmeter -n -t /tmp/order-500-10s.jmx
     
     
     
-    <script src="/js/academic.min.c816d323c3a55093dae0829b44ea1ca8.js"></script>
+    <script src="/js/academic.min.6f1005d1a84220e2f466ff3d8e712f31.js"></script>
 
     <html>
 <head>
