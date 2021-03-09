@@ -9,7 +9,7 @@ tags: [Linux,Jmeter]
 categories: [压力测试]
 toc: true
 date: 2020-12-22T10:12:50+08:00
-lastmod: 2020-12-22T10:12:50+08:00
+lastmod: 2021-03-09T10:12:50+08:00
 featured: false
 draft: false
 
@@ -130,9 +130,25 @@ jmeter -n -t /tmp/order-500-10s.jmx -l /tmp/jmeter-order-report-20200109/order-5
 jmeter -n -t /tmp/order-500-10s.jmx
 ```
 
-## Grafana 暂时废弃
+## Grafana
 
 编写测试案例的时候发现，图表展示的效果其实没太多必要，接口的`tps`数据在命令行执行的时候已经能观测到，更多是想知道程序内部的耗时
+
+简单部署`grafana`控制台面板，导入配置文件对接`InfluxDB`
+
+控制台支持通过标签过滤测试结果，一般只需要配置一个`InfluxDB`数据库即可：
+- 应用名称
+- 测试案例名称
+
+![grafana](Snipaste_2021-03-09_19-44-22.png)
+
+```
+docker run -d --name=grafana -p 3000:3000 grafana/grafana:7.3.1
+```
+
+网页版由于采样器间隔会导致计算的`TPS`和相关数值与`Jmeter`聚合报告不相符，参考链接：[https://www.vinsguru.com/jmeter-real-time-results-influxdb-grafana/](https://www.vinsguru.com/jmeter-real-time-results-influxdb-grafana/)
+
+资料中也描述了如何自定义`监听器`
 
 ## 后记
 
