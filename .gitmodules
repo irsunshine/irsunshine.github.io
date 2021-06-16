@@ -7,3 +7,6 @@
 [submodule "themes/fix-academic"]
 	path = themes/fix-academic
 	url = https://github.com/xiangtianlong/hugo-academic.git
+[submodule "themes/even"]
+	path = themes/even
+	url = https://github.com/olOwOlo/hugo-theme-even
