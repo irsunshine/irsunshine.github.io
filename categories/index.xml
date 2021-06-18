@@ -1,16 +1,65 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Categories | 假装不困</title>
+    <title>Categories on 假装不困</title>
     <link>https://www.xiangtianlong.com/categories/</link>
-      <atom:link href="https://www.xiangtianlong.com/categories/index.xml" rel="self" type="application/rss+xml" />
-    <description>Categories</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>zh-Hans</language><copyright>2019</copyright><lastBuildDate>Tue, 22 Dec 2020 10:12:50 +0800</lastBuildDate>
-    <image>
-      <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
-      <title>Categories</title>
-      <link>https://www.xiangtianlong.com/categories/</link>
-    </image>
+    <description>Recent content in Categories on 假装不困</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Tue, 22 Dec 2020 10:12:50 +0800</lastBuildDate><atom:link href="https://www.xiangtianlong.com/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>压力测试</title>
+      <link>https://www.xiangtianlong.com/categories/%E5%8E%8B%E5%8A%9B%E6%B5%8B%E8%AF%95/</link>
+      <pubDate>Tue, 22 Dec 2020 10:12:50 +0800</pubDate>
+      
+      <guid>https://www.xiangtianlong.com/categories/%E5%8E%8B%E5%8A%9B%E6%B5%8B%E8%AF%95/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>linux</title>
+      <link>https://www.xiangtianlong.com/categories/linux/</link>
+      <pubDate>Tue, 21 Jul 2020 20:02:35 +0800</pubDate>
+      
+      <guid>https://www.xiangtianlong.com/categories/linux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>鱼的记忆：见闻</title>
+      <link>https://www.xiangtianlong.com/categories/%E9%B1%BC%E7%9A%84%E8%AE%B0%E5%BF%86%E8%A7%81%E9%97%BB/</link>
+      <pubDate>Tue, 21 Jul 2020 19:52:41 +0800</pubDate>
+      
+      <guid>https://www.xiangtianlong.com/categories/%E9%B1%BC%E7%9A%84%E8%AE%B0%E5%BF%86%E8%A7%81%E9%97%BB/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>其他</title>
+      <link>https://www.xiangtianlong.com/categories/%E5%85%B6%E4%BB%96/</link>
+      <pubDate>Sat, 18 Jul 2020 14:33:46 +0800</pubDate>
+      
+      <guid>https://www.xiangtianlong.com/categories/%E5%85%B6%E4%BB%96/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>白岩松演讲稿</title>
+      <link>https://www.xiangtianlong.com/categories/%E7%99%BD%E5%B2%A9%E6%9D%BE%E6%BC%94%E8%AE%B2%E7%A8%BF/</link>
+      <pubDate>Sat, 15 Feb 2020 11:28:28 +0800</pubDate>
+      
+      <guid>https://www.xiangtianlong.com/categories/%E7%99%BD%E5%B2%A9%E6%9D%BE%E6%BC%94%E8%AE%B2%E7%A8%BF/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>c&#43;&#43;</title>
+      <link>https://www.xiangtianlong.com/categories/c&#43;&#43;/</link>
+      <pubDate>Mon, 30 Dec 2019 13:26:19 +0800</pubDate>
+      
+      <guid>https://www.xiangtianlong.com/categories/c&#43;&#43;/</guid>
+      <description></description>
+    </item>
     
   </channel>
 </rss>

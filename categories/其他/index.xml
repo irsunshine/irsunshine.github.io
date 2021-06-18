@@ -1,232 +1,46 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>其他 | 假装不困</title>
+    <title>其他 on 假装不困</title>
     <link>https://www.xiangtianlong.com/categories/%E5%85%B6%E4%BB%96/</link>
-      <atom:link href="https://www.xiangtianlong.com/categories/%E5%85%B6%E4%BB%96/index.xml" rel="self" type="application/rss+xml" />
-    <description>其他</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>zh-Hans</language><copyright>2019</copyright><lastBuildDate>Sat, 18 Jul 2020 14:33:46 +0800</lastBuildDate>
-    <image>
-      <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
-      <title>其他</title>
-      <link>https://www.xiangtianlong.com/categories/%E5%85%B6%E4%BB%96/</link>
-    </image>
-    
+    <description>Recent content in 其他 on 假装不困</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sat, 18 Jul 2020 14:33:46 +0800</lastBuildDate><atom:link href="https://www.xiangtianlong.com/categories/%E5%85%B6%E4%BB%96/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>电脑组装那些事</title>
       <link>https://www.xiangtianlong.com/post/2020/%E7%94%B5%E8%84%91%E7%BB%84%E8%A3%85%E9%82%A3%E4%BA%9B%E4%BA%8B/</link>
       <pubDate>Sat, 18 Jul 2020 14:33:46 +0800</pubDate>
+      
       <guid>https://www.xiangtianlong.com/post/2020/%E7%94%B5%E8%84%91%E7%BB%84%E8%A3%85%E9%82%A3%E4%BA%9B%E4%BA%8B/</guid>
-      <description>&lt;h3 id=&#34;缘妙不可言&#34;&gt;缘·妙不可言&lt;/h3&gt;
-&lt;p&gt;打小呢就想着组装一台自己的电脑，奈何经济条件不允许。好不容易熬到了大学，为了便于携带，配置的也是笔记本。如果非要有个具体的时间点，我是什么时候开始有组装电脑这个念想的，就要说到老家的图书馆。毕竟也是个市区级别的图书馆，不仅有电子阅览室（其实从没去过，据说是按时计费），还有个杂志阅览室，也就是在这里，翻阅到了《大众软件》、《电脑报》这类杂志，对接触电脑不多的我来说，堪称神级科普资料。看到打副本的章节，就想着自己弄个电脑，也去拉怪，当主力输出；看到黑科技呢，幻想自己照着书上的做，也能达到描述的效果（论黑客工具的使用）。虽说高中课业重，就我那会的认知，书要读，玩也要玩，过的也算是“天真烂漫”，打着去图书馆看书的由头，没事就拎着个小包溜达过去，市区不大，一般都是徒步走去图书馆。到了地，吹着空调，看着小说、漫画、游戏杂志，偶尔也看点正经的书籍。&lt;/p&gt;
-&lt;p&gt;年纪大了就容易忘事，图书馆引发的还不算是初次萌芽。初中的时候，亲戚家组装过一台电脑，也不知道当初组装那台机器是干嘛用的。操作系统还是 windows 2003，游戏有系统自带的纸牌 + 帝国时代。各种“斗智斗勇”想着偷到钥匙，带着堂弟一起玩游戏。&lt;/p&gt;
-&lt;p&gt;刚入初中，学校就有就计算机的初级培训，后来转学，也接触到了一点计算机竞赛的概念。等到了高中，NOIP混过一次。说道这里，就不得不提，校友的力量，高中的计算机大楼是校友捐赠的，包含计算机教学室+图书馆。其实那会也是国内互联网浪潮的初浪。校领导也支持参与计算机竞赛，毕竟前面两届的学长，好几位前辈通过计算机保送了重点大学。&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;从未这样回顾过我和电脑这些事。也难怪我毕业后硬是从自动化专业义无反顾的转到了计算机行业，种子早已种下，局中人不自知而已。从小接触的多了，以为自己很厉害，其实也就懂个皮毛，最大的优势也就是最初的那份热情。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h3 id=&#34;硬件组装&#34;&gt;硬件组装&lt;/h3&gt;
-&lt;p&gt;多逛逛卡吧、chiphell、知乎电脑组装的板块，萌新能较为简单的给出一份自己需要的机器清单。2019年后选购CPU，经济条件不充裕的情况下，想要更高的性能，首选AMD。&lt;/p&gt;
-&lt;p&gt;推荐一个常用的硬件性能对比网站：
-&lt;a href=&#34;https://cpu.userbenchmark.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://cpu.userbenchmark.com/&lt;/a&gt;，价格这块基本可以和咸鱼的美版做个对比。真大佬可以去咸鱼淘二手的，能便宜很多。如果不是很精通，不推荐去咸鱼，本人就购买了假内存，虽说目前使用没发现问题，不太确定太多了，型号和参数完全对不上。&lt;/p&gt;
-&lt;h4 id=&#34;sn550-vs-sn750&#34;&gt;SN550 VS SN750&lt;/h4&gt;
-&lt;p&gt;SN550 1TB容量和SN750 1TB容量差别就是，两者持续读写差一倍，一个850MB，一个1.6GB，但日常使用没区别，因为两者4K都一样。当然这里说的是1TB容量的SN550，500G和250G速度顺序读写更慢。其实我觉得只要不是不差钱的，日常使用买SN550就行，我没买这个最大原因不是因为它的顺序读写速度，而是它最大只有1TB容量，而SN750有2TB容量。对我来说，在不额外扩展的情况下，主板的M.2 Nvme接口比这些固态的差价更值钱&lt;/p&gt;
-&lt;p&gt;综合网友的结论，入手一块转接板，B150 主板也能支持 M2 接口的固态。&lt;/p&gt;
-&lt;h4 id=&#34;机械硬盘选购&#34;&gt;机械硬盘选购&lt;/h4&gt;
-&lt;p&gt;机械硬盘目前价格趋于稳定，对于有大量存储需求的用户，需要选购一款合适的机械硬盘，频繁下载资源的用户推荐企业级硬盘，常见的有：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;西数金盘&lt;/li&gt;
-&lt;li&gt;希捷exos&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;大容量的机械硬盘推荐进行分区，频繁的下载操作固定在某个分区进行，日后出现坏道，可以集中在某个分区，废弃当前分区即可，能有效延长机械硬盘寿命。&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;希捷系列
-&lt;a href=&#34;https://www.seagate.com/cn/zh/enterprise-storage/exos-drives/exos-e-drives/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;官网介绍&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;%E5%B8%8C%E6%8D%B7exos1.png&#34; alt=&#34;希捷企业级硬盘概述&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;%E5%B8%8C%E6%8D%B7exos2.png&#34; alt=&#34;希捷企业级硬盘概述&#34;&gt;&lt;/p&gt;
-&lt;h4 id=&#34;内存频率&#34;&gt;内存频率&lt;/h4&gt;
-&lt;p&gt;日常工作的角度出发，频率不会对性能产生太大的影响。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;%E5%86%85%E5%AD%98.png&#34; alt=&#34;内存时序&#34;&gt; &lt;img src=&#34;%E5%92%B8%E9%B1%BC%E5%86%85%E5%AD%98.png&#34; alt=&#34;咸鱼内存&#34;&gt;&lt;/p&gt;
-&lt;p&gt;内存时序（英语：Memory timings或RAM timings）是描述同步动态随机存取存储器（SDRAM）性能的四个参数：CL、TRCD、TRP和TRAS，单位为时钟周期。它们通常被写为四个用破折号分隔开的数字，例如7-8-8-24。第四个参数（RAS）经常被省略，而有时还会加入第五个参数：Command rate（命令速率），通常为2T或1T，也写作2N、1N。这些参数指定了影响随机存取存储器速度的潜伏时间（延迟时间）。较低的数字通常意味着更快的性能。决定系统性能的最终元素是实际的延迟时间，通常以纳秒为单位。&lt;/p&gt;
-&lt;p&gt;当将内存时序转换为实际的延迟时，最重要的是注意它是以时钟周期为单位。如果不知道时钟周期的时间，就不可能了解一组数字是否比另一组数字更快。&lt;/p&gt;
-&lt;p&gt;举例来说，DDR3-2000内存的时钟频率是1000 MHz，其时钟周期为1 ns。基于这个1 ns的时钟，CL=7给出的绝对延迟为7 ns。而更快的DDR3-2666（时钟1333 MHz，每个周期0.75 ns）则可能用更大的CL=9，但产生的绝对延迟6.75 ns更短。&lt;/p&gt;
-&lt;p&gt;现代DIMM包括一个串行存在检测（SPD）ROM芯片，其中包含为自动配置推荐的内存时序。PC上的BIOS可能允许用户调整时序以提高性能（存在降低稳定性的风险），或在某些情况下增加稳定性（如使用建议的时序）。&lt;/p&gt;
-&lt;p&gt;注意：内存带宽是测量内存的吞吐量，并通常受到传输速率而非潜伏时间的限制。通过交错访问SDRAM的多个内部bank，有可能以峰值速率连续传输。可能以增加潜伏时间为代价来增加带宽。具体来说，每个新一代的DDR内存都有着较高的传输速率，但绝对延迟没有显著变化，尤其是市场上的第一批新一代产品，通常有着较上一代更长的延迟。&lt;/p&gt;
-&lt;p&gt;即便增加了内存延迟，增加内存带宽也可以改善多处理器或多个执行线程的计算机系统的性能。更高的带宽也将提升没有专用显存的集成显卡的性能。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;%E5%86%85%E5%AD%98%E6%97%B6%E5%BA%8F%E5%8F%82%E6%95%B0%E8%AF%B4%E6%98%8E.png&#34; alt=&#34;内存时序参数说明&#34;&gt;&lt;/p&gt;
-&lt;h3 id=&#34;参考资料&#34;&gt;参考资料&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;a href=&#34;https://zh.wikipedia.org/wiki/%E5%86%85%E5%AD%98%E6%97%B6%E5%BA%8F&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;内存时序参数说明&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+      <description>缘·妙不可言 打小呢就想着组装一台自己的电脑，奈何经济条件不允许。好不容易熬到了大学，为了便于携带，配置的也是笔记本。如果非要有个具体的时间点</description>
     </item>
     
     <item>
       <title>网站加速和域名设置</title>
       <link>https://www.xiangtianlong.com/post/2020/%E7%BD%91%E7%AB%99%E5%8A%A0%E9%80%9F%E5%92%8C%E5%9F%9F%E5%90%8D%E8%AE%BE%E7%BD%AE/</link>
       <pubDate>Sat, 20 Jun 2020 10:36:27 +0800</pubDate>
+      
       <guid>https://www.xiangtianlong.com/post/2020/%E7%BD%91%E7%AB%99%E5%8A%A0%E9%80%9F%E5%92%8C%E5%9F%9F%E5%90%8D%E8%AE%BE%E7%BD%AE/</guid>
-      <description>&lt;h3 id=&#34;背景&#34;&gt;背景&lt;/h3&gt;
-&lt;p&gt;网站托管在GitHub Pages，某些众所周知的原因，境内访问GitHub Pages有点慢。故而申请了个人域名，购买了国内云主机供应商的CDN加速服务。在设置加速服务的时候，想到了自己还有开发机器，上面部署了docker、frp、k8s等服务，这些服务都有配套的dashboard，本着不浪费的原则，配置了几个反向代理，全部挂上了二级域名。&lt;/p&gt;
-&lt;p&gt;当我美滋滋用着二级域名的时候，突发现www子域名无法访问了，阿里云上命名配置了DNS同时解析到www.xiangtianlong.com和xiangtianlong.com，尚未启用CDN加速的时候，两个域名都能正常使用。&lt;/p&gt;
-&lt;p&gt;在配置CDN加速的时候，由于二级域名太多，启用了泛域名规则，统一路由到了开发机器，结果导致www这个二级域名也挂了，是的，你没看错，www前缀是个二级域名。实际网站部署在GitHub Pages，开发机器没有任何网站的缓存信息。&lt;/p&gt;
-&lt;p&gt;至于为什么开发机器上没有部署站点，因为静态博客，配着GitHub提供的action，自动集成发布，真香。&lt;/p&gt;
-&lt;h3 id=&#34;域名&#34;&gt;域名&lt;/h3&gt;
-&lt;p&gt;非专业的web开发，对于域名的理解不涉及SEO和跨域问题。作为博客站点，裸域容易突出博客主的站点，说的就是我这种用汉字拼音当做域名的小朋友，加之当前移动访问居多，能少输入几个字符。&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;电脑端能使用快捷键免去输入www和com&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h3 id=&#34;cdn&#34;&gt;CDN&lt;/h3&gt;
-&lt;p&gt;阿里云和腾讯云的都用过，新人上手不难，腾讯云还有个视频单独讲解相关的概念。CDN加速的原理和京东仓库是一个道理，发售新商品，提前统一配送到全国各地的仓库，触发配送请求的时候，就近分发。&lt;/p&gt;
-&lt;p&gt;回源地址：网站资源原始存放的地址&lt;/p&gt;
-&lt;p&gt;缓存文件设置，浏览器F12，管理控制台，简单分析静态资源和动态资源&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;全部0天有效期&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;.php;.jsp;.asp;.aspx&lt;/code&gt; 0天有效期&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;.jpg;.png;.js;.css;.woff2&lt;/code&gt;	1天有效期&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;腾讯云配置规则：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;缓存过期规则最多可配置10条&lt;/li&gt;
-&lt;li&gt;多条缓存过期规则之间的优先级为底部优先&lt;/li&gt;
-&lt;li&gt;缓存过期时间最多可设置365天&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;悲惨自述&#34;&gt;悲惨自述&lt;/h3&gt;
-&lt;p&gt;以前也没用过Nginx，以为网站随便搜索就能明白反向代理的配置，结果有点混乱，折腾半天连个302跳转也没弄明白，结果屁用没有。就想着笨办法解决一下，DNS解析删除*模式的泛域名解析，单个二级域名进行独立设置。此时突然注意到了阿里云DNS解析有一个叫做显示URL跳转的模式，尝试了一下，这不就是我想要的302跳转。&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;设置了第一个二级域名正常访问，等我设置第二个的时候，发现没用，都快怀疑人生了，等了一会突然就能用了，看来阿里云的DNS扩散偶尔也是会抽风的&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h3 id=&#34;参考资料&#34;&gt;参考资料&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;a href=&#34;https://www.zhihu.com/question/20414602&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;为什么越来越多的网站域名不加「www」前缀？&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;
-&lt;a href=&#34;https://www.cloudxns.net/Support/detail/id/918.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;带www和不带www域名有什么区别呢?&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;
-&lt;a href=&#34;https://gythialy.github.io/Docker-nginx-reverse-proxy/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Docker nginx 反向代理设置&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+      <description>背景 网站托管在GitHub Pages，某些众所周知的原因，境内访问GitHub Pages有点慢。故而申请了个人域名，购买了国内云主机供应商的</description>
     </item>
     
     <item>
       <title>博客IDE环境和碎碎念</title>
       <link>https://www.xiangtianlong.com/post/2020/%E5%8D%9A%E5%AE%A2ide%E7%8E%AF%E5%A2%83%E5%92%8C%E7%A2%8E%E7%A2%8E%E5%BF%B5/</link>
       <pubDate>Tue, 31 Mar 2020 13:54:27 +0800</pubDate>
+      
       <guid>https://www.xiangtianlong.com/post/2020/%E5%8D%9A%E5%AE%A2ide%E7%8E%AF%E5%A2%83%E5%92%8C%E7%A2%8E%E7%A2%8E%E5%BF%B5/</guid>
-      <description>&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
-&lt;h3 id=&#34;markdown&#34;&gt;Markdown&lt;/h3&gt;
-&lt;blockquote&gt;
-&lt;p&gt;一种轻量级标记语言，它允许人们使用易读易写的纯文本格式编写文档&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;详细的Markdown语法本文不做额外赘述，推荐一本电子书，
-&lt;a href=&#34;https://markdown-zh.readthedocs.io/en/latest/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;点击此处&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;市面上很多软件都已经支持md作为书写方式。csdn博文系统推出了支持md语法的在线编辑器，在首次使用时，默认会有一篇关于md语法的介绍文章，笔者觉得还不错；印象笔记在2018年增加了对于md笔记的支持，快捷栏中有各种md标记的选项，用起来和编辑普通的文章差不多，整体的交互流程属于新手友好&lt;/p&gt;
-&lt;h3 id=&#34;ide推荐&#34;&gt;IDE推荐&lt;/h3&gt;
-&lt;p&gt;编写本文的时候，已经是2020年，vscode你必然是听说过的，毕竟能想到使用git page来搭建博文系统的都是业内人士。早些年的时候，sublime、atom也是不错的选择，经过两年开源社区的推动，vscode发展迅速，已经逐渐成为新手入场的首选。&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;微软巨头和开源社区的关系从割裂的状态，成功跨入蜜月期：拥抱开源；笔者所在的公司在最近两年也积极的引入Java体系，换言之在业务开发上，如今的Java生态在国内属实真香&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h3 id=&#34;vscode插件推荐&#34;&gt;vscode插件推荐&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;2020-03-31-14-07-17.png&#34; alt=&#34;插件清单&#34;&gt;&lt;/p&gt;
-&lt;p&gt;插件都有自带的Readme，介绍基本用法，核心功能，部分插件作者还提供动态效果展示图&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;Paste Image&lt;/code&gt;，配合hugo的图片插件方式，很便捷的就能引入图片&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;快捷键没记住，打开vscode快捷键管理菜单，搜索md，多看几遍；重看一遍插件使用说明&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&#34;hugo&#34;&gt;hugo&lt;/h2&gt;
-&lt;p&gt;笔者从&lt;code&gt;hexo&lt;/code&gt;切换到了&lt;code&gt;hugo&lt;/code&gt;，爱折腾是我的天性，终归是耐不住性子安安静静写文章&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;hugo支持在单独的文件夹放置图片和md文档&lt;/li&gt;
-&lt;li&gt;academic主题在设计上支持多种各式的文章样式&lt;/li&gt;
-&lt;li&gt;各种便捷的自定义拓展&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2 id=&#34;academic&#34;&gt;academic&lt;/h2&gt;
-&lt;p&gt;官网默认&lt;code&gt;exampleSite&lt;/code&gt;，menu引入采用&lt;code&gt;#组件&lt;/code&gt;的方式，推荐使用&lt;code&gt;url&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;url的模式，点击导航栏能实现单页的跳转，而非在首页进行滚动，这点纯属个人喜好&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;样式上：随笔、演讲、电子书&lt;/li&gt;
-&lt;li&gt;灵活性：自定义整体风格、自定义css样式&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;这款主题对于中文的支持还不是很完善，主要是从视觉的角度来说，字体大小不太符合中文阅读习惯，hexo的开发人员大部分为国人，在这点优于hugo&lt;/p&gt;
-&lt;p&gt;但是呢，自己动手丰衣足食，浏览器审核元素。定位了到了元素，想要知道需要修改的css样式名称，侧栏点击&lt;strong&gt;Insert Style Rule Below&lt;/strong&gt;，即使嵌套多层的css，也能轻松拿到节点名称。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;a href=&#34;https://sourcethemes.com/academic/docs/customization/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;引入&lt;strong&gt;custom.css&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;
-&lt;a href=&#34;https://sourcethemes.com/academic/docs/customization/#add-scripts-js&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;引入&lt;strong&gt;custom_js&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;主题内置的语法高亮设置，
-&lt;a href=&#34;https://sourcethemes.com/academic/docs/writing-markdown-latex/#highlighting-options.&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;官方链接&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;结尾&#34;&gt;结尾&lt;/h2&gt;
-&lt;p&gt;小朋友又要吐槽了，你怎么从头到尾都说的模模糊糊，细节什么的都不提&lt;/p&gt;
-&lt;p&gt;我想说的是，有下面这些东西，足够你用了：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;官方手册&lt;/li&gt;
-&lt;li&gt;插件说明&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;快速上手新技术，推荐先阅读官网文档，&lt;strong&gt;粗读&lt;/strong&gt;不求一遍看懂，至少心里有个数，搜索引擎出来的结果，不一定和当前最新的版本保持一致，也许会产生误导。翻阅新书也是如此，先看目录，搞清楚作者准备讲什么，有时候读书先读序，部分国外的著作翻译成中文，译者的序其实涵盖了书籍和核心内容。&lt;/p&gt;
-&lt;h2 id=&#34;彩蛋&#34;&gt;彩蛋&lt;/h2&gt;
-&lt;p&gt;切换hugo academic内置风格样式，发布到站点，访问时，风格没有发生变换。聪明的小伙伴已经想到了，清空本地浏览器缓存，能解决问题。机智的我：F12开发者模式，切换到&lt;code&gt;network&lt;/code&gt;，勾选&lt;code&gt;disable cache&lt;/code&gt;，刷新，搞定！&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;2020-03-31-14-27-15.png&#34; alt=&#34;network&#34;&gt;&lt;/p&gt;
-</description>
+      <description>前言 Markdown 一种轻量级标记语言，它允许人们使用易读易写的纯文本格式编写文档 详细的Markdown语法本文不做额外赘述，推荐一本电子书，点击此处 市面</description>
     </item>
     
     <item>
       <title>自动集成系统切换</title>
       <link>https://www.xiangtianlong.com/post/2020/%E8%87%AA%E5%8A%A8%E9%9B%86%E6%88%90%E7%B3%BB%E7%BB%9F%E5%88%87%E6%8D%A2/</link>
       <pubDate>Sun, 29 Mar 2020 02:11:33 +0800</pubDate>
+      
       <guid>https://www.xiangtianlong.com/post/2020/%E8%87%AA%E5%8A%A8%E9%9B%86%E6%88%90%E7%B3%BB%E7%BB%9F%E5%88%87%E6%8D%A2/</guid>
-      <description>&lt;h4 id=&#34;背景介绍&#34;&gt;背景介绍&lt;/h4&gt;
-&lt;p&gt;昨天更新博客时发现travis服务不可用，查看travis网页，发现进度卡在拉取源码的时候，灵光闪现想到了github之前推出的action服务&lt;/p&gt;
-&lt;p&gt;由于那会比较忙，同时也需要申请才能使用action，现在已经开始正式上线，周末闲来无事，尝试一个新玩具？&lt;/p&gt;
-&lt;p&gt;官方资料大家自行进入网站查阅即可，本文就不做更多的转载了，如果之前用过kubernetes会觉得，action的yaml文件配置和kubernetes很像。&lt;/p&gt;
-&lt;p&gt;关于的入门的教程，或者说是中文的介绍资料，推荐搜索&lt;strong&gt;阮一峰的博客&lt;/strong&gt;，有两篇文章，第一篇是基础的语法介绍，第二篇是一个实际的案例。&lt;/p&gt;
-&lt;h4 id=&#34;正文&#34;&gt;正文&lt;/h4&gt;
-&lt;p&gt;需要的知识点&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;github secrets&lt;/li&gt;
-&lt;li&gt;action 语法&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;核心的job使用现有的组件完成，推送到国内gitee使用command实现，command这部分比较粗暴，都是强制推送，沿用了使用travis的逻辑。&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;name&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;github pages and gitee pages&lt;/span&gt;
-
-&lt;span style=&#34;color:#f92672&#34;&gt;on&lt;/span&gt;:
-  &lt;span style=&#34;color:#f92672&#34;&gt;push&lt;/span&gt;:
-    &lt;span style=&#34;color:#f92672&#34;&gt;branches&lt;/span&gt;:
-      - &lt;span style=&#34;color:#ae81ff&#34;&gt;hugo&lt;/span&gt;
-
-&lt;span style=&#34;color:#f92672&#34;&gt;jobs&lt;/span&gt;:
-  &lt;span style=&#34;color:#f92672&#34;&gt;deploy&lt;/span&gt;:
-    &lt;span style=&#34;color:#f92672&#34;&gt;runs-on&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;ubuntu-18.04&lt;/span&gt;
-    &lt;span style=&#34;color:#f92672&#34;&gt;steps&lt;/span&gt;:
-      - &lt;span style=&#34;color:#f92672&#34;&gt;uses&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;actions/checkout@v2&lt;/span&gt;
-        &lt;span style=&#34;color:#f92672&#34;&gt;with&lt;/span&gt;:
-          &lt;span style=&#34;color:#f92672&#34;&gt;submodules&lt;/span&gt;: &lt;span style=&#34;color:#66d9ef&#34;&gt;true&lt;/span&gt;
-
-      - &lt;span style=&#34;color:#f92672&#34;&gt;name&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;Setup Hugo&lt;/span&gt;
-        &lt;span style=&#34;color:#f92672&#34;&gt;uses&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;peaceiris/actions-hugo@v2&lt;/span&gt;
-        &lt;span style=&#34;color:#f92672&#34;&gt;with&lt;/span&gt;:
-          &lt;span style=&#34;color:#f92672&#34;&gt;hugo-version&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;latest&amp;#39;&lt;/span&gt;
-          &lt;span style=&#34;color:#f92672&#34;&gt;extended&lt;/span&gt;: &lt;span style=&#34;color:#66d9ef&#34;&gt;true&lt;/span&gt;
-
-      - &lt;span style=&#34;color:#f92672&#34;&gt;name&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;Build Github and Gitee&lt;/span&gt; &lt;span style=&#34;color:#75715e&#34;&gt;## 单个step只能写一个run命令&lt;/span&gt;
-        &lt;span style=&#34;color:#f92672&#34;&gt;run&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;hugo -b &amp;#34;https://www.xiangtianlong.com/&amp;#34; -d &amp;#34;github_public&amp;#34; &amp;amp;&amp;amp; hugo -b &amp;#34;https://www.xiangtianlong.com/&amp;#34; -d &amp;#34;gitee_public&amp;#34; &amp;amp;&amp;amp; ls&lt;/span&gt;
-
-      - &lt;span style=&#34;color:#f92672&#34;&gt;name&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;Deploy Github&lt;/span&gt;
-        &lt;span style=&#34;color:#f92672&#34;&gt;uses&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;peaceiris/actions-gh-pages@v3&lt;/span&gt;
-        &lt;span style=&#34;color:#f92672&#34;&gt;with&lt;/span&gt;:
-          &lt;span style=&#34;color:#f92672&#34;&gt;github_token&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;${{ secrets.BLOG_TOKEN }}&lt;/span&gt;
-          &lt;span style=&#34;color:#f92672&#34;&gt;publish_dir&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;./github_public&lt;/span&gt;
-          &lt;span style=&#34;color:#f92672&#34;&gt;publish_branch&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;master&lt;/span&gt;
-          &lt;span style=&#34;color:#f92672&#34;&gt;cname&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;xiangtianlong.com&lt;/span&gt;
-
-      - &lt;span style=&#34;color:#f92672&#34;&gt;name&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;Deploy Gitee&lt;/span&gt;
-        &lt;span style=&#34;color:#f92672&#34;&gt;run&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;cd ./gitee_public &amp;amp;&amp;amp; git init &amp;amp;&amp;amp; git config user.name &amp;#34;TianlongXiang&amp;#34; &amp;amp;&amp;amp; git config user.email &amp;#34;tianlongxiang51@gmail.com&amp;#34; &amp;amp;&amp;amp; git add . &amp;amp;&amp;amp; git commit -m &amp;#34;Update TianlongXiang&amp;#39;s Blog&amp;#34; &amp;amp;&amp;amp; git push --force &amp;#34;https://xiangtianlong:${{ secrets.GITEE_PASSWORD }}@gitee.com/xiangtianlong/xiangtianlong.git&amp;#34; master:master   &lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;后记&#34;&gt;后记&lt;/h4&gt;
-&lt;p&gt;从官方市场提供的action来看，目前支持的玩法挺多，构建docker镜像以后也能不再依赖dockerhub提供的服务&lt;/p&gt;
-&lt;p&gt;查阅hugo的issue，发现使用github action自动部署git pages，最终发布的网页需要在master分支，如果是部署在其他分支，在setting界面，github会提示部署的网页存在语法问题&lt;/p&gt;
-&lt;p&gt;实际上只是由于hugo的源文件放在了master分支，github当作jelly博客的源码进行检测，无法检查无法通过导致的报错&lt;/p&gt;
-&lt;p&gt;解决方案也简单，hugo源码文件放到其他分支，静态文件发布在master分支&lt;/p&gt;
-</description>
+      <description>背景介绍 昨天更新博客时发现travis服务不可用，查看travis网页，发现进度卡在拉取源码的时候，灵光闪现想到了github之前推出的ac</description>
     </item>
     
   </channel>

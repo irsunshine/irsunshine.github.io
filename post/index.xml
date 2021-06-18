@@ -1,593 +1,154 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>  | 假装不困</title>
+    <title>Posts on 假装不困</title>
     <link>https://www.xiangtianlong.com/post/</link>
-      <atom:link href="https://www.xiangtianlong.com/post/index.xml" rel="self" type="application/rss+xml" />
-    <description> </description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>zh-Hans</language><copyright>2019</copyright><lastBuildDate>Wed, 27 Jan 2021 14:35:21 +0800</lastBuildDate>
-    <image>
-      <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
-      <title> </title>
-      <link>https://www.xiangtianlong.com/post/</link>
-    </image>
-    
+    <description>Recent content in Posts on 假装不困</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Wed, 27 Jan 2021 14:35:21 +0800</lastBuildDate><atom:link href="https://www.xiangtianlong.com/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>交易所接口文档汇总</title>
       <link>https://www.xiangtianlong.com/post/2021/%E4%BA%A4%E6%98%93%E6%89%80%E6%8E%A5%E5%8F%A3%E6%96%87%E6%A1%A3%E6%B1%87%E6%80%BB/</link>
       <pubDate>Wed, 27 Jan 2021 14:35:21 +0800</pubDate>
+      
       <guid>https://www.xiangtianlong.com/post/2021/%E4%BA%A4%E6%98%93%E6%89%80%E6%8E%A5%E5%8F%A3%E6%96%87%E6%A1%A3%E6%B1%87%E6%80%BB/</guid>
-      <description>&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
-&lt;p&gt;金融软件开发的第五个年头，打交道最多的就是各种交易所的接口文档，熟悉的也是港交所的文档，近期处理中华通业务，涉及到了部分中华通业务，顺手查阅了深交所和上交所的资料&lt;/p&gt;
-&lt;h2 id=&#34;港交所&#34;&gt;港交所&lt;/h2&gt;
-&lt;p&gt;
-&lt;a href=&#34;https://www.hkex.com.hk/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;官网链接&lt;/a&gt;&lt;/p&gt;
-&lt;h3 id=&#34;常用&#34;&gt;常用&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;a href=&#34;https://www.hkex.com.hk/Mutual-Market/Stock-Connect/Reference-Materials/Trading-Hour,-Trading-and-Settlement-Calendar?sc_lang=zh-HK&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;交易時間，交易和結算日曆&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;
-&lt;a href=&#34;https://sc.hkex.com.hk/TuniS/www.hkex.com.hk/Services/Trading/Securities/Overview/Trading-Mechanism?sc_lang=zh-CN&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;交易机制&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;
-&lt;a href=&#34;https://www.hkex.com.hk/-/media/hkex-market/mutual-market/stock-connect/reference-materials/resources/glossary_c&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;中港金融詞彙對照表&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;a href=&#34;2021-Calendar_pdf_c.pdf&#34;&gt;滬港通及深港通交易日曆 PDF&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;
-&lt;a href=&#34;2021-Calendar_csv_c.csv&#34;&gt;滬港通及深港通交易日曆 CSV&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;
-&lt;a href=&#34;glossary_c.pdf&#34;&gt;中港金融詞彙對照表 PDF&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;hr&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;a href=&#34;https://sc.hkex.com.hk/TuniS/www.hkex.com.hk/chi/vcm/vcmtriggersecurity_c.aspx&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;市调机制冷静期触发记录&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;
-&lt;a href=&#34;https://sc.hkex.com.hk/TuniS/www.hkex.com.hk/chi/services/trading/securities/securitieslists/ListOfSecurities_c.xlsx&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;证券名单：基本信息、证券分类&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;
-&lt;a href=&#34;https://sc.hkex.com.hk/TuniS/www.hkex.com.hk/Services/Trading/Securities/Securities-Lists/Closing-Auction-Session-%28CAS%29-Securities?sc_lang=zh-CN&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;收市竞价交易时段证券&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;
-&lt;a href=&#34;https://sc.hkex.com.hk/TuniS/www.hkex.com.hk/Services/Trading/Securities/Securities-Lists/Volatility-Control-Mechanism-%28VCM%29-Securities?sc_lang=zh-CN&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;市场波动调节机制（市调机制）证券&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;
-&lt;a href=&#34;https://sc.hkex.com.hk/TuniS/www.hkex.com.hk/Services/Trading/Securities/Securities-Lists/Designated-Securities-Eligible-for-Short-Selling?sc_lang=zh-CN&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;可进行卖空的指定证券&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;a href=&#34;ListOfSecurities_c.xlsx&#34;&gt;证券名单：基本信息、证券分类 XLSX&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;行情接口文档港股--中华通&#34;&gt;行情接口文档：港股 + 中华通&lt;/h3&gt;
-&lt;p&gt;
-&lt;a href=&#34;https://www.hkex.com.hk/Services/Market-Data-Services/Infrastructure/Overview?sc_lang=en&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;行情接口文档汇总链接&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;常见问题答疑、指引开发手册、历史行情接口文档可以通过搜索栏获取下载地址，搜索历史版本号&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;a href=&#34;https://www.hkex.com.hk/Services/Market-Data-Services/Infrastructure/HKEX-Orion-Market-Data-Platform-Securities-Market-OMD-C?sc_lang=en&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;港股证券行情接口文档&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;
-&lt;a href=&#34;https://www.hkex.com.hk/Mutual-Market/Stock-Connect/Reference-Materials/Technical-Documents/OMD_CC-Specifications?sc_lang=en&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;中华通行情接口文档&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;a href=&#34;HKEX_OMDC_Binary_Interface_Specifications_v_1,-d-,32c.pdf&#34;&gt;HKEX_OMDC_Binary_Interface_Specifications_v_1,-d-,32c.pdf&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;
-&lt;a href=&#34;HKEX_OMDC_Developers_Guide_1_11.pdf&#34;&gt;HKEX_OMDC_Developers_Guide_1_11.pdf&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;
-&lt;a href=&#34;OMDC_Connectivity_Guide_Securities_Market-_Index_datafeed_%28v2_2%29.pdf&#34;&gt;OMDC_Connectivity_Guide_Securities_Market-&lt;em&gt;Index_datafeed&lt;/em&gt;(v2_2).pdf&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;
-&lt;a href=&#34;OMD_Interface_Specification_China_Connect_Securities-%28v1-3%29.pdf&#34;&gt;OMD_Interface_Specification_China_Connect_Securities-(v1-3).pdf&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;
-&lt;a href=&#34;OMD_Connectivity_Guide_China_Connect_Securities.pdf&#34;&gt;OMD_Connectivity_Guide_China_Connect_Securities.pdf&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;
-&lt;a href=&#34;OMD_Developers_Guide_China_Connect_Securities.pdf&#34;&gt;OMD_Developers_Guide_China_Connect_Securities.pdf&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;报盘接口文档港股--中华通&#34;&gt;报盘接口文档：港股 + 中华通&lt;/h3&gt;
-&lt;p&gt;
-&lt;a href=&#34;https://www.hkex.com.hk/Services/Trading/Securities/Infrastructure/Overview?sc_lang=en&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;报盘接口文档汇总链接&lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;a href=&#34;HKEX_OCG_FIX_Trading_Interface_Specifications_v2_2-%28clean%29.pdf&#34;&gt;港股FIX协议接口文档 PDF&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;
-&lt;a href=&#34;HKEX_OCG_Binary_Trading_Interface_Specifications_v2_2-%28clean%29.pdf&#34;&gt;港股二级制协议接口文档 PDF&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;
-&lt;a href=&#34;Reason_Text_List.xlsx&#34;&gt;港股交易所错误代码清单 XLSX&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;a href=&#34;HKEx_CCCG_FIX_Trading_Interface_Specifications_v1_3-%28clean%29.pdf&#34;&gt;中华通Fix协议接口文档 PDF&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;
-&lt;a href=&#34;HKEx_CCCG_Binary_Trading_Interface_Specifications_v1_3-%28clean%29.pdf&#34;&gt;中华通二进制接口文档 PDF&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;上交所&#34;&gt;上交所&lt;/h2&gt;
-&lt;p&gt;
-&lt;a href=&#34;http://www.sse.com.cn/services/tradingservice/tradingtech/technical/data/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;行情报盘接口文档&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;报错接口文档在其他菜单中获取&lt;/p&gt;
-&lt;p&gt;
-&lt;a href=&#34;SSE_IS111_ErrorCode_CV3.15.xlsx&#34;&gt;报盘报错接口文档 XLSX&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&#34;深交所&#34;&gt;深交所&lt;/h2&gt;
-&lt;p&gt;
-&lt;a href=&#34;http://www.szse.cn/marketServices/technicalservice/interface/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;行情报盘接口文档&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;深交所没有提供单独的报错信息说明，在报盘接口文档的第六章有附加说明&lt;/p&gt;
-&lt;p&gt;
-&lt;a href=&#34;P020201229686784934466.pdf&#34;&gt;深圳证券交易所Binary交易数据接口规范（Ver1.18）PDF&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&#34;纳斯达克&#34;&gt;纳斯达克&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;a href=&#34;https://www.nyse.com/markets/hours-calendars&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;假期安排&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;
-&lt;a href=&#34;https://www.nasdaq.com/market-activity/ipos?tab=upcoming&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;新股上市信息&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;收市价&#34;&gt;收市价&lt;/h2&gt;
-&lt;p&gt;
-&lt;a href=&#34;http://eoddata.com/stocklist/NASDAQ.htm&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;全球市场收市价&lt;/a&gt;&lt;/p&gt;
-</description>
+      <description>前言 金融软件开发的第五个年头，打交道最多的就是各种交易所的接口文档，熟悉的也是港交所的文档，近期处理中华通业务，涉及到了部分中华通业务，顺手</description>
     </item>
     
     <item>
       <title>docker二三事</title>
       <link>https://www.xiangtianlong.com/post/2021/docker%E4%BA%8C%E4%B8%89%E4%BA%8B/</link>
       <pubDate>Thu, 21 Jan 2021 09:26:07 +0800</pubDate>
+      
       <guid>https://www.xiangtianlong.com/post/2021/docker%E4%BA%8C%E4%B8%89%E4%BA%8B/</guid>
-      <description>&lt;h3 id=&#34;安装&#34;&gt;安装&lt;/h3&gt;
-&lt;p&gt;国内服务器安装，先设置阿里云仓库地址&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;yum install yum-utils device-mapper-persistent-data lvm2 &lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;\
-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;&lt;/span&gt;sudo yum-config-manager --add-repo http://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo &lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;\
-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;&lt;/span&gt;sudo yum install -y docker-ce docker-ce-cli containerd.io &lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; systemctl enable --now docker
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;普通用户添加docker权限&#34;&gt;普通用户添加docker权限&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;sudo usermod -aG docker &lt;span style=&#34;color:#e6db74&#34;&gt;${&lt;/span&gt;USER&lt;span style=&#34;color:#e6db74&#34;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;卸载&#34;&gt;卸载&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;sudo yum erase -y docker-ce docker-ce-cli containerd.io
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;镜像加速&#34;&gt;镜像加速&lt;/h3&gt;
-&lt;p&gt;加速的地址各位看管自己注册阿里云账号获取，此服务免费，阿里云也提供免费的镜像构建服务&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;cat &amp;gt; /etc/docker/daemon.json &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;lt;&amp;lt;EOF
-&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;{
-&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;  &amp;#34;registry-mirrors&amp;#34;: [&amp;#34;https://9fbz1if4.mirror.aliyuncs.com&amp;#34;]
-&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;}
-&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;EOF&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;重启设置生效&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;systemctl daemon-reload &lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;\
-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;&lt;/span&gt;systemctl restart docker
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;安装特定版本的docker&#34;&gt;安装特定版本的&lt;code&gt;docker&lt;/code&gt;&lt;/h3&gt;
-&lt;p&gt;&lt;code&gt;kubernetes&lt;/code&gt;和&lt;code&gt;docker&lt;/code&gt;的发布并没与完全同步，此时需要安装特特定的版本&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;yum list docker-ce --showduplicates | sort -r
-sudo yum install -y docker-ce-18.09.2-3.el7 docker-ce-cli-18.09.2-3.el7 containerd.io-18.09.2-3.el7 &lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; systemctl enable --now docker
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;强烈推荐的控制面板&#34;&gt;强烈推荐的控制面板&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;docker volume create portainer_data &lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;\
-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;&lt;/span&gt;docker run -d --name&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;portainer --restart&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;always -p 9000:9000 -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce:2.0.1
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;常用镜像拉取合集&#34;&gt;常用镜像拉取合集&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;docker pull rancher/rancher:stable &lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; docker pull  portainer/portainer-ce:2.0.1 &lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;\
-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;&lt;/span&gt;docker pull centos:7 &lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; docker pull ubuntu:20.04 &lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; docker pull ubuntu:18.04 &lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;\
-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;&lt;/span&gt;docker pull redis:5 &lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; docker pull redis:6 &lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;\
-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;&lt;/span&gt;docker pull alpine:3.11 &lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; docker pull busybox:1.32 &lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;\
-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;&lt;/span&gt;docker pull rabbitmq:3.7-management &lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;\
-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;&lt;/span&gt;docker pull mariadb:10.2 &lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;\
-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;&lt;/span&gt;docker pull nginx:1.18 &lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; docker pull nginx:1.19 &lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;\
-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;&lt;/span&gt;docker pull mysql:5.6 &lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; docker pull mysql:8 &lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;\
-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;&lt;/span&gt;docker pull elasticsearch:6.8.11 &lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; docker pull logstash:6.8.11 &lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; docker pull kibana:6.8.11 &lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;\
-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;&lt;/span&gt;docker pull zookeeper:3.4 &lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;\
-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;&lt;/span&gt;docker pull influxdb:1.7 &lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; docker pull grafana/grafana:7.3.1 &lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;\
-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;&lt;/span&gt;docker pull percona:8 &lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; docker pull percona:5.6 &lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;\
-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;&lt;/span&gt;docker pull cloverzrg/frps-docker:0.34.3 &lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; docker pull cloverzrg/frpc-docker:0.34.3
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;常用组合命令&#34;&gt;常用组合命令&lt;/h3&gt;
-&lt;p&gt;
-&lt;a href=&#34;https://docs.docker.com/engine/reference/commandline/docker/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://docs.docker.com/engine/reference/commandline/docker/&lt;/a&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;ul&gt;
-&lt;li&gt;查看容器运行状态，附加&lt;code&gt;format&lt;/code&gt;参数，查看详细的容器信息，此时不关注镜像信息&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;docker ps --format &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;{{.Names}}: {{.Ports}}: {{.Size}}&amp;#34;&lt;/span&gt;
-&lt;span style=&#34;color:#75715e&#34;&gt;#portainer: 0.0.0.0:8000-&amp;gt;8000/tcp, 0.0.0.0:9000-&amp;gt;9000/tcp: 0B (virtual 172MB)&lt;/span&gt;
-&lt;span style=&#34;color:#75715e&#34;&gt;#influxdb: 0.0.0.0:8086-&amp;gt;8086/tcp: 183B (virtual 311MB)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
-&lt;ul&gt;
-&lt;li&gt;一键停止所有容器&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;docker stop &lt;span style=&#34;color:#66d9ef&#34;&gt;$(&lt;/span&gt;docker ps -a -q&lt;span style=&#34;color:#66d9ef&#34;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
-&lt;li&gt;一键删除所有镜像&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;dokcer rmi &lt;span style=&#34;color:#66d9ef&#34;&gt;$(&lt;/span&gt;docker images -a -q&lt;span style=&#34;color:#66d9ef&#34;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
-&lt;ul&gt;
-&lt;li&gt;导出镜像&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;docker save &amp;lt;IMAGE NAME&amp;gt;:&amp;lt;IMAGE TAG&amp;gt; &amp;gt; -o XXX.tar
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
-&lt;li&gt;导出镜像并压缩&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;docker save &amp;lt;IMAGE NAME&amp;gt;:&amp;lt;IMAGE TAG&amp;gt; | gzip &amp;gt; XXX.tar
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
-&lt;li&gt;导入镜像&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;docker load -i XXX.tar
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+      <description>安装 国内服务器安装，先设置阿里云仓库地址 1 2 3 yum install yum-utils device-mapper-persistent-data lvm2 &amp;amp;&amp;amp; \ sudo yum-config-manager --add-repo http://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo &amp;amp;&amp;amp; \ sudo yum install -y docker-ce docker-ce-cli containerd.io &amp;amp;&amp;amp; systemctl enable --now docker 普通用户添加docker权限 1 sudo usermod -aG docker ${USER} 卸载</description>
     </item>
     
     <item>
       <title>Linux搭建Jmeter压测环境</title>
       <link>https://www.xiangtianlong.com/post/2020/linux%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BAjmeter%E5%8E%8B%E6%B5%8B%E7%8E%AF%E5%A2%83/</link>
       <pubDate>Tue, 22 Dec 2020 10:12:50 +0800</pubDate>
+      
       <guid>https://www.xiangtianlong.com/post/2020/linux%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BAjmeter%E5%8E%8B%E6%B5%8B%E7%8E%AF%E5%A2%83/</guid>
-      <description>&lt;h1 id=&#34;背景&#34;&gt;背景&lt;/h1&gt;
-&lt;p&gt;&lt;code&gt;众所周知&lt;/code&gt;本人对硬件有很浓厚的兴趣，凑巧测试组在用&lt;code&gt;Jmeter&lt;/code&gt;做压力测试，发现性能上不去，作为好奇宝宝的我果断出击，试试公司的压测是怎么玩的。此处还有个小故事，在某个久远的时间点，在开源中国看过一篇帖子，如何绘制看上去更加高大上的性能压测图，在测试围观过&lt;code&gt;windows&lt;/code&gt;版本执行测试，已经做到了可视化的&lt;code&gt;TPS&lt;/code&gt;数据展示，另外配置一份web面板能有什么用？&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;脑子想的都是想当然的东西，你要去试试才明白&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Don&amp;rsquo;t use GUI mode for load testing! only for Test creation and Test debuggin.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;官方推荐的是通过命令行的方式获取压测报告，绘制GUI的方式展示，存在数据上的误差？对于Jmeter了解的不是很深入，至少找到一个理由去折腾一下&lt;code&gt;Linux&lt;/code&gt;版本的控制台面板&lt;/p&gt;
-&lt;p&gt;开源中国的帖子，核心组件的部署方式并不友好，安装所需的文件也需要关注公众号才能下载，作为新生代的好青年，当然是用&lt;code&gt;Docker&lt;/code&gt;替代了。说白了还是自己服务器在境内，跨境的源地址访问速度都很慢，至少镜像服务，阿里云有个免费的加速。&lt;/p&gt;
-&lt;h2 id=&#34;influxdb&#34;&gt;InfluxDB&lt;/h2&gt;
-&lt;p&gt;InfluxDB是一款用Go语言编写的开源分布式时序、事件和指标数据库，无需外部依赖。该数据库现在主要用于存储涉及大量的时间戳数据，如DevOps监控数据，APP metrics, loT传感器数据和实时分析数据。&lt;/p&gt;
-&lt;h3 id=&#34;influxdb-特点&#34;&gt;InfluxDB 特点&lt;/h3&gt;
-&lt;p&gt;InfluxDB的特点可以归纳为以下9个方面：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;无结构(无模式)：可以是任意数量的列;&lt;/li&gt;
-&lt;li&gt;可以设置metric的保存时间;&lt;/li&gt;
-&lt;li&gt;支持与时间有关的相关函数(如min、max、sum、count、mean、median等)，方便统计;&lt;/li&gt;
-&lt;li&gt;支持存储策略:可以用于数据的删改。(influxDB没有提供数据的删除与修改方法);&lt;/li&gt;
-&lt;li&gt;支持连续查询:是数据库中自动定时启动的一组语句，和存储策略搭配可以降低InfluxDB的系统占用量;&lt;/li&gt;
-&lt;li&gt;原生的HTTP支持，内置HTTP API;&lt;/li&gt;
-&lt;li&gt;支持类似sql语法;&lt;/li&gt;
-&lt;li&gt;支持设置数据在集群中的副本数;&lt;/li&gt;
-&lt;li&gt;支持定期采样数据，写入另外的measurement，方便分粒度存储数据。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;influxdb-docker-安装&#34;&gt;InfluxDB docker 安装&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;docker run -p 8086:8086 -d --name influxdb -v $PWD:/var/lib/influxdb influxdb:1.7
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;code&gt;docker exec -it influxdb /bin/bash&lt;/code&gt; 进入容器，执行命令，人工创建数据库&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;root@bce0a55bbc72:/# influx
-Connected to http://localhost:8086 version 1.7.10
-InfluxDB shell version: 1.7.10
-&amp;gt; 交互面板执行命令
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;influxdb-创建数据库和用户&#34;&gt;InfluxDB 创建数据库和用户&lt;/h3&gt;
-&lt;p&gt;创建数据库：create database jmeter_t2
-查看数据库：show databases
-切换数据库：use jmeter_t2
-创建用户：create user &amp;ldquo;admin&amp;rdquo; with password &amp;lsquo;XXX&amp;rsquo; with all privileges
-查看用户：show users&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&amp;gt; show users
-user  admin
-----  -----
-admin true
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;如果显示用户权限&lt;code&gt;admin&lt;/code&gt;为&lt;code&gt;true&lt;/code&gt;，数据库的准备工作就完成了&lt;/p&gt;
-&lt;h2 id=&#34;jmeter&#34;&gt;Jmeter&lt;/h2&gt;
-&lt;p&gt;Apache JMeter是Apache组织开发的基于Java的压力测试工具。用于对软件做压力测试，它最初被设计用于Web应用测试，但后来扩展到其他测试领域。 它可以用于测试静态和动态资源，例如静态文件、Java 小服务程序、CGI 脚本、Java 对象、数据库、FTP 服务器， 等等。JMeter 可以用于对服务器、网络或对象模拟巨大的负载，来自不同压力类别下测试它们的强度和分析整体性能。另外，JMeter能够对应用程序做功能/回归测试，通过创建带有断言的脚本来验证你的程序返回了你期望的结果。为了最大限度的灵活性，JMeter允许使用正则表达式创建断言。&lt;/p&gt;
-&lt;p&gt;Apache jmeter 可以用于对静态的和动态的资源（文件，Servlet，Perl脚本，java 对象，数据库和查询，FTP服务器等等）的性能进行测试。它可以用于对服务器、网络或对象模拟繁重的负载来测试它们的强度或分析不同压力类型下的整体性能。你可以使用它做性能的图形分析或在大并发负载测试你的服务器/脚本/对象。&lt;/p&gt;
-&lt;h3 id=&#34;jmeter-部署-centos7&#34;&gt;Jmeter 部署 centos7&lt;/h3&gt;
-&lt;p&gt;安装运行环境&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;yum update -y &lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;\
-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;&lt;/span&gt;yum install java-1.8.0-openjdk -y &lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;\
-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;&lt;/span&gt;java -version
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;获取安装包&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;wget https://mirrors.bfsu.edu.cn/apache//jmeter/binaries/apache-jmeter-5.4.tgz &lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; tar -xf apache-jmeter-5.4.tgz
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;配置环境变量&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;export JMETER_HOME&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;$HOME/jmeter/apache-jmeter-5.4
-export PATH&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;$JMETER_HOME/bin:$PATH
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;jmeter-命令&#34;&gt;Jmeter 命令&lt;/h3&gt;
-&lt;p&gt;最后会对接&lt;code&gt;Grafana&lt;/code&gt;控制面板，可以不输入&lt;code&gt;-l&lt;/code&gt;参数，在&lt;code&gt;web&lt;/code&gt;控制台观察数据&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;jmeter -n -t /tmp/order-500-10s.jmx -l /tmp/jmeter-order-report-20200109/order-500-10s.jtl
-&lt;span style=&#34;color:#75715e&#34;&gt;# 一般不用测试结果和测试报告，简化命令&lt;/span&gt;
-jmeter -n -t /tmp/order-500-10s.jmx
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;grafana&#34;&gt;Grafana&lt;/h2&gt;
-&lt;p&gt;编写测试案例的时候发现，图表展示的效果其实没太多必要，接口的&lt;code&gt;tps&lt;/code&gt;数据在命令行执行的时候已经能观测到，更多是想知道程序内部的耗时&lt;/p&gt;
-&lt;p&gt;简单部署&lt;code&gt;grafana&lt;/code&gt;控制台面板，导入配置文件对接&lt;code&gt;InfluxDB&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;控制台支持通过标签过滤测试结果，一般只需要配置一个&lt;code&gt;InfluxDB&lt;/code&gt;数据库即可：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;应用名称&lt;/li&gt;
-&lt;li&gt;测试案例名称&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;Snipaste_2021-03-09_19-44-22.png&#34; alt=&#34;grafana&#34;&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;docker run -d --name=grafana -p 3000:3000 grafana/grafana:7.3.1
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;网页版由于采样器间隔会导致计算的&lt;code&gt;TPS&lt;/code&gt;和相关数值与&lt;code&gt;Jmeter&lt;/code&gt;聚合报告不相符，参考链接：
-&lt;a href=&#34;https://www.vinsguru.com/jmeter-real-time-results-influxdb-grafana/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://www.vinsguru.com/jmeter-real-time-results-influxdb-grafana/&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;资料中也描述了如何自定义&lt;code&gt;监听器&lt;/code&gt;&lt;/p&gt;
-&lt;h2 id=&#34;后记&#34;&gt;后记&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;高性能的程序模式必然是 one loop thread，任何的锁、入队列和出队列，都会造成不必要的性能损失&lt;/li&gt;
-&lt;li&gt;核心业务逻辑的耗时大于引入其他代码的耗时，并发才能有效提高效率，核心耗时如果足够小谨慎引入其他代码&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;h1 id=&#34;参考资料&#34;&gt;参考资料&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;a href=&#34;https://my.oschina.net/u/4617935/blog/4680856&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Jmeter系列之Jmeter+Grafana+InfluxDB实时监控&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;
-&lt;a href=&#34;https://hub.docker.com/_/influxdb&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;influxdb官方镜像&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;
-&lt;a href=&#34;https://hub.docker.com/r/grafana/grafana&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;grafane官方镜像&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;
-&lt;a href=&#34;https://jmeter.apache.org/download_jmeter.cgi&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Jmeter官网&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;
-&lt;a href=&#34;https://medium.com/@jasonli.studio/to-install-apache-jmeter-in-centos7-294bc72a97ba&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;To install Apache JMeter in CentOS7&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+      <description>背景 众所周知本人对硬件有很浓厚的兴趣，凑巧测试组在用Jmeter做压力测试，发现性能上不去，作为好奇宝宝的我果断出击，试试公司的压测是怎么玩</description>
     </item>
     
     <item>
       <title>redhat and centos life cycle</title>
       <link>https://www.xiangtianlong.com/post/2020/redhat-and-centos-life-cycle/</link>
       <pubDate>Tue, 21 Jul 2020 20:02:35 +0800</pubDate>
+      
       <guid>https://www.xiangtianlong.com/post/2020/redhat-and-centos-life-cycle/</guid>
-      <description>&lt;p&gt;线上生产环境操作系统，目前国内的环境来说，redhat和centos为主流选择。前两年经历了redhat6的退役，特此记录两个系统生命周期官网链接。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;a href=&#34;https://access.redhat.com/support/policy/updates/errata&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Red Hat Enterprise Linux Life Cycle&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;
-&lt;a href=&#34;https://wiki.centos.org/zh/About/Product&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CentOS 产品规范&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+      <description>线上生产环境操作系统，目前国内的环境来说，redhat和centos为主流选择。前两年经历了redhat6的退役，特此记录两个系统生命周期官</description>
     </item>
     
     <item>
       <title>中美贸易战</title>
       <link>https://www.xiangtianlong.com/post/2020/%E4%B8%AD%E7%BE%8E%E8%B4%B8%E6%98%93%E6%88%98/</link>
       <pubDate>Tue, 21 Jul 2020 19:52:41 +0800</pubDate>
+      
       <guid>https://www.xiangtianlong.com/post/2020/%E4%B8%AD%E7%BE%8E%E8%B4%B8%E6%98%93%E6%88%98/</guid>
-      <description>&lt;ul&gt;
-&lt;li&gt;
-&lt;a href=&#34;https://zh.wikipedia.org/zh-hans/2018%EF%BC%8D2020%E5%B9%B4%E4%B8%AD%E7%BE%8E%E8%B4%B8%E6%98%93%E6%88%98&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;始于2018的中美贸易战&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;
-&lt;a href=&#34;https://zh.wikipedia.org/wiki/%E4%B8%AD%E5%9B%BD%E5%88%B6%E9%80%A02025&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;中国制造2025&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;以下内容转载于维基百科&lt;/p&gt;
-&lt;p&gt;2018－2020年中美贸易战，简称中美贸易战（英语：China–United States trade war），又简称中美贸易争端、中美贸易摩擦、中美贸易纠纷或美中贸易战，是中华人民共和国与美利坚合众国之间的一场贸易战。&lt;/p&gt;
-&lt;p&gt;贸易争端源起于美国总统唐纳德·特朗普于2018年3月22日签署备忘录时，宣称“中国偷窃美国知识产权和商业秘密”，并根据1974年贸易法第301条要求美国贸易代表对从中国进口的商品征收关税，涉及商品总计估达600亿美元。2018年7月6日，美国对价值340亿美元的中国输美商品征收25%的额外关税。中国商务部同日作出反制措施，对价值340亿美元的美国输华商品征收25%的额外关税，其中包括美国向中国出口最多的货品大豆。&lt;/p&gt;
-&lt;p&gt;中美双方曾一度于2018年5月达成暂停贸易战的共识，并发表联合声明寻求和解。但美国贸易代表办公室其后于6月16日公布了第一批针对500亿美元中国输美商品的征税清单，将原有10%税率提高到25%。中国国务院关税税则委员会随后作出对等报复，中国商务部亦重启对美输华多项产品的反倾销调查。7月6日，特朗普政府正式对第一批征税清单中价值340亿美元的中国输美商品加征25%关税，标志着特朗普对华关税政策正式实施（剩余的160亿商品随后于8月23日加征25%关税）。中国商务部其后在声明中指出，“美国违反世贸规则，发动了迄今为止经济史上规模最大的贸易战”。中国海关总署指，中方的反击措施已在美方加征关税措施生效后即行实施。&lt;/p&gt;
-&lt;p&gt;12月1日，G20布宜诺斯艾利斯峰会上，两国领导人习近平与唐纳德·特朗普达成共识，同意举行为期90日的谈判，并在谈判期内暂停新增贸易措施。2019年3月1日最后期限到期后，美国方面宣布已有重大进展，并延长暂停新增贸易措施的期限。&lt;/p&gt;
-&lt;p&gt;2019年5月5日，美国总统唐纳德·特朗普宣布对另外价值约2000亿美元，合共2500亿美元的中国输美商品征收25%的关税，该措施于6月1日起正式对到达美国港口的中国商品生效。5月13日，中国国务院关税税则委员会宣布自6月1日起对原产于美国价值600亿美元的部分进口商品提高到加征5%至25%的关税。6月1日，美贸易代表办公室宣布将美方加征25%关税时间推迟至6月15日，中国国务院关税税则委员会则表示中方加征关税举措于6月1日如期生效。&lt;/p&gt;
-&lt;p&gt;6月29日，两国领导人习近平与特朗普在G20大阪峰会上举行会谈，同意重启经贸磋商，美国不再对中国产品加征新的关税。&lt;/p&gt;
-&lt;p&gt;8月1日，因特朗普政府不满中国政府对美国农产品的购买进程，特朗普在推特宣布将在2019年9月1日起，对余下价值3000亿美元的所有中国输美商品征收10%的关税。8月5日，人民币兑美元汇率跌破7关口。同日，美国财政部宣布将中国列为汇率操纵国。其后，中国政府宣布暂停购买美国农产品，并于8月24日宣布对约750亿美元美国商品加征10%或5%关税、对美国汽车及其零部件恢复加征关税；而美国在次日也增加之前加征的3000亿美元中国货品的税率至15%，以及目前的2500亿中国货品加征的25%关税至30%作为反制，但其后被搁置。&lt;/p&gt;
-&lt;p&gt;2020年1月16日，中美两国签署第一阶段贸易协议。&lt;/p&gt;
-</description>
+      <description>始于2018的中美贸易战 中国制造2025 以下内容转载于维基百科 2018－2020年中美贸易战，简称中美贸易战（英语：China–United</description>
     </item>
     
     <item>
       <title>电脑组装那些事</title>
       <link>https://www.xiangtianlong.com/post/2020/%E7%94%B5%E8%84%91%E7%BB%84%E8%A3%85%E9%82%A3%E4%BA%9B%E4%BA%8B/</link>
       <pubDate>Sat, 18 Jul 2020 14:33:46 +0800</pubDate>
+      
       <guid>https://www.xiangtianlong.com/post/2020/%E7%94%B5%E8%84%91%E7%BB%84%E8%A3%85%E9%82%A3%E4%BA%9B%E4%BA%8B/</guid>
-      <description>&lt;h3 id=&#34;缘妙不可言&#34;&gt;缘·妙不可言&lt;/h3&gt;
-&lt;p&gt;打小呢就想着组装一台自己的电脑，奈何经济条件不允许。好不容易熬到了大学，为了便于携带，配置的也是笔记本。如果非要有个具体的时间点，我是什么时候开始有组装电脑这个念想的，就要说到老家的图书馆。毕竟也是个市区级别的图书馆，不仅有电子阅览室（其实从没去过，据说是按时计费），还有个杂志阅览室，也就是在这里，翻阅到了《大众软件》、《电脑报》这类杂志，对接触电脑不多的我来说，堪称神级科普资料。看到打副本的章节，就想着自己弄个电脑，也去拉怪，当主力输出；看到黑科技呢，幻想自己照着书上的做，也能达到描述的效果（论黑客工具的使用）。虽说高中课业重，就我那会的认知，书要读，玩也要玩，过的也算是“天真烂漫”，打着去图书馆看书的由头，没事就拎着个小包溜达过去，市区不大，一般都是徒步走去图书馆。到了地，吹着空调，看着小说、漫画、游戏杂志，偶尔也看点正经的书籍。&lt;/p&gt;
-&lt;p&gt;年纪大了就容易忘事，图书馆引发的还不算是初次萌芽。初中的时候，亲戚家组装过一台电脑，也不知道当初组装那台机器是干嘛用的。操作系统还是 windows 2003，游戏有系统自带的纸牌 + 帝国时代。各种“斗智斗勇”想着偷到钥匙，带着堂弟一起玩游戏。&lt;/p&gt;
-&lt;p&gt;刚入初中，学校就有就计算机的初级培训，后来转学，也接触到了一点计算机竞赛的概念。等到了高中，NOIP混过一次。说道这里，就不得不提，校友的力量，高中的计算机大楼是校友捐赠的，包含计算机教学室+图书馆。其实那会也是国内互联网浪潮的初浪。校领导也支持参与计算机竞赛，毕竟前面两届的学长，好几位前辈通过计算机保送了重点大学。&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;从未这样回顾过我和电脑这些事。也难怪我毕业后硬是从自动化专业义无反顾的转到了计算机行业，种子早已种下，局中人不自知而已。从小接触的多了，以为自己很厉害，其实也就懂个皮毛，最大的优势也就是最初的那份热情。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h3 id=&#34;硬件组装&#34;&gt;硬件组装&lt;/h3&gt;
-&lt;p&gt;多逛逛卡吧、chiphell、知乎电脑组装的板块，萌新能较为简单的给出一份自己需要的机器清单。2019年后选购CPU，经济条件不充裕的情况下，想要更高的性能，首选AMD。&lt;/p&gt;
-&lt;p&gt;推荐一个常用的硬件性能对比网站：
-&lt;a href=&#34;https://cpu.userbenchmark.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://cpu.userbenchmark.com/&lt;/a&gt;，价格这块基本可以和咸鱼的美版做个对比。真大佬可以去咸鱼淘二手的，能便宜很多。如果不是很精通，不推荐去咸鱼，本人就购买了假内存，虽说目前使用没发现问题，不太确定太多了，型号和参数完全对不上。&lt;/p&gt;
-&lt;h4 id=&#34;sn550-vs-sn750&#34;&gt;SN550 VS SN750&lt;/h4&gt;
-&lt;p&gt;SN550 1TB容量和SN750 1TB容量差别就是，两者持续读写差一倍，一个850MB，一个1.6GB，但日常使用没区别，因为两者4K都一样。当然这里说的是1TB容量的SN550，500G和250G速度顺序读写更慢。其实我觉得只要不是不差钱的，日常使用买SN550就行，我没买这个最大原因不是因为它的顺序读写速度，而是它最大只有1TB容量，而SN750有2TB容量。对我来说，在不额外扩展的情况下，主板的M.2 Nvme接口比这些固态的差价更值钱&lt;/p&gt;
-&lt;p&gt;综合网友的结论，入手一块转接板，B150 主板也能支持 M2 接口的固态。&lt;/p&gt;
-&lt;h4 id=&#34;机械硬盘选购&#34;&gt;机械硬盘选购&lt;/h4&gt;
-&lt;p&gt;机械硬盘目前价格趋于稳定，对于有大量存储需求的用户，需要选购一款合适的机械硬盘，频繁下载资源的用户推荐企业级硬盘，常见的有：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;西数金盘&lt;/li&gt;
-&lt;li&gt;希捷exos&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;大容量的机械硬盘推荐进行分区，频繁的下载操作固定在某个分区进行，日后出现坏道，可以集中在某个分区，废弃当前分区即可，能有效延长机械硬盘寿命。&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;希捷系列
-&lt;a href=&#34;https://www.seagate.com/cn/zh/enterprise-storage/exos-drives/exos-e-drives/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;官网介绍&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;%E5%B8%8C%E6%8D%B7exos1.png&#34; alt=&#34;希捷企业级硬盘概述&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;%E5%B8%8C%E6%8D%B7exos2.png&#34; alt=&#34;希捷企业级硬盘概述&#34;&gt;&lt;/p&gt;
-&lt;h4 id=&#34;内存频率&#34;&gt;内存频率&lt;/h4&gt;
-&lt;p&gt;日常工作的角度出发，频率不会对性能产生太大的影响。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;%E5%86%85%E5%AD%98.png&#34; alt=&#34;内存时序&#34;&gt; &lt;img src=&#34;%E5%92%B8%E9%B1%BC%E5%86%85%E5%AD%98.png&#34; alt=&#34;咸鱼内存&#34;&gt;&lt;/p&gt;
-&lt;p&gt;内存时序（英语：Memory timings或RAM timings）是描述同步动态随机存取存储器（SDRAM）性能的四个参数：CL、TRCD、TRP和TRAS，单位为时钟周期。它们通常被写为四个用破折号分隔开的数字，例如7-8-8-24。第四个参数（RAS）经常被省略，而有时还会加入第五个参数：Command rate（命令速率），通常为2T或1T，也写作2N、1N。这些参数指定了影响随机存取存储器速度的潜伏时间（延迟时间）。较低的数字通常意味着更快的性能。决定系统性能的最终元素是实际的延迟时间，通常以纳秒为单位。&lt;/p&gt;
-&lt;p&gt;当将内存时序转换为实际的延迟时，最重要的是注意它是以时钟周期为单位。如果不知道时钟周期的时间，就不可能了解一组数字是否比另一组数字更快。&lt;/p&gt;
-&lt;p&gt;举例来说，DDR3-2000内存的时钟频率是1000 MHz，其时钟周期为1 ns。基于这个1 ns的时钟，CL=7给出的绝对延迟为7 ns。而更快的DDR3-2666（时钟1333 MHz，每个周期0.75 ns）则可能用更大的CL=9，但产生的绝对延迟6.75 ns更短。&lt;/p&gt;
-&lt;p&gt;现代DIMM包括一个串行存在检测（SPD）ROM芯片，其中包含为自动配置推荐的内存时序。PC上的BIOS可能允许用户调整时序以提高性能（存在降低稳定性的风险），或在某些情况下增加稳定性（如使用建议的时序）。&lt;/p&gt;
-&lt;p&gt;注意：内存带宽是测量内存的吞吐量，并通常受到传输速率而非潜伏时间的限制。通过交错访问SDRAM的多个内部bank，有可能以峰值速率连续传输。可能以增加潜伏时间为代价来增加带宽。具体来说，每个新一代的DDR内存都有着较高的传输速率，但绝对延迟没有显著变化，尤其是市场上的第一批新一代产品，通常有着较上一代更长的延迟。&lt;/p&gt;
-&lt;p&gt;即便增加了内存延迟，增加内存带宽也可以改善多处理器或多个执行线程的计算机系统的性能。更高的带宽也将提升没有专用显存的集成显卡的性能。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;%E5%86%85%E5%AD%98%E6%97%B6%E5%BA%8F%E5%8F%82%E6%95%B0%E8%AF%B4%E6%98%8E.png&#34; alt=&#34;内存时序参数说明&#34;&gt;&lt;/p&gt;
-&lt;h3 id=&#34;参考资料&#34;&gt;参考资料&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;a href=&#34;https://zh.wikipedia.org/wiki/%E5%86%85%E5%AD%98%E6%97%B6%E5%BA%8F&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;内存时序参数说明&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+      <description>缘·妙不可言 打小呢就想着组装一台自己的电脑，奈何经济条件不允许。好不容易熬到了大学，为了便于携带，配置的也是笔记本。如果非要有个具体的时间点</description>
     </item>
     
     <item>
       <title>网站加速和域名设置</title>
       <link>https://www.xiangtianlong.com/post/2020/%E7%BD%91%E7%AB%99%E5%8A%A0%E9%80%9F%E5%92%8C%E5%9F%9F%E5%90%8D%E8%AE%BE%E7%BD%AE/</link>
       <pubDate>Sat, 20 Jun 2020 10:36:27 +0800</pubDate>
+      
       <guid>https://www.xiangtianlong.com/post/2020/%E7%BD%91%E7%AB%99%E5%8A%A0%E9%80%9F%E5%92%8C%E5%9F%9F%E5%90%8D%E8%AE%BE%E7%BD%AE/</guid>
-      <description>&lt;h3 id=&#34;背景&#34;&gt;背景&lt;/h3&gt;
-&lt;p&gt;网站托管在GitHub Pages，某些众所周知的原因，境内访问GitHub Pages有点慢。故而申请了个人域名，购买了国内云主机供应商的CDN加速服务。在设置加速服务的时候，想到了自己还有开发机器，上面部署了docker、frp、k8s等服务，这些服务都有配套的dashboard，本着不浪费的原则，配置了几个反向代理，全部挂上了二级域名。&lt;/p&gt;
-&lt;p&gt;当我美滋滋用着二级域名的时候，突发现www子域名无法访问了，阿里云上命名配置了DNS同时解析到www.xiangtianlong.com和xiangtianlong.com，尚未启用CDN加速的时候，两个域名都能正常使用。&lt;/p&gt;
-&lt;p&gt;在配置CDN加速的时候，由于二级域名太多，启用了泛域名规则，统一路由到了开发机器，结果导致www这个二级域名也挂了，是的，你没看错，www前缀是个二级域名。实际网站部署在GitHub Pages，开发机器没有任何网站的缓存信息。&lt;/p&gt;
-&lt;p&gt;至于为什么开发机器上没有部署站点，因为静态博客，配着GitHub提供的action，自动集成发布，真香。&lt;/p&gt;
-&lt;h3 id=&#34;域名&#34;&gt;域名&lt;/h3&gt;
-&lt;p&gt;非专业的web开发，对于域名的理解不涉及SEO和跨域问题。作为博客站点，裸域容易突出博客主的站点，说的就是我这种用汉字拼音当做域名的小朋友，加之当前移动访问居多，能少输入几个字符。&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;电脑端能使用快捷键免去输入www和com&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h3 id=&#34;cdn&#34;&gt;CDN&lt;/h3&gt;
-&lt;p&gt;阿里云和腾讯云的都用过，新人上手不难，腾讯云还有个视频单独讲解相关的概念。CDN加速的原理和京东仓库是一个道理，发售新商品，提前统一配送到全国各地的仓库，触发配送请求的时候，就近分发。&lt;/p&gt;
-&lt;p&gt;回源地址：网站资源原始存放的地址&lt;/p&gt;
-&lt;p&gt;缓存文件设置，浏览器F12，管理控制台，简单分析静态资源和动态资源&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;全部0天有效期&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;.php;.jsp;.asp;.aspx&lt;/code&gt; 0天有效期&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;.jpg;.png;.js;.css;.woff2&lt;/code&gt;	1天有效期&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;腾讯云配置规则：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;缓存过期规则最多可配置10条&lt;/li&gt;
-&lt;li&gt;多条缓存过期规则之间的优先级为底部优先&lt;/li&gt;
-&lt;li&gt;缓存过期时间最多可设置365天&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;悲惨自述&#34;&gt;悲惨自述&lt;/h3&gt;
-&lt;p&gt;以前也没用过Nginx，以为网站随便搜索就能明白反向代理的配置，结果有点混乱，折腾半天连个302跳转也没弄明白，结果屁用没有。就想着笨办法解决一下，DNS解析删除*模式的泛域名解析，单个二级域名进行独立设置。此时突然注意到了阿里云DNS解析有一个叫做显示URL跳转的模式，尝试了一下，这不就是我想要的302跳转。&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;设置了第一个二级域名正常访问，等我设置第二个的时候，发现没用，都快怀疑人生了，等了一会突然就能用了，看来阿里云的DNS扩散偶尔也是会抽风的&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h3 id=&#34;参考资料&#34;&gt;参考资料&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;a href=&#34;https://www.zhihu.com/question/20414602&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;为什么越来越多的网站域名不加「www」前缀？&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;
-&lt;a href=&#34;https://www.cloudxns.net/Support/detail/id/918.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;带www和不带www域名有什么区别呢?&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;
-&lt;a href=&#34;https://gythialy.github.io/Docker-nginx-reverse-proxy/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Docker nginx 反向代理设置&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+      <description>背景 网站托管在GitHub Pages，某些众所周知的原因，境内访问GitHub Pages有点慢。故而申请了个人域名，购买了国内云主机供应商的</description>
     </item>
     
     <item>
       <title>博客IDE环境和碎碎念</title>
       <link>https://www.xiangtianlong.com/post/2020/%E5%8D%9A%E5%AE%A2ide%E7%8E%AF%E5%A2%83%E5%92%8C%E7%A2%8E%E7%A2%8E%E5%BF%B5/</link>
       <pubDate>Tue, 31 Mar 2020 13:54:27 +0800</pubDate>
+      
       <guid>https://www.xiangtianlong.com/post/2020/%E5%8D%9A%E5%AE%A2ide%E7%8E%AF%E5%A2%83%E5%92%8C%E7%A2%8E%E7%A2%8E%E5%BF%B5/</guid>
-      <description>&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
-&lt;h3 id=&#34;markdown&#34;&gt;Markdown&lt;/h3&gt;
-&lt;blockquote&gt;
-&lt;p&gt;一种轻量级标记语言，它允许人们使用易读易写的纯文本格式编写文档&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;详细的Markdown语法本文不做额外赘述，推荐一本电子书，
-&lt;a href=&#34;https://markdown-zh.readthedocs.io/en/latest/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;点击此处&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;市面上很多软件都已经支持md作为书写方式。csdn博文系统推出了支持md语法的在线编辑器，在首次使用时，默认会有一篇关于md语法的介绍文章，笔者觉得还不错；印象笔记在2018年增加了对于md笔记的支持，快捷栏中有各种md标记的选项，用起来和编辑普通的文章差不多，整体的交互流程属于新手友好&lt;/p&gt;
-&lt;h3 id=&#34;ide推荐&#34;&gt;IDE推荐&lt;/h3&gt;
-&lt;p&gt;编写本文的时候，已经是2020年，vscode你必然是听说过的，毕竟能想到使用git page来搭建博文系统的都是业内人士。早些年的时候，sublime、atom也是不错的选择，经过两年开源社区的推动，vscode发展迅速，已经逐渐成为新手入场的首选。&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;微软巨头和开源社区的关系从割裂的状态，成功跨入蜜月期：拥抱开源；笔者所在的公司在最近两年也积极的引入Java体系，换言之在业务开发上，如今的Java生态在国内属实真香&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h3 id=&#34;vscode插件推荐&#34;&gt;vscode插件推荐&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;2020-03-31-14-07-17.png&#34; alt=&#34;插件清单&#34;&gt;&lt;/p&gt;
-&lt;p&gt;插件都有自带的Readme，介绍基本用法，核心功能，部分插件作者还提供动态效果展示图&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;Paste Image&lt;/code&gt;，配合hugo的图片插件方式，很便捷的就能引入图片&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;快捷键没记住，打开vscode快捷键管理菜单，搜索md，多看几遍；重看一遍插件使用说明&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&#34;hugo&#34;&gt;hugo&lt;/h2&gt;
-&lt;p&gt;笔者从&lt;code&gt;hexo&lt;/code&gt;切换到了&lt;code&gt;hugo&lt;/code&gt;，爱折腾是我的天性，终归是耐不住性子安安静静写文章&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;hugo支持在单独的文件夹放置图片和md文档&lt;/li&gt;
-&lt;li&gt;academic主题在设计上支持多种各式的文章样式&lt;/li&gt;
-&lt;li&gt;各种便捷的自定义拓展&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2 id=&#34;academic&#34;&gt;academic&lt;/h2&gt;
-&lt;p&gt;官网默认&lt;code&gt;exampleSite&lt;/code&gt;，menu引入采用&lt;code&gt;#组件&lt;/code&gt;的方式，推荐使用&lt;code&gt;url&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;url的模式，点击导航栏能实现单页的跳转，而非在首页进行滚动，这点纯属个人喜好&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;样式上：随笔、演讲、电子书&lt;/li&gt;
-&lt;li&gt;灵活性：自定义整体风格、自定义css样式&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;这款主题对于中文的支持还不是很完善，主要是从视觉的角度来说，字体大小不太符合中文阅读习惯，hexo的开发人员大部分为国人，在这点优于hugo&lt;/p&gt;
-&lt;p&gt;但是呢，自己动手丰衣足食，浏览器审核元素。定位了到了元素，想要知道需要修改的css样式名称，侧栏点击&lt;strong&gt;Insert Style Rule Below&lt;/strong&gt;，即使嵌套多层的css，也能轻松拿到节点名称。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;a href=&#34;https://sourcethemes.com/academic/docs/customization/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;引入&lt;strong&gt;custom.css&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;
-&lt;a href=&#34;https://sourcethemes.com/academic/docs/customization/#add-scripts-js&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;引入&lt;strong&gt;custom_js&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;主题内置的语法高亮设置，
-&lt;a href=&#34;https://sourcethemes.com/academic/docs/writing-markdown-latex/#highlighting-options.&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;官方链接&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;结尾&#34;&gt;结尾&lt;/h2&gt;
-&lt;p&gt;小朋友又要吐槽了，你怎么从头到尾都说的模模糊糊，细节什么的都不提&lt;/p&gt;
-&lt;p&gt;我想说的是，有下面这些东西，足够你用了：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;官方手册&lt;/li&gt;
-&lt;li&gt;插件说明&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;快速上手新技术，推荐先阅读官网文档，&lt;strong&gt;粗读&lt;/strong&gt;不求一遍看懂，至少心里有个数，搜索引擎出来的结果，不一定和当前最新的版本保持一致，也许会产生误导。翻阅新书也是如此，先看目录，搞清楚作者准备讲什么，有时候读书先读序，部分国外的著作翻译成中文，译者的序其实涵盖了书籍和核心内容。&lt;/p&gt;
-&lt;h2 id=&#34;彩蛋&#34;&gt;彩蛋&lt;/h2&gt;
-&lt;p&gt;切换hugo academic内置风格样式，发布到站点，访问时，风格没有发生变换。聪明的小伙伴已经想到了，清空本地浏览器缓存，能解决问题。机智的我：F12开发者模式，切换到&lt;code&gt;network&lt;/code&gt;，勾选&lt;code&gt;disable cache&lt;/code&gt;，刷新，搞定！&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;2020-03-31-14-27-15.png&#34; alt=&#34;network&#34;&gt;&lt;/p&gt;
-</description>
+      <description>前言 Markdown 一种轻量级标记语言，它允许人们使用易读易写的纯文本格式编写文档 详细的Markdown语法本文不做额外赘述，推荐一本电子书，点击此处 市面</description>
     </item>
     
     <item>
       <title>自动集成系统切换</title>
       <link>https://www.xiangtianlong.com/post/2020/%E8%87%AA%E5%8A%A8%E9%9B%86%E6%88%90%E7%B3%BB%E7%BB%9F%E5%88%87%E6%8D%A2/</link>
       <pubDate>Sun, 29 Mar 2020 02:11:33 +0800</pubDate>
+      
       <guid>https://www.xiangtianlong.com/post/2020/%E8%87%AA%E5%8A%A8%E9%9B%86%E6%88%90%E7%B3%BB%E7%BB%9F%E5%88%87%E6%8D%A2/</guid>
-      <description>&lt;h4 id=&#34;背景介绍&#34;&gt;背景介绍&lt;/h4&gt;
-&lt;p&gt;昨天更新博客时发现travis服务不可用，查看travis网页，发现进度卡在拉取源码的时候，灵光闪现想到了github之前推出的action服务&lt;/p&gt;
-&lt;p&gt;由于那会比较忙，同时也需要申请才能使用action，现在已经开始正式上线，周末闲来无事，尝试一个新玩具？&lt;/p&gt;
-&lt;p&gt;官方资料大家自行进入网站查阅即可，本文就不做更多的转载了，如果之前用过kubernetes会觉得，action的yaml文件配置和kubernetes很像。&lt;/p&gt;
-&lt;p&gt;关于的入门的教程，或者说是中文的介绍资料，推荐搜索&lt;strong&gt;阮一峰的博客&lt;/strong&gt;，有两篇文章，第一篇是基础的语法介绍，第二篇是一个实际的案例。&lt;/p&gt;
-&lt;h4 id=&#34;正文&#34;&gt;正文&lt;/h4&gt;
-&lt;p&gt;需要的知识点&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;github secrets&lt;/li&gt;
-&lt;li&gt;action 语法&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;核心的job使用现有的组件完成，推送到国内gitee使用command实现，command这部分比较粗暴，都是强制推送，沿用了使用travis的逻辑。&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;name&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;github pages and gitee pages&lt;/span&gt;
-
-&lt;span style=&#34;color:#f92672&#34;&gt;on&lt;/span&gt;:
-  &lt;span style=&#34;color:#f92672&#34;&gt;push&lt;/span&gt;:
-    &lt;span style=&#34;color:#f92672&#34;&gt;branches&lt;/span&gt;:
-      - &lt;span style=&#34;color:#ae81ff&#34;&gt;hugo&lt;/span&gt;
-
-&lt;span style=&#34;color:#f92672&#34;&gt;jobs&lt;/span&gt;:
-  &lt;span style=&#34;color:#f92672&#34;&gt;deploy&lt;/span&gt;:
-    &lt;span style=&#34;color:#f92672&#34;&gt;runs-on&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;ubuntu-18.04&lt;/span&gt;
-    &lt;span style=&#34;color:#f92672&#34;&gt;steps&lt;/span&gt;:
-      - &lt;span style=&#34;color:#f92672&#34;&gt;uses&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;actions/checkout@v2&lt;/span&gt;
-        &lt;span style=&#34;color:#f92672&#34;&gt;with&lt;/span&gt;:
-          &lt;span style=&#34;color:#f92672&#34;&gt;submodules&lt;/span&gt;: &lt;span style=&#34;color:#66d9ef&#34;&gt;true&lt;/span&gt;
-
-      - &lt;span style=&#34;color:#f92672&#34;&gt;name&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;Setup Hugo&lt;/span&gt;
-        &lt;span style=&#34;color:#f92672&#34;&gt;uses&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;peaceiris/actions-hugo@v2&lt;/span&gt;
-        &lt;span style=&#34;color:#f92672&#34;&gt;with&lt;/span&gt;:
-          &lt;span style=&#34;color:#f92672&#34;&gt;hugo-version&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;latest&amp;#39;&lt;/span&gt;
-          &lt;span style=&#34;color:#f92672&#34;&gt;extended&lt;/span&gt;: &lt;span style=&#34;color:#66d9ef&#34;&gt;true&lt;/span&gt;
-
-      - &lt;span style=&#34;color:#f92672&#34;&gt;name&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;Build Github and Gitee&lt;/span&gt; &lt;span style=&#34;color:#75715e&#34;&gt;## 单个step只能写一个run命令&lt;/span&gt;
-        &lt;span style=&#34;color:#f92672&#34;&gt;run&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;hugo -b &amp;#34;https://www.xiangtianlong.com/&amp;#34; -d &amp;#34;github_public&amp;#34; &amp;amp;&amp;amp; hugo -b &amp;#34;https://www.xiangtianlong.com/&amp;#34; -d &amp;#34;gitee_public&amp;#34; &amp;amp;&amp;amp; ls&lt;/span&gt;
-
-      - &lt;span style=&#34;color:#f92672&#34;&gt;name&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;Deploy Github&lt;/span&gt;
-        &lt;span style=&#34;color:#f92672&#34;&gt;uses&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;peaceiris/actions-gh-pages@v3&lt;/span&gt;
-        &lt;span style=&#34;color:#f92672&#34;&gt;with&lt;/span&gt;:
-          &lt;span style=&#34;color:#f92672&#34;&gt;github_token&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;${{ secrets.BLOG_TOKEN }}&lt;/span&gt;
-          &lt;span style=&#34;color:#f92672&#34;&gt;publish_dir&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;./github_public&lt;/span&gt;
-          &lt;span style=&#34;color:#f92672&#34;&gt;publish_branch&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;master&lt;/span&gt;
-          &lt;span style=&#34;color:#f92672&#34;&gt;cname&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;xiangtianlong.com&lt;/span&gt;
-
-      - &lt;span style=&#34;color:#f92672&#34;&gt;name&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;Deploy Gitee&lt;/span&gt;
-        &lt;span style=&#34;color:#f92672&#34;&gt;run&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;cd ./gitee_public &amp;amp;&amp;amp; git init &amp;amp;&amp;amp; git config user.name &amp;#34;TianlongXiang&amp;#34; &amp;amp;&amp;amp; git config user.email &amp;#34;tianlongxiang51@gmail.com&amp;#34; &amp;amp;&amp;amp; git add . &amp;amp;&amp;amp; git commit -m &amp;#34;Update TianlongXiang&amp;#39;s Blog&amp;#34; &amp;amp;&amp;amp; git push --force &amp;#34;https://xiangtianlong:${{ secrets.GITEE_PASSWORD }}@gitee.com/xiangtianlong/xiangtianlong.git&amp;#34; master:master   &lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;后记&#34;&gt;后记&lt;/h4&gt;
-&lt;p&gt;从官方市场提供的action来看，目前支持的玩法挺多，构建docker镜像以后也能不再依赖dockerhub提供的服务&lt;/p&gt;
-&lt;p&gt;查阅hugo的issue，发现使用github action自动部署git pages，最终发布的网页需要在master分支，如果是部署在其他分支，在setting界面，github会提示部署的网页存在语法问题&lt;/p&gt;
-&lt;p&gt;实际上只是由于hugo的源文件放在了master分支，github当作jelly博客的源码进行检测，无法检查无法通过导致的报错&lt;/p&gt;
-&lt;p&gt;解决方案也简单，hugo源码文件放到其他分支，静态文件发布在master分支&lt;/p&gt;
-</description>
+      <description>背景介绍 昨天更新博客时发现travis服务不可用，查看travis网页，发现进度卡在拉取源码的时候，灵光闪现想到了github之前推出的ac</description>
+    </item>
+    
+    <item>
+      <title>未来的好中国一定是有好老头好老太太的中国</title>
+      <link>https://www.xiangtianlong.com/post/%E5%B2%81%E6%9C%88%E6%97%A2%E6%85%A2%E4%B8%94%E9%95%BF%E7%99%BD%E8%AF%B4%E4%BD%A0%E5%90%AC/06-%E6%9C%AA%E6%9D%A5%E7%9A%84%E5%A5%BD%E4%B8%AD%E5%9B%BD%E4%B8%80%E5%AE%9A%E6%98%AF%E6%9C%89%E5%A5%BD%E8%80%81%E5%A4%B4%E5%A5%BD%E8%80%81%E5%A4%AA%E5%A4%AA%E7%9A%84%E4%B8%AD%E5%9B%BD/</link>
+      <pubDate>Sat, 15 Feb 2020 11:28:28 +0800</pubDate>
+      
+      <guid>https://www.xiangtianlong.com/post/%E5%B2%81%E6%9C%88%E6%97%A2%E6%85%A2%E4%B8%94%E9%95%BF%E7%99%BD%E8%AF%B4%E4%BD%A0%E5%90%AC/06-%E6%9C%AA%E6%9D%A5%E7%9A%84%E5%A5%BD%E4%B8%AD%E5%9B%BD%E4%B8%80%E5%AE%9A%E6%98%AF%E6%9C%89%E5%A5%BD%E8%80%81%E5%A4%B4%E5%A5%BD%E8%80%81%E5%A4%AA%E5%A4%AA%E7%9A%84%E4%B8%AD%E5%9B%BD/</guid>
+      <description>我说10年后可爱的老头是我，我要努力的去做一个可爱的老头，未来的好，中国一定是要有好老头好老太太的中国。我即便10年后60岁了，也是这个世界</description>
+    </item>
+    
+    <item>
+      <title>我的18岁，可能跟你们不太一样</title>
+      <link>https://www.xiangtianlong.com/post/%E5%B2%81%E6%9C%88%E6%97%A2%E6%85%A2%E4%B8%94%E9%95%BF%E7%99%BD%E8%AF%B4%E4%BD%A0%E5%90%AC/05-%E6%88%91%E7%9A%8418%E5%B2%81%E5%8F%AF%E8%83%BD%E8%B7%9F%E4%BD%A0%E4%BB%AC%E4%B8%8D%E5%A4%AA%E4%B8%80%E6%A0%B7/</link>
+      <pubDate>Sat, 15 Feb 2020 11:19:33 +0800</pubDate>
+      
+      <guid>https://www.xiangtianlong.com/post/%E5%B2%81%E6%9C%88%E6%97%A2%E6%85%A2%E4%B8%94%E9%95%BF%E7%99%BD%E8%AF%B4%E4%BD%A0%E5%90%AC/05-%E6%88%91%E7%9A%8418%E5%B2%81%E5%8F%AF%E8%83%BD%E8%B7%9F%E4%BD%A0%E4%BB%AC%E4%B8%8D%E5%A4%AA%E4%B8%80%E6%A0%B7/</guid>
+      <description>每一个自己的18岁都像是一个期待和追问的目光，每一个人偶尔要拿自己的18岁来问问自己，你是当初自己要活的那个样子吗！我很怕现在每个人都有无数</description>
+    </item>
+    
+    <item>
+      <title>这个社会需要什么样的记者？</title>
+      <link>https://www.xiangtianlong.com/post/%E5%B2%81%E6%9C%88%E6%97%A2%E6%85%A2%E4%B8%94%E9%95%BF%E7%99%BD%E8%AF%B4%E4%BD%A0%E5%90%AC/04-%E8%BF%99%E4%B8%AA%E7%A4%BE%E4%BC%9A%E9%9C%80%E8%A6%81%E4%BB%80%E4%B9%88%E6%A0%B7%E7%9A%84%E8%AE%B0%E8%80%85/</link>
+      <pubDate>Sat, 15 Feb 2020 11:08:38 +0800</pubDate>
+      
+      <guid>https://www.xiangtianlong.com/post/%E5%B2%81%E6%9C%88%E6%97%A2%E6%85%A2%E4%B8%94%E9%95%BF%E7%99%BD%E8%AF%B4%E4%BD%A0%E5%90%AC/04-%E8%BF%99%E4%B8%AA%E7%A4%BE%E4%BC%9A%E9%9C%80%E8%A6%81%E4%BB%80%E4%B9%88%E6%A0%B7%E7%9A%84%E8%AE%B0%E8%80%85/</guid>
+      <description>一个最好的记者就是首先有社会良心，第2个有知识储备，第3个长跑。不能我跑100米不过瘾了，跑了。我觉得这三者结合，人们期待的是疫苗安全的隐患</description>
+    </item>
+    
+    <item>
+      <title>20年后的中国足球会怎么样？</title>
+      <link>https://www.xiangtianlong.com/post/%E5%B2%81%E6%9C%88%E6%97%A2%E6%85%A2%E4%B8%94%E9%95%BF%E7%99%BD%E8%AF%B4%E4%BD%A0%E5%90%AC/03-20%E5%B9%B4%E5%90%8E%E7%9A%84%E4%B8%AD%E5%9B%BD%E8%B6%B3%E7%90%83%E4%BC%9A%E6%80%8E%E4%B9%88%E6%A0%B7/</link>
+      <pubDate>Sat, 15 Feb 2020 10:59:32 +0800</pubDate>
+      
+      <guid>https://www.xiangtianlong.com/post/%E5%B2%81%E6%9C%88%E6%97%A2%E6%85%A2%E4%B8%94%E9%95%BF%E7%99%BD%E8%AF%B4%E4%BD%A0%E5%90%AC/03-20%E5%B9%B4%E5%90%8E%E7%9A%84%E4%B8%AD%E5%9B%BD%E8%B6%B3%E7%90%83%E4%BC%9A%E6%80%8E%E4%B9%88%E6%A0%B7/</guid>
+      <description>你对中国足球还保持好奇吗？好奇，非常好奇，还能差成什么样？所以你发现中国足球踢不好有很多原因，其中的一个原因就在于谁都怕把球丢自己这儿，传给</description>
+    </item>
+    
+    <item>
+      <title>道德赤字、人性亏损</title>
+      <link>https://www.xiangtianlong.com/post/%E5%B2%81%E6%9C%88%E6%97%A2%E6%85%A2%E4%B8%94%E9%95%BF%E7%99%BD%E8%AF%B4%E4%BD%A0%E5%90%AC/02-%E9%81%93%E5%BE%B7%E8%B5%A4%E5%AD%97%E4%BA%BA%E6%80%A7%E4%BA%8F%E6%8D%9F%E6%89%8D%E6%98%AF%E7%8E%B0%E5%9C%A8%E6%9C%80%E5%A4%A7%E7%9A%84%E8%B5%A4%E5%AD%97%E5%92%8C%E4%BA%8F%E6%8D%9F/</link>
+      <pubDate>Sat, 15 Feb 2020 01:20:34 +0800</pubDate>
+      
+      <guid>https://www.xiangtianlong.com/post/%E5%B2%81%E6%9C%88%E6%97%A2%E6%85%A2%E4%B8%94%E9%95%BF%E7%99%BD%E8%AF%B4%E4%BD%A0%E5%90%AC/02-%E9%81%93%E5%BE%B7%E8%B5%A4%E5%AD%97%E4%BA%BA%E6%80%A7%E4%BA%8F%E6%8D%9F%E6%89%8D%E6%98%AF%E7%8E%B0%E5%9C%A8%E6%9C%80%E5%A4%A7%E7%9A%84%E8%B5%A4%E5%AD%97%E5%92%8C%E4%BA%8F%E6%8D%9F/</guid>
+      <description>我有八个字说的比较重，我觉得我们现在是道德赤字，人性亏损，时代总是在出了问题解决问题，彻底解决问题的这样逻辑循环当中前进，你要有耐心去等待它</description>
+    </item>
+    
+    <item>
+      <title>关于光阴，你要读很多书才能找到答案</title>
+      <link>https://www.xiangtianlong.com/post/%E5%B2%81%E6%9C%88%E6%97%A2%E6%85%A2%E4%B8%94%E9%95%BF%E7%99%BD%E8%AF%B4%E4%BD%A0%E5%90%AC/01-%E5%85%B3%E4%BA%8E%E5%85%89%E9%98%B4%E4%BD%A0%E8%A6%81%E8%AF%BB%E5%BE%88%E5%A4%9A%E4%B9%A6%E6%89%8D%E8%83%BD%E6%89%BE%E5%88%B0%E7%AD%94%E6%A1%88/</link>
+      <pubDate>Fri, 14 Feb 2020 07:27:21 +0800</pubDate>
+      
+      <guid>https://www.xiangtianlong.com/post/%E5%B2%81%E6%9C%88%E6%97%A2%E6%85%A2%E4%B8%94%E9%95%BF%E7%99%BD%E8%AF%B4%E4%BD%A0%E5%90%AC/01-%E5%85%B3%E4%BA%8E%E5%85%89%E9%98%B4%E4%BD%A0%E8%A6%81%E8%AF%BB%E5%BE%88%E5%A4%9A%E4%B9%A6%E6%89%8D%E8%83%BD%E6%89%BE%E5%88%B0%E7%AD%94%E6%A1%88/</guid>
+      <description>今年我已经整整50岁了，过去没想过，我觉得这就是老头。现在才发现还真是老头，这是30岁时候的样子。30岁的时候不觉得自己很年轻，很好看，50</description>
     </item>
     
     <item>
       <title>标准库容器的内存分配器：allocator</title>
       <link>https://www.xiangtianlong.com/post/2020/std-allocator-%E7%9B%B8%E5%85%B3%E6%A6%82%E5%BF%B5/</link>
       <pubDate>Mon, 30 Dec 2019 13:26:19 +0800</pubDate>
+      
       <guid>https://www.xiangtianlong.com/post/2020/std-allocator-%E7%9B%B8%E5%85%B3%E6%A6%82%E5%BF%B5/</guid>
-      <description>&lt;h4 id=&#34;前因&#34;&gt;前因&lt;/h4&gt;
-&lt;p&gt;近期接触到了网络网络数据包的开发，需要频繁的申请和释放小块的内存，原本想着使用内存池，查看了几个现有的内存池，发现了这个：&lt;/p&gt;
-&lt;p&gt;
-&lt;a href=&#34;https://github.com/cacay/MemoryPool&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://github.com/cacay/MemoryPool&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;看到接口的时候，就比较纳闷，这个内存池的实现怎么有点奇怪。&lt;code&gt;MemoryPool&lt;/code&gt;的实现逻辑，是在申请固定大小的内存空间。看过boost的内存池接口，提供的是一个模板，用的时候进行实例化。正巧这个库已经有文章进行过介绍，提到了&lt;code&gt;allocator&lt;/code&gt;这个概念。&lt;/p&gt;
-&lt;h4 id=&#34;wikihttpszhwikipediaorgwikie58886e9858de599a8_c2b2b&#34;&gt;
-&lt;a href=&#34;https://zh.wikipedia.org/wiki/%E5%88%86%E9%85%8D%E5%99%A8_%28C%2B%2B%29&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;wiki&lt;/a&gt;&lt;/h4&gt;
-&lt;p&gt;在C++编程中，分配器（英语：allocator）是C++标准库的重要组成部分。C++的库中定义了多种被统称为“容器”的数据结构（如链表、集合等），这些容器的共同特征之一，就是其大小可以在程序的运行时改变；为了实现这一点，进行动态内存分配就显得尤为必要，在此分配器就用于处理容器对内存的分配与释放请求。换句话说，分配器用于封装标准模板库（STL）容器在内存管理上的低层细节。默认情况下，C++标准库使用其自带的通用分配器，但根据具体需要，程序员也可自行定制分配器以替代之。&lt;/p&gt;
-&lt;p&gt;分配器最早由亚历山大·斯特潘诺夫作为C++标准模板库（Standard Template Library，简称STL）的一部分发明，其初衷是创造一种能“使库更加灵活，并能独立于底层数据模型的方法”，并允许程序员在库中利用自定义的指针和引用类型；但在将标准模板库纳入C++标准时，C++标准委员会意识到对数据模型的完全抽象化处理会带来不可接受的性能损耗，为作折中，标准中对分配器的限制变得更加严格，而有鉴于此，与斯特潘诺夫原先的设想相比，现有标准所描述的分配器可定制程度已大大受限。&lt;/p&gt;
-&lt;p&gt;虽然分配器的定制有所限制，但在许多情况下，仍需要用到自定义的分配器，而这一般是为封装对不同类型内存空间（如共享内存与已回收内存）的访问方式，或在使用内存池进行内存分配时提高性能而为。除此以外，从内存占用和运行时间的角度看，在频繁进行少量内存分配的程序中，若引入为之专门定制的分配器，也会获益良多。&lt;/p&gt;
-&lt;h4 id=&#34;使用需求httpszhwikipediaorgwikie58886e9858de599a8_c2b2b&#34;&gt;
-&lt;a href=&#34;https://zh.wikipedia.org/wiki/%E5%88%86%E9%85%8D%E5%99%A8_%28C%2B%2B%29&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;使用需求&lt;/a&gt;&lt;/h4&gt;
-&lt;p&gt;定义自定义分配器的主要原因之一是提升性能。利用专用的自定义分配器可以提高程序的性能，又或提高内存使用效率，亦或两者兼而有之[4][8]。默认分配器使用new操作符分配存储空间[文 5]，而这常利用C语言堆分配函数（malloc()）实现[9]。由于堆分配函数常针对偶发的内存大量分配作优化，因此在为需要一次分配大量内存的容器（如向量、双端队列）分配内存时，默认分配器一般效率良好[8]。但是，对于关联容器与双向链表这类需要频繁分配少量内存的容器来说，若采用默认分配器分配内存，则通常效率很低[4][9]。除此之外，基于malloc()的默认分配器还存在许多问题，诸如较差的引用局部性[4]，以及可能造成内存碎片化[4][9]。&lt;/p&gt;
-&lt;p&gt;简言之，此段（……）（如同）是这一标准针对分配器的一场《我有一个梦想》的演讲。在梦想成真之前，关心可移植性的程序员将把自己局限于（使用）无状态的自定义分配器上。
-——斯科特 梅耶斯，《Effective STL》
-有鉴于此，在这一情况下，人们常使用基于内存池的分配器来解决频繁少量分配问题[8]。与默认的“按需分配”方式不同，在使用基于内存池的分配器时，程序会预先为之分配大块内存（即“内存池”），而后在需要分配内存时，自定义分配器只需向请求方返回一个指向池内内存的指针即可；而在对象析构时，并不需实际解除分配内存，而是延迟到内存池的生命周期完结时才真正解除分配[注 1][8]。&lt;/p&gt;
-&lt;p&gt;在“自定义分配器”这一话题上，已有诸多C++专家与相关作者参与探讨，例如斯科特·梅耶斯的作品《Effective STL》与安德烈·亚历山德雷斯库的《Modern C++ Design》都有提及。梅耶斯洞察到，若要求针对某一类型T的分配器的所有实例都相等，则可移植的分配器的实例必须不包含状态。虽然C++标准鼓励库的实现者支持带状态的分配器[文 4]，但梅耶斯称，相关段落是“（看似）美妙的观点”，但也几乎是空话，并称分配器的限制“过于严苛”[4]。例如，STL的list允许splice方法，即一个list对象A的节点可以被直接移入另一个list对象B中，这就要求A的分配器申请到的内存，可被B的分配器释放掉，从而推导出A与B的分配器实例必须相等。梅耶斯的结论是，分配器最好定义为使用静态方法的类型。例如，根据C++标准，分配器必须提供一个实现了rebind方法的other类模板。&lt;/p&gt;
-&lt;p&gt;另外，在《C++程序设计语言》中，比雅尼·斯特劳斯特鲁普则认为“‘严格限制分配器，以免各对象信息不同’，这点显然问题不大”（大意），并指出大部分分配器并不需要状态，甚至没有状态情形下性能反倒更佳。他提出了三个自定义分配器的用例：内存池型的分配器、共享内存型分配器与垃圾回收型分配器，并展示了一个分配器的实现，此间利用了一个内部内存池，以快速分配/解除分配少量内存。但他也提到，如此优化可能已经在他所提供的样例分配器中实现[3]。&lt;/p&gt;
-&lt;p&gt;自定义分配器的另一用途是调试内存相关错误[10]。若要做到这一点，可以编写一个分配器，令之在分配时分配额外的内存，并借此存放调试信息。这类分配器不仅可以保证内存由同类分配器分配/解除分配内存，还可在一定程度上保护程序免受缓存溢出之害[11]。&lt;/p&gt;
-</description>
+      <description>前因 近期接触到了网络网络数据包的开发，需要频繁的申请和释放小块的内存，原本想着使用内存池，查看了几个现有的内存池，发现了这个： https://github.com/cacay/MemoryPool 看到接口的时</description>
     </item>
     
   </channel>

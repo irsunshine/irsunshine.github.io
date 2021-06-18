@@ -1,16 +1,146 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags | 假装不困</title>
+    <title>Tags on 假装不困</title>
     <link>https://www.xiangtianlong.com/tags/</link>
-      <atom:link href="https://www.xiangtianlong.com/tags/index.xml" rel="self" type="application/rss+xml" />
-    <description>Tags</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>zh-Hans</language><copyright>2019</copyright><lastBuildDate>Wed, 27 Jan 2021 14:35:21 +0800</lastBuildDate>
-    <image>
-      <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
-      <title>Tags</title>
-      <link>https://www.xiangtianlong.com/tags/</link>
-    </image>
+    <description>Recent content in Tags on 假装不困</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Wed, 27 Jan 2021 14:35:21 +0800</lastBuildDate><atom:link href="https://www.xiangtianlong.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>hkex</title>
+      <link>https://www.xiangtianlong.com/tags/hkex/</link>
+      <pubDate>Wed, 27 Jan 2021 14:35:21 +0800</pubDate>
+      
+      <guid>https://www.xiangtianlong.com/tags/hkex/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>上交所</title>
+      <link>https://www.xiangtianlong.com/tags/%E4%B8%8A%E4%BA%A4%E6%89%80/</link>
+      <pubDate>Wed, 27 Jan 2021 14:35:21 +0800</pubDate>
+      
+      <guid>https://www.xiangtianlong.com/tags/%E4%B8%8A%E4%BA%A4%E6%89%80/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>中华通</title>
+      <link>https://www.xiangtianlong.com/tags/%E4%B8%AD%E5%8D%8E%E9%80%9A/</link>
+      <pubDate>Wed, 27 Jan 2021 14:35:21 +0800</pubDate>
+      
+      <guid>https://www.xiangtianlong.com/tags/%E4%B8%AD%E5%8D%8E%E9%80%9A/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>接口文档</title>
+      <link>https://www.xiangtianlong.com/tags/%E6%8E%A5%E5%8F%A3%E6%96%87%E6%A1%A3/</link>
+      <pubDate>Wed, 27 Jan 2021 14:35:21 +0800</pubDate>
+      
+      <guid>https://www.xiangtianlong.com/tags/%E6%8E%A5%E5%8F%A3%E6%96%87%E6%A1%A3/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>深交所</title>
+      <link>https://www.xiangtianlong.com/tags/%E6%B7%B1%E4%BA%A4%E6%89%80/</link>
+      <pubDate>Wed, 27 Jan 2021 14:35:21 +0800</pubDate>
+      
+      <guid>https://www.xiangtianlong.com/tags/%E6%B7%B1%E4%BA%A4%E6%89%80/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>港交所</title>
+      <link>https://www.xiangtianlong.com/tags/%E6%B8%AF%E4%BA%A4%E6%89%80/</link>
+      <pubDate>Wed, 27 Jan 2021 14:35:21 +0800</pubDate>
+      
+      <guid>https://www.xiangtianlong.com/tags/%E6%B8%AF%E4%BA%A4%E6%89%80/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>纳斯达克</title>
+      <link>https://www.xiangtianlong.com/tags/%E7%BA%B3%E6%96%AF%E8%BE%BE%E5%85%8B/</link>
+      <pubDate>Wed, 27 Jan 2021 14:35:21 +0800</pubDate>
+      
+      <guid>https://www.xiangtianlong.com/tags/%E7%BA%B3%E6%96%AF%E8%BE%BE%E5%85%8B/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>centos</title>
+      <link>https://www.xiangtianlong.com/tags/centos/</link>
+      <pubDate>Thu, 21 Jan 2021 09:26:07 +0800</pubDate>
+      
+      <guid>https://www.xiangtianlong.com/tags/centos/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>docker</title>
+      <link>https://www.xiangtianlong.com/tags/docker/</link>
+      <pubDate>Thu, 21 Jan 2021 09:26:07 +0800</pubDate>
+      
+      <guid>https://www.xiangtianlong.com/tags/docker/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Linux</title>
+      <link>https://www.xiangtianlong.com/tags/linux/</link>
+      <pubDate>Thu, 21 Jan 2021 09:26:07 +0800</pubDate>
+      
+      <guid>https://www.xiangtianlong.com/tags/linux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Jmeter</title>
+      <link>https://www.xiangtianlong.com/tags/jmeter/</link>
+      <pubDate>Tue, 22 Dec 2020 10:12:50 +0800</pubDate>
+      
+      <guid>https://www.xiangtianlong.com/tags/jmeter/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>github action</title>
+      <link>https://www.xiangtianlong.com/tags/github-action/</link>
+      <pubDate>Sun, 29 Mar 2020 02:11:33 +0800</pubDate>
+      
+      <guid>https://www.xiangtianlong.com/tags/github-action/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>travis</title>
+      <link>https://www.xiangtianlong.com/tags/travis/</link>
+      <pubDate>Sun, 29 Mar 2020 02:11:33 +0800</pubDate>
+      
+      <guid>https://www.xiangtianlong.com/tags/travis/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>自动集成</title>
+      <link>https://www.xiangtianlong.com/tags/%E8%87%AA%E5%8A%A8%E9%9B%86%E6%88%90/</link>
+      <pubDate>Sun, 29 Mar 2020 02:11:33 +0800</pubDate>
+      
+      <guid>https://www.xiangtianlong.com/tags/%E8%87%AA%E5%8A%A8%E9%9B%86%E6%88%90/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>allocator</title>
+      <link>https://www.xiangtianlong.com/tags/allocator/</link>
+      <pubDate>Mon, 30 Dec 2019 13:26:19 +0800</pubDate>
+      
+      <guid>https://www.xiangtianlong.com/tags/allocator/</guid>
+      <description></description>
+    </item>
     
   </channel>
 </rss>
