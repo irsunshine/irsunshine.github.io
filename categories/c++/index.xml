@@ -6,6 +6,7 @@
     <description>Recent content in c&#43;&#43; on 假装不困</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
+    <copyright>&lt;a href=&#34;https://beian.miit.gov.cn/&#34;&gt;粤ICP备20045654号&lt;/a&gt;</copyright>
     <lastBuildDate>Mon, 30 Dec 2019 13:26:19 +0800</lastBuildDate><atom:link href="https://www.xiangtianlong.com/categories/c++/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>标准库容器的内存分配器：allocator</title>
