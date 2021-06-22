@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>IB on 假装不困</title>
+    <link>https://www.xiangtianlong.com/tags/ib/</link>
+    <description>Recent content in IB on 假装不困</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>&lt;a href=&#34;https://beian.miit.gov.cn/&#34;&gt;粤ICP备20045654号&lt;/a&gt;</copyright>
+    <lastBuildDate>Tue, 22 Jun 2021 10:51:59 +0800</lastBuildDate><atom:link href="https://www.xiangtianlong.com/tags/ib/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>盈透证券：中断交易</title>
+      <link>https://www.xiangtianlong.com/post/2021/03-%E7%9B%88%E9%80%8F%E8%AF%81%E5%88%B8%E4%B8%AD%E6%96%AD%E4%BA%A4%E6%98%93/%E7%9B%88%E9%80%8F%E8%AF%81%E5%88%B8%E4%B8%AD%E6%96%AD%E4%BA%A4%E6%98%93/</link>
+      <pubDate>Tue, 22 Jun 2021 10:51:59 +0800</pubDate>
+      
+      <guid>https://www.xiangtianlong.com/post/2021/03-%E7%9B%88%E9%80%8F%E8%AF%81%E5%88%B8%E4%B8%AD%E6%96%AD%E4%BA%A4%E6%98%93/%E7%9B%88%E9%80%8F%E8%AF%81%E5%88%B8%E4%B8%AD%E6%96%AD%E4%BA%A4%E6%98%93/</guid>
+      <description>Busted Trade 中断交易是指当一个交易执行已经发生，并且IB收到来自交易所的执行信息。然后交易所意识到出现了某种错误（比如，定价、电子处理过程、明显的错</description>
+    </item>
+    
+  </channel>
+</rss>
