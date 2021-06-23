@@ -6,7 +6,7 @@ subtitle: ""
 summary: ""
 authors: [向天龙]
 tags: [hkex,港交所,中华通,上交所,深交所,纳斯达克,接口文档]
-categories: []
+categories: [金融知识库]
 date: 2021-01-27T14:35:21+08:00
 lastmod: 2021-01-28T20:53:21+08:00
 featured: false

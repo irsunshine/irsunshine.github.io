@@ -49,13 +49,18 @@ copyright = '<a href="https://beian.miit.gov.cn/">粤ICP备20045654号</a>'     
   identifier = "categories"
   url = "/categories/"
 [[menu.main]]
-  name = "鱼的七秒钟见闻"
+  name = "金融知识库"
   weight = 50
+  identifier = "jinrongzhishiku"
+  url = "/categories/金融知识库/"
+[[menu.main]]
+  name = "见闻"
+  weight = 80
   identifier = "yudeqimiaozhongjianwen"
   url = "/categories/鱼的七秒钟见闻/"
 [[menu.main]]
   name = "白岩松"
-  weight = 60
+  weight = 90
   identifier = "baiyansong"
   url = "/categories/白岩松演讲稿/"
 
