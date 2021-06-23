@@ -29,25 +29,35 @@ copyright = '<a href="https://beian.miit.gov.cn/">粤ICP备20045654号</a>'     
   filename = "sitemap.xml"
 
 [[menu.main]]             # config your menu              # 配置目录
-  name = "Home"
+  name = "首页"
   weight = 10
   identifier = "home"
   url = "/"
 [[menu.main]]
-  name = "Archives"
+  name = "归档"
   weight = 20
   identifier = "archives"
   url = "/post/"
+# [[menu.main]]
+#   name = "标签云"
+#   weight = 30
+#   identifier = "tags"
+#   url = "/tags/"
 [[menu.main]]
-  name = "Tags"
-  weight = 30
-  identifier = "tags"
-  url = "/tags/"
-[[menu.main]]
-  name = "Categories"
+  name = "目录"
   weight = 40
   identifier = "categories"
   url = "/categories/"
+[[menu.main]]
+  name = "鱼的七秒钟见闻"
+  weight = 50
+  identifier = "yudeqimiaozhongjianwen"
+  url = "/categories/鱼的七秒钟见闻/"
+[[menu.main]]
+  name = "白岩松"
+  weight = 60
+  identifier = "baiyansong"
+  url = "/categories/白岩松演讲稿/"
 
 [params]
   version = "4.x"           # Used to give a friendly message when you have an incompatible update
