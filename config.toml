@@ -21,7 +21,7 @@ googleAnalytics = "UA-110120845-1"      # UA-XXXXXXXX-X
 copyright = '<a href="https://beian.miit.gov.cn/">粤ICP备20045654号</a>'            # default: author.name ↓        # 默认为下面配置的author.name ↓
 
 [author]                  # essential                     # 必需
-  name = "向天龙"
+  name = "向天龙 内容来源申明：原创 整理 转载 翻译，如有侵权联系本人删除"
 
 [sitemap]                 # essential                     # 必需
   changefreq = "weekly"
