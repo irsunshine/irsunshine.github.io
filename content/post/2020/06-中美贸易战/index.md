@@ -1,37 +1,54 @@
 ---
-# Documentation: https://sourcethemes.com/academic/docs/managing-content/
-
 title: "中美贸易战"
-subtitle: ""
-summary: ""
-authors: []
-tags: []
-categories: [鱼的记忆：见闻]
 date: 2020-07-21T19:52:41+08:00
-lastmod: 2020-07-21T19:52:41+08:00
-featured: false
+lastmod: 2021-06-23T19:52:41+08:00
 draft: false
+keywords: []
+description: ""
+tags: []
+categories: [鱼的七秒钟见闻]
+author: ""
 
-# Featured image
-# To use, add an image named `featured.jpg/png` to your page's folder.
-# Focal points: Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight.
-image:
-  caption: ""
-  focal_point: ""
-  preview_only: false
+# You can also close(false) or open(true) something for this content.
+# P.S. comment can only be closed
+comment: false
+toc: false
+autoCollapseToc: false
+postMetaInFooter: false
+hiddenFromHomePage: false
+# You can also define another contentCopyright. e.g. contentCopyright: "This is another copyright."
+contentCopyright: false
+reward: false
+mathjax: false
+mathjaxEnableSingleDollar: false
+mathjaxEnableAutoNumber: false
 
-# Projects (optional).
-#   Associate this post with one or more of your projects.
-#   Simply enter your project's folder or file name without extension.
-#   E.g. `projects = ["internal-project"]` references `content/project/deep-learning/index.md`.
-#   Otherwise, set `projects = []`.
-projects: []
+# You unlisted posts you might want not want the header or footer to show
+hideHeaderAndFooter: false
+
+# You can enable or disable out-of-date content warning for individual post.
+# Comment this out to use the global config.
+#enableOutdatedInfoWarning: false
+
+flowchartDiagrams:
+  enable: false
+  options: ""
+
+sequenceDiagrams: 
+  enable: false
+  options: ""
 ---
+
+先谈点题外话，中国特色社会主义和资本主义的不同。从老一辈的口中，都听过要想富，先修路。中国的基础设置建设，这些东西都是国家在出钱，放到资本主义社会，这些都会承包出去，偏远地区，完全没有利益可言，也就不会有公司乐意承接。说太多呢，有点偏离当前文章的主题，普通人可能觉得贸易战对生活没太多影响，实际上，我国的高端制造业一直相对薄弱。本人从事的IT行业，内存、硬盘、CPU、显卡，组装一台电脑的核心配置，都是来自于国外的工厂，这些配件的费用也占用了整机价格的50%，高端制造势在必行。中国和美国的碰撞也是不可避免的。
+
+---
+
+## 前言
 
 - [始于2018的中美贸易战](https://zh.wikipedia.org/zh-hans/2018%EF%BC%8D2020%E5%B9%B4%E4%B8%AD%E7%BE%8E%E8%B4%B8%E6%98%93%E6%88%98)
 - [中国制造2025](https://zh.wikipedia.org/wiki/%E4%B8%AD%E5%9B%BD%E5%88%B6%E9%80%A02025)
 
-以下内容转载于维基百科
+## 维基百科
 
 2018－2020年中美贸易战，简称中美贸易战（英语：China–United States trade war），又简称中美贸易争端、中美贸易摩擦、中美贸易纠纷或美中贸易战，是中华人民共和国与美利坚合众国之间的一场贸易战。
 
