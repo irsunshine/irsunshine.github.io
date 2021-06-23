@@ -1,12 +1,12 @@
 ---
 # Documentation: https://sourcethemes.com/academic/docs/managing-content/
 
-title: "redhat and centos life cycle"
+title: "redhat和centos生命周期"
 subtitle: ""
 summary: ""
 authors: [向天龙]
 tags: []
-categories: [linux]
+categories: [centos]
 date: 2020-07-21T20:02:35+08:00
 lastmod: 2020-07-21T20:02:35+08:00
 featured: false
