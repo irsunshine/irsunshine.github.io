@@ -1,26 +1,46 @@
 ---
-title: 关于光阴，你要读很多书才能找到答案
-event: 岁月既慢且长，白说你听
-event_url: 
-
-summary: 
-abstract: "今年我已经整整50岁了，30岁最大的人生感受是什么？回头看是减法。在30岁之前要玩命的做加法，要去尝试，40岁是困惑，不是不惑，这个时代40岁恐怕困惑的是最多的，我干的这一切有价值吗？有意义吗？我到底要什么物质没有给我带来，我以为会带给我的幸福，50岁很尴尬，你怎么去向前走就不该总是明天再说，或者昨天真好，我觉得今天最好，但是我督促自己，好奇是督促人类进步的最重要的一个动力。一个民族只要不好奇了，这个民族吹了，我也许做的不够好，但起码我在想、在做、在说。"
-
+title: "关于光阴，你要读很多书才能找到答案"
 date: "2020-02-14T07:27:21+08:00"
-date_end: "2020-02-14T07:27:21+08:00"
-all_day: false
+lastmod: "2020-02-14T07:27:21+08:00"
+draft: false
+keywords: []
+description: "今年我已经整整50岁了，30岁最大的人生感受是什么？回头看是减法。在30岁之前要玩命的做加法，要去尝试，40岁是困惑，不是不惑，这个时代40岁恐怕困惑的是最多的，我干的这一切有价值吗？有意义吗？我到底要什么物质没有给我带来，我以为会带给我的幸福，50岁很尴尬，你怎么去向前走就不该总是明天再说，或者昨天真好，我觉得今天最好，但是我督促自己，好奇是督促人类进步的最重要的一个动力。一个民族只要不好奇了，这个民族吹了，我也许做的不够好，但起码我在想、在做、在说。"
+tags: []
+categories: [白岩松演讲稿]
+author: ""
 
-publishDate: "2020-02-14T07:27:21+08:00"
+# You can also close(false) or open(true) something for this content.
+# P.S. comment can only be closed
+comment: false
+toc: false
+autoCollapseToc: false
+postMetaInFooter: false
+hiddenFromHomePage: false
+# You can also define another contentCopyright. e.g. contentCopyright: "This is another copyright."
+contentCopyright: false
+reward: false
+mathjax: false
+mathjaxEnableSingleDollar: false
+mathjaxEnableAutoNumber: false
 
-authors: 
-- 白岩松
-tags:
+# You unlisted posts you might want not want the header or footer to show
+hideHeaderAndFooter: false
 
-image:
-  caption: 'Image credit: [**Unsplash**](https://v.youku.com/v_show/id_XNDI5MzA4NjcyNA)'
-  focal_point: Right
+# You can enable or disable out-of-date content warning for individual post.
+# Comment this out to use the global config.
+#enableOutdatedInfoWarning: false
 
---- 
+flowchartDiagrams:
+  enable: false
+  options: ""
+
+sequenceDiagrams: 
+  enable: false
+  options: ""
+
+---
+
+[视频原始链接点击此处](https://v.youku.com/v_show/id_XNDI5MzA4NjcyNA)，如有侵权，联系本人删除，此文仅做文字稿翻译
 
 ![30岁](30岁.jpg)
 
