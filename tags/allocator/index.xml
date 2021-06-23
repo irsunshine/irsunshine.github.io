@@ -10,10 +10,10 @@
     <lastBuildDate>Mon, 30 Dec 2019 13:26:19 +0800</lastBuildDate><atom:link href="https://www.xiangtianlong.com/tags/allocator/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>标准库容器的内存分配器：allocator</title>
-      <link>https://www.xiangtianlong.com/post/2020/std-allocator-%E7%9B%B8%E5%85%B3%E6%A6%82%E5%BF%B5/</link>
+      <link>https://www.xiangtianlong.com/post/2020/01-std-allocator-%E7%9B%B8%E5%85%B3%E6%A6%82%E5%BF%B5/</link>
       <pubDate>Mon, 30 Dec 2019 13:26:19 +0800</pubDate>
       
-      <guid>https://www.xiangtianlong.com/post/2020/std-allocator-%E7%9B%B8%E5%85%B3%E6%A6%82%E5%BF%B5/</guid>
+      <guid>https://www.xiangtianlong.com/post/2020/01-std-allocator-%E7%9B%B8%E5%85%B3%E6%A6%82%E5%BF%B5/</guid>
       <description>前因 近期接触到了网络网络数据包的开发，需要频繁的申请和释放小块的内存，原本想着使用内存池，查看了几个现有的内存池，发现了这个： https://github.com/cacay/MemoryPool 看到接口的时</description>
     </item>
     
