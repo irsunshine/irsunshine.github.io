@@ -9,6 +9,41 @@
   </url>
   
   <url>
+    <loc>https://www.xiangtianlong.com/post/</loc>
+    <lastmod>2021-07-09T11:27:06+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.xiangtianlong.com/tags/</loc>
+    <lastmod>2021-07-09T11:27:06+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.xiangtianlong.com/</loc>
+    <lastmod>2021-07-09T11:27:06+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.xiangtianlong.com/post/2021/04-%E5%9F%BA%E9%87%91%E5%92%8C%E5%9B%BA%E6%94%B6%E7%90%86%E8%B4%A2/</loc>
+    <lastmod>2021-07-09T11:27:06+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.xiangtianlong.com/tags/%E9%87%91%E8%9E%8D/</loc>
+    <lastmod>2021-07-09T11:27:06+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://www.xiangtianlong.com/categories/</loc>
     <lastmod>2021-06-23T19:52:41+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -18,27 +53,6 @@
   <url>
     <loc>https://www.xiangtianlong.com/tags/ib/</loc>
     <lastmod>2021-06-22T10:51:59+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.xiangtianlong.com/post/</loc>
-    <lastmod>2021-06-23T19:52:41+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.xiangtianlong.com/tags/</loc>
-    <lastmod>2021-06-22T10:51:59+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.xiangtianlong.com/</loc>
-    <lastmod>2021-06-23T19:52:41+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
